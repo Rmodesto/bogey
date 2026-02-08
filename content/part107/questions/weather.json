@@ -1,0 +1,278 @@
+[
+  {
+    "id": "q-wx-001",
+    "stem": "What does a METAR report provide?",
+    "choices": [
+      { "id": "q-wx-001-a", "text": "Current surface weather conditions", "isCorrect": true },
+      { "id": "q-wx-001-b", "text": "Forecast weather conditions", "isCorrect": false },
+      { "id": "q-wx-001-c", "text": "Winds aloft data", "isCorrect": false },
+      { "id": "q-wx-001-d", "text": "NOTAMs for an area", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "METAR reports provide current surface weather conditions.",
+      "reason": "A METAR (Meteorological Aerodrome Report) is an observation of current surface weather conditions at a specific airport or weather station.",
+      "keyTakeaway": "METARs are observations (current), while TAFs are forecasts (future). Know the difference for the exam.",
+      "references": ["ref-ac0045h"]
+    },
+    "domain": "Weather",
+    "moduleId": "mod-weather",
+    "lessonId": "les-wx-metar",
+    "acsRefs": ["acs-ua-iii-a"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-wx-002",
+    "stem": "What effect does high density altitude have on UAS performance?",
+    "choices": [
+      { "id": "q-wx-002-a", "text": "Decreased performance", "isCorrect": true },
+      { "id": "q-wx-002-b", "text": "Increased performance", "isCorrect": false },
+      { "id": "q-wx-002-c", "text": "No effect", "isCorrect": false },
+      { "id": "q-wx-002-d", "text": "Increased battery life", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "High density altitude decreases UAS performance.",
+      "reason": "High density altitude means the air is less dense. Less dense air reduces propeller efficiency and lift, requiring more power to maintain flight, which decreases overall performance and battery life.",
+      "keyTakeaway": "High, hot, and humid conditions increase density altitude and reduce aircraft performance. Always account for environmental conditions during preflight planning.",
+      "references": ["ref-phak"]
+    },
+    "domain": "Weather",
+    "moduleId": "mod-weather",
+    "lessonId": "les-wx-density",
+    "acsRefs": ["acs-ua-iii-a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-wx-003",
+    "stem": "In a METAR, what does 'BKN025' indicate?",
+    "choices": [
+      { "id": "q-wx-003-a", "text": "Broken cloud layer at 2,500 feet AGL", "isCorrect": true },
+      { "id": "q-wx-003-b", "text": "Broken cloud layer at 25,000 feet MSL", "isCorrect": false },
+      { "id": "q-wx-003-c", "text": "Visibility of 25 statute miles", "isCorrect": false },
+      { "id": "q-wx-003-d", "text": "Barometric pressure of 25.0 inches", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "BKN025 means broken cloud layer at 2,500 feet AGL.",
+      "reason": "In a METAR, cloud heights are given in hundreds of feet AGL. BKN (broken) indicates 5/8 to 7/8 cloud coverage. 025 = 2,500 feet AGL.",
+      "keyTakeaway": "METAR cloud heights are in hundreds of feet AGL. BKN025 = broken at 2,500 feet AGL, not 25,000 or 250 feet.",
+      "references": ["ref-ac0045h"]
+    },
+    "domain": "Weather",
+    "moduleId": "mod-weather",
+    "lessonId": "les-wx-metar",
+    "acsRefs": ["acs-ua-iii-a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-wx-004",
+    "stem": "What is indicated by a temperature/dewpoint spread of 3°C or less?",
+    "choices": [
+      { "id": "q-wx-004-a", "text": "Fog or low clouds are likely to form", "isCorrect": true },
+      { "id": "q-wx-004-b", "text": "Clear skies are expected", "isCorrect": false },
+      { "id": "q-wx-004-c", "text": "Thunderstorms are likely", "isCorrect": false },
+      { "id": "q-wx-004-d", "text": "High winds are expected", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "A small temperature/dewpoint spread indicates fog or low clouds are likely.",
+      "reason": "When the temperature and dewpoint are close together (3°C or less), the air is nearly saturated. Any further cooling will cause the moisture to condense, forming fog or low clouds.",
+      "keyTakeaway": "Watch the temp/dewpoint spread! When they're 3°C or less apart, expect fog or low clouds, especially if temperatures are falling.",
+      "references": ["ref-ac0045h"]
+    },
+    "domain": "Weather",
+    "moduleId": "mod-weather",
+    "lessonId": "les-wx-hazards",
+    "acsRefs": ["acs-ua-iii-a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-wx-005",
+    "stem": "What is the difference between a METAR and a TAF?",
+    "choices": [
+      { "id": "q-wx-005-a", "text": "METAR is current observation; TAF is a forecast", "isCorrect": true },
+      { "id": "q-wx-005-b", "text": "METAR is a forecast; TAF is current observation", "isCorrect": false },
+      { "id": "q-wx-005-c", "text": "Both provide current observations", "isCorrect": false },
+      { "id": "q-wx-005-d", "text": "METAR covers a region; TAF covers a single airport", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "METAR is current observation; TAF is a forecast.",
+      "reason": "METAR (Meteorological Aerodrome Report) provides current conditions observed at an airport. TAF (Terminal Aerodrome Forecast) provides a forecast of expected conditions for the next 24-30 hours.",
+      "keyTakeaway": "METAR = what's happening NOW. TAF = what's EXPECTED to happen. Both cover a single airport's vicinity.",
+      "references": ["ref-ac0045h"]
+    },
+    "domain": "Weather",
+    "moduleId": "mod-weather",
+    "lessonId": "les-wx-taf",
+    "acsRefs": ["acs-ua-iii-a"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-wx-006",
+    "stem": "In a METAR, what cloud coverage does 'OVC' indicate?",
+    "choices": [
+      { "id": "q-wx-006-a", "text": "Overcast — 8/8 coverage (full cloud cover)", "isCorrect": true },
+      { "id": "q-wx-006-b", "text": "Obscured — visibility blocked by precipitation", "isCorrect": false },
+      { "id": "q-wx-006-c", "text": "Occasional — intermittent clouds", "isCorrect": false },
+      { "id": "q-wx-006-d", "text": "Over vertical — clouds above 10,000 feet", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "OVC indicates overcast conditions with 8/8 (full) cloud coverage.",
+      "reason": "Cloud coverage abbreviations: FEW (1-2/8), SCT (3-4/8), BKN (5-7/8), OVC (8/8). Overcast means the sky is completely covered by clouds.",
+      "keyTakeaway": "OVC = Overcast = complete cloud cover. Only BKN (broken) and OVC (overcast) constitute a 'ceiling' for aviation purposes.",
+      "references": ["ref-ac0045h"]
+    },
+    "domain": "Weather",
+    "moduleId": "mod-weather",
+    "lessonId": "les-wx-metar",
+    "acsRefs": ["acs-ua-iii-a"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-wx-007",
+    "stem": "What type of fog forms when warm, moist air moves over a colder surface?",
+    "choices": [
+      { "id": "q-wx-007-a", "text": "Advection fog", "isCorrect": true },
+      { "id": "q-wx-007-b", "text": "Radiation fog", "isCorrect": false },
+      { "id": "q-wx-007-c", "text": "Upslope fog", "isCorrect": false },
+      { "id": "q-wx-007-d", "text": "Steam fog", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Advection fog forms when warm, moist air moves over a colder surface.",
+      "reason": "Advection fog is caused by the horizontal movement (advection) of warm, moist air over a cooler surface. Unlike radiation fog, it can form day or night and can be thick and persistent.",
+      "keyTakeaway": "Advection = air movement over cold surface. Radiation = nighttime cooling. Steam = cold air over warm water. Upslope = air forced up terrain.",
+      "references": ["ref-ac0045h"]
+    },
+    "domain": "Weather",
+    "moduleId": "mod-weather",
+    "lessonId": "les-wx-hazards",
+    "acsRefs": ["acs-ua-iii-a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-wx-008",
+    "stem": "A microburst is most likely to occur:",
+    "choices": [
+      { "id": "q-wx-008-a", "text": "In or near a thunderstorm", "isCorrect": true },
+      { "id": "q-wx-008-b", "text": "During clear, calm conditions", "isCorrect": false },
+      { "id": "q-wx-008-c", "text": "Only at high altitudes", "isCorrect": false },
+      { "id": "q-wx-008-d", "text": "Only over large bodies of water", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Microbursts are most likely to occur in or near thunderstorms.",
+      "reason": "A microburst is a localized column of sinking air (downdraft) that produces damaging divergent winds at the surface. They are associated with thunderstorms and can produce wind shear exceeding 100 knots.",
+      "keyTakeaway": "Microbursts = thunderstorms. They're dangerous to all aircraft, including drones. If thunderstorms are in the area, don't fly!",
+      "references": ["ref-ac0045h"]
+    },
+    "domain": "Weather",
+    "moduleId": "mod-weather",
+    "lessonId": "les-wx-hazards",
+    "acsRefs": ["acs-ua-iii-a"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-wx-009",
+    "stem": "In a TAF, what does 'FM' followed by a time indicate?",
+    "choices": [
+      { "id": "q-wx-009-a", "text": "A rapid, permanent change expected at the specified time", "isCorrect": true },
+      { "id": "q-wx-009-b", "text": "Fog moving into the area", "isCorrect": false },
+      { "id": "q-wx-009-c", "text": "Forecast message end time", "isCorrect": false },
+      { "id": "q-wx-009-d", "text": "Full moon visibility conditions", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "FM indicates a rapid, permanent change expected from the specified time.",
+      "reason": "In a TAF, FM (From) marks a complete change in conditions expected to occur rapidly (usually within an hour) at the time indicated. All conditions after FM replace the previous forecast.",
+      "keyTakeaway": "FM = From (rapid change). TEMPO = temporary change. BECMG = gradual change. PROB = probability of change.",
+      "references": ["ref-ac0045h"]
+    },
+    "domain": "Weather",
+    "moduleId": "mod-weather",
+    "lessonId": "les-wx-taf",
+    "acsRefs": ["acs-ua-iii-a"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-wx-010",
+    "stem": "What condition is indicated by 'TS' in a METAR or TAF?",
+    "choices": [
+      { "id": "q-wx-010-a", "text": "Thunderstorm", "isCorrect": true },
+      { "id": "q-wx-010-b", "text": "Tropical storm", "isCorrect": false },
+      { "id": "q-wx-010-c", "text": "Temperature stable", "isCorrect": false },
+      { "id": "q-wx-010-d", "text": "Tower shutdown", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "TS indicates a thunderstorm.",
+      "reason": "TS in a METAR or TAF indicates thunderstorm activity at or near the airport. Thunderstorms present multiple hazards: lightning, turbulence, hail, and microbursts. UAS operations should be suspended when thunderstorms are in the area.",
+      "keyTakeaway": "TS = Thunderstorm = DO NOT FLY. Thunderstorms are one of the most dangerous weather conditions for any aircraft.",
+      "references": ["ref-ac0045h"]
+    },
+    "domain": "Weather",
+    "moduleId": "mod-weather",
+    "lessonId": "les-wx-metar",
+    "acsRefs": ["acs-ua-iii-a"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-wx-011",
+    "stem": "What is a 'ceiling' in aviation weather terminology?",
+    "choices": [
+      { "id": "q-wx-011-a", "text": "The lowest broken or overcast cloud layer", "isCorrect": true },
+      { "id": "q-wx-011-b", "text": "The highest cloud layer in the sky", "isCorrect": false },
+      { "id": "q-wx-011-c", "text": "Any cloud layer above 10,000 feet", "isCorrect": false },
+      { "id": "q-wx-011-d", "text": "The maximum altitude allowed for aircraft", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "A ceiling is the lowest broken (BKN) or overcast (OVC) cloud layer.",
+      "reason": "FEW and SCT cloud layers do not constitute a ceiling because they don't significantly obscure the sky. Only BKN (5-7/8 coverage) or OVC (8/8 coverage) layers are considered ceilings.",
+      "keyTakeaway": "Ceiling = lowest BKN or OVC layer. FEW and SCT clouds don't count as a ceiling. This matters for VFR weather minimums.",
+      "references": ["ref-ac0045h"]
+    },
+    "domain": "Weather",
+    "moduleId": "mod-weather",
+    "lessonId": "les-wx-metar",
+    "acsRefs": ["acs-ua-iii-a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-wx-012",
+    "stem": "Which type of weather briefing provides a complete picture of the weather for the planned flight?",
+    "choices": [
+      { "id": "q-wx-012-a", "text": "Standard briefing", "isCorrect": true },
+      { "id": "q-wx-012-b", "text": "Abbreviated briefing", "isCorrect": false },
+      { "id": "q-wx-012-c", "text": "Outlook briefing", "isCorrect": false },
+      { "id": "q-wx-012-d", "text": "Summary briefing", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "A standard briefing provides a complete picture of the weather.",
+      "reason": "A standard briefing is the most complete briefing, providing all available weather information including adverse conditions, VFR flight not recommended, synopsis, current conditions, forecast, winds, NOTAMs, and ATC delays.",
+      "keyTakeaway": "Standard = complete briefing (first time or no previous briefing). Abbreviated = update to previous briefing. Outlook = 6+ hours before flight for planning.",
+      "references": ["ref-ac0045h"]
+    },
+    "domain": "Weather",
+    "moduleId": "mod-weather",
+    "lessonId": "les-wx-sources",
+    "acsRefs": ["acs-ua-iii-a"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  }
+]

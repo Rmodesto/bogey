@@ -1,0 +1,183 @@
+{
+  "module": {
+    "id": "mod-regulations",
+    "title": "Regulations",
+    "description": "FAA Part 107 rules and regulatory requirements for sUAS operations",
+    "domain": "Regulations",
+    "order": 1,
+    "lessonIds": ["les-reg-general", "les-reg-reporting", "les-reg-operating", "les-reg-certification", "les-reg-ops-over-people"],
+    "references": ["ref-cfr107"],
+    "icon": "Scale",
+    "estimatedHours": 3,
+    "version": 2
+  },
+  "lessons": [
+    {
+      "id": "les-reg-general",
+      "moduleId": "mod-regulations",
+      "title": "General Regulations",
+      "order": 1,
+      "objectives": [
+        "Understand the applicability of 14 CFR Part 107 to sUAS operations",
+        "Define key terms: sUAS, Remote PIC, Visual Observer, Control Station",
+        "Know the 55-pound weight limit and what it includes"
+      ],
+      "references": ["ref-cfr107"],
+      "acsRefs": ["acs-ua-i-a"],
+      "estimatedMinutes": 25,
+      "sections": [
+        {
+          "id": "sec-reg-applicability",
+          "title": "Applicability of Part 107",
+          "content": "## What the Regulation Says\n\n14 CFR Part 107 governs the **registration, certification, and operation** of civil small unmanned aircraft systems within the United States.\n\n**Part 107 applies to:**\n\n- Civil (non-military, non-public) small UAS operations in the NAS\n- Any sUAS weighing **less than 55 pounds** at takeoff (including everything on board)\n- Both commercial and non-commercial operations conducted under Part 107\n- Airman certification (your Remote Pilot Certificate)\n\n**Part 107 does NOT apply to:**\n\n- **Recreational flying** under 49 U.S.C. §44809 (TRUST test)\n- **Public aircraft operations** (government operations under a COA)\n- Operations under Section 333 or §44807 exemptions\n- sUAS with an airworthiness certificate operating under Part 91\n\n## Why It Matters\n\nThis is the first question you should answer: \"Does Part 107 apply to what I'm doing?\" If you're flying commercially (real estate photos, inspections, mapping, delivery), this regulation governs you.\n\n## What the Exam Tests\n\nExpect questions like:\n- \"Under what regulation would a commercial drone operation fall?\"\n- \"A drone weighing 52 lbs with a camera is used for real estate photography. What regulations apply?\"\n- \"Which operations are NOT covered by Part 107?\""
+        },
+        {
+          "id": "sec-reg-definitions",
+          "title": "Key Definitions",
+          "content": "## What the Regulation Says\n\n14 CFR 107.3 defines the core terminology every remote pilot must know.\n\n### Small Unmanned Aircraft\n\nAn unmanned aircraft weighing **less than 55 pounds on takeoff**, including everything on board or attached.\n\n### Small Unmanned Aircraft System (sUAS)\n\nThe small unmanned aircraft **and its associated elements** — communication links, control components — required for safe operation.\n\n> **Key Distinction:** The \"aircraft\" is just the flying machine. The \"system\" is the aircraft PLUS controller, data link, ground station, and display.\n\n### Remote Pilot in Command (Remote PIC)\n\nThe person who holds a Remote Pilot Certificate with sUAS rating and has **final authority and responsibility** for the operation.\n\n### Visual Observer (VO)\n\nA person designated by the remote PIC to assist with see-and-avoid duties. VOs are **optional**, not required.\n\n### Control Station\n\nThe interface (controller/tablet/GCS) used to control the flight path.\n\n### Person Manipulating Flight Controls\n\nWhoever is physically operating the sticks at any moment. May or may not be the Remote PIC.\n\n## Why It Matters\n\nThese definitions establish the **chain of responsibility**. The Remote PIC holds final authority — even if someone else is flying the drone.",
+          "bogeyman": {
+            "message": "Aircraft vs. System is a favorite exam trap! The aircraft is just the drone. The sUAS includes the controller, data links, and everything needed to operate it.",
+            "mood": "warning"
+          }
+        },
+        {
+          "id": "sec-reg-weight-limit",
+          "title": "The 55-Pound Weight Limit",
+          "content": "## What the Rule Says\n\nThe maximum takeoff weight for a small unmanned aircraft under Part 107 is **less than 55 pounds**, including:\n\n- The aircraft itself\n- All batteries\n- All payload (cameras, sensors, cargo)\n- Any attachments (parachute systems, lights)\n\n## Common Traps\n\n- If your drone weighs 48 lbs and you attach a 10 lb camera, that's 58 lbs — **no longer qualifies** under Part 107\n- The weight is measured at **takeoff**, not empty weight\n- Part 107 is not just for commercial ops — anyone can choose to fly under it\n\n## Key Facts to Memorize\n\n| Fact | Detail |\n|---|---|\n| Maximum takeoff weight | **< 55 lbs** (including all onboard equipment) |\n| Governing regulation | **14 CFR Part 107** |\n| Recreational alternative | 49 U.S.C. §44809 (TRUST test) |\n| Public aircraft | Excluded — operate under COA |"
+        }
+      ],
+      "version": 2
+    },
+    {
+      "id": "les-reg-reporting",
+      "moduleId": "mod-regulations",
+      "title": "Falsification and Accident Reporting",
+      "order": 2,
+      "objectives": [
+        "Understand consequences of falsifying records",
+        "Know when accident reporting is required",
+        "Memorize the 10-day deadline and $500 threshold"
+      ],
+      "references": ["ref-cfr107"],
+      "acsRefs": ["acs-ua-i-a"],
+      "estimatedMinutes": 20,
+      "sections": [
+        {
+          "id": "sec-reg-falsification",
+          "title": "Falsification of Records",
+          "content": "## What the Regulation Says\n\n14 CFR 107.5 makes it a **federal offense** to:\n\n- Make or cause to be made any **fraudulent or intentionally false** record or report\n- **Reproduce** for fraudulent purpose any certificate or authorization\n- **Alter** any certificate, rating, authorization, record, or report\n\n## The Consequences\n\nCommitting any of these acts is grounds for:\n\n1. **Denial** of an application for a Remote Pilot Certificate\n2. **Denial** of an application for a certificate of waiver\n3. **Suspension or revocation** of any certificate or waiver\n4. **Civil penalties** (fines)\n5. Potential **criminal penalties**\n\n## Why It Matters\n\nThe FAA takes integrity of records extremely seriously. Every accident report, maintenance log, and certificate exists to keep the NAS safe.\n\n## Common Traps\n\n- This covers records you \"cause to be made,\" not just ones you personally create\n- Even minor alterations count — changing a date is falsification\n- The consequences are severe and can end your career as a remote pilot"
+        },
+        {
+          "id": "sec-reg-accident-reporting",
+          "title": "Accident Reporting Requirements",
+          "content": "## What the Regulation Says\n\nUnder 14 CFR 107.9, the Remote PIC must report to the FAA within **10 calendar days** of any operation that results in:\n\n1. **Serious injury** to any person (AIS Level 3+)\n2. **Loss of consciousness** of any person\n3. **Damage to any property** other than the sUAS exceeding **$500**\n\n## The Reporting Process\n\nReports are submitted to the FAA's online reporting system and should include:\n- Date, time, and location of the accident\n- Description of the sUAS involved\n- Description of the accident\n- Injuries or property damage that occurred\n\n## What the Exam Tests\n\nThis is one of the **most frequently tested** topics. Key points:\n\n1. The **$500 threshold** applies to property OTHER than the drone\n2. The deadline is **10 calendar days** (not business days)\n3. Know what qualifies as a triggering event",
+          "bogeyman": {
+            "message": "The $500 threshold applies to property OTHER than your drone. If your $3,000 drone is destroyed but nothing else is damaged, there's nothing to report!",
+            "mood": "warning"
+          }
+        },
+        {
+          "id": "sec-reg-accident-scenarios",
+          "title": "Accident Reporting Scenarios",
+          "content": "## Typical Exam Questions\n\n**Scenario 1:** Your sUAS crashes into a parked car causing $600 in damage. The drone is destroyed ($1,200). No injuries.\n\n→ **Report within 10 days.** Car damage exceeds $500; drone damage doesn't count.\n\n**Scenario 2:** Your sUAS clips a tree and crashes. The $1,200 drone is totaled. No other damage, no injuries.\n\n→ **No report required.** Damage to the sUAS itself is excluded.\n\n**Scenario 3:** A bystander is hit by your sUAS and briefly loses consciousness but has no visible injuries.\n\n→ **Yes, report it.** Loss of consciousness is a mandatory trigger regardless of visible injury.\n\n## Key Facts to Memorize\n\n| Detail | Value |\n|---|---|\n| Reporting deadline | **10 calendar days** |\n| Property damage threshold | **> $500** (to property OTHER than the sUAS) |\n| Injury trigger | **Serious injury** (AIS Level 3+) |\n| Consciousness trigger | **Any loss of consciousness** |\n| Drone damage | **Does NOT trigger reporting** |\n| Report to | **FAA** |",
+          "bogeyman": {
+            "message": "10 calendar days, not business days! If the accident happens on a Friday, day 10 is the Sunday a week and a half later.",
+            "mood": "happy"
+          }
+        }
+      ],
+      "version": 2
+    },
+    {
+      "id": "les-reg-operating",
+      "moduleId": "mod-regulations",
+      "title": "Operating Rules and Inspection",
+      "order": 3,
+      "objectives": [
+        "Know inspection and compliance requirements",
+        "Understand multiple category sUAS concepts",
+        "Learn record retention requirements"
+      ],
+      "references": ["ref-cfr107"],
+      "acsRefs": ["acs-ua-i-a"],
+      "estimatedMinutes": 20,
+      "sections": [
+        {
+          "id": "sec-reg-inspection",
+          "title": "Inspection and Compliance",
+          "content": "## What the Regulation Says\n\n14 CFR 107.7 establishes the FAA's authority to inspect your operation.\n\n### Presentation of Documents\n\nUpon request by the FAA, you must present:\n- Your Remote Pilot Certificate with sUAS rating\n- Any document, record, or report required under Part 107\n\n### Testing and Inspection Authority\n\nUpon request, you must allow the FAA to:\n- Make any test or inspection of the sUAS\n- Inspect any person involved in the operation\n- Conduct any inspection to determine compliance\n\n## Why It Matters\n\nThis is the legal basis for an FAA inspector approaching you in the field. **Refusing is a violation of Part 107.**\n\n## Common Traps\n\n- You **cannot refuse** an FAA inspection\n- This covers more than just the drone — the FAA can inspect aircraft, your certificate, records, and you\n- It's not just the PIC's obligation — VOs, owners, operators all must comply"
+        },
+        {
+          "id": "sec-reg-multiple-category",
+          "title": "Multiple Category sUAS",
+          "content": "## What the Regulation Says\n\nA single sUAS can be eligible to operate under **more than one category** for operations over people (Categories 1–4). The same drone might qualify as Category 1 for one mission and Category 2 for another, depending on configuration.\n\n**Critical Rule:** The Remote PIC must **not be able to inadvertently switch** between categories during flight.\n\n## Why It Matters\n\nMany commercial drones can be configured differently depending on the mission. A drone weighing 0.50 lbs with no payload (Category 1) might weigh 2 lbs with a camera attached (potentially Category 2 or 3).\n\n## Key Facts\n\n| Fact | Detail |\n|---|---|\n| Can one sUAS qualify for multiple categories? | **Yes** |\n| What determines the category? | Configuration at time of operation |\n| Key safety requirement | Cannot **inadvertently switch** categories during flight |"
+        },
+        {
+          "id": "sec-reg-records",
+          "title": "Record Retention",
+          "content": "## What the Regulation Says\n\n14 CFR 107.165 establishes record retention requirements.\n\n### For Manufacturers (Category 2/3 Aircraft)\n\n- Must retain all supporting information demonstrating compliance\n- Retention period: **2 years after ceasing production** of that model\n\n### For Declaration Submitters\n\n- Must retain all detailed information submitted with the declaration\n- Retention period: **2 years after submission date**\n\n### For Means of Compliance (MoC) Submitters\n\n- Must retain the detailed description of the means of compliance\n- Retention period: **As long as the MoC remains FAA-accepted**\n\n### For All Remote Pilots (Best Practices)\n\nWhile not mandated, the FAA strongly recommends maintaining:\n- Flight logs\n- Maintenance records\n- Preflight inspection records\n- Incident/accident documentation\n\n## Key Facts to Memorize\n\n| Who | Retention Period |\n|---|---|\n| Manufacturers (Cat 2/3) | **2 years** after ceasing production |\n| Declaration submitters | **2 years** after submission date |\n| MoC submitters | **As long as MoC remains FAA-accepted** |"
+        }
+      ],
+      "version": 2
+    },
+    {
+      "id": "les-reg-certification",
+      "moduleId": "mod-regulations",
+      "title": "Remote Pilot Certification",
+      "order": 4,
+      "objectives": [
+        "Know eligibility requirements for Remote Pilot Certificate",
+        "Understand recency requirements (24 calendar months)",
+        "Learn about waivers and their application process"
+      ],
+      "references": ["ref-cfr107"],
+      "acsRefs": ["acs-ua-i-a"],
+      "estimatedMinutes": 15,
+      "sections": [
+        {
+          "id": "sec-reg-eligibility",
+          "title": "Certificate Eligibility",
+          "content": "## What the Regulation Says\n\nTo obtain a Remote Pilot Certificate with sUAS rating, you must:\n\n1. Be at least **16 years old** (exam can be taken at 14, but certificate not issued until 16)\n2. Be able to **read, speak, write, and understand English**\n3. Be in a physical and mental condition to safely operate an sUAS\n4. Pass the initial aeronautical knowledge test\n5. Be vetted by TSA\n\n## Recency Requirements\n\nTo maintain currency, you must complete **recurrent training or testing every 24 calendar months**.\n\n## What the Exam Tests\n\n- Age requirements (16 to obtain, 14 to test)\n- Recency period (24 calendar months)\n- English language requirements"
+        },
+        {
+          "id": "sec-reg-waivers",
+          "title": "Waivers",
+          "content": "## What the Regulation Says\n\nMany Part 107 rules can be waived if you demonstrate **equivalent safety**. Waivers are applied for through **FAA DroneZone**.\n\n## Commonly Waivable Rules\n\n- Night operations (before 2021 rule)\n- Visual line of sight (VLOS)\n- Altitude limitations\n- Operations over people\n- Multiple aircraft by single pilot\n\n## The Waiver Process\n\n1. Submit application through FAA DroneZone\n2. Describe how you will maintain equivalent safety\n3. Include operational procedures and risk mitigations\n4. Wait for FAA review (can take weeks to months)\n\n## Key Facts\n\n- Waivers require demonstrating **equivalent safety**\n- Some rules cannot be waived (e.g., registration requirements)\n- Waivers have specific conditions that must be followed"
+        }
+      ],
+      "version": 2
+    },
+    {
+      "id": "les-reg-ops-over-people",
+      "moduleId": "mod-regulations",
+      "title": "Operations Over People and Remote ID",
+      "order": 5,
+      "objectives": [
+        "Understand the four categories for operations over people",
+        "Know Remote ID requirements",
+        "Learn about Declaration of Compliance"
+      ],
+      "references": ["ref-cfr107"],
+      "acsRefs": ["acs-ua-i-a"],
+      "estimatedMinutes": 20,
+      "sections": [
+        {
+          "id": "sec-reg-ops-categories",
+          "title": "Operations Over People Categories",
+          "content": "## What the Regulation Says\n\nOperations over people are divided into four categories based on aircraft capabilities and risk:\n\n### Category 1\n\n- Weight: **≤ 0.55 lbs** (250 grams)\n- No exposed rotating parts that could lacerate skin\n- No Declaration of Compliance needed\n- Can fly over people without further restrictions\n\n### Category 2\n\n- Weight: ≤ 0.55 lbs OR meets severity limit\n- Has FAA-accepted **Declaration of Compliance (DoC)**\n- Impact kinetic energy limits (11 ft-lbs)\n- No exposed rotating parts that could lacerate skin\n\n### Category 3\n\n- Same requirements as Category 2\n- **Cannot fly over open-air assemblies**\n- Must be over closed/restricted sites OR people directly participating\n- Impact kinetic energy limits (25 ft-lbs)\n\n### Category 4\n\n- Has an **airworthiness certificate** under Part 21\n- Must operate within aircraft operating limitations\n- Manufacturer specifies eligible operations\n\n## Key Distinctions\n\n| Category | Max Weight | DoC Required? | Open-Air Assemblies? |\n|---|---|---|---|\n| 1 | ≤ 0.55 lbs | No | Yes |\n| 2 | Varies | Yes | Yes |\n| 3 | Varies | Yes | **No** |\n| 4 | Per certificate | N/A | Per limitations |"
+        },
+        {
+          "id": "sec-reg-remote-id",
+          "title": "Remote Identification",
+          "content": "## What the Regulation Says\n\n14 CFR Part 89 establishes Remote Identification requirements.\n\n### Standard Remote ID\n\nThe sUAS broadcasts identification data directly from the drone, including:\n- Drone ID (serial number or session ID)\n- Drone location, altitude, and velocity\n- Control station location\n- Timestamp\n- Emergency status\n\n### Remote ID Broadcast Module\n\nAn add-on device for previously manufactured drones that broadcasts:\n- Module serial number\n- Drone location and altitude\n- Takeoff location\n- Timestamp\n\n### FAA-Recognized Identification Areas (FRIAs)\n\nDesignated areas where drones without Remote ID can still operate.\n\n## Why It Matters\n\nRemote ID enables the FAA, law enforcement, and other authorities to identify drones in flight. All new drones must have Standard Remote ID built in.\n\n## Key Facts\n\n| Compliance Option | What It Broadcasts |\n|---|---|\n| Standard Remote ID | Drone ID, location, altitude, control station location |\n| Broadcast Module | Module ID, drone location, takeoff location |\n| FRIA | No broadcast required (within designated area only) |"
+        },
+        {
+          "id": "sec-reg-previously-manufactured",
+          "title": "Previously Manufactured sUAS",
+          "content": "## What the Regulation Says\n\n\"Previously manufactured\" refers to sUAS produced before certain regulatory requirements took effect.\n\n### Key Points\n\n- Can still be used for **all standard Part 107 operations**\n- For Category 4 operations, would need an **airworthiness certificate**\n- Can be modified to comply with Category 2/3 requirements\n- **Must comply with Remote ID** requirements\n\n### Remote ID Compliance Options\n\n1. Standard Remote ID (if equipped)\n2. Add an RID broadcast module\n3. Operate within a FRIA\n\n## Key Facts\n\n| Fact | Detail |\n|---|---|\n| Standard Part 107 operations | **Unaffected** |\n| Operations over people | Only if meeting Category 1-4 requirements |\n| Remote ID | Must comply via Standard RID, module, or FRIA |\n| Category 2/3 path | Must demonstrate compliance through test/analysis/inspection + DoC |"
+        }
+      ],
+      "version": 2
+    }
+  ]
+}

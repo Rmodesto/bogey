@@ -4,14 +4,11 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Clock, Grid3X3, Flag, ChevronLeft, ChevronRight } from "lucide-react";
-import { examQuestions } from "@/data/questions";
+import { getExamQuestions } from "@/lib/part107/compat";
 
-function formatTime(s: number) {
-  const h = Math.floor(s / 3600);
-  const m = Math.floor((s % 3600) / 60);
-  const sec = s % 60;
-  return `${h}:${String(m).padStart(2, "0")}:${String(sec).padStart(2, "0")}`;
-}
+const examQuestions = getExamQuestions();
+import { formatTime } from "@/lib/utils";
+import Button from "@/components/Button";
 
 export default function ExamSimulator() {
   const router = useRouter();
@@ -66,7 +63,7 @@ export default function ExamSimulator() {
     return (
       <div className="min-h-screen bg-jet-black flex items-center justify-center">
         <div className="bg-graphite border border-slate/30 rounded-2xl p-10 max-w-lg w-full text-center">
-          <h1 className="text-3xl font-semibold text-white mb-3">Part 107 Practice Exam</h1>
+          <h1 className="text-3xl font-semibold text-white mb-3">BogeyMan Practice Exam</h1>
           <p className="text-slate text-sm mb-8">
             This practice exam simulates the actual FAA Part 107 exam experience. You have 2 hours to answer {examQuestions.length} questions. Once started, the timer cannot be paused.
           </p>
@@ -83,9 +80,9 @@ export default function ExamSimulator() {
             ))}
           </div>
           <div className="flex justify-center gap-4">
-            <button onClick={() => setStarted(true)} className="bg-volt-green hover:bg-volt-lime text-jet-black font-semibold px-8 py-3 rounded-full">
+            <Button onClick={() => setStarted(true)} className="px-8">
               Begin Exam
-            </button>
+            </Button>
             <Link href="/dashboard" className="text-slate hover:text-white font-semibold px-6 py-3 rounded-full border border-slate/40">
               Cancel
             </Link>

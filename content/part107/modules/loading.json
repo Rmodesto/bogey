@@ -1,0 +1,228 @@
+{
+  "module": {
+    "id": "mod-loading",
+    "title": "Loading & Performance",
+    "description": "Weight and balance fundamentals, performance calculations, and factors affecting UAS flight characteristics",
+    "domain": "Loading and Performance",
+    "order": 4,
+    "lessonIds": ["les-lp-weight", "les-lp-loading-changes", "les-lp-cg", "les-lp-performance-data"],
+    "references": ["ref-phak", "ref-ac9157d"],
+    "icon": "Gauge",
+    "estimatedHours": 3,
+    "version": 1
+  },
+  "lessons": [
+    {
+      "id": "les-lp-weight",
+      "moduleId": "mod-loading",
+      "title": "General Loading and Performance",
+      "order": 1,
+      "objectives": [
+        "Understand the non-linear relationship between weight and power consumption",
+        "Explain how payload affects endurance, range, speed, and maneuverability",
+        "Identify Part 107 weight limits"
+      ],
+      "references": ["ref-phak", "ref-ac1072"],
+      "acsRefs": ["acs-ua-iv-a-k1"],
+      "estimatedMinutes": 25,
+      "sections": [
+        {
+          "id": "sec-lp-weight-core",
+          "title": "The Core Weight-Performance Principle",
+          "content": "## What This Covers\n\nEvery drone has limits. How much it can carry, how long it can stay airborne, how high it can climb, and how fast it can fly are all determined by its weight and the conditions it's flying in.\n\n## The Core Principle\n\n**More weight = more power required = less performance.**\n\nThis relationship is **not linear**. Adding 25% more weight does not simply reduce flight time by 25% — it reduces it by **more**, because motors must spin faster to generate extra lift, and power consumption increases exponentially with thrust demand.\n\n### The Physics\n\nHover power scales with approximately the 1.5 power of weight:\n- Doubling weight increases hover power by roughly **2.8×**, not 2×\n- This means performance degrades faster than weight increases\n\n## Why It Matters\n\nUnderstanding this non-linear relationship helps you:\n- Plan realistic mission durations with payload\n- Know when conditions make a flight unsafe\n- Avoid overloading your aircraft\n\n## What the Exam Tests\n\nExpect questions about:\n- How adding payload affects flight time (always reduces it)\n- Whether the reduction is proportional (no — it's worse)\n- Part 107's maximum weight limit (55 lbs)"
+        },
+        {
+          "id": "sec-lp-weight-effects",
+          "title": "How Payload Affects Flight Characteristics",
+          "content": "## Endurance (Flight Time)\n\nThis is the most commonly tested relationship. Every gram of payload you add forces the motors to work harder, drawing more current from the battery.\n\n| Payload Added | Approximate Endurance Reduction |\n|---|---|\n| +10% of aircraft weight | 12–15% shorter flight time |\n| +25% of aircraft weight | 25–35% shorter flight time |\n| +50% of aircraft weight | 40–55% shorter flight time |\n\n## Range\n\nRange decreases with added weight because the drone burns through its battery faster. It covers less ground before needing to return.\n\n## Maximum Speed\n\nHeavier drones have a lower top speed. More power is consumed just staying airborne, leaving less power available for forward acceleration.\n\n## Climb Rate\n\nA heavier drone climbs more slowly. If a drone rated for 300 ft/min climb at base weight adds 30% payload, expect roughly 150–200 ft/min climb rate.\n\n## Maneuverability\n\nHeavier aircraft respond more slowly to control inputs. Roll rates decrease, turn radii increase, and recovery from aggressive maneuvers takes longer.\n\n**A loaded drone is a sluggish drone.**\n\n## Maximum Achievable Altitude\n\nAt higher altitudes, air becomes thinner and propellers generate less lift per revolution. A drone that can easily hover at sea level with a full payload may struggle or fail to maintain altitude at 8,000 feet with the same load.",
+          "bogeyman": {
+            "message": "If a question says 'payload is added,' the correct answer almost always involves reduced endurance. The only exception would be if payload is *removed*.",
+            "mood": "happy"
+          }
+        },
+        {
+          "id": "sec-lp-weight-facts",
+          "title": "Key Facts and Common Traps",
+          "content": "## Key Facts to Memorize\n\n| Fact | Detail |\n|---|---|\n| Part 107 max weight | 55 lbs (including everything on the aircraft) |\n| Weight–power relationship | Non-linear (doubling weight roughly triples hover power) |\n| Every flight | Heavier = shorter, slower, less maneuverable |\n| Thin air at altitude | Compounds weight effects — less lift available |\n\n## Common Traps\n\n### Trap 1: Linear Thinking\n**\"Adding 10% weight reduces flight time by 10%.\"**\n\n❌ Wrong. The reduction is always *greater* than the weight percentage because power demand increases non-linearly.\n\n### Trap 2: MTOW Equals Safety\n**\"The drone is under MTOW so it's safe to fly.\"**\n\n❌ Not necessarily. MTOW is rated for ideal conditions. High altitude and hot temperatures can make a drone unsafe even at published MTOW.\n\n### Trap 3: Weight Improves Stability\n**\"Maneuverability improves with more weight because the drone is more stable.\"**\n\n❌ Wrong. More weight means slower response, not better stability. The drone becomes sluggish, not stable.",
+          "bogeyman": {
+            "message": "The weight-power relationship is NON-LINEAR. A 25% weight increase causes a 25-35% endurance reduction, not 25%. The exam loves testing this concept!",
+            "mood": "warning"
+          }
+        }
+      ],
+      "version": 1
+    },
+    {
+      "id": "les-lp-loading-changes",
+      "moduleId": "mod-loading",
+      "title": "Effects of Loading Changes",
+      "order": 2,
+      "objectives": [
+        "Explain how battery depletion affects performance during flight",
+        "Describe temperature effects on loading performance",
+        "Understand altitude effects on payload capacity",
+        "Relate weight to stall speed for fixed-wing sUAS"
+      ],
+      "references": ["ref-phak", "ref-ac1072"],
+      "acsRefs": ["acs-ua-iv-a-k1a"],
+      "estimatedMinutes": 25,
+      "sections": [
+        {
+          "id": "sec-lp-battery-depletion",
+          "title": "Battery Consumption During Flight",
+          "content": "## What Happens as Battery Depletes\n\nAs a drone flies, its battery loses charge and its total weight decreases slightly. However, this minor weight reduction does **not** meaningfully improve performance because:\n\n### Voltage Sag\n\nAs the battery depletes, **voltage sag** increases — the battery can deliver less power even though chemical energy remains.\n\n### Internal Resistance\n\n**Internal resistance** rises as the battery depletes, meaning the battery wastes more energy as heat.\n\n### Negligible Weight Loss\n\nThe weight reduction (perhaps 20–30 grams over a 25-minute flight) is negligible compared to the power output loss.\n\n## The Bottom Line\n\nPerformance **degrades** as battery depletes, despite the minor weight loss. You'll experience:\n- Reduced power output\n- Lower climb capability\n- Less responsive controls\n- Motors working harder to maintain altitude",
+          "bogeyman": {
+            "message": "If a question asks what happens as a battery depletes during flight, the answer is REDUCED power output and climb capability — NOT 'improved performance from weight loss.' The voltage sag effect dominates.",
+            "mood": "warning"
+          }
+        },
+        {
+          "id": "sec-lp-temp-effects",
+          "title": "Temperature Effects on Performance",
+          "content": "## How Temperature Affects Loading Performance\n\nTemperature dramatically affects how much useful work a drone can do.\n\n### Cold Weather (below 32°F / 0°C)\n\n- Battery capacity drops by **15–30%**\n- A 5,000 mAh battery may deliver only 3,500–4,000 mAh of usable energy\n- Power output capability decreases\n- Endurance is significantly shorter than published specs\n\n### Hot Weather (above 86°F / 30°C)\n\n- Battery voltage sag increases\n- Motors run hotter, reducing efficiency\n- Air is less dense, requiring more power to generate the same lift\n\n## The Double Penalty\n\nTemperature doesn't just affect the battery — it affects **air density** too.\n\n**Hot air is less dense**, so propellers generate less lift. The drone needs more power to hover, but the battery can deliver less.\n\nThis double penalty is why hot-day operations at altitude are so demanding.\n\n## Key Fact\n\n| Condition | Effect |\n|---|---|\n| Cold weather | 15–30% battery capacity reduction below 32°F |"
+        },
+        {
+          "id": "sec-lp-altitude-effects",
+          "title": "Altitude Effects on Loading",
+          "content": "## How Altitude Affects Loading Performance\n\nAs altitude increases, air density decreases. At 10,000 feet, air density is roughly **65% of sea level**.\n\n### The Effects\n\n- Propellers generate less lift per revolution\n- Motors must spin faster to compensate\n- Power consumption increases\n- A drone that lifts 10 lbs at sea level might manage only 7 lbs at 10,000 feet\n\n### Performance Loss Rule of Thumb\n\n~3–4% performance loss per 1,000 ft elevation\n\n## Combined Effects\n\nTemperature + altitude effects are **multiplicative, not additive**.\n\nA hot day at high altitude is far worse than either condition alone.\n\n## Fixed-Wing sUAS: Loading and Stall Speed\n\nFor fixed-wing drones, weight directly affects stall speed:\n\n**Heavier aircraft stall at higher airspeeds.**\n\nIf a fixed-wing sUAS stalls at 24 knots at light weight, adding payload increases stall speed — perhaps to 27–28 knots. This means the drone must fly faster to stay airborne, further increasing power demand.\n\n### Key Relationship\n\n| Loading | Stall Speed |\n|---|---|\n| Increased weight | Higher stall speed |\n| Decreased weight | Lower stall speed |"
+        },
+        {
+          "id": "sec-lp-loading-traps",
+          "title": "Common Traps",
+          "content": "## Common Exam Traps\n\n### Trap 1: Weight Loss During Flight\n**\"Battery weight loss during flight significantly improves endurance.\"**\n\n❌ Wrong. Voltage sag dominates over the minor weight reduction.\n\n### Trap 2: Independent Effects\n**\"Temperature and altitude effects are independent.\"**\n\n❌ Wrong. They compound each other. A hot day at high altitude is far worse than either condition alone.\n\n### Trap 3: Constant Payload Capacity\n**\"The drone can carry its full rated payload at any altitude.\"**\n\n❌ Wrong. Payload capacity decreases with altitude because less lift is available.\n\n## Key Facts to Memorize\n\n| Fact | Detail |\n|---|---|\n| Cold battery capacity loss | 15–30% reduction below 32°F |\n| Altitude density loss | ~3–4% performance loss per 1,000 ft elevation |\n| Voltage sag during flight | Reduces power more than weight loss helps |\n| Combined effects | Temperature + altitude effects are multiplicative |\n| Stall speed and weight | Heavier = higher stall speed (fixed-wing) |"
+        }
+      ],
+      "version": 1
+    },
+    {
+      "id": "les-lp-cg",
+      "moduleId": "mod-loading",
+      "title": "Balance and Center of Gravity",
+      "order": 3,
+      "objectives": [
+        "Define center of gravity and explain why it matters",
+        "Compare effects of forward vs aft CG",
+        "Distinguish between static and dynamic stability",
+        "Explain CG limits and their importance"
+      ],
+      "references": ["ref-phak", "ref-ac1072"],
+      "acsRefs": ["acs-ua-iv-a-k1b"],
+      "estimatedMinutes": 30,
+      "sections": [
+        {
+          "id": "sec-lp-cg-definition",
+          "title": "What is Center of Gravity?",
+          "content": "## Center of Gravity Definition\n\nThe **center of gravity (CG)** is the single point where the aircraft's total weight is balanced. If you could hang the drone from one point and have it sit perfectly level, that point is the CG.\n\n## Why CG Matters\n\nEven if your drone is within its total weight limit, **where** that weight is positioned matters enormously. An unbalanced drone can be uncontrollable.\n\n## Critical Fact: CG is Not Fixed\n\nThe CG shifts whenever you:\n- Add or remove payload\n- Reposition payload\n- As battery charge depletes (slight shift)\n\n## The Core Exam Concept\n\nA drone can be within its total weight limit but **outside its CG limits**. Both limits must be satisfied for safe operation."
+        },
+        {
+          "id": "sec-lp-cg-forward",
+          "title": "Forward CG (Nose-Heavy)",
+          "content": "## Forward CG Effects\n\nWhen the CG is forward of the ideal position:\n\n### For Multirotors\n\n- Front motors must produce **less** thrust; rear motors must produce **more**\n- Results in higher power consumption\n- Rear motors overheat faster\n- Reduced endurance (10–20% loss is common)\n- Aircraft is **more stable but less responsive**\n\n### For Fixed-Wing sUAS\n\n- Tail must produce continuous downward force to balance the nose\n- This extra tail drag increases power consumption\n- **Stall speed increases** (the aircraft must fly faster)\n- Landing flare becomes difficult (nose wants to stay down)\n- More stable, but sluggish\n\n## The Trade-off\n\n**Forward CG = more stable but less efficient**\n\nThe word \"stable\" sounds good, but it comes with a performance penalty.",
+          "bogeyman": {
+            "message": "Forward CG is STABLE but INEFFICIENT. It's safer than aft CG, but you pay for that safety with reduced endurance and sluggish response.",
+            "mood": "happy"
+          }
+        },
+        {
+          "id": "sec-lp-cg-aft",
+          "title": "Aft CG (Tail-Heavy)",
+          "content": "## Aft CG Effects\n\nWhen the CG is aft of the ideal position:\n\n### For Multirotors\n\n- Rear motors work harder; front motors loaf\n- Aircraft tends to pitch backward\n- Oscillations in pitch axis become more pronounced\n- In extreme cases, aircraft can flip backward and crash\n- **Less stable but more responsive**\n\n### For Fixed-Wing sUAS\n\n- Less tail downforce needed, so less drag (more efficient)\n- **Stall speed decreases** (aircraft can fly slower)\n- But pitch stability is reduced — oscillations may grow instead of dampen\n- Recovery from unusual attitudes becomes difficult\n- **Dangerous condition** — can lead to loss of control\n\n## The Danger\n\n**Aft CG = less stable, potentially dangerous**\n\nWhile aft CG is more efficient, the reduced stability is a real safety concern.",
+          "bogeyman": {
+            "message": "If a question describes oscillations growing over time, the answer likely involves AFT CG. Aft CG is efficient but dangerous!",
+            "mood": "warning"
+          }
+        },
+        {
+          "id": "sec-lp-cg-lateral",
+          "title": "Lateral CG and CG Limits",
+          "content": "## Lateral CG (Side-to-Side Balance)\n\nIf payload is mounted off-center (left or right), one side's motors must work harder:\n\n- Continuous correction required to maintain level flight\n- Motors on the heavy side overheat\n- Efficiency decreases by 10–15%\n- In extreme cases, the overworked motors reach maximum output and the drone rolls toward the heavy side\n\n## CG Limits\n\nManufacturers specify a CG range (e.g., 95 mm to 115 mm from the nose reference).\n\n### Operating Outside CG Limits Means:\n\n- The aircraft may be uncontrollable\n- Published performance data is invalid\n- The operation is unsafe regardless of total weight\n\n## Critical Exam Fact\n\nA drone can be within its total weight limit but outside its CG limits. **Both limits must be satisfied** for safe operation.\n\n| Condition | Safe to Fly? |\n|---|---|\n| Within MTOW, within CG limits | ✅ Yes |\n| Within MTOW, outside CG limits | ❌ No |\n| Over MTOW, within CG limits | ❌ No |\n| Over MTOW, outside CG limits | ❌ No |"
+        },
+        {
+          "id": "sec-lp-cg-stability",
+          "title": "Static vs Dynamic Stability",
+          "content": "## Two Types of Stability\n\nThe exam tests whether you understand these two distinct concepts:\n\n### Static Stability\n\nThe aircraft's **initial** response to a disturbance.\n\n- **Positive static stability:** After a gust pushes the nose up, the aircraft initially tends to pitch back down toward level. This is desirable.\n- **Negative static stability:** After a gust pushes the nose up, the aircraft continues pitching up. This is dangerous.\n\n**Forward CG increases positive static stability; aft CG decreases it.**\n\n### Dynamic Stability\n\nWhether oscillations after a disturbance **grow or shrink** over time.\n\n- **Dynamically stable:** Oscillations get smaller over time. The aircraft settles back to equilibrium.\n- **Dynamically unstable:** Oscillations grow larger. Even if the aircraft initially tries to correct, the overcorrections build until control is lost.\n\n## The Classic Exam Scenario\n\n> \"An aircraft is disturbed by a gust. It initially pitches back toward level but then oscillates with increasing amplitude.\"\n\nThis describes an aircraft that is **statically stable but dynamically unstable** — it tries to correct but overcorrects each time.\n\nThis is a classic aft-CG behavior.",
+          "bogeyman": {
+            "message": "MEMORIZE THIS: 'Initially returns to level but oscillations grow' = Statically STABLE but Dynamically UNSTABLE. This is a favorite exam question!",
+            "mood": "warning"
+          }
+        },
+        {
+          "id": "sec-lp-cg-summary",
+          "title": "CG Summary and Traps",
+          "content": "## Key Facts to Memorize\n\n| Fact | Detail |\n|---|---|\n| Forward CG | More stable, higher stall speed, less efficient |\n| Aft CG | Less stable, lower stall speed, potentially dangerous |\n| CG shifts when | Payload added/removed, payload repositioned, battery depletes |\n| Static stability | Initial tendency to return to equilibrium |\n| Dynamic stability | Whether oscillations grow or shrink over time |\n| CG limits | Must be within range regardless of total weight |\n\n## Common Traps\n\n### Trap 1: Weight-Only Thinking\n**\"The drone is under MTOW, so CG doesn't matter.\"**\n\n❌ Wrong. CG can be out of limits even at reduced weight.\n\n### Trap 2: Responsive = Stable\n**\"More responsive means more stable.\"**\n\n❌ Wrong. Responsiveness indicates reduced stability.\n\n### Trap 3: Efficiency First\n**\"Aft CG is more efficient, so it's always better.\"**\n\n❌ Wrong. Aft CG reduces stability and can lead to loss of control.\n\n### Trap 4: Confusing Stability Types\n**Mixing up static and dynamic stability.**\n\nAn aircraft can be statically stable but dynamically unstable — know the difference."
+        }
+      ],
+      "version": 1
+    },
+    {
+      "id": "les-lp-performance-data",
+      "moduleId": "mod-loading",
+      "title": "Performance Data and Density Altitude",
+      "order": 4,
+      "objectives": [
+        "Interpret manufacturer performance data and its limitations",
+        "Calculate density altitude using the standard formula",
+        "Apply density altitude to flight planning decisions",
+        "Identify conditions that degrade performance"
+      ],
+      "references": ["ref-phak", "ref-ac1072"],
+      "acsRefs": ["acs-ua-iv-a-k2"],
+      "estimatedMinutes": 35,
+      "sections": [
+        {
+          "id": "sec-lp-mfr-data",
+          "title": "Understanding Manufacturer Data",
+          "content": "## Manufacturer Performance Data\n\nTypical specifications a manufacturer provides:\n\n| Data Point | What It Tells You |\n|---|---|\n| Maximum Takeoff Weight (MTOW) | Total weight including airframe, battery, and payload |\n| Payload capacity | Maximum external load weight |\n| Flight time | Endurance at specified conditions |\n| Maximum speed | Top ground speed |\n| Climb rate | Vertical speed capability |\n| Wind resistance | Maximum sustainable wind speed |\n| Operating temperature range | Safe ambient temperature limits |\n\n## The Fine Print: Standard Conditions\n\n**All manufacturer data assumes ideal conditions:**\n\n- Sea level altitude\n- 59°F (15°C) standard temperature\n- No wind\n- Moderate forward speed (not hovering, not max speed)\n- New battery in good condition\n- Properly balanced payload\n\nReal-world operations almost never match these conditions. You must know how to adjust.",
+          "bogeyman": {
+            "message": "If a question asks whether you can rely on manufacturer specs for a hot day at elevation, the answer is NO — you must derate the performance data!",
+            "mood": "warning"
+          }
+        },
+        {
+          "id": "sec-lp-density-alt-intro",
+          "title": "What is Density Altitude?",
+          "content": "## Density Altitude — The Key Performance Tool\n\nDensity altitude is the single most important concept in this section. It answers the question:\n\n**\"What does the air think the altitude is?\"**\n\n## Definition\n\n**Density altitude** is pressure altitude corrected for non-standard temperature. It tells you the equivalent altitude at which the air has the same density as your actual conditions.\n\n## Why It Matters\n\nYour drone doesn't care about your actual elevation. It cares about **air density**.\n\nOn a hot day at moderate elevation, the air may be as thin as it would be at a much higher altitude. Your drone performs as if it's at that higher altitude.\n\n## Pressure Altitude vs. Density Altitude\n\n| | Pressure Altitude | Density Altitude |\n|---|---|---|\n| **Based on** | Barometric pressure only | Pressure + temperature |\n| **Used for** | Altimeter settings, airspace | **Performance calculations** |\n| **Accounts for temperature?** | No | Yes |\n\n**For any question about aircraft performance, use density altitude — never pressure altitude.**"
+        },
+        {
+          "id": "sec-lp-density-alt-formula",
+          "title": "Calculating Density Altitude",
+          "content": "## The Formula\n\n**Density Altitude = Pressure Altitude + (120 × Temperature Deviation in °C)**\n\n### Where:\n\n- **Pressure Altitude** = Field Elevation + ((29.92 − Current Altimeter Setting) × 1,000)\n- **Temperature Deviation** = Actual Temperature (°C) − Standard Temperature (°C) for that altitude\n- **Standard Temperature** at sea level = 15°C, decreasing approximately 2°C per 1,000 feet\n\n## Standard Temperature Reference\n\n| Altitude (ft) | Standard Temp (°C) | Standard Temp (°F) |\n|---|---|---|\n| Sea level | 15°C | 59°F |\n| 1,000 | 13°C | 55°F |\n| 2,000 | 11°C | 52°F |\n| 3,000 | 9°C | 48°F |\n| 4,000 | 7°C | 45°F |\n| 5,000 | 5°C | 41°F |\n| 6,000 | 3°C | 37°F |\n| 7,000 | 1°C | 34°F |\n| 8,000 | −1°C | 30°F |\n| 9,000 | −3°C | 27°F |\n| 10,000 | −5°C | 23°F |\n\n## Memory Aid: The Lapse Rate\n\nStandard temperature decreases about **2°C per 1,000 feet** (the \"lapse rate\")."
+        },
+        {
+          "id": "sec-lp-density-alt-examples",
+          "title": "Density Altitude Examples",
+          "content": "## Worked Example 1: Hot Day at Moderate Elevation\n\n**Given:**\n- Airport elevation: 3,000 feet MSL\n- Altimeter setting: 29.92\" Hg (standard)\n- Outside air temperature: 35°C (95°F)\n\n**Step 1 — Pressure Altitude:**\nSince altimeter setting is standard (29.92), pressure altitude = field elevation = **3,000 ft**\n\n**Step 2 — Temperature Deviation:**\n- Standard temp at 3,000 ft = 9°C\n- Actual temp = 35°C\n- Deviation = 35 − 9 = **+26°C**\n\n**Step 3 — Density Altitude:**\nDA = 3,000 + (120 × 26) = 3,000 + 3,120 = **6,120 feet**\n\n**What this means:** Your drone will perform as if it's at 6,120 feet, even though you're standing at 3,000 feet. Expect roughly 20% less endurance and climb performance.\n\n---\n\n## Worked Example 2: High Altitude Operation\n\n**Given:**\n- Airport elevation: 7,000 feet MSL\n- Altimeter setting: 29.80\" Hg\n- Outside air temperature: 25°C (77°F)\n\n**Step 1 — Pressure Altitude:**\nPA = 7,000 + ((29.92 − 29.80) × 1,000) = 7,000 + 120 = **7,120 ft**\n\n**Step 2 — Temperature Deviation:**\n- Standard temp at 7,000 ft = 1°C\n- Actual temp = 25°C\n- Deviation = 25 − 1 = **+24°C**\n\n**Step 3 — Density Altitude:**\nDA = 7,120 + (120 × 24) = 7,120 + 2,880 = **10,000 feet**\n\n**What this means:** Air density is roughly 65% of sea level. Payload capacity is severely reduced."
+        },
+        {
+          "id": "sec-lp-density-alt-favorable",
+          "title": "Favorable Conditions Example",
+          "content": "## Worked Example 3: Cool Day (Favorable Conditions)\n\n**Given:**\n- Airport elevation: 5,000 feet MSL\n- Altimeter setting: 30.10\" Hg\n- Outside air temperature: 0°C (32°F)\n\n**Step 1 — Pressure Altitude:**\nPA = 5,000 + ((29.92 − 30.10) × 1,000) = 5,000 + (−180) = **4,820 ft**\n\n**Step 2 — Temperature Deviation:**\n- Standard temp at ~5,000 ft = 5°C\n- Actual temp = 0°C\n- Deviation = 0 − 5 = **−5°C**\n\n**Step 3 — Density Altitude:**\nDA = 4,820 + (120 × (−5)) = 4,820 − 600 = **4,220 feet**\n\n## What This Means\n\nCold air is denser than standard. The density altitude is **lower** than field elevation.\n\nYour drone performs better than the elevation would suggest — as if it were at 4,220 feet instead of 5,000.\n\n**However:** Remember that cold temperatures reduce battery performance, so the aerodynamic advantage may be offset by reduced battery output."
+        },
+        {
+          "id": "sec-lp-high-hot-humid",
+          "title": "High, Hot, and Humid",
+          "content": "## The Three Enemies of Performance\n\nA simple memory aid for density altitude and performance:\n\n- **High** elevation = less air density\n- **Hot** temperature = less air density\n- **Humid** air = slightly less air density (minor effect, but testable)\n\nAll three increase density altitude and reduce performance.\n\n## Worst-Case Scenario\n\n**A high-elevation airport on a hot, humid summer afternoon.**\n\nThis is when you'll see:\n- Maximum density altitude\n- Minimum payload capacity\n- Shortest flight times\n- Most reduced climb performance\n\n## Memory Aid\n\n**\"High, hot, and humid = horrible performance.\"**",
+          "bogeyman": {
+            "message": "HIGH + HOT + HUMID = the worst possible conditions for drone performance. All three factors INCREASE density altitude and REDUCE what your drone can do.",
+            "mood": "warning"
+          }
+        },
+        {
+          "id": "sec-lp-flight-planning",
+          "title": "Using Performance Data for Flight Planning",
+          "content": "## Pre-Flight Performance Planning\n\nBefore every flight, a remote PIC should:\n\n1. **Determine density altitude** for current conditions\n2. **Consult manufacturer data** for performance at that density altitude\n3. **Reduce published specs by 10–15%** for a real-world safety margin\n4. **Verify payload is within limits** for the adjusted conditions\n5. **Plan mission duration** with adequate battery reserve\n\n## The 80% Rule\n\nMost operators plan to land with at least **20% battery remaining**.\n\nThis provides margin for:\n- Unexpected wind\n- Return-to-home if needed\n- Battery degradation\n- Flight controller errors in fuel estimation\n\n## Other Performance-Limiting Factors\n\n| Factor | Effect |\n|---|---|\n| Cold batteries | Below 50°F, capacity and power output decrease significantly |\n| Aging batteries | After 300+ charge cycles, expect 15% or more capacity loss |\n| Wind | Headwinds reduce range; crosswinds increase power consumption |\n| Propeller condition | Nicked or worn propellers reduce efficiency by 10–15% |\n| Payload imbalance | Off-center loads increase power consumption by 10–15% |"
+        },
+        {
+          "id": "sec-lp-perf-traps",
+          "title": "Performance Data Traps",
+          "content": "## Key Facts to Memorize\n\n| Fact | Detail |\n|---|---|\n| DA formula | PA + (120 × temp deviation in °C) |\n| Standard sea-level temp | 15°C (59°F) |\n| Lapse rate | ~2°C per 1,000 feet |\n| Performance tool | Always use density altitude, not pressure altitude |\n| Manufacturer specs | Assume ideal conditions — derate for real world |\n| High, hot, humid | All increase DA and reduce performance |\n| Safety margin | Reduce published specs by 10–15%; land with 20%+ battery |\n\n## Common Traps\n\n### Trap 1: Wrong Altitude Type\n**Using pressure altitude for performance questions.**\n\n❌ Wrong. Always use **density altitude**.\n\n### Trap 2: Wrong Temperature Units\n**Forgetting to convert °F to °C.**\n\nThe formula uses Celsius. If the question gives Fahrenheit:\n**°C = (°F − 32) × 5/9**\n\n### Trap 3: Trusting Specs\n**Thinking manufacturer specs are guaranteed.**\n\n❌ They're best-case. Real performance is always worse.\n\n### Trap 4: Ignoring Altimeter Setting\n**Forgetting to correct pressure altitude.**\n\nIf the altimeter setting is not 29.92, you must correct the pressure altitude before calculating density altitude.\n\n### Trap 5: Dismissing Humidity\n**\"Humidity doesn't matter.\"**\n\nWhile humidity has a smaller effect than temperature or altitude, it does increase density altitude slightly. The FAA may test this concept.",
+          "bogeyman": {
+            "message": "Any question about aircraft PERFORMANCE requires DENSITY altitude, not pressure altitude. If you see 'performance' in the question, think density altitude!",
+            "mood": "happy"
+          }
+        }
+      ],
+      "version": 1
+    }
+  ]
+}

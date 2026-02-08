@@ -2,8 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, BookOpen, CheckCircle, XCircle } from "lucide-react";
-import { studyQuestions } from "@/data/questions";
+import { BookOpen, CheckCircle, XCircle } from "lucide-react";
+import { getStudyQuestions } from "@/lib/part107/compat";
+
+const studyQuestions = getStudyQuestions();
+import Card from "@/components/Card";
+import Badge from "@/components/Badge";
+import Button from "@/components/Button";
 
 export default function StudyMode() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -42,7 +47,7 @@ export default function StudyMode() {
       <header className="bg-white border-b border-divider-gray px-6 py-4">
         <div className="max-w-3xl mx-auto flex justify-between items-center">
           <Link href="/dashboard" className="flex items-center gap-2 text-slate hover:text-jet-black text-sm">
-            <ArrowLeft className="w-4 h-4" /> Back to Dashboard
+            <span className="w-4 h-4 inline-flex"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg></span> Back to Dashboard
           </Link>
           <span className="text-sm text-slate">
             Question {currentIndex + 1} of {studyQuestions.length}
@@ -62,13 +67,11 @@ export default function StudyMode() {
         {/* Domain badge */}
         <div className="flex items-center gap-2 mb-6">
           <BookOpen className="w-4 h-4 text-deep-ice-blue" />
-          <span className="bg-mist-blue text-deep-ice-blue text-xs font-semibold px-3 py-1 rounded-full">
-            {question.domain}
-          </span>
+          <Badge>{question.domain}</Badge>
         </div>
 
         {/* Question card */}
-        <div className="bg-white border border-divider-gray rounded-xl p-6 mb-6">
+        <Card className="mb-6">
           <h2 className="text-xl font-semibold text-jet-black mb-6">{question.question}</h2>
           <div className="space-y-3">
             {question.options.map((opt, i) => (
@@ -81,20 +84,20 @@ export default function StudyMode() {
               </button>
             ))}
           </div>
-        </div>
+        </Card>
 
         {/* Explanation */}
         {answered && (
           <div className={`border rounded-xl p-6 mb-6 ${isCorrect ? "border-volt-green bg-white" : "border-red-400 bg-white"}`}>
             <div className="flex items-center gap-2 mb-4">
               {isCorrect ? (
-                <span className="bg-volt-mist text-volt-lime text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1">
-                  <CheckCircle className="w-3 h-3" /> Correct
-                </span>
+                <Badge variant="success">
+                  <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3" /> Correct</span>
+                </Badge>
               ) : (
-                <span className="bg-red-50 text-red-500 text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1">
-                  <XCircle className="w-3 h-3" /> Incorrect
-                </span>
+                <Badge variant="error">
+                  <span className="flex items-center gap-1"><XCircle className="w-3 h-3" /> Incorrect</span>
+                </Badge>
               )}
               {question.regulation && (
                 <span className="text-xs text-slate">{question.regulation}</span>
@@ -115,13 +118,9 @@ export default function StudyMode() {
 
             <div className="mt-6">
               {isLast ? (
-                <Link href="/dashboard" className="inline-block bg-volt-green hover:bg-volt-lime text-jet-black font-semibold px-6 py-3 rounded-full text-sm">
-                  Return to Dashboard
-                </Link>
+                <Button href="/dashboard">Return to Dashboard</Button>
               ) : (
-                <button onClick={handleNext} className="bg-volt-green hover:bg-volt-lime text-jet-black font-semibold px-6 py-3 rounded-full text-sm">
-                  Next Question
-                </button>
+                <Button onClick={handleNext}>Next Question</Button>
               )}
             </div>
           </div>

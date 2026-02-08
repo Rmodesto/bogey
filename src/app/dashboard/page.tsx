@@ -5,8 +5,13 @@ import {
   Clock,
   AlertCircle,
   TrendingUp,
-  ArrowLeft,
 } from "lucide-react";
+import PageHeader from "@/components/PageHeader";
+import Card from "@/components/Card";
+import StatCard from "@/components/StatCard";
+import Button from "@/components/Button";
+import ProgressBar from "@/components/ProgressBar";
+import { scoreColor } from "@/lib/utils";
 
 const domains = [
   { name: "Regulations", score: 87, questions: 120 },
@@ -28,12 +33,6 @@ const activities = [
   { text: "Took practice exam #3", domain: "All Domains", time: "2 days ago" },
 ];
 
-function scoreColor(score: number) {
-  if (score >= 80) return "text-volt-green";
-  if (score >= 70) return "text-deep-ice-blue";
-  return "text-slate";
-}
-
 function dotColor(score: number) {
   if (score >= 80) return "bg-volt-green";
   if (score >= 70) return "bg-deep-ice-blue";
@@ -43,23 +42,20 @@ function dotColor(score: number) {
 export default function Dashboard() {
   return (
     <div className="min-h-screen bg-fog-gray">
-      <header className="bg-white border-b border-divider-gray px-6 py-4">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <Link href="/" className="flex items-center gap-2 text-slate hover:text-jet-black text-sm">
-            <ArrowLeft className="w-4 h-4" /> Back to Home
-          </Link>
-          <Link href="/exam" className="bg-volt-green hover:bg-volt-lime text-jet-black font-semibold px-5 py-2.5 rounded-full text-sm">
-            Start Exam
-          </Link>
-        </div>
-      </header>
+      <PageHeader
+        backHref="/"
+        backLabel="Back to Home"
+        rightContent={
+          <Button href="/exam" className="px-5 py-2.5">Start Exam</Button>
+        }
+      />
 
       <main className="max-w-7xl mx-auto px-6 py-8">
         <h1 className="text-3xl font-semibold text-jet-black mb-1">Training Dashboard</h1>
         <p className="text-slate mb-8">Monitor your progress and identify areas for improvement</p>
 
         <div className="grid md:grid-cols-3 gap-6 mb-8">
-          <div className="md:col-span-2 bg-white border border-divider-gray rounded-xl p-6">
+          <Card className="md:col-span-2">
             <div className="flex justify-between items-start mb-2">
               <div>
                 <h2 className="font-semibold text-jet-black text-lg">Exam Readiness</h2>
@@ -73,44 +69,34 @@ export default function Dashboard() {
                 <TrendingUp className="w-3 h-3" /> +12% this week
               </span>
             </div>
-            <div className="w-full bg-mist-blue rounded-full h-3 mb-4">
-              <div className="bg-volt-green h-3 rounded-full" style={{ width: "80%" }} />
-            </div>
+            <ProgressBar value={80} containerClass="w-full bg-mist-blue rounded-full h-3 mb-4" barClass="bg-volt-green" />
             <p className="text-sm text-slate">
               <span className="font-semibold text-jet-black">Recommendation:</span> Focus on Loading &amp; Performance and Weather domains to increase your readiness score. You&apos;re on track to pass!
             </p>
-          </div>
+          </Card>
 
           <div className="flex flex-col gap-6">
-            <div className="bg-white border border-divider-gray rounded-xl p-6">
-              <BookOpen className="w-6 h-6 text-deep-ice-blue mb-3" />
-              <p className="text-3xl font-semibold text-jet-black">475</p>
-              <p className="text-slate text-sm">Questions Answered</p>
-            </div>
-            <div className="bg-white border border-divider-gray rounded-xl p-6">
-              <Clock className="w-6 h-6 text-deep-ice-blue mb-3" />
-              <p className="text-3xl font-semibold text-jet-black">12.5</p>
-              <p className="text-slate text-sm">Hours Studied</p>
-            </div>
+            <StatCard icon={BookOpen} value="475" label="Questions Answered" />
+            <StatCard icon={Clock} value="12.5" label="Hours Studied" />
           </div>
         </div>
 
         <h2 className="text-xl font-semibold text-jet-black mb-4">Performance by Domain</h2>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
           {domains.map((d) => (
-            <div key={d.name} className="bg-white border border-divider-gray rounded-xl p-4">
+            <Card key={d.name} className="!p-4">
               <div className="flex items-center justify-between mb-2">
                 <div className={`w-2.5 h-2.5 rounded-full ${dotColor(d.score)}`} />
                 <span className={`text-xl font-semibold ${scoreColor(d.score)}`}>{d.score}%</span>
               </div>
               <p className="font-semibold text-jet-black text-sm">{d.name}</p>
               <p className="text-slate text-xs">{d.questions} questions</p>
-            </div>
+            </Card>
           ))}
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 mb-8">
-          <div className="bg-white border border-divider-gray rounded-xl p-6">
+          <Card>
             <div className="flex items-center gap-2 mb-4">
               <AlertCircle className="w-5 h-5 text-slate" />
               <h2 className="font-semibold text-jet-black text-lg">Focus Areas</h2>
@@ -129,9 +115,9 @@ export default function Dashboard() {
                 </Link>
               </div>
             ))}
-          </div>
+          </Card>
 
-          <div className="bg-white border border-divider-gray rounded-xl p-6">
+          <Card>
             <h2 className="font-semibold text-jet-black text-lg mb-4">Recent Activity</h2>
             <div className="space-y-5">
               {activities.map((a, i) => (
@@ -144,15 +130,20 @@ export default function Dashboard() {
                 </div>
               ))}
             </div>
-          </div>
+          </Card>
         </div>
 
-        <div className="bg-mist-blue rounded-xl p-8 text-center">
-          <h2 className="text-xl font-semibold text-jet-black mb-2">Daily Practice Recommended</h2>
-          <p className="text-slate mb-4">Consistency is key. Complete 20 questions today to maintain your progress.</p>
-          <Link href="/study" className="inline-block bg-volt-green hover:bg-volt-lime text-jet-black font-semibold px-6 py-3 rounded-full">
-            Start Daily Practice
-          </Link>
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <div className="bg-mist-blue rounded-xl p-8 text-center">
+            <h2 className="text-xl font-semibold text-jet-black mb-2">Daily Practice Recommended</h2>
+            <p className="text-slate mb-4">Consistency is key. Complete 20 questions today to maintain your progress.</p>
+            <Button href="/study">Start Daily Practice</Button>
+          </div>
+          <div className="bg-mist-blue rounded-xl p-8 text-center">
+            <h2 className="text-xl font-semibold text-jet-black mb-2">Learning Modules</h2>
+            <p className="text-slate mb-4">Study structured lessons covering regulations, weather, airspace, and more.</p>
+            <Button href="/learn">Browse Modules</Button>
+          </div>
         </div>
       </main>
     </div>

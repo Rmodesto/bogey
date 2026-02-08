@@ -1,0 +1,207 @@
+{
+  "module": {
+    "id": "mod-airspace",
+    "title": "Airspace Classification",
+    "description": "National Airspace System classifications, operating requirements, and authorization procedures for UAS",
+    "domain": "Airspace Classification",
+    "order": 3,
+    "lessonIds": ["les-as-controlled", "les-as-class-e-g", "les-as-special", "les-as-tfr-mtr", "les-as-night"],
+    "references": ["ref-aim", "ref-cfr107"],
+    "icon": "Radio",
+    "estimatedHours": 4,
+    "version": 2
+  },
+  "lessons": [
+    {
+      "id": "les-as-controlled",
+      "moduleId": "mod-airspace",
+      "title": "Controlled Airspace: Class B, C, D",
+      "order": 1,
+      "objectives": [
+        "Identify Class B, C, and D airspace on sectional charts",
+        "Understand authorization requirements for each class",
+        "Know the visual indicators and dimensions of each class"
+      ],
+      "references": ["ref-aim"],
+      "acsRefs": ["acs-ua-ii-a"],
+      "estimatedMinutes": 25,
+      "sections": [
+        {
+          "id": "sec-as-overview",
+          "title": "The National Airspace System",
+          "content": "## The Big Picture\n\nThe National Airspace System (NAS) is divided into **controlled** and **uncontrolled** airspace. As a Part 107 pilot, your key question is: **in which airspace do I need authorization?**\n\n| Need Authorization | Fly Freely |\n|---|---|\n| Class B | Class E (non-surface) |\n| Class C | Class G |\n| Class D | |\n| Class E surface area (E2) | |\n\n## Authorization Methods\n\n**LAANC (Preferred):** Near-real-time approval through approved apps\n\n**DroneZone:** Manual authorization — can take up to 90 days"
+        },
+        {
+          "id": "sec-as-class-b",
+          "title": "Class B Airspace",
+          "content": "## What It Is\n\nClass B airspace surrounds the **busiest airports** — LAX, JFK, ORD, ATL, DFW. These are major airline hubs with heavy jet traffic.\n\n## Shape and Dimensions\n\nClass B has the iconic **\"upside-down wedding cake\"** shape:\n\n- **Surface area** extending from the ground up\n- **Two or more layers** expanding outward at higher altitudes\n- Each layer tailored to contain instrument approach/departure procedures\n\n| Layer | Typical Radius | Floor | Ceiling |\n|---|---|---|---|\n| Inner (surface) | ~5 NM | Surface | 10,000 ft MSL |\n| Middle | ~10 NM | ~2,000-3,000 ft | 10,000 ft MSL |\n| Outer | ~15-20 NM | ~4,000-6,000 ft | 10,000 ft MSL |\n\n## How to Identify on Sectional Charts\n\n**Solid blue lines** forming concentric irregular shapes around the airport. Each ring is labeled with floor/ceiling (e.g., \"100/40\" = ceiling 10,000 ft, floor 4,000 ft).\n\n## Part 107 Rules\n\n- **Authorization required:** Yes — LAANC or DroneZone\n- No sUAS operations without explicit ATC authorization\n- Even with authorization, all Part 107 limits still apply",
+          "visualizer": { "type": "airspace" }
+        },
+        {
+          "id": "sec-as-class-c",
+          "title": "Class C Airspace",
+          "content": "## What It Is\n\nClass C surrounds **medium-traffic airports** — busy enough for radar approach control but not as busy as Class B. Examples: Sacramento (SMF), Pittsburgh (PIT), Raleigh-Durham (RDU).\n\n## Shape and Dimensions\n\nClass C has a **two-layer structure:**\n\n| Layer | Radius | Floor | Ceiling |\n|---|---|---|---|\n| Inner circle (surface) | 5 NM | Surface | 4,000 ft above airport |\n| Outer shelf | 10 NM | 1,200 ft AGL | 4,000 ft above airport |\n\nThere's also an **outer area** extending to 20 NM where pilots can request radar service — but this doesn't require UAS authorization.\n\n## How to Identify on Sectional Charts\n\n**Solid magenta lines** forming two concentric rings.\n\n## Part 107 Rules\n\n- **Authorization required:** Yes — LAANC or DroneZone\n- Same process as Class B"
+        },
+        {
+          "id": "sec-as-class-d",
+          "title": "Class D Airspace",
+          "content": "## What It Is\n\nClass D surrounds **smaller towered airports** — airports with an operating control tower but less traffic than B or C. Think regional airports or military airfields with towers.\n\n## Shape and Dimensions\n\n- **Horizontal:** Generally 4-5 NM radius\n- **Vertical:** Surface to 2,500 ft AGL (varies by airport)\n- Shape is roughly circular, may be modified for instrument approaches\n\n## How to Identify on Sectional Charts\n\n**Dashed blue lines** forming a roughly circular shape.\n\n> **Memory aid:** Class **D**ashed = Class **D**\n\n## Part 107 Rules\n\n- **Authorization required:** Yes — LAANC or DroneZone\n- If tower is part-time, Class D typically reverts to Class E or G when closed\n- Check Chart Supplement for tower operating hours",
+          "bogeyman": {
+            "message": "Watch for part-time Class D! When the tower closes, airspace often reverts to Class E surface (dashed magenta). The exam may test whether you need authorization during tower hours vs. after hours.",
+            "mood": "warning"
+          }
+        }
+      ],
+      "version": 2
+    },
+    {
+      "id": "les-as-class-e-g",
+      "moduleId": "mod-airspace",
+      "title": "Class E and Class G Airspace",
+      "order": 2,
+      "objectives": [
+        "Distinguish between Class E surface area and transition areas",
+        "Know when Class E requires authorization",
+        "Understand Class G as uncontrolled airspace"
+      ],
+      "references": ["ref-aim"],
+      "acsRefs": ["acs-ua-ii-a"],
+      "estimatedMinutes": 25,
+      "sections": [
+        {
+          "id": "sec-as-class-e-types",
+          "title": "Class E Airspace Types",
+          "content": "## The Most Misunderstood Airspace\n\nClass E is the most common controlled airspace and the **most misunderstood** by drone pilots. Not all Class E requires authorization — only the surface area does.\n\n### Class E Surface Area (E2) — REQUIRES AUTHORIZATION\n\n- Designated around airports with instrument approaches but no operating tower\n- Extends from the **surface** upward\n- Identified by a **dashed magenta line**\n\n### Class E Transition Area (starts at 700 ft AGL) — NO AUTHORIZATION NEEDED\n\n- Shown as **faded/shaded magenta** on the chart\n- Since Part 107 limits you to 400 ft AGL, you're in Class G below this\n\n### Class E En Route (starts at 1,200 ft AGL) — NO AUTHORIZATION NEEDED\n\n- The \"default\" — unless otherwise depicted, Class E starts at 1,200 ft AGL\n- Below 1,200 ft is Class G (uncontrolled)",
+          "bogeyman": {
+            "message": "This is the #1 chart-reading trap! Dashed magenta = surface = authorization needed. Faded/shaded magenta = starts at 700 ft = no authorization needed (you're flying in Class G below it).",
+            "mood": "warning"
+          }
+        },
+        {
+          "id": "sec-as-class-e-chart",
+          "title": "Reading Class E on Sectional Charts",
+          "content": "## The Critical Distinction\n\n| Class E Type | Starts At | Sectional Chart | Authorization? |\n|---|---|---|---|\n| E2 (Surface Area) | Surface | **Dashed magenta line** | **YES** |\n| E5 (Transition, 700 ft) | 700 ft AGL | Faded magenta shading | No |\n| E6 (En Route, 1,200 ft) | 1,200 ft AGL | Faded blue shading | No |\n\n## Why Non-Surface Class E Doesn't Matter\n\nPart 107 operations are limited to 400 ft AGL. If Class E starts at 700 ft or 1,200 ft, you're operating in Class G below that floor — no authorization needed.\n\n## Exam Strategy\n\nThe exam will show you a sectional chart and ask if authorization is needed:\n\n1. Look for **dashed magenta line** around the airport\n2. If dashed magenta → Class E surface → **authorization needed**\n3. If faded/shaded magenta → Class E starts at 700 ft → **no authorization** (you're in Class G at 400 ft)",
+          "visualizer": { "type": "airspace" }
+        },
+        {
+          "id": "sec-as-class-g",
+          "title": "Class G Uncontrolled Airspace",
+          "content": "## What It Is\n\nClass G is **uncontrolled airspace** — ATC has no authority or responsibility here. This is where Part 107 pilots have the **most operational freedom**.\n\n## Where It Exists\n\n- Below Class E transition areas (below 700 ft or 1,200 ft AGL)\n- In sparsely populated areas where controlled airspace isn't designated\n- Anywhere not depicted as controlled on sectional charts\n\n## Part 107 Rules in Class G\n\n- **No authorization needed**\n- All other Part 107 rules still apply:\n  - Maximum 400 ft AGL\n  - Minimum 3 SM visibility\n  - Cloud clearance: 500 ft below, 2,000 ft horizontal\n  - VLOS, daylight/night lighting rules\n\n## Common Trap\n\nClass G is the \"default\" for drone operations — but don't assume everywhere is Class G. Always check the sectional chart. And remember: even in Class G, you still need 3 SM visibility and cloud clearance. \"Uncontrolled\" doesn't mean \"no rules.\""
+        }
+      ],
+      "version": 2
+    },
+    {
+      "id": "les-as-special",
+      "moduleId": "mod-airspace",
+      "title": "Special-Use Airspace",
+      "order": 3,
+      "objectives": [
+        "Identify the six types of special-use airspace",
+        "Know which types prohibit operations vs. allow operations",
+        "Understand that CFAs are not depicted on charts"
+      ],
+      "references": ["ref-aim"],
+      "acsRefs": ["acs-ua-ii-a"],
+      "estimatedMinutes": 25,
+      "sections": [
+        {
+          "id": "sec-as-sua-overview",
+          "title": "Special-Use Airspace Overview",
+          "content": "## What It Is\n\nSpecial-use airspace (SUA) separates certain military and hazardous activities from other traffic. As a drone pilot, you need to know:\n\n- Which types you **absolutely cannot enter**\n- Which require **permission**\n- Which just require **awareness**\n\n## The Six Types\n\n| Type | Can You Fly? | On Charts? |\n|---|---|---|\n| **Prohibited (P)** | **NO** — Never | Yes — blue hatching |\n| **Restricted (R)** | With permission | Yes — blue hatching |\n| **Warning (W)** | Yes, with caution | Yes |\n| **MOA** | Yes, with caution | Yes — magenta hatching |\n| **Alert** | Yes, with awareness | Yes — magenta hatching |\n| **CFA** | Yes | **NO — not on charts** |"
+        },
+        {
+          "id": "sec-as-sua-prohibited",
+          "title": "Prohibited and Restricted Areas",
+          "content": "## Prohibited Areas (P-xxx)\n\n- **Can you fly here?** **NO. Never.**\n- Established for **national security** (e.g., P-56 over White House/Capitol)\n- Flight of **all** aircraft is prohibited\n- **No waiver or authorization process** for Part 107\n- Shown with **blue hashed lines** labeled \"P\" + number\n\n> If a question mentions a prohibited area, the answer is always: you cannot fly there.\n\n## Restricted Areas (R-xxx)\n\n- **Can you fly here?** **Only with permission** from the controlling agency\n- Contains hazardous activities (artillery, aerial gunnery, missiles)\n- May be active full-time or only during certain hours\n- You must get **written permission from the controlling agency** — LAANC does not apply\n- Shown with **blue hashed lines** labeled \"R\" + number\n\n> Restricted ≠ Prohibited. Restricted means you *might* be able to fly with permission."
+        },
+        {
+          "id": "sec-as-sua-other",
+          "title": "MOAs, Warning, Alert, and CFAs",
+          "content": "## Military Operation Areas (MOAs)\n\n- Separate military training from civilian traffic\n- When active: high-speed maneuvers, aerobatics, combat training\n- VFR flight is permitted but **use extreme caution**\n- Check NOTAMs for active status\n- Shown with **magenta hashed lines**\n\n## Warning Areas (W-xxx)\n\n- Similar to MOAs but extend over **international waters** (typically 3+ NM offshore)\n- May contain hazardous activities\n- Exercise extreme caution\n\n## Alert Areas\n\n- High volume of pilot training or unusual aerial activity\n- **No restriction** on flight — but exercise extra vigilance\n- Shown with **magenta hashed lines** labeled \"A\" + number\n\n## Controlled Firing Areas (CFAs)\n\n- Activities (artillery, missiles) are **suspended when aircraft are detected**\n- Only SUA where the hazardous activity yields to traffic\n- **NOT depicted on sectional charts** — they're self-regulating",
+          "bogeyman": {
+            "message": "Exam favorite: 'Which special-use airspace is NOT shown on sectional charts?' Answer: Controlled Firing Areas. They suspend operations when aircraft approach, so no chart depiction is needed.",
+            "mood": "happy"
+          }
+        }
+      ],
+      "version": 2
+    },
+    {
+      "id": "les-as-tfr-mtr",
+      "moduleId": "mod-airspace",
+      "title": "TFRs, MTRs, and NOTAMs",
+      "order": 4,
+      "objectives": [
+        "Understand Temporary Flight Restrictions",
+        "Know how to read Military Training Routes",
+        "Learn how to obtain and interpret NOTAMs"
+      ],
+      "references": ["ref-aim"],
+      "acsRefs": ["acs-ua-ii-a"],
+      "estimatedMinutes": 25,
+      "sections": [
+        {
+          "id": "sec-as-tfr",
+          "title": "Temporary Flight Restrictions",
+          "content": "## What TFRs Are\n\nTFRs are **temporary airspace restrictions** that can pop up anywhere, anytime. They restrict all aircraft — including drones — from operating in the affected area.\n\n## Common Triggers\n\n- **Presidential/VIP movement** (most common)\n- **Wildfires** (\"If you fly, they can't\" — operating near a wildfire TFR is a federal offense)\n- **Sporting events** (NFL, MLB, NASCAR — typically 3 NM radius, surface to 3,000 ft)\n- **Disaster relief** (hurricanes, earthquakes)\n- **Space launches**\n- **Special security events**\n\n## How to Check for TFRs\n\n1. **tfr.faa.gov** — official FAA TFR site\n2. **B4UFLY app** — shows TFRs on a map\n3. **LAANC apps** — integrated TFR alerts\n4. **Flight Service** — 1-800-WX-BRIEF\n5. **NOTAMs** — notams.faa.gov\n\n## Part 107 Requirements\n\nUnder 14 CFR 107.47, Part 107 pilots must comply with all flight restrictions under Parts 91 and 99 — this includes TFRs. **Ignorance is not an excuse.** Check before every flight."
+        },
+        {
+          "id": "sec-as-mtr",
+          "title": "Military Training Routes",
+          "content": "## What MTRs Are\n\nMilitary Training Routes are **low-altitude, high-speed corridors** where military aircraft fly below 10,000 feet at speeds exceeding 250 knots. This is one of the most dangerous environments for drone pilots.\n\n## Route Types\n\n| Prefix | Rule | Notes |\n|---|---|---|\n| **IR** (Instrument Route) | Flown under IFR | May have segments in clouds |\n| **VR** (Visual Route) | Flown under VFR | Clear weather operations |\n\n## The Number Tells You the Altitude\n\n| Digits | Example | What It Means |\n|---|---|---|\n| **4 digits** | VR1234 | **All segments below 1,500 ft AGL** — highest risk |\n| **3 digits** | IR567 | At least **one segment above 1,500 ft AGL** |\n\n## How to Identify on Charts\n\nRed arrows showing direction of flight, labeled with route designator (e.g., \"IR205\" or \"VR1042\").\n\n## What to Do\n\nCheck NOTAMs or contact Flight Service (1-800-WX-BRIEF) for MTR activation status before flying near one.",
+          "bogeyman": {
+            "message": "Four digits = below 1,500 ft = maximum danger zone for drones. Three digits = at least part of the route is higher. This distinction is frequently tested!",
+            "mood": "warning"
+          }
+        },
+        {
+          "id": "sec-as-notam",
+          "title": "The NOTAM System",
+          "content": "## What NOTAMs Are\n\nNOTAMs (Notices to Air Missions) are advisories that alert pilots to hazards, changes, and special activities in the NAS. Checking NOTAMs is essential for preflight planning.\n\n## How to Obtain NOTAMs\n\n| Source | Access |\n|---|---|\n| **Flight Service** | Call **1-800-WX-BRIEF** |\n| **Online NOTAM Search** | notams.faa.gov |\n| **1800WXBrief.com** | Leidos Flight Service website |\n| **LAANC Apps** | Most display relevant NOTAMs automatically |\n| **B4UFLY App** | FAA's free app shows NOTAMs/TFRs |\n\n## What to Look For\n\n- **TFRs** in your area\n- **Parachute jumping** activity\n- **MTR activation**\n- **Temporary obstacles** (cranes, construction)\n- **Airspace changes**\n- **Special events**\n\n## Exam Tip\n\nThe exam will ask how to obtain NOTAMs. Classic answer: **Flight Service (1-800-WX-BRIEF)**. Also know online sources like notams.faa.gov."
+        }
+      ],
+      "version": 2
+    },
+    {
+      "id": "les-as-night",
+      "moduleId": "mod-airspace",
+      "title": "Night Operations and Lighting",
+      "order": 5,
+      "objectives": [
+        "Know anti-collision lighting requirements for night operations",
+        "Understand manned aircraft lighting patterns",
+        "Identify ground hazards at night"
+      ],
+      "references": ["ref-aim", "ref-cfr107"],
+      "acsRefs": ["acs-ua-ii-a"],
+      "estimatedMinutes": 20,
+      "sections": [
+        {
+          "id": "sec-as-night-requirements",
+          "title": "sUAS Lighting Requirements",
+          "content": "## The 2021 Rule Change\n\nBefore April 2021, Part 107 required a waiver for night operations. Now, night flight is permitted by default — but with specific equipment requirements.\n\n## Anti-Collision Lighting Requirements\n\n**At Night (sunset to sunrise):**\n\n- Your sUAS must have **anti-collision lighting visible for at least 3 statute miles**\n- The light must have a flash rate sufficient to avoid a collision\n- The remote PIC may reduce (but NOT extinguish) light intensity if needed for safety\n\n**During Civil Twilight (30 minutes before sunrise / 30 minutes after sunset):**\n\n- Same anti-collision lighting requirements\n- Light intensity may be reduced if in the interest of safety\n\n## What Counts as Anti-Collision Lighting\n\n- Strobe lights designed for sUAS use\n- Must be visible from **3 statute miles** in clear conditions\n- Must be **flashing**, not steady-burn\n- Must be visible from all directions",
+          "bogeyman": {
+            "message": "\"3 statute miles\" is the magic number for anti-collision light visibility — same as the minimum flight visibility requirement. Easy to remember!",
+            "mood": "happy"
+          }
+        },
+        {
+          "id": "sec-as-manned-lights",
+          "title": "Manned Aircraft Lighting",
+          "content": "## Know the Lights to Stay Safe\n\nUnderstanding manned aircraft lighting helps you see-and-avoid at night.\n\n| Light | Color | Location | Meaning |\n|---|---|---|---|\n| **Position (nav) lights** | Red (left), Green (right), White (tail) | Wingtips and tail | Always on |\n| **Anti-collision beacon** | Red or white rotating/flashing | Top/bottom of fuselage | High visibility |\n| **Landing lights** | White (very bright) | Nose or wing | Approaching for landing |\n| **Strobe lights** | White, high-intensity flashing | Wingtips | Enhanced visibility |\n\n## What This Tells You\n\n- **Red on left:** Aircraft moving left to right (you see left wing)\n- **Green on left:** Aircraft moving right to left (you see right wing)\n- **Red AND green visible:** Aircraft heading toward you\n- **Only white visible:** Aircraft moving away from you\n- **Bright landing lights:** Aircraft approaching your location — **take immediate action**",
+          "bogeyman": {
+            "message": "Red-Right-Returning: If you see a red light on the right side of an aircraft, it's coming toward you. The exam frequently tests this!",
+            "mood": "warning"
+          }
+        },
+        {
+          "id": "sec-as-ground-hazards",
+          "title": "Ground Hazards at Night",
+          "content": "## Ground Structure Lighting\n\nMany structures have obstruction lighting:\n\n| Light Type | Color | Structure |\n|---|---|---|\n| Red steady-burning | Red | Towers, buildings (marks top) |\n| Red flashing/strobe | Red/White | Tall towers (>200 ft AGL) |\n| High-intensity white strobe | White | Very tall structures |\n\n## Hazards WITHOUT Lighting\n\nAt night, many ground hazards become invisible:\n\n- **Power lines and telephone wires** — rarely lit\n- **Trees and vegetation** — no lighting\n- **Fences and walls** — no lighting\n- **Terrain changes** (hills, ditches)\n- **Temporary structures** (construction equipment)\n- **Water features** — hard to distinguish\n\n## Mitigation\n\n- **Scout during daylight** before night operations\n- Use satellite imagery to identify hazards\n- Maintain sufficient altitude to clear known obstacles\n- Use obstacle avoidance sensors if equipped (but don't rely on them exclusively)"
+        }
+      ],
+      "version": 2
+    }
+  ]
+}

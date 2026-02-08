@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {
   Plane,
   TrendingUp,
@@ -11,6 +10,10 @@ import {
   Smartphone,
   RefreshCw,
 } from "lucide-react";
+import Card from "@/components/Card";
+import StatCard from "@/components/StatCard";
+import Badge from "@/components/Badge";
+import Button from "@/components/Button";
 
 const stats = [
   { value: "94%", label: "Pass Rate", icon: TrendingUp },
@@ -65,25 +68,20 @@ export default function Landing() {
         <div className="flex items-center gap-2">
           <Plane className="w-6 h-6 text-deep-ice-blue" />
           <span className="font-semibold text-lg text-jet-black">
-            Part 107 Prep
+            BogeyMan
           </span>
         </div>
-        <Link
-          href="/dashboard"
-          className="bg-volt-green hover:bg-volt-lime text-jet-black font-semibold px-5 py-2.5 rounded-full text-sm"
-        >
+        <Button href="/dashboard" className="px-5 py-2.5">
           Start Training
-        </Link>
+        </Button>
       </nav>
 
       {/* Hero */}
       <section className="max-w-7xl mx-auto px-6 py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <span className="inline-block bg-mist-blue text-deep-ice-blue text-xs font-semibold tracking-wide uppercase px-3 py-1.5 rounded-full mb-6">
-              FAA-Approved Curriculum
-            </span>
-            <h1 className="text-5xl font-semibold text-jet-black leading-tight mb-4">
+            <Badge>FAA-Approved Curriculum</Badge>
+            <h1 className="text-5xl font-semibold text-jet-black leading-tight mb-4 mt-6">
               Pass Your Part 107 Drone Exam
             </h1>
             <p className="text-lg text-slate mb-8 leading-relaxed">
@@ -92,18 +90,8 @@ export default function Landing() {
               earn your certification with confidence.
             </p>
             <div className="flex gap-4">
-              <Link
-                href="/study"
-                className="bg-volt-green hover:bg-volt-lime text-jet-black font-semibold px-6 py-3 rounded-full"
-              >
-                Start Free Training
-              </Link>
-              <Link
-                href="/exam"
-                className="border border-divider-gray hover:border-slate text-jet-black font-semibold px-6 py-3 rounded-full"
-              >
-                Try Exam Simulator
-              </Link>
+              <Button href="/study">Start Free Training</Button>
+              <Button href="/exam" variant="outline">Try Exam Simulator</Button>
             </div>
           </div>
           <div className="bg-mist-blue rounded-xl p-8 flex items-center justify-center min-h-[300px]">
@@ -119,16 +107,7 @@ export default function Landing() {
       <section className="max-w-7xl mx-auto px-6 pb-20">
         <div className="grid md:grid-cols-3 gap-6">
           {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="bg-white border border-divider-gray rounded-xl p-6"
-            >
-              <stat.icon className="w-6 h-6 text-deep-ice-blue mb-4" />
-              <p className="text-3xl font-semibold text-jet-black">
-                {stat.value}
-              </p>
-              <p className="text-slate text-sm mt-1">{stat.label}</p>
-            </div>
+            <StatCard key={stat.label} icon={stat.icon} value={stat.value} label={stat.label} />
           ))}
         </div>
       </section>
@@ -144,10 +123,7 @@ export default function Landing() {
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             {features.map((feature) => (
-              <div
-                key={feature.title}
-                className="bg-white border border-divider-gray rounded-xl p-6 hover:shadow-md"
-              >
+              <Card key={feature.title} className="hover:shadow-md">
                 <div className="w-10 h-10 bg-mist-blue rounded-lg flex items-center justify-center mb-4">
                   <div className="w-2 h-2 bg-deep-ice-blue rounded-full" />
                 </div>
@@ -157,7 +133,7 @@ export default function Landing() {
                 <p className="text-slate text-sm leading-relaxed">
                   {feature.description}
                 </p>
-              </div>
+              </Card>
             ))}
           </div>
         </div>
@@ -173,12 +149,9 @@ export default function Landing() {
             Join thousands of professional drone pilots who trusted our platform
             to pass their Part 107 exam on the first try.
           </p>
-          <Link
-            href="/study"
-            className="inline-block bg-volt-green hover:bg-volt-lime text-jet-black font-semibold px-8 py-3.5 rounded-full"
-          >
+          <Button href="/study" className="px-8 py-3.5">
             Begin Training Now
-          </Link>
+          </Button>
         </div>
       </section>
 
@@ -187,10 +160,10 @@ export default function Landing() {
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <Plane className="w-5 h-5 text-deep-ice-blue" />
-            <span className="font-semibold text-jet-black">Part 107 Prep</span>
+            <span className="font-semibold text-jet-black">BogeyMan</span>
           </div>
           <p className="text-slate text-sm">
-            &copy; 2026 Part 107 Prep. All rights reserved.
+            &copy; 2026 BogeyMan. All rights reserved.
           </p>
         </div>
       </footer>

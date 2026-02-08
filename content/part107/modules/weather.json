@@ -1,0 +1,197 @@
+{
+  "module": {
+    "id": "mod-weather",
+    "title": "Weather",
+    "description": "Aviation weather theory, sources, and effects on UAS operations",
+    "domain": "Weather",
+    "order": 2,
+    "lessonIds": ["les-wx-sources", "les-wx-metar", "les-wx-taf", "les-wx-density", "les-wx-hazards"],
+    "references": ["ref-ac0045h", "ref-phak"],
+    "icon": "Cloud",
+    "estimatedHours": 4,
+    "version": 2
+  },
+  "lessons": [
+    {
+      "id": "les-wx-sources",
+      "moduleId": "mod-weather",
+      "title": "Weather Sources and Briefings",
+      "order": 1,
+      "objectives": [
+        "Know where to obtain aviation weather information",
+        "Understand the three types of weather briefings",
+        "Identify ASOS vs AWOS capabilities"
+      ],
+      "references": ["ref-ac0045h"],
+      "acsRefs": ["acs-ua-v-b"],
+      "estimatedMinutes": 20,
+      "sections": [
+        {
+          "id": "sec-wx-where",
+          "title": "Weather Information Sources",
+          "content": "## Where to Get Weather for Flight Planning\n\nAs a Part 107 pilot, you're responsible for checking weather before every flight.\n\n| Source | What It Provides | Access |\n|---|---|---|\n| **1800WXBrief.com** | Full briefings, METARs, TAFs, NOTAMs, TFRs | Website (Leidos) |\n| **AviationWeather.gov** | METARs, TAFs, radar, satellite, prog charts | Website (FAA/NWS) |\n| **Flight Service** | Verbal briefings from a specialist | Call **1-800-WX-BRIEF** |\n| **B4UFLY App** | Airspace restrictions, TFRs, basic weather | FAA mobile app |\n| **LAANC Apps** | Weather + airspace authorization | Various providers |\n| **weather.gov** | General weather forecasts, radar, alerts | NWS website |"
+        },
+        {
+          "id": "sec-wx-briefings",
+          "title": "Types of Weather Briefings",
+          "content": "## The Three Briefing Types\n\nWhen you call Flight Service or use 1800WXBrief.com, you can request three types:\n\n### Standard Briefing\n\nComplete weather picture — METARs, TAFs, winds aloft, NOTAMs, TFRs, AIRMETs/SIGMETs. Use when you haven't received a previous briefing.\n\n### Abbreviated Briefing\n\nUpdate to a previous briefing, or when you only need specific information. Tell the briefer what you already know.\n\n### Outlook Briefing\n\nFor planning flights **6+ hours in advance**. Gives a general picture of expected conditions.\n\n## Exam Tip\n\nThe exam will ask where to obtain weather information. Classic answer: **Flight Service (1-800-WX-BRIEF)** or **aviationweather.gov**. Know both."
+        },
+        {
+          "id": "sec-wx-asos-awos",
+          "title": "ASOS and AWOS",
+          "content": "## What They Are\n\nBoth are **automated weather stations** at airports that continuously measure weather conditions.\n\n| Feature | ASOS | AWOS |\n|---|---|---|\n| **Full Name** | Automated Surface Observing System | Automated Weather Observing System |\n| **Operated By** | NWS, FAA, DOD (federal) | State/local governments |\n| **Report Frequency** | Hourly (with specials) | **Every 1 minute** |\n| **Precipitation Type** | Yes — can distinguish rain, snow | Limited |\n| **Lightning Detection** | Yes | No (except AWOS-3PT) |\n| **Icing Detection** | Yes | No |\n\n## AWOS Levels\n\n| Level | Capabilities |\n|---|---|\n| **AWOS-A** | Altimeter setting only |\n| **AWOS-AV** | Altimeter + visibility |\n| **AWOS-1** | Altimeter, visibility, temp, dewpoint, wind |\n| **AWOS-2** | AWOS-1 + precipitation |\n| **AWOS-3** | AWOS-2 + cloud ceiling |\n\n## How to Access\n\n- **Radio frequency** — listed on sectional chart near airport symbol\n- **Phone** — many have numbers in Chart Supplement\n- **Online** — aviationweather.gov shows ASOS/AWOS as METARs"
+        }
+      ],
+      "version": 2
+    },
+    {
+      "id": "les-wx-metar",
+      "moduleId": "mod-weather",
+      "title": "METAR Decoding",
+      "order": 2,
+      "objectives": [
+        "Decode all elements of a METAR report",
+        "Interpret wind, visibility, and sky condition",
+        "Understand temperature/dewpoint spread and fog risk"
+      ],
+      "references": ["ref-ac0045h"],
+      "acsRefs": ["acs-ua-v-b"],
+      "estimatedMinutes": 30,
+      "sections": [
+        {
+          "id": "sec-wx-metar-overview",
+          "title": "METAR Format",
+          "content": "## This Is the Most Tested Weather Topic\n\nMETARs are **real-time weather observations** from airports. They're issued hourly (with special reports when conditions change). You must be able to decode every element.\n\n## METAR Format Order\n\n```\n[Type] [Station] [Date/Time] [Modifier] [Wind] [Visibility] [Weather] [Sky Condition] [Temp/Dewpoint] [Altimeter] [Remarks]\n```\n\n## Complete Example\n\n**METAR KORD 121856Z 22015G25KT 6SM -RA BR BKN015 OVC025 18/16 A2978 RMK AO2**\n\n| Element | Code | Meaning |\n|---|---|---|\n| Report type | **METAR** | Routine hourly observation |\n| Station | **KORD** | Chicago O'Hare |\n| Date/Time | **121856Z** | 12th day, 1856 UTC |\n| Wind | **22015G25KT** | From 220° at 15 kt, gusting 25 kt |\n| Visibility | **6SM** | 6 statute miles |\n| Weather | **-RA BR** | Light rain and mist |\n| Sky Condition | **BKN015 OVC025** | Broken at 1,500 ft, Overcast at 2,500 ft |\n| Temp/Dewpoint | **18/16** | 18°C / 16°C (2° spread — fog likely) |\n| Altimeter | **A2978** | 29.78 inches Hg |",
+          "visualizer": { "type": "metar" }
+        },
+        {
+          "id": "sec-wx-metar-wind",
+          "title": "Wind and Visibility",
+          "content": "## Wind — How to Read It\n\nFormat: **DDDSSKT** or **DDDSSGSKT**\n\n| Code | Meaning |\n|---|---|\n| **DDD** | Direction wind is coming FROM (three digits, true north) |\n| **SS** | Sustained speed in knots |\n| **G** | Gust indicator (if gusts ≥ 10 kt above sustained) |\n| **KT** | Knots |\n\n**Examples:**\n\n| METAR Wind | Translation |\n|---|---|\n| **27015KT** | From 270° (west) at 15 knots |\n| **18010G20KT** | From 180° (south) at 10 kt, gusting to 20 kt |\n| **VRB03KT** | Variable direction at 3 knots |\n| **00000KT** | Calm wind |\n\n> Wind direction is where wind comes FROM, not where it's going.\n\n## Visibility\n\nReported in **statute miles (SM)**:\n\n| Code | Meaning |\n|---|---|\n| **10SM** | 10 statute miles (excellent) |\n| **P6SM** | Greater than 6 statute miles |\n| **3SM** | 3 statute miles (Part 107 minimum) |\n| **1/2SM** | 0.5 statute miles |\n| **M1/4SM** | Less than 1/4 mile (M = less than) |\n\n**Key Rule:** Part 107 requires minimum **3 statute miles** from the control station."
+        },
+        {
+          "id": "sec-wx-metar-sky",
+          "title": "Sky Condition and Ceiling",
+          "content": "## Cloud Coverage\n\nClouds are reported in **oktas** (eighths of sky covered):\n\n| Code | Coverage | Oktas | Creates a Ceiling? |\n|---|---|---|---|\n| **SKC/CLR** | Clear | 0/8 | No |\n| **FEW** | Few | 1–2/8 | **No** |\n| **SCT** | Scattered | 3–4/8 | **No** |\n| **BKN** | Broken | 5–7/8 | **YES** |\n| **OVC** | Overcast | 8/8 | **YES** |\n\n**Height is in hundreds of feet AGL:**\n\n| Code | Meaning |\n|---|---|\n| **FEW030** | Few clouds at 3,000 ft AGL |\n| **BKN015** | Broken at 1,500 ft AGL — this IS the ceiling |\n| **OVC008** | Overcast at 800 ft AGL — this IS the ceiling |\n\n## The Ceiling Definition\n\nThe **ceiling** is the height of the lowest **BKN or OVC** layer. FEW and SCT do NOT create a ceiling.\n\n**Example:** FEW010 SCT025 BKN040 OVC080\n- FEW at 1,000 ft — not a ceiling\n- SCT at 2,500 ft — not a ceiling\n- **BKN at 4,000 ft — THIS is the ceiling**\n- OVC at 8,000 ft — also a ceiling layer, but BKN below is \"official\"",
+          "bogeyman": {
+            "message": "Only BKN and OVC create ceilings! If you see FEW020 SCT040 and nothing else, there is NO ceiling. This is heavily tested.",
+            "mood": "warning"
+          }
+        },
+        {
+          "id": "sec-wx-metar-temp",
+          "title": "Temperature, Dewpoint, and Fog",
+          "content": "## Temperature and Dewpoint\n\nFormat: **TT/DD** (degrees Celsius)\n\n| Code | Meaning |\n|---|---|\n| **18/16** | Temp 18°C, Dewpoint 16°C (2° spread — fog very likely) |\n| **25/10** | Temp 25°C, Dewpoint 10°C (15° spread — dry) |\n| **M02/M08** | Temp -2°C, Dewpoint -8°C (M = minus) |\n\n## The Fog Rule\n\nWhen temperature and dewpoint are within **3°C or less**, expect fog or mist:\n\n| Spread | Fog Risk |\n|---|---|\n| ≤ 2°C | **Very likely** — dense fog possible |\n| 2–4°C | **Likely** — mist probable |\n| 4–6°C | **Possible** |\n| > 6°C | **Unlikely** |\n\n## Altimeter Setting\n\nFormat: **A####** (inches of mercury)\n\n| Code | Meaning | Implication |\n|---|---|---|\n| **A2992** | 29.92 in Hg | Standard pressure |\n| **A3025** | 30.25 in Hg | High pressure (good weather) |\n| **A2955** | 29.55 in Hg | Low pressure (poor weather) |\n\n> **Memory Aid:** High altimeter = High pressure = Happy weather.",
+          "bogeyman": {
+            "message": "Temp/dewpoint spread ≤ 3°C = fog is likely or imminent. If a METAR shows 15/14, expect fog to form soon. This is tested heavily!",
+            "mood": "warning"
+          }
+        }
+      ],
+      "version": 2
+    },
+    {
+      "id": "les-wx-taf",
+      "moduleId": "mod-weather",
+      "title": "TAF Interpretation",
+      "order": 3,
+      "objectives": [
+        "Understand the difference between METAR and TAF",
+        "Decode TAF change indicators (FM, TEMPO, BECMG)",
+        "Plan flights using TAF forecasts"
+      ],
+      "references": ["ref-ac0045h"],
+      "acsRefs": ["acs-ua-v-b"],
+      "estimatedMinutes": 20,
+      "sections": [
+        {
+          "id": "sec-wx-taf-overview",
+          "title": "TAF Format and Structure",
+          "content": "## What TAFs Are\n\nA TAF is a **forecast** of weather conditions at a specific airport, covering **24 to 30 hours**. While a METAR tells you what's happening now, a TAF tells you what's expected.\n\n## TAF Format\n\n```\nTAF [Station] [Issue Date/Time] [Valid Period] [Forecast Groups]\n```\n\n## Example with Decode\n\n**TAF KJFK 121720Z 1218/1318 18012KT 5SM HZ BKN020 FM122200 24018G30KT 2SM +TSRA OVC010**\n\n| Element | Code | Meaning |\n|---|---|---|\n| Type | **TAF** | Terminal Aerodrome Forecast |\n| Station | **KJFK** | JFK Airport, New York |\n| Issued | **121720Z** | Issued 12th at 1720 UTC |\n| Valid | **1218/1318** | Valid from 12th 1800Z to 13th 1800Z (24 hrs) |\n| **Base forecast** | **18012KT 5SM HZ BKN020** | Wind 180° at 12 kt, 5SM haze, broken at 2,000 ft |\n| **FM (From)** | **FM122200** | Starting at 2200Z on the 12th |\n| New conditions | **24018G30KT 2SM +TSRA OVC010** | Wind 240° at 18 gusting 30, 2SM, heavy thunderstorms |"
+        },
+        {
+          "id": "sec-wx-taf-changes",
+          "title": "Change Indicators",
+          "content": "## FM, TEMPO, BECMG, PROB\n\n| Indicator | Meaning | Duration |\n|---|---|---|\n| **FM** (From) | Complete change to new conditions | Starts new forecast period |\n| **TEMPO** | Temporary fluctuation | Lasts **less than 1 hour** at a time |\n| **BECMG** | Gradual transition | Change occurs over **1–2 hours** |\n| **PROB30/PROB40** | 30% or 40% probability | Used only for precipitation/visibility |\n\n## Understanding TEMPO\n\nTEMPO 1223/1302 2SM +TSRA OVC008CB\n\n- Between 2300Z on the 12th and 0200Z on the 13th\n- Temporarily: 2SM visibility, heavy thunderstorms, overcast at 800 ft with cumulonimbus\n- Each occurrence lasts **less than 1 hour**\n\n## Understanding BECMG\n\nBECMG 1306/1308 30010KT P6SM SCT040\n\n- Between 0600Z and 0800Z on the 13th\n- Conditions will gradually become: wind 300° at 10 kt, visibility >6SM, scattered at 4,000 ft\n\n## Exam Tip\n\nAll TAF times are in **UTC (Zulu)**. The exam may ask you to convert to local time."
+        }
+      ],
+      "version": 2
+    },
+    {
+      "id": "les-wx-density",
+      "moduleId": "mod-weather",
+      "title": "Density Altitude and Performance",
+      "order": 4,
+      "objectives": [
+        "Understand density altitude and its calculation",
+        "Know the effects of 'high, hot, and humid' conditions",
+        "Apply density altitude to flight planning"
+      ],
+      "references": ["ref-phak"],
+      "acsRefs": ["acs-ua-v-b"],
+      "estimatedMinutes": 25,
+      "sections": [
+        {
+          "id": "sec-wx-density-concept",
+          "title": "Understanding Density Altitude",
+          "content": "## What It Is\n\nDensity altitude is the **altitude at which the air \"feels\" based on its density**, regardless of your actual altitude. It's the single most important performance concept in aviation weather.\n\n## The Formula\n\n**Density Altitude = Pressure Altitude + [120 × (Outside Air Temp – Standard Temp)]**\n\nWhere:\n- Standard temperature at sea level = 15°C\n- Temperature decreases ~2°C per 1,000 feet\n\n## The Three Enemies of Performance\n\n**\"High, Hot, and Humid\"** = High density altitude = Degraded performance\n\n| Factor | Why It Hurts |\n|---|---|\n| **High elevation** | Less air pressure = thinner air |\n| **High temperature** | Warm air expands = thinner air |\n| **High humidity** | Water vapor is lighter than dry air |"
+        },
+        {
+          "id": "sec-wx-density-effects",
+          "title": "Effects on Your Drone",
+          "content": "## How High Density Altitude Affects Performance\n\nIn high density altitude conditions:\n\n- **Reduced lift** — propellers generate less thrust\n- **Reduced battery life** — motors must work harder\n- **Reduced climb rate** — takes longer to reach altitude\n- **Reduced maximum altitude** — may not reach 400 ft safely\n- **Reduced payload capacity** — may need to fly lighter\n\n## Real-World Example\n\nFlying in Denver, CO (elevation 5,280 ft) on a hot August day (95°F / 35°C):\n\n- Standard temp at 5,280 ft would be about 4.4°C\n- Actual temp is 35°C — that's 30.6°C above standard\n- Density altitude ≈ 5,280 + (120 × 30.6) = **~8,950 ft**\n\nYour drone will perform as if it's flying at nearly **9,000 feet** even though you're on the ground in Denver.\n\n## Standard Temperature Reference\n\n| Altitude (ft) | Standard Temp |\n|---|---|\n| Sea level | 15°C / 59°F |\n| 3,000 | 9°C / 48°F |\n| 5,000 | 5°C / 41°F |\n| 7,000 | 1°C / 34°F |\n| 10,000 | -5°C / 23°F |",
+          "bogeyman": {
+            "message": "If the question describes 'a hot summer day at a high-elevation airport,' think density altitude. The answer will involve reduced performance.",
+            "mood": "happy"
+          }
+        },
+        {
+          "id": "sec-wx-wind-effects",
+          "title": "Wind Effects on Performance",
+          "content": "## How Wind Affects Your sUAS\n\n**Headwind (flying into the wind):**\n- Reduces ground speed\n- Increases battery consumption\n- Reduces effective range\n\n**Tailwind (wind behind you):**\n- Increases ground speed going out\n- BUT you fly into the wind coming back\n- Can push you past planned range before you realize\n\n**Crosswind:**\n- Drone must \"crab\" (angle into wind)\n- Reduces effective forward speed\n- Can cause handling difficulties\n\n## Mechanical Turbulence\n\nWhen wind flows over obstacles, it creates **turbulence on the downwind (lee) side**.\n\n**Avoid:**\n- Flying on downwind side of buildings or ridges\n- Flying in gaps between buildings (wind tunnel effect)\n- Low altitude in gusty conditions near structures\n\n## Wind Shear\n\nSudden change in wind speed or direction. Can cause:\n- Sudden loss of altitude\n- Loss of control\n- Unexpected position changes\n\nMost common near frontal boundaries, thunderstorms, and temperature inversions."
+        }
+      ],
+      "version": 2
+    },
+    {
+      "id": "les-wx-hazards",
+      "moduleId": "mod-weather",
+      "title": "Hazardous Weather",
+      "order": 5,
+      "objectives": [
+        "Recognize thunderstorm development and hazards",
+        "Identify the four types of fog",
+        "Understand icing and its effects on drones"
+      ],
+      "references": ["ref-ac0045h", "ref-phak"],
+      "acsRefs": ["acs-ua-v-b"],
+      "estimatedMinutes": 25,
+      "sections": [
+        {
+          "id": "sec-wx-thunderstorms",
+          "title": "Thunderstorms and Microbursts",
+          "content": "## The Three Stages of a Thunderstorm\n\n| Stage | Dominant Feature | Duration | Danger |\n|---|---|---|---|\n| **Cumulus** | Updrafts only | 5–10 min | Low |\n| **Mature** | Updrafts AND downdrafts | 10–20 min | **HIGHEST** |\n| **Dissipating** | Downdrafts only | 10–15 min | Decreasing |\n\n## Three Requirements for Formation\n\n1. **Moisture** — sufficient water vapor\n2. **Lifting action** — front, terrain, or heating forces air up\n3. **Instability** — atmosphere allows air to keep rising\n\n## Microbursts — Extremely Dangerous\n\n| Characteristic | Detail |\n|---|---|\n| Size | 0.5 to 4 km diameter |\n| Duration | **5–15 minutes** |\n| Wind speeds | Can exceed **150 mph** |\n| Danger | Causes sudden wind shifts |\n\n**Why they're lethal:** An aircraft encounters headwind (gains lift), then suddenly tailwind (loses lift) as it passes through.\n\n## Safety Rule\n\n**Stay at least 20 miles away from thunderstorms.** If you can hear thunder, the storm is within 5 NM — too close to fly.",
+          "bogeyman": {
+            "message": "The exam tests the three requirements for thunderstorms: Moisture, Lifting action, Instability. Also know the three stages and that mature is most dangerous.",
+            "mood": "warning"
+          }
+        },
+        {
+          "id": "sec-wx-fog",
+          "title": "Types of Fog",
+          "content": "## The Four Types You Need to Know\n\n### Radiation Fog\n\n- Forms on **clear, calm nights** when ground radiates heat\n- Most common in valleys and low areas\n- **Burns off within 1–2 hours after sunrise**\n- Requires: clear skies, light wind, high humidity\n\n### Advection Fog\n\n- Warm, moist air moves over a **cold surface**\n- Can form with wind (unlike radiation fog)\n- **Does NOT burn off** with sunrise — can persist all day\n- Common along coastlines (marine layer)\n\n### Upslope Fog\n\n- Moist air pushed **up a slope** by wind\n- Persists as long as upslope wind continues\n- Common on windward sides of mountains\n\n### Steam Fog (Evaporation Fog)\n\n- **Cold air** moves over **warm water**\n- Water evaporates and immediately condenses\n- Appears as \"steam\" rising from water\n- Usually shallow (50–200 ft)\n\n## Predicting Fog from METAR\n\nLook at temperature/dewpoint spread:\n- **18/16** (2° spread) → fog forming or imminent\n- **22/08** (14° spread) → fog very unlikely",
+          "bogeyman": {
+            "message": "Radiation fog: clear night + calm wind + moist air. It dissipates after sunrise. Advection fog does NOT burn off — it can persist all day. Know the difference!",
+            "mood": "happy"
+          }
+        },
+        {
+          "id": "sec-wx-icing",
+          "title": "Icing and Other Hazards",
+          "content": "## How Icing Affects Your Drone\n\n| Type | Effect |\n|---|---|\n| **Propeller icing** | Changes blade shape → reduced thrust, vibration |\n| **Airframe icing** | Adds weight → reduced lift and endurance |\n| **Sensor icing** | Camera, GPS, barometer covered → degraded data |\n| **Battery effects** | Cold temps reduce capacity and output |\n\n## When to Expect Icing\n\n- Temperature between **0°C and -10°C** with visible moisture\n- Most dangerous zone: **0°C to -5°C** (supercooled water)\n- If METAR shows temps near freezing with precipitation, assess icing risk\n\n## Lightning\n\n**Direct threats to drones:**\n- Direct strike — instantly destroys electronics\n- EMI — disrupts GPS, control link, sensors even from nearby strikes\n- Induced currents — damage from nearby lightning\n\n**Safety Rules:**\n- Don't fly if thunderstorms are within 10+ NM\n- If you can **hear thunder**, storm is within 5 NM — too close\n- If you can **see lightning**, storm is within 25 NM — reassess\n\n## Fronts\n\n| Front Type | Weather | Movement |\n|---|---|---|\n| **Cold** | Violent but brief — thunderstorms, wind shifts | Fast (25–40 mph) |\n| **Warm** | Prolonged poor visibility, drizzle, fog | Slow (10–20 mph) |\n| **Stationary** | Weather persists for days — clouds, drizzle | None |\n| **Occluded** | Most complex — severe weather possible | Variable |"
+        }
+      ],
+      "version": 2
+    }
+  ]
+}

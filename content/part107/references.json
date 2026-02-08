@@ -1,0 +1,60 @@
+[
+  {
+    "id": "ref-cfr107",
+    "title": "14 CFR Part 107 — Small Unmanned Aircraft Systems",
+    "docId": "14-CFR-107",
+    "url": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107",
+    "section": "Part 107",
+    "revisionDate": "2024-01-01"
+  },
+  {
+    "id": "ref-ac0045h",
+    "title": "Aviation Weather Services — AC 00-45H",
+    "docId": "AC-00-45H",
+    "url": "https://www.faa.gov/regulations_policies/advisory_circulars/index.cfm/go/document.information/documentID/1030235",
+    "revisionDate": "2016-11-14"
+  },
+  {
+    "id": "ref-phak",
+    "title": "Pilot's Handbook of Aeronautical Knowledge (FAA-H-8083-25B)",
+    "docId": "FAA-H-8083-25B",
+    "url": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+  },
+  {
+    "id": "ref-aim",
+    "title": "Aeronautical Information Manual (AIM)",
+    "docId": "AIM",
+    "url": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/"
+  },
+  {
+    "id": "ref-ac9157d",
+    "title": "Aircraft Weight and Balance Control — AC 91-57D",
+    "docId": "AC-91-57D"
+  },
+  {
+    "id": "ref-ac10756",
+    "title": "Small Unmanned Aircraft Systems (sUAS) — AC 107-2",
+    "docId": "AC-107-2",
+    "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_107-2.pdf",
+    "revisionDate": "2016-06-21"
+  },
+  {
+    "id": "ref-ac1072",
+    "title": "Small Unmanned Aircraft Systems (sUAS) — AC 107-2",
+    "docId": "AC-107-2",
+    "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_107-2.pdf",
+    "revisionDate": "2016-06-21"
+  },
+  {
+    "id": "ref-faa-h-8083-2",
+    "title": "Risk Management Handbook (FAA-H-8083-2)",
+    "docId": "FAA-H-8083-2",
+    "url": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/media/FAA-H-8083-2.pdf"
+  },
+  {
+    "id": "ref-faa-h-8083-25",
+    "title": "Pilot's Handbook of Aeronautical Knowledge (FAA-H-8083-25B)",
+    "docId": "FAA-H-8083-25B",
+    "url": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+  }
+]

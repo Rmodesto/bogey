@@ -1,0 +1,17 @@
+[
+  {
+    "id": "bp-practice-01",
+    "title": "Part 107 Practice Exam",
+    "totalQuestions": 14,
+    "timeLimitSeconds": 7200,
+    "passingScore": 0.7,
+    "domainWeights": [
+      { "domain": "Regulations", "weight": 0.20, "minQuestions": 2 },
+      { "domain": "Airspace Classification", "weight": 0.25, "minQuestions": 3 },
+      { "domain": "Weather", "weight": 0.20, "minQuestions": 2 },
+      { "domain": "Loading and Performance", "weight": 0.15, "minQuestions": 2 },
+      { "domain": "Operations", "weight": 0.20, "minQuestions": 2 }
+    ],
+    "version": 1
+  }
+]

@@ -4,7 +4,19 @@ import { Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { CheckCircle, XCircle, RotateCcw, TrendingUp, Home } from "lucide-react";
-import { examQuestions } from "@/data/questions";
+import { getExamQuestions } from "@/lib/part107/compat";
+
+const examQuestions = getExamQuestions();
+import Card from "@/components/Card";
+import Badge from "@/components/Badge";
+import Button from "@/components/Button";
+import ProgressBar from "@/components/ProgressBar";
+
+function barColor(pct: number) {
+  if (pct >= 80) return "bg-volt-green";
+  if (pct >= 60) return "bg-deep-ice-blue";
+  return "bg-red-400";
+}
 
 function ResultsContent() {
   const searchParams = useSearchParams();
@@ -29,12 +41,6 @@ function ResultsContent() {
   const missed = examQuestions
     .map((q, i) => ({ ...q, userAnswer: userAnswers[i], index: i }))
     .filter((q) => q.userAnswer !== q.correctAnswer);
-
-  function barColor(pct: number) {
-    if (pct >= 80) return "bg-volt-green";
-    if (pct >= 60) return "bg-deep-ice-blue";
-    return "bg-red-400";
-  }
 
   return (
     <div className="min-h-screen bg-fog-gray">
@@ -83,16 +89,16 @@ function ResultsContent() {
 
         {/* Action buttons */}
         <div className="flex justify-center gap-4 mb-8">
-          <Link href="/exam" className="flex items-center gap-2 bg-volt-green hover:bg-volt-lime text-jet-black font-semibold px-6 py-3 rounded-full text-sm">
+          <Button href="/exam">
             <RotateCcw className="w-4 h-4" /> Retake Exam
-          </Link>
-          <Link href="/study" className="flex items-center gap-2 border border-divider-gray hover:border-slate text-jet-black font-semibold px-6 py-3 rounded-full text-sm">
+          </Button>
+          <Button href="/study" variant="outline">
             <TrendingUp className="w-4 h-4" /> Continue Studying
-          </Link>
+          </Button>
         </div>
 
         {/* Domain performance */}
-        <div className="bg-white border border-divider-gray rounded-xl p-6 mb-8">
+        <Card className="mb-8">
           <h2 className="font-semibold text-jet-black text-lg mb-4">Performance by Domain</h2>
           <div className="space-y-4">
             {Object.entries(domainMap).map(([domain, data]) => {
@@ -103,14 +109,12 @@ function ResultsContent() {
                     <span className="text-sm font-medium text-jet-black">{domain}</span>
                     <span className="text-sm text-slate">{data.correct}/{data.total} ({pct}%)</span>
                   </div>
-                  <div className="w-full bg-divider-gray rounded-full h-2">
-                    <div className={`h-2 rounded-full ${barColor(pct)}`} style={{ width: `${pct}%` }} />
-                  </div>
+                  <ProgressBar value={pct} colorFn={barColor} />
                 </div>
               );
             })}
           </div>
-        </div>
+        </Card>
 
         {/* Missed questions */}
         {missed.length > 0 && (
@@ -118,11 +122,11 @@ function ResultsContent() {
             <h2 className="font-semibold text-jet-black text-lg mb-4">Questions to Review</h2>
             <div className="space-y-4">
               {missed.map((q) => (
-                <div key={q.id} className="bg-white border border-divider-gray rounded-xl p-6">
+                <Card key={q.id}>
                   <div className="flex items-center gap-2 mb-3">
                     <XCircle className="w-5 h-5 text-red-400" />
                     <span className="text-sm font-medium text-jet-black">Question {q.index + 1}</span>
-                    <span className="bg-mist-blue text-deep-ice-blue text-xs font-semibold px-2 py-0.5 rounded-full">{q.domain}</span>
+                    <Badge>{q.domain}</Badge>
                   </div>
                   <p className="text-sm text-jet-black mb-4">{q.question}</p>
                   <div className="space-y-2">
@@ -135,7 +139,7 @@ function ResultsContent() {
                       <p className="text-sm text-jet-black">{q.options[q.correctAnswer]}</p>
                     </div>
                   </div>
-                </div>
+                </Card>
               ))}
             </div>
           </div>
@@ -151,12 +155,9 @@ function ResultsContent() {
               ? "Keep practicing to maintain your readiness score and build confidence."
               : "Review the domains where you scored lowest and practice targeted questions."}
           </p>
-          <Link
-            href={passed ? "/dashboard" : "/study"}
-            className="inline-block bg-volt-green hover:bg-volt-lime text-jet-black font-semibold px-6 py-3 rounded-full"
-          >
+          <Button href={passed ? "/dashboard" : "/study"}>
             {passed ? "Go to Dashboard" : "Start Studying"}
-          </Link>
+          </Button>
         </div>
       </main>
     </div>

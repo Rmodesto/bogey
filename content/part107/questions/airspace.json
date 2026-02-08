@@ -1,0 +1,232 @@
+[
+  {
+    "id": "q-as-001",
+    "stem": "In which class of airspace can a Part 107 pilot operate without prior authorization?",
+    "choices": [
+      { "id": "q-as-001-a", "text": "Class G", "isCorrect": true },
+      { "id": "q-as-001-b", "text": "Class B", "isCorrect": false },
+      { "id": "q-as-001-c", "text": "Class C", "isCorrect": false },
+      { "id": "q-as-001-d", "text": "Class D", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Class G (uncontrolled) airspace does not require prior authorization.",
+      "reason": "Class G airspace is uncontrolled airspace where Part 107 operations can be conducted without ATC authorization. Classes B, C, D, and surface E require LAANC or FAA airspace authorization.",
+      "keyTakeaway": "Class G is the only airspace class where Part 107 pilots can fly freely without any airspace authorization.",
+      "references": ["ref-aim"]
+    },
+    "domain": "Airspace Classification",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-class-e-g",
+    "acsRefs": ["acs-ua-ii-a"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-002",
+    "stem": "What type of airspace is designated by a 'P' followed by a number on a sectional chart?",
+    "choices": [
+      { "id": "q-as-002-a", "text": "Prohibited area", "isCorrect": true },
+      { "id": "q-as-002-b", "text": "Private airport", "isCorrect": false },
+      { "id": "q-as-002-c", "text": "Parachute jump area", "isCorrect": false },
+      { "id": "q-as-002-d", "text": "Positive control area", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "A 'P' designation indicates a prohibited area.",
+      "reason": "Prohibited areas (e.g., P-56 over the White House) are areas where flight is completely prohibited for security or national welfare reasons. No aircraft, including UAS, may enter without specific authorization.",
+      "keyTakeaway": "Prohibited areas are absolute no-fly zones. Restricted areas (R-XXX) may be used when not active, but prohibited areas are always off-limits.",
+      "references": ["ref-aim"]
+    },
+    "domain": "Airspace Classification",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-special",
+    "acsRefs": ["acs-ua-ii-a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-003",
+    "stem": "What system provides near-real-time airspace authorization for Part 107 operations in controlled airspace?",
+    "choices": [
+      { "id": "q-as-003-a", "text": "LAANC", "isCorrect": true },
+      { "id": "q-as-003-b", "text": "NOTAM", "isCorrect": false },
+      { "id": "q-as-003-c", "text": "ATIS", "isCorrect": false },
+      { "id": "q-as-003-d", "text": "CTAF", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "LAANC (Low Altitude Authorization and Notification Capability) provides near-real-time authorization.",
+      "reason": "LAANC automates the airspace authorization process using UAS Facility Maps that define maximum allowable altitudes. Approved apps can request and receive authorization in near-real-time.",
+      "keyTakeaway": "LAANC is the fastest authorization method. If LAANC isn't available for your area, manual authorization through FAA DroneZone can take up to 90 days.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "Airspace Classification",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-controlled",
+    "acsRefs": ["acs-ua-ii-a"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-004",
+    "stem": "How is Class E airspace that extends to the surface depicted on a sectional chart?",
+    "choices": [
+      { "id": "q-as-004-a", "text": "Dashed magenta line", "isCorrect": true },
+      { "id": "q-as-004-b", "text": "Solid magenta shading", "isCorrect": false },
+      { "id": "q-as-004-c", "text": "Blue shading", "isCorrect": false },
+      { "id": "q-as-004-d", "text": "Solid blue circle", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "A dashed magenta line indicates Class E airspace that extends to the surface.",
+      "reason": "The dashed magenta line is critical for Part 107 pilots because it indicates where Class E begins at the surface (requiring authorization). A faded magenta shading indicates where Class E transitions from 1,200 AGL down to 700 AGL — still Class G at the surface.",
+      "keyTakeaway": "DASHED magenta = Class E to surface = authorization required. FADED magenta shading = Class E starts at 700 AGL, so below 700 AGL is still Class G.",
+      "references": ["ref-aim"]
+    },
+    "domain": "Airspace Classification",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-class-e-g",
+    "acsRefs": ["acs-ua-ii-a"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-005",
+    "stem": "What is indicated by a Military Training Route labeled 'IR-206' on a sectional chart?",
+    "choices": [
+      { "id": "q-as-005-a", "text": "IFR route flown at or above 1,500 feet AGL with segments below", "isCorrect": true },
+      { "id": "q-as-005-b", "text": "VFR route flown below 1,500 feet AGL", "isCorrect": false },
+      { "id": "q-as-005-c", "text": "Instrument approach route for military aircraft", "isCorrect": false },
+      { "id": "q-as-005-d", "text": "Restricted airspace for military operations", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "IR routes are IFR routes; the 3-digit number indicates segments at or above 1,500 feet AGL.",
+      "reason": "MTRs starting with 'IR' are flown under IFR; 'VR' routes are VFR. A 3-digit route number means at least one segment is at or above 1,500 feet AGL. A 4-digit number means the entire route is below 1,500 feet AGL.",
+      "keyTakeaway": "3-digit = segments above 1,500 AGL. 4-digit = entire route below 1,500 AGL. Watch for the 4-digit routes — they're at drone altitudes!",
+      "references": ["ref-aim"]
+    },
+    "domain": "Airspace Classification",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-tfr-mtr",
+    "acsRefs": ["acs-ua-ii-a"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-006",
+    "stem": "Which type of special-use airspace is NOT depicted on VFR sectional charts?",
+    "choices": [
+      { "id": "q-as-006-a", "text": "Controlled Firing Areas (CFA)", "isCorrect": true },
+      { "id": "q-as-006-b", "text": "Military Operations Areas (MOA)", "isCorrect": false },
+      { "id": "q-as-006-c", "text": "Prohibited Areas", "isCorrect": false },
+      { "id": "q-as-006-d", "text": "Restricted Areas", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Controlled Firing Areas (CFA) are NOT depicted on VFR sectional charts.",
+      "reason": "CFAs are areas where activities could be hazardous to nonparticipating aircraft. However, they are not charted because operations are suspended when radar or observers detect an approaching aircraft. This is the only special-use airspace NOT shown on sectional charts.",
+      "keyTakeaway": "CFAs are 'invisible' on charts because they suspend operations when aircraft approach. All other special-use airspace is charted.",
+      "references": ["ref-aim"]
+    },
+    "domain": "Airspace Classification",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-special",
+    "acsRefs": ["acs-ua-ii-a"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-007",
+    "stem": "Class B airspace surrounding major airports typically extends from the surface up to:",
+    "choices": [
+      { "id": "q-as-007-a", "text": "10,000 feet MSL", "isCorrect": true },
+      { "id": "q-as-007-b", "text": "5,000 feet AGL", "isCorrect": false },
+      { "id": "q-as-007-c", "text": "18,000 feet MSL", "isCorrect": false },
+      { "id": "q-as-007-d", "text": "2,500 feet AGL", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Class B airspace typically extends from the surface up to 10,000 feet MSL.",
+      "reason": "Class B airspace surrounds the nation's busiest airports and typically extends from the surface to 10,000 feet MSL. The airspace is depicted as a series of concentric circles or arcs resembling an inverted wedding cake.",
+      "keyTakeaway": "Class B = 'Big' airports (major commercial). Goes from surface to typically 10,000 MSL in an inverted wedding cake shape.",
+      "references": ["ref-aim"]
+    },
+    "domain": "Airspace Classification",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-controlled",
+    "acsRefs": ["acs-ua-ii-a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-008",
+    "stem": "What color are airports depicted on sectional charts when they have an operating control tower?",
+    "choices": [
+      { "id": "q-as-008-a", "text": "Blue", "isCorrect": true },
+      { "id": "q-as-008-b", "text": "Magenta", "isCorrect": false },
+      { "id": "q-as-008-c", "text": "Green", "isCorrect": false },
+      { "id": "q-as-008-d", "text": "Yellow", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Towered airports are depicted in blue on sectional charts.",
+      "reason": "Airports with operating control towers are shown in blue. Non-towered airports are shown in magenta. This is one of the most fundamental chart-reading skills tested on the exam.",
+      "keyTakeaway": "Blue = towered airport. Magenta = non-towered airport. This is heavily tested!",
+      "references": ["ref-aim"]
+    },
+    "domain": "Airspace Classification",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-controlled",
+    "acsRefs": ["acs-ua-ii-a"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-009",
+    "stem": "During night operations under Part 107, what lighting is required on the sUAS?",
+    "choices": [
+      { "id": "q-as-009-a", "text": "Anti-collision lighting visible for at least 3 statute miles", "isCorrect": true },
+      { "id": "q-as-009-b", "text": "Navigation lights visible for at least 1 statute mile", "isCorrect": false },
+      { "id": "q-as-009-c", "text": "Landing lights visible for at least 5 statute miles", "isCorrect": false },
+      { "id": "q-as-009-d", "text": "No lighting is required if the pilot has completed night training", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Anti-collision lighting visible for at least 3 statute miles is required.",
+      "reason": "14 CFR 107.29 requires anti-collision lighting visible for at least 3 statute miles during civil twilight and night operations. The remote PIC may reduce intensity if it would create a safety hazard, but it must remain visible for 3 SM.",
+      "keyTakeaway": "Night operations require anti-collision lighting visible for 3 statute miles. This is mandatory, not optional.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "Airspace Classification",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-night",
+    "acsRefs": ["acs-ua-ii-a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-010",
+    "stem": "A Temporary Flight Restriction (TFR) is issued for a presidential visit. What should a Part 107 pilot do?",
+    "choices": [
+      { "id": "q-as-010-a", "text": "Check NOTAMs and avoid the TFR area completely", "isCorrect": true },
+      { "id": "q-as-010-b", "text": "Contact the local tower for clearance to fly", "isCorrect": false },
+      { "id": "q-as-010-c", "text": "Fly below 200 feet AGL to avoid conflict", "isCorrect": false },
+      { "id": "q-as-010-d", "text": "Request a waiver through LAANC", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Check NOTAMs and avoid the TFR area completely.",
+      "reason": "TFRs for VIP movements (presidential visits, etc.) are highly restricted and enforced by armed military aircraft. UAS operations are prohibited within these TFRs. There is no waiver process for VIP TFRs — the only option is to avoid the area.",
+      "keyTakeaway": "VIP TFRs are absolute no-fly zones. No LAANC, no waivers, no exceptions. Check NOTAMs before every flight!",
+      "references": ["ref-aim"]
+    },
+    "domain": "Airspace Classification",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-tfr-mtr",
+    "acsRefs": ["acs-ua-ii-a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  }
+]

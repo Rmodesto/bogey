@@ -1,0 +1,278 @@
+[
+  {
+    "id": "q-lp-001",
+    "stem": "What is the formula for calculating an aircraft's center of gravity?",
+    "choices": [
+      { "id": "q-lp-001-a", "text": "Total moment divided by total weight", "isCorrect": true },
+      { "id": "q-lp-001-b", "text": "Total weight divided by total moment", "isCorrect": false },
+      { "id": "q-lp-001-c", "text": "Total weight multiplied by arm length", "isCorrect": false },
+      { "id": "q-lp-001-d", "text": "Gross weight minus empty weight", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "CG = Total Moment / Total Weight.",
+      "reason": "The center of gravity is found by dividing the total moment (sum of each item's weight x arm) by the total weight. This gives the distance from the datum where the aircraft balances.",
+      "keyTakeaway": "Remember: Moment = Weight x Arm, then CG = Total Moment / Total Weight. This is a frequently tested formula on the Part 107 exam.",
+      "references": ["ref-phak"]
+    },
+    "domain": "Loading and Performance",
+    "moduleId": "mod-loading",
+    "lessonId": "les-lp-cg",
+    "acsRefs": ["acs-ua-iv-a-k1b"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-lp-002",
+    "stem": "What is the load factor in a level, coordinated 60-degree banked turn?",
+    "choices": [
+      { "id": "q-lp-002-a", "text": "2G", "isCorrect": true },
+      { "id": "q-lp-002-b", "text": "1.5G", "isCorrect": false },
+      { "id": "q-lp-002-c", "text": "1G", "isCorrect": false },
+      { "id": "q-lp-002-d", "text": "3G", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "A 60-degree banked turn produces a load factor of 2G.",
+      "reason": "Load factor in a coordinated turn equals 1/cosine of the bank angle. At 60 degrees, cos(60°) = 0.5, so the load factor is 1/0.5 = 2G. This means the aircraft must produce twice the lift to maintain altitude.",
+      "keyTakeaway": "Key bank angles to memorize: 30° = 1.15G, 45° = 1.41G, 60° = 2G. Load factor increases exponentially with bank angle.",
+      "references": ["ref-phak"]
+    },
+    "domain": "Loading and Performance",
+    "moduleId": "mod-loading",
+    "lessonId": "les-lp-weight",
+    "acsRefs": ["acs-ua-iv-a-k1"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-lp-003",
+    "stem": "Which condition would most decrease UAS performance?",
+    "choices": [
+      { "id": "q-lp-003-a", "text": "High altitude, high temperature, and high humidity", "isCorrect": true },
+      { "id": "q-lp-003-b", "text": "Low altitude, low temperature, and low humidity", "isCorrect": false },
+      { "id": "q-lp-003-c", "text": "High altitude, low temperature, and low humidity", "isCorrect": false },
+      { "id": "q-lp-003-d", "text": "Low altitude, high temperature, and low humidity", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "High altitude, high temperature, and high humidity all reduce air density and decrease performance.",
+      "reason": "All three factors reduce air density (increase density altitude). Less dense air means propellers generate less thrust per revolution, motors work harder, and battery drain increases — all resulting in decreased performance.",
+      "keyTakeaway": "Remember 'high, hot, and humid' as the three enemies of aircraft performance. All three reduce air density and increase density altitude.",
+      "references": ["ref-phak"]
+    },
+    "domain": "Loading and Performance",
+    "moduleId": "mod-loading",
+    "lessonId": "les-lp-performance-data",
+    "acsRefs": ["acs-ua-iv-a-k2"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-lp-004",
+    "stem": "A remote pilot plans to operate a quadrotor carrying a 500-gram camera payload. The manufacturer's specs show 25-minute flight time with no payload at sea level. What is the most likely effect of adding the camera?",
+    "choices": [
+      { "id": "q-lp-004-a", "text": "Flight time decreases to approximately 18–20 minutes", "isCorrect": true },
+      { "id": "q-lp-004-b", "text": "Flight time remains 25 minutes", "isCorrect": false },
+      { "id": "q-lp-004-c", "text": "Flight time increases because the camera stabilizes the aircraft", "isCorrect": false },
+      { "id": "q-lp-004-d", "text": "Flight time decreases to approximately 5 minutes", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Flight time decreases to approximately 18–20 minutes.",
+      "reason": "Adding 500 grams of payload forces the motors to work harder, increasing current draw from the battery. The relationship is non-linear — a moderate payload addition typically reduces endurance by 20–30%.",
+      "keyTakeaway": "The weight-power relationship is NON-LINEAR. Adding weight reduces endurance by MORE than the weight percentage would suggest.",
+      "references": ["ref-phak", "ref-ac1072"]
+    },
+    "domain": "Loading and Performance",
+    "moduleId": "mod-loading",
+    "lessonId": "les-lp-weight",
+    "acsRefs": ["acs-ua-iv-a-k1"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-lp-005",
+    "stem": "A fixed-wing sUAS has a stall speed of 25 knots at light loading. A heavy camera is mounted on the nose, moving the CG forward. The stall speed will:",
+    "choices": [
+      { "id": "q-lp-005-a", "text": "Increase because the tail must produce more downforce, reducing effective lift", "isCorrect": true },
+      { "id": "q-lp-005-b", "text": "Decrease because the nose-heavy condition provides more lift", "isCorrect": false },
+      { "id": "q-lp-005-c", "text": "Remain 25 knots because stall speed depends on wing design, not CG", "isCorrect": false },
+      { "id": "q-lp-005-d", "text": "Increase because forward CG reduces the angle of attack", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Stall speed increases because the tail must produce more downforce.",
+      "reason": "With forward CG, the horizontal stabilizer must push downward to keep the nose from dropping. This downward tail force effectively adds to the weight that the wing must support. Since the wing must generate more lift, the aircraft must fly faster — hence stall speed increases.",
+      "keyTakeaway": "Forward CG = more stable, higher stall speed, less efficient. Aft CG = less stable, lower stall speed, potentially dangerous.",
+      "references": ["ref-phak"]
+    },
+    "domain": "Loading and Performance",
+    "moduleId": "mod-loading",
+    "lessonId": "les-lp-cg",
+    "acsRefs": ["acs-ua-iv-a-k1b"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-lp-006",
+    "stem": "An sUAS is loaded within its MTOW but with the CG aft of published limits. After a wind gust, the aircraft pitches nose-up, then oscillates with increasing amplitude. This aircraft is:",
+    "choices": [
+      { "id": "q-lp-006-a", "text": "Statically stable but dynamically unstable", "isCorrect": true },
+      { "id": "q-lp-006-b", "text": "Statically unstable and dynamically unstable", "isCorrect": false },
+      { "id": "q-lp-006-c", "text": "Statically stable and dynamically stable", "isCorrect": false },
+      { "id": "q-lp-006-d", "text": "Statically unstable but dynamically stable", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Statically stable but dynamically unstable.",
+      "reason": "The aircraft initially attempts to return to level (positive static stability — it pitches back toward equilibrium after the gust). However, the oscillations grow larger over time instead of dampening out, which is dynamic instability. This is classic aft-CG behavior.",
+      "keyTakeaway": "'Initially returns to level but oscillations grow' = Statically STABLE but Dynamically UNSTABLE. This is a favorite exam question!",
+      "references": ["ref-phak"]
+    },
+    "domain": "Loading and Performance",
+    "moduleId": "mod-loading",
+    "lessonId": "les-lp-cg",
+    "acsRefs": ["acs-ua-iv-a-k1b"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-lp-007",
+    "stem": "Airport elevation is 4,000 feet MSL. The altimeter setting is 29.72\" Hg. Outside air temperature is 30°C. Standard temperature at 4,000 feet is 7°C. What is the approximate density altitude?",
+    "choices": [
+      { "id": "q-lp-007-a", "text": "6,960 feet", "isCorrect": true },
+      { "id": "q-lp-007-b", "text": "4,000 feet", "isCorrect": false },
+      { "id": "q-lp-007-c", "text": "5,000 feet", "isCorrect": false },
+      { "id": "q-lp-007-d", "text": "7,500 feet", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "6,960 feet density altitude.",
+      "reason": "Step 1: PA = 4,000 + ((29.92 − 29.72) × 1,000) = 4,200 ft. Step 2: Deviation = 30°C − 7°C = +23°C. Step 3: DA = 4,200 + (120 × 23) = 6,960 feet.",
+      "keyTakeaway": "DA formula: PA + (120 × temp deviation in °C). At nearly 7,000 feet DA, expect roughly 22–25% less performance than sea-level specs.",
+      "references": ["ref-phak"]
+    },
+    "domain": "Loading and Performance",
+    "moduleId": "mod-loading",
+    "lessonId": "les-lp-performance-data",
+    "acsRefs": ["acs-ua-iv-a-k2"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-lp-008",
+    "stem": "A remote pilot is planning a flight at 8,000 feet elevation on a hot day. The manufacturer states MTOW is 2,500 grams with a 22-minute flight time at MTOW at sea level. Which statement is most accurate?",
+    "choices": [
+      { "id": "q-lp-008-a", "text": "The pilot should reduce payload to account for reduced lift at high density altitude", "isCorrect": true },
+      { "id": "q-lp-008-b", "text": "The pilot can expect 22 minutes of flight time since the aircraft is within MTOW", "isCorrect": false },
+      { "id": "q-lp-008-c", "text": "Performance data is only affected by temperature, not elevation", "isCorrect": false },
+      { "id": "q-lp-008-d", "text": "The pilot should increase speed to compensate for thinner air", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Reduce payload to account for reduced lift at high density altitude.",
+      "reason": "At 8,000 feet on a hot day, density altitude could exceed 10,000 feet. Air density is significantly reduced, meaning propellers generate less lift. The drone may not be able to safely hover at full MTOW.",
+      "keyTakeaway": "Manufacturer specs assume ideal conditions (sea level, standard temp). At high elevation on hot days, you must derate performance and possibly reduce payload.",
+      "references": ["ref-phak", "ref-ac1072"]
+    },
+    "domain": "Loading and Performance",
+    "moduleId": "mod-loading",
+    "lessonId": "les-lp-performance-data",
+    "acsRefs": ["acs-ua-iv-a-k2"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-lp-009",
+    "stem": "During hover, a quadrotor has a sensor package mounted far to the right side. Which is the most likely effect?",
+    "choices": [
+      { "id": "q-lp-009-a", "text": "Left-side motors work harder to maintain level flight", "isCorrect": true },
+      { "id": "q-lp-009-b", "text": "The aircraft yaws to the right", "isCorrect": false },
+      { "id": "q-lp-009-c", "text": "Right-side motors work harder to maintain level flight", "isCorrect": false },
+      { "id": "q-lp-009-d", "text": "No effect because the flight controller compensates automatically", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Left-side motors work harder to maintain level flight.",
+      "reason": "With weight offset to the right, the aircraft wants to roll right. To counteract this, the flight controller commands the left-side motors to increase thrust (pushing that side up). The left motors draw more current and may overheat faster.",
+      "keyTakeaway": "Lateral CG imbalance causes one side's motors to work harder. This reduces efficiency by 10–15% and can lead to motor overheating.",
+      "references": ["ref-phak"]
+    },
+    "domain": "Loading and Performance",
+    "moduleId": "mod-loading",
+    "lessonId": "les-lp-cg",
+    "acsRefs": ["acs-ua-iv-a-k1b"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-lp-010",
+    "stem": "A remote pilot's battery-powered sUAS has been flying for 15 minutes. Compared to the start of the flight, the aircraft's performance is most accurately described as:",
+    "choices": [
+      { "id": "q-lp-010-a", "text": "Degraded, because battery voltage decreases and internal resistance increases", "isCorrect": true },
+      { "id": "q-lp-010-b", "text": "Improved, because the aircraft is lighter as the battery depletes", "isCorrect": false },
+      { "id": "q-lp-010-c", "text": "Unchanged, because electric motors maintain constant output", "isCorrect": false },
+      { "id": "q-lp-010-d", "text": "Improved, because the motors have warmed to optimal operating temperature", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Degraded, because battery voltage decreases and internal resistance increases.",
+      "reason": "As a lithium battery depletes, its terminal voltage drops and internal resistance rises. This means the battery can deliver less power to the motors, even though chemical energy remains. The minor weight loss from depletion is far outweighed by the voltage sag effect.",
+      "keyTakeaway": "Battery weight loss during flight does NOT improve performance. Voltage sag reduces power output more than the minor weight reduction helps.",
+      "references": ["ref-phak", "ref-ac1072"]
+    },
+    "domain": "Loading and Performance",
+    "moduleId": "mod-loading",
+    "lessonId": "les-lp-loading-changes",
+    "acsRefs": ["acs-ua-iv-a-k1a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-lp-011",
+    "stem": "What is the primary reason a remote pilot should calculate density altitude before flight?",
+    "choices": [
+      { "id": "q-lp-011-a", "text": "To determine actual aircraft performance capability for the conditions", "isCorrect": true },
+      { "id": "q-lp-011-b", "text": "To determine the correct altimeter setting", "isCorrect": false },
+      { "id": "q-lp-011-c", "text": "To determine if ATC authorization is required", "isCorrect": false },
+      { "id": "q-lp-011-d", "text": "To comply with the 400-foot AGL altitude limit", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "To determine actual aircraft performance capability for the conditions.",
+      "reason": "Density altitude is a performance planning tool. It tells you how your drone will actually perform given the current temperature and pressure conditions. Published specs assume standard conditions; density altitude lets you adjust expectations for the real world.",
+      "keyTakeaway": "Any question about aircraft PERFORMANCE requires DENSITY altitude, not pressure altitude. If you see 'performance' in the question, think density altitude!",
+      "references": ["ref-phak"]
+    },
+    "domain": "Loading and Performance",
+    "moduleId": "mod-loading",
+    "lessonId": "les-lp-performance-data",
+    "acsRefs": ["acs-ua-iv-a-k2"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-lp-012",
+    "stem": "A remote pilot loads a fixed-wing sUAS with the CG at the aft limit. Compared to a mid-range CG loading, the aircraft will be:",
+    "choices": [
+      { "id": "q-lp-012-a", "text": "Less stable but more fuel-efficient", "isCorrect": true },
+      { "id": "q-lp-012-b", "text": "More stable and easier to control", "isCorrect": false },
+      { "id": "q-lp-012-c", "text": "Unchanged in handling characteristics", "isCorrect": false },
+      { "id": "q-lp-012-d", "text": "More stable and more fuel-efficient", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Less stable but more fuel-efficient.",
+      "reason": "Aft CG reduces pitch stability (less stable) but also reduces the tail downforce required for trim. Less tail downforce means less trim drag, which improves aerodynamic efficiency. However, the reduced stability is a real safety concern.",
+      "keyTakeaway": "Aft CG is efficient but dangerous. Forward CG is stable but inefficient. Know the trade-offs!",
+      "references": ["ref-phak"]
+    },
+    "domain": "Loading and Performance",
+    "moduleId": "mod-loading",
+    "lessonId": "les-lp-cg",
+    "acsRefs": ["acs-ua-iv-a-k1b"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  }
+]

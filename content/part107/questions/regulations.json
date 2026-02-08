@@ -1,0 +1,186 @@
+[
+  {
+    "id": "q-reg-001",
+    "stem": "Under what conditions may a remote pilot operate a small UAS from a moving vehicle?",
+    "choices": [
+      { "id": "q-reg-001-a", "text": "Only in a sparsely populated area", "isCorrect": true },
+      { "id": "q-reg-001-b", "text": "Only over water", "isCorrect": false },
+      { "id": "q-reg-001-c", "text": "Never under any circumstances", "isCorrect": false },
+      { "id": "q-reg-001-d", "text": "Only when the vehicle is stationary", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "A remote pilot may operate from a moving vehicle only in a sparsely populated area.",
+      "reason": "14 CFR 107.25 states that a remote pilot may operate a small UAS from a moving vehicle or aircraft only in a sparsely populated area. This restriction protects people on the ground.",
+      "keyTakeaway": "Moving vehicle operations are not completely prohibited — they are limited to sparsely populated areas to reduce risk to people on the ground.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "Regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-002",
+    "stem": "Who is responsible for determining whether a small UAS operation can be conducted safely?",
+    "choices": [
+      { "id": "q-reg-002-a", "text": "Remote pilot in command", "isCorrect": true },
+      { "id": "q-reg-002-b", "text": "Visual observer", "isCorrect": false },
+      { "id": "q-reg-002-c", "text": "FAA inspector", "isCorrect": false },
+      { "id": "q-reg-002-d", "text": "Aircraft manufacturer", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "The remote pilot in command (RPIC) is responsible.",
+      "reason": "14 CFR 107.19 establishes that the remote pilot in command is directly responsible for and is the final authority as to the operation of the small unmanned aircraft system.",
+      "keyTakeaway": "The RPIC has final authority and responsibility — similar to a manned aircraft pilot in command. This responsibility cannot be delegated.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "Regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-general",
+    "acsRefs": ["acs-ua-i-a"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-003",
+    "stem": "Under Part 107, when must a remote pilot report an accident to the FAA?",
+    "choices": [
+      { "id": "q-reg-003-a", "text": "Within 10 days of serious injury, loss of consciousness, or property damage over $500", "isCorrect": true },
+      { "id": "q-reg-003-b", "text": "Within 24 hours of any incident", "isCorrect": false },
+      { "id": "q-reg-003-c", "text": "Within 30 days of any incident", "isCorrect": false },
+      { "id": "q-reg-003-d", "text": "Only if the UAS is destroyed", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Within 10 days of qualifying events.",
+      "reason": "14 CFR 107.9 requires the RPIC to report any operation that results in serious injury to any person, loss of consciousness, or damage to any property (other than the UAS) in excess of $500 within 10 calendar days.",
+      "keyTakeaway": "Remember the three triggers: serious injury, loss of consciousness, or $500+ property damage. The reporting window is 10 calendar days. Damage to the drone itself does NOT trigger reporting.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "Regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-reporting",
+    "acsRefs": ["acs-ua-i-a-k4"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-004",
+    "stem": "A remote pilot causes a collision that damages a farmer's fence. The repair estimate is $475. Must this accident be reported to the FAA?",
+    "choices": [
+      { "id": "q-reg-004-a", "text": "No, because the property damage does not exceed $500", "isCorrect": true },
+      { "id": "q-reg-004-b", "text": "Yes, because any property damage must be reported", "isCorrect": false },
+      { "id": "q-reg-004-c", "text": "Yes, because it involves third-party property", "isCorrect": false },
+      { "id": "q-reg-004-d", "text": "Only if the farmer files a complaint", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No report is required because the damage is below $500.",
+      "reason": "The $500 threshold is specific. Property damage that does not exceed $500 (to property other than the UAS) does not trigger the reporting requirement under 14 CFR 107.9.",
+      "keyTakeaway": "The $500 threshold applies to property OTHER than your drone. If your $3,000 drone is destroyed but nothing else is damaged, there's nothing to report!",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "Regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-reporting",
+    "acsRefs": ["acs-ua-i-a-k4"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-005",
+    "stem": "What is the maximum penalty for falsification of records or reports under 14 CFR 107.5?",
+    "choices": [
+      { "id": "q-reg-005-a", "text": "Suspension or revocation of any certificate or authorization", "isCorrect": true },
+      { "id": "q-reg-005-b", "text": "A $1,000 fine only", "isCorrect": false },
+      { "id": "q-reg-005-c", "text": "A written warning", "isCorrect": false },
+      { "id": "q-reg-005-d", "text": "Retaking the knowledge test", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Falsification can result in suspension or revocation of any certificate or authorization.",
+      "reason": "14 CFR 107.5 states that any falsification, reproduction, or alteration of documents is grounds for suspension or revocation. This includes lying on FAA forms, falsifying flight records, or misrepresenting qualifications.",
+      "keyTakeaway": "Falsification is taken very seriously — it can cost you ALL your FAA certificates, not just your Part 107 Remote Pilot Certificate.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "Regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-general",
+    "acsRefs": ["acs-ua-i-a-k3"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-006",
+    "stem": "A remote pilot holds both a Part 107 certificate and a Private Pilot Certificate. If convicted of falsifying Part 107 flight records, which certificates may the FAA revoke?",
+    "choices": [
+      { "id": "q-reg-006-a", "text": "Both the Part 107 and Private Pilot Certificate", "isCorrect": true },
+      { "id": "q-reg-006-b", "text": "Only the Part 107 certificate", "isCorrect": false },
+      { "id": "q-reg-006-c", "text": "Only the Private Pilot Certificate", "isCorrect": false },
+      { "id": "q-reg-006-d", "text": "Neither — only civil penalties apply", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "The FAA may revoke any certificate or authorization issued by the FAA.",
+      "reason": "14 CFR 107.5 states that falsification is grounds for suspension or revocation of 'any certificate or authorization issued by the FAA.' This cross-contamination effect means all your certificates are at risk.",
+      "keyTakeaway": "Falsification affects ALL your FAA certificates — not just the one related to the falsified document. This includes Private, Commercial, and ATP certificates.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "Regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-general",
+    "acsRefs": ["acs-ua-i-a-k3"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-007",
+    "stem": "What is the maximum takeoff weight for a small unmanned aircraft under Part 107?",
+    "choices": [
+      { "id": "q-reg-007-a", "text": "55 pounds", "isCorrect": true },
+      { "id": "q-reg-007-b", "text": "25 pounds", "isCorrect": false },
+      { "id": "q-reg-007-c", "text": "100 pounds", "isCorrect": false },
+      { "id": "q-reg-007-d", "text": "0.55 pounds", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "55 pounds is the maximum takeoff weight including everything onboard.",
+      "reason": "Under 14 CFR 107.3, a 'small unmanned aircraft' is defined as weighing less than 55 pounds on takeoff, including everything that is on board or otherwise attached to the aircraft.",
+      "keyTakeaway": "The 55-pound limit includes the airframe, batteries, payload, and all attached equipment. Aircraft 55 pounds or heavier require different regulations.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "Regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-general",
+    "acsRefs": ["acs-ua-i-a-k2"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-008",
+    "stem": "A remote pilot's certificate expires in 30 days. What must the pilot do to continue operating after that date?",
+    "choices": [
+      { "id": "q-reg-008-a", "text": "Complete recurrent training and pass the recurrent knowledge test", "isCorrect": true },
+      { "id": "q-reg-008-b", "text": "Nothing — the certificate does not expire", "isCorrect": false },
+      { "id": "q-reg-008-c", "text": "Pay a renewal fee to the FAA", "isCorrect": false },
+      { "id": "q-reg-008-d", "text": "Retake the initial knowledge test", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Complete recurrent training and pass the recurrent knowledge test.",
+      "reason": "To maintain currency, a remote pilot must complete recurrent training within 24 calendar months of their previous training. This can be done online through approved training providers.",
+      "keyTakeaway": "Recurrent training is required every 24 calendar months. The recurrent test is shorter and can be completed online — you don't need to retake the full initial exam.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "Regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-certification",
+    "acsRefs": ["acs-ua-i-a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  }
+]

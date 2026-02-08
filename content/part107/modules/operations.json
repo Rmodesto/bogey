@@ -1,0 +1,412 @@
+{
+  "module": {
+    "id": "mod-operations",
+    "title": "Operations",
+    "description": "Airport operations, emergency procedures, crew resource management, aeronautical decision making, physiology, and maintenance",
+    "domain": "Operations",
+    "order": 5,
+    "lessonIds": ["les-ops-radio", "les-ops-airport", "les-ops-emergency", "les-ops-adm", "les-ops-physiology", "les-ops-maintenance"],
+    "references": ["ref-aim", "ref-cfr107", "ref-ac10756"],
+    "icon": "BookOpen",
+    "estimatedHours": 5,
+    "version": 1
+  },
+  "lessons": [
+    {
+      "id": "les-ops-radio",
+      "moduleId": "mod-operations",
+      "title": "Radio Communications",
+      "order": 1,
+      "objectives": [
+        "Understand the difference between towered and non-towered airport communications",
+        "Identify CTAF, UNICOM, and ATIS and their purposes",
+        "Recite the phonetic alphabet and aviation number pronunciations",
+        "Interpret standard radio phraseology for altitudes, directions, and time"
+      ],
+      "references": ["ref-aim", "ref-ac1072"],
+      "acsRefs": ["acs-ua-v-a-k1", "acs-ua-v-a-k2", "acs-ua-v-a-k3", "acs-ua-v-a-k4", "acs-ua-v-a-k5", "acs-ua-v-a-k6", "acs-ua-v-a-k7", "acs-ua-v-a-k8"],
+      "estimatedMinutes": 30,
+      "sections": [
+        {
+          "id": "sec-ops-radio-intro",
+          "title": "Why Radio Knowledge Matters",
+          "content": "## Why Remote Pilots Need Radio Knowledge\n\nAlthough Part 107 does not require remote pilots to communicate with ATC by radio, the FAA expects you to understand aviation radio procedures.\n\n**Why?** Monitoring radio frequencies gives you critical situational awareness about manned aircraft near your operating area.\n\n## Towered vs. Non-Towered Airports\n\n| Airport Type | Sectional Chart Color | Description |\n|---|---|---|\n| Towered | **Blue** | Active ATC tower manages operations |\n| Non-towered | **Magenta** | Pilots self-coordinate |\n\n### What This Means for Remote Pilots\n\nWhen operating near any airport, you should **monitor** the appropriate frequency to maintain awareness of manned aircraft. You should rarely transmit unless facing a genuine emergency.\n\n**Your primary tool is listening.**"
+        },
+        {
+          "id": "sec-ops-radio-ctaf",
+          "title": "CTAF - Common Traffic Advisory Frequency",
+          "content": "## What is CTAF?\n\n**CTAF** (Common Traffic Advisory Frequency) is the frequency where pilots announce their position and intentions at and around airports. It is the primary frequency for pilot-to-pilot communication at non-towered airports.\n\n## Finding CTAF on a Sectional Chart\n\nLook for the circled \"C\" symbol next to the airport data. The frequency appears before the circle-C notation.\n\nAt towered airports, the CTAF is typically the tower frequency.\n\n## Default CTAF\n\nWhen no CTAF is published, the default frequency is **122.9 MHz**.\n\n## Remote Pilot Use\n\nMonitor CTAF on an aviation handheld radio to hear manned aircraft announcements about their:\n- Position\n- Runway in use\n- Intentions\n\nThis tells you where traffic is and when to expect aircraft nearby.",
+          "bogeyman": {
+            "message": "Remote pilots should MONITOR radio frequencies, not transmit. You're listening for situational awareness, not participating in traffic coordination (unless there's a genuine emergency).",
+            "mood": "happy"
+          }
+        },
+        {
+          "id": "sec-ops-radio-unicom-atis",
+          "title": "UNICOM and ATIS",
+          "content": "## UNICOM\n\nUNICOM (Universal Communications) is a ground-based advisory station at airports — typically operated by a private agency (an FBO or airport operator), not by ATC.\n\n### Services UNICOM Provides\n- Weather conditions\n- Wind direction\n- Recommended runway\n- Fuel availability\n- Parking information\n\n### Common UNICOM Frequency\n**122.8 MHz** (but varies by airport — always check)\n\n## Key Distinction: CTAF vs. UNICOM\n\n| Service | Purpose |\n|---|---|\n| CTAF | Pilot-to-pilot frequency for traffic coordination |\n| UNICOM | Ground station providing advisory information |\n\n## ATIS - Automatic Terminal Information Service\n\nATIS is a continuously broadcast recorded message at busier airports providing:\n- Current weather\n- Active runway\n- Wind, visibility, altimeter setting\n- NOTAMs and approach information\n\n### Phonetic Identifiers\n\nEach ATIS update receives a sequential letter:\n- First of the day: \"Information Alpha\"\n- Next update: \"Information Bravo\"\n- Continues through Zulu, then cycles back to Alpha",
+          "bogeyman": {
+            "message": "Don't confuse UNICOM (122.8) with the default CTAF (122.9). They are DIFFERENT services on DIFFERENT frequencies. This is a common exam trap!",
+            "mood": "warning"
+          }
+        },
+        {
+          "id": "sec-ops-radio-phonetic",
+          "title": "The Phonetic Alphabet",
+          "content": "## The NATO/ICAO Phonetic Alphabet\n\nThe phonetic alphabet eliminates confusion in radio communication. **Memorize all 26 code words.**\n\n| A – Alfa | B – Bravo | C – Charlie | D – Delta |\n|---|---|---|---|\n| E – Echo | F – Foxtrot | G – Golf | H – Hotel |\n| I – India | J – Juliett | K – Kilo | L – Lima |\n| M – Mike | N – November | O – Oscar | P – Papa |\n| Q – Quebec | R – Romeo | S – Sierra | T – Tango |\n| U – Uniform | V – Victor | W – Whiskey | X – X-ray |\n| Y – Yankee | Z – Zulu | | |\n\n## Number Pronunciation in Aviation\n\n| Number | Pronunciation |\n|---|---|\n| 0 | \"Zero\" (not \"oh\") |\n| 3 | \"Tree\" (not \"three\") |\n| 5 | \"Fife\" (not \"five\") |\n| 9 | \"Niner\" (not \"nine\") |\n\n## Spelling Notes\n\nNote the spellings:\n- **Alfa** (not Alpha)\n- **Juliett** (with double-t)",
+          "bogeyman": {
+            "message": "The FAA tests specific number pronunciations: TREE (3), FIFE (5), and NINER (9). Also note the spellings: ALFA (not Alpha) and JULIETT (double-t).",
+            "mood": "warning"
+          }
+        },
+        {
+          "id": "sec-ops-radio-phraseology",
+          "title": "Radio Phraseology",
+          "content": "## Altitudes (below 18,000 feet)\n\nStated as separate digits of the thousands plus hundreds:\n- 1,500 feet = \"One thousand five hundred\"\n- 10,500 feet = \"One zero thousand five hundred\"\n- Flight Level 250 (at/above 18,000 ft) = \"Flight level two five zero\"\n\n## Directions\n\nAviation radio communications use **magnetic headings**, not true headings.\n\n## Speed\n\nAviation uses **knots** (nautical miles per hour), not miles per hour.\n\n## Time\n\nAll aviation times are stated in **UTC (Zulu time)**, using the 24-hour clock.\n\n- 2:30 PM local (EST) = 1930Z (Zulu)\n- Written as 1930Z or 19:30 UTC\n\n## Self-Announce Format\n\n**Standard format:**\n\"[Airport name] traffic, [aircraft type and N-number], [position], [altitude], [intentions], [airport name]\"\n\n**Example:**\n\"Riverside traffic, Cessna Four Seven Six Five Juliet, 10 miles south, 2,000 feet, inbound for landing runway 27, Riverside.\"",
+          "bogeyman": {
+            "message": "If a question mentions 'Zulu time' or 'UTC,' remember it's the same thing — Universal Coordinated Time at the Prime Meridian.",
+            "mood": "happy"
+          }
+        },
+        {
+          "id": "sec-ops-radio-traffic",
+          "title": "Traffic Pattern Calls",
+          "content": "## Understanding Traffic Pattern Calls\n\nManned aircraft pilots announce their position at key points. Understanding these calls helps you know where aircraft are.\n\n## Traffic Pattern Position Calls You'll Hear\n\n- **\"Entering downwind runway 27\"** — aircraft is flying parallel to the runway, opposite direction of landing\n- **\"Turning base runway 27\"** — aircraft is making the turn toward the runway\n- **\"Final runway 27\"** — aircraft is on final approach, about to land\n- **\"Departing runway 27 to the north\"** — aircraft has taken off and is leaving the area\n\n## The Five Traffic Pattern Legs (in order)\n\n1. **Upwind** — climbing along the runway heading after takeoff\n2. **Crosswind** — 90° turn from upwind, still climbing\n3. **Downwind** — parallel to the runway in the opposite direction (the longest leg)\n4. **Base** — 90° turn toward the runway, descending\n5. **Final** — aligned with the runway, on approach to land\n\n## Aircraft Call Signs\n\nU.S. aircraft are identified by **N-numbers** — registration numbers beginning with \"N\" followed by up to 5 alphanumeric characters (e.g., N978CP, N1234).\n\nOn the radio, civil aircraft pilots use the manufacturer name plus the registration number:\n\"Cessna Four Seven Six Five Juliet\" (not \"November Four Seven Six Five Juliet\")",
+          "bogeyman": {
+            "message": "Know the five traffic pattern legs IN ORDER: upwind, crosswind, downwind, base, final. The FAA tests whether you can interpret these radio calls!",
+            "mood": "warning"
+          }
+        }
+      ],
+      "version": 1
+    },
+    {
+      "id": "les-ops-airport",
+      "moduleId": "mod-operations",
+      "title": "Airport Operations",
+      "order": 2,
+      "objectives": [
+        "Identify airport types by sectional chart color",
+        "Interpret runway markings and airport signs",
+        "Understand traffic patterns and standard pattern altitude",
+        "Recognize airport lighting systems"
+      ],
+      "references": ["ref-aim", "ref-ac1072"],
+      "acsRefs": ["acs-ua-v-b-k1", "acs-ua-v-b-k2", "acs-ua-v-b-k3", "acs-ua-v-b-k4", "acs-ua-v-b-k5", "acs-ua-v-b-k6", "acs-ua-v-b-k7", "acs-ua-v-b-k8"],
+      "estimatedMinutes": 30,
+      "sections": [
+        {
+          "id": "sec-ops-airport-types",
+          "title": "Types of Airports",
+          "content": "## Airport Types on Sectional Charts\n\n| Airport Type | Sectional Chart Color | Description |\n|---|---|---|\n| Towered | **Blue** | Active ATC control tower |\n| Non-towered | **Magenta** | No active tower; pilots self-coordinate |\n| Heliport | Special \"H\" symbol | Designated rotorcraft landing area |\n| Seaplane base | Special symbol | Water-based operations |\n\n## ATC Tower Frequencies\n\nAt a towered airport, multiple frequencies handle different functions:\n\n| Frequency | Function |\n|---|---|\n| Clearance Delivery | Route clearances before taxi |\n| Ground Control | Taxiway and surface movement |\n| Tower | Runway operations, takeoff/landing clearances |\n| Approach/Departure | Radar-based arrival/departure sequencing |\n\n## Remote Pilot Considerations\n\nRemote pilots can monitor these frequencies for situational awareness but should not transmit unless facing a genuine emergency.",
+          "bogeyman": {
+            "message": "Blue = towered, magenta = non-towered. This is HEAVILY tested on the exam!",
+            "mood": "warning"
+          }
+        },
+        {
+          "id": "sec-ops-airport-markings",
+          "title": "Runway Markings",
+          "content": "## Runway Numbering\n\nThe runway number is the **magnetic heading divided by 10** and rounded.\n\n- A runway oriented 270° magnetic is **Runway 27**\n- The opposite end is **Runway 09** (180° difference)\n\n## Color Rules\n\n- **White** markings = on the runway\n- **Yellow** markings = on taxiways and non-runway areas\n- **Yellow chevrons** = blast pad (not for taxiing, takeoff, or landing)\n\n## Displaced Threshold\n\nWhite arrows along the centerline lead to a threshold bar set back from the physical runway end.\n\n- Landing aircraft must touch down **beyond** the displaced threshold\n- The area before it **can** be used for takeoff and rollout\n\n## Key Markings\n\n| Marking | Description |\n|---|---|\n| Threshold markings | White stripes at beginning of landing portion |\n| Centerline | White dashed line down the middle |\n| Touchdown zone | Groups of stripes on each side of centerline |\n| Hold short lines | Four yellow lines (two solid, two dashed) |"
+        },
+        {
+          "id": "sec-ops-airport-signs",
+          "title": "Airport Signs",
+          "content": "## Airport Sign Color Code\n\nKnow the color code — this is heavily tested:\n\n| Sign Type | Colors | Purpose |\n|---|---|---|\n| **Mandatory** | White on **red** background | STOP, hold short, no entry |\n| **Location** | Black on **yellow** background | Identifies where you are |\n| **Directional** | Yellow on **black** background | Points to where you're going |\n\n## Memory Aid\n\n- **R**ed = **R**equired to comply (mandatory)\n- **Y**ellow background = **Y**ou are here (location)\n- **B**lack background = **B**earing/direction",
+          "bogeyman": {
+            "message": "The sign color coding is HEAVILY tested. RED background = MANDATORY (must comply). Yellow background = location (you are here). Black background = directional (where you're going).",
+            "mood": "warning"
+          }
+        },
+        {
+          "id": "sec-ops-airport-traffic",
+          "title": "Traffic Patterns",
+          "content": "## Standard Traffic Pattern\n\nThe standard traffic pattern is a **left-hand rectangular pattern** with five legs:\n\n1. **Upwind** — climbing along the runway heading after takeoff\n2. **Crosswind** — 90° turn from upwind, still climbing\n3. **Downwind** — parallel to the runway in the opposite direction (the longest leg)\n4. **Base** — 90° turn toward the runway, descending\n5. **Final** — aligned with the runway, on approach to land\n\n## Standard Pattern Altitude\n\n**1,000 feet AGL** for propeller-driven aircraft.\n\n## Right-Hand Patterns\n\nSome airports use right-hand traffic due to terrain, noise, or other factors. Check the Chart Supplement or look for the traffic pattern indicator on the segmented circle.\n\n## Segmented Circle\n\nA visual indicator system at non-towered airports:\n- L-shaped extensions show traffic pattern direction\n- Wind cone indicates current wind direction\n\n## Why This Matters for UAS\n\n- Aircraft on approach/departure are at **low altitude** — conflict risk is highest\n- Traffic pattern altitude (1,000 AGL) overlaps with the Part 107 400-foot ceiling\n- Watch for aircraft in the pattern when operating near airports",
+          "bogeyman": {
+            "message": "Traffic pattern questions are common. Standard pattern is LEFT turns at 1,000 AGL. Don't confuse the order: downwind comes BEFORE base, not after!",
+            "mood": "happy"
+          }
+        },
+        {
+          "id": "sec-ops-airport-lighting",
+          "title": "Airport Lighting",
+          "content": "## Runway Edge Lights\n\nWhite along the length; **yellow for the last 2,000 feet** (caution zone before runway end).\n\n## Visual Glide Slope Indicators\n\n**VASI/PAPI** provide descent guidance using red/white light patterns:\n- Both give a standard **3-degree glide path**\n- PAPI uses four light boxes on the left side of the runway\n\n## Rotating Beacons\n\n| Airport Type | Beacon Pattern |\n|---|---|\n| Civilian airport | Alternating **white and green** |\n| Military airport | Two quick white flashes then green (white-white-green) |\n\n## Pilot-Controlled Lighting (PCL)\n\nAt non-towered airports, pilots activate runway lights via microphone clicks:\n- **7 clicks** = highest intensity\n- **5 clicks** = medium\n- **3 clicks** = low\n\n## Sources for Airport Data\n\n| Source | Information Provided |\n|---|---|\n| Sectional Charts | Airport location, type, runway configuration, frequencies, airspace |\n| Chart Supplements (A/FD) | Detailed info: runway dimensions, surface, fuel, lighting, hours |",
+          "bogeyman": {
+            "message": "Runway edge lights are NOT all white — the last 2,000 feet are YELLOW. Also: civilian beacon = white/green; military = white-white-green.",
+            "mood": "warning"
+          }
+        },
+        {
+          "id": "sec-ops-airport-hazards",
+          "title": "Bird and Wildlife Hazards",
+          "content": "## Bird Strike Risk\n\nBird strikes are a significant aviation hazard:\n- Over **90% occur at or below 3,000 feet AGL**\n- Migratory birds (geese, ducks) can be found up to 7,000 feet during migration\n\n## Migration Seasons\n\n- **Spring:** March–April\n- **Fall:** August–November\n\n## Reporting Bird Strikes\n\nUse **FAA Form 5200-7** (Bird/Other Wildlife Strike Report). Anyone with knowledge of a strike is encouraged to report.\n\n## Security Identification Display Areas (SIDA)\n\nSIDA is a restricted security zone at airports regulated under TSA rules.\n\n**Why it matters for drone pilots:**\n- Operating in or near SIDA areas requires authorization\n- Flying drones into SIDA without authorization violates airport security",
+          "bogeyman": {
+            "message": "Know the migration seasons: spring (March-April) and fall (August-November). Birds can be at HIGH altitudes during migration!",
+            "mood": "happy"
+          }
+        }
+      ],
+      "version": 1
+    },
+    {
+      "id": "les-ops-emergency",
+      "moduleId": "mod-operations",
+      "title": "Emergency Procedures",
+      "order": 3,
+      "objectives": [
+        "Explain emergency planning and PIC emergency authority",
+        "Describe lithium battery hazards and proper fire response",
+        "Understand loss of control link and GPS procedures",
+        "Identify procedures for operations over people and at night"
+      ],
+      "references": ["ref-ac1072", "ref-cfr107"],
+      "acsRefs": ["acs-ua-v-c-k1", "acs-ua-v-c-k2", "acs-ua-v-c-k3", "acs-ua-v-c-k4", "acs-ua-v-c-k5", "acs-ua-v-c-k6", "acs-ua-v-c-k7"],
+      "estimatedMinutes": 35,
+      "sections": [
+        {
+          "id": "sec-ops-emerg-planning",
+          "title": "Emergency Planning",
+          "content": "## Pre-Flight Emergency Briefing\n\n**Before every flight**, the remote PIC must brief all personnel on emergency procedures (14 CFR 107.49).\n\nEveryone involved must know:\n- Their roles\n- What to do if something goes wrong\n- Communication protocols\n\n## Emergency Authority (14 CFR 107.21)\n\nIn a genuine in-flight emergency requiring immediate action, the remote PIC may deviate from **any** Part 107 rule to the extent necessary to meet the emergency.\n\nThis is your ultimate safety valve — but it applies only to real emergencies, not convenience.\n\n## When to Invoke Emergency Authority\n\n- Search and rescue operations\n- Fire suppression support\n- Imminent risk to persons on the ground\n- Any situation where following the rules would create greater danger",
+          "bogeyman": {
+            "message": "The pre-flight briefing on emergency procedures is MANDATORY for all crew. The remote PIC has authority to deviate from ANY rule during a genuine emergency.",
+            "mood": "happy"
+          }
+        },
+        {
+          "id": "sec-ops-emerg-lithium",
+          "title": "Lithium Battery Hazards",
+          "content": "## Safe Battery Practices\n\nThis is one of the most testable topics in Section V.\n\n### Safe Transportation\n- Inspect batteries for swelling, cracks, or damage\n- Protect terminals from short circuits (use caps or tape)\n- Transport in protective cases or fireproof bags\n- For air transport: discharge to **below 30%** state of charge\n\n### Safe Charging\n- Always use the manufacturer-recommended charger\n- **Never leave batteries charging unattended**\n- Charge on a non-flammable surface with ventilation\n- Stop charging immediately if battery becomes hot or swells\n- Never overcharge\n\n### Safe Usage\n- Don't over-discharge (land with 20%+ remaining)\n- Inspect before every flight — swollen batteries must not be flown\n- Store at **40–60% charge** for long-term storage\n- Store at room temperature (68–77°F / 20–25°C)"
+        },
+        {
+          "id": "sec-ops-emerg-thermal",
+          "title": "Thermal Runaway and Fire Response",
+          "content": "## What is Thermal Runaway?\n\n**Thermal runaway** is a self-accelerating chemical reaction that produces:\n- Extreme heat (750°F+)\n- Toxic smoke\n- Flames\n\nOnce it starts, it cannot be easily stopped.\n\n## Causes of Thermal Runaway\n\n- Overcharging\n- Physical damage (crush/puncture)\n- Manufacturing defects\n- Short circuits\n- Over-discharge followed by fast recharge\n\n## Fire Response — What to Use\n\n| Method | Effective? |\n|---|---|\n| **Dry powder (Class D) fire extinguisher** | **YES** — primary method |\n| **Dry sand or salt** | **YES** — smothers the fire |\n| **Let it burn in open area** | **YES** — if safe, let it burn out |\n| Water | **NO** — lithium reacts with water |\n| Standard foam extinguisher | **NO** — ineffective |\n| CO₂ extinguisher | **NO** — ineffective |\n\n## State of Charge and Fire Risk\n\n**High state of charge = higher fire risk.**\n\nBatteries at 70–100% charge produce significantly more violent thermal runaway compared to batteries at 30%. This is why the FAA requires batteries to be discharged below 30% for air transport.",
+          "bogeyman": {
+            "message": "The FAA loves testing what NOT to use on a lithium fire. NEVER use water, foam, or CO₂. Use dry powder (Class D) or sand!",
+            "mood": "warning"
+          }
+        },
+        {
+          "id": "sec-ops-emerg-link-loss",
+          "title": "Loss of Control Link",
+          "content": "## When Control Link is Lost\n\nWhen the radio link between your controller and the drone is lost, you can no longer send commands. The primary safety feature is **Return-to-Home (RTH)**.\n\n## How RTH Works\n\n1. The aircraft automatically climbs to a pre-set safety altitude\n2. Navigates back to its takeoff point using GPS\n3. Descends and lands at the home point\n\n## Critical Limitation: RTH Depends on GPS\n\nIf GPS is unavailable or unreliable (urban canyons, indoor, interference), **RTH may fail**.\n\nA failed RTH with a lost control link can result in a **fly-away** — the drone drifts uncontrolled.\n\n## Prevention\n\n- Verify GPS lock before launch (typically 8+ satellites)\n- Pre-program RTH altitude above surrounding obstacles\n- Test RTH on the ground before mission\n- Maintain visual line of sight\n- Monitor signal strength throughout flight",
+          "bogeyman": {
+            "message": "RTH is NOT foolproof. It depends ENTIRELY on GPS. If GPS is lost or degraded, RTH will fail. This is a favorite exam topic!",
+            "mood": "warning"
+          }
+        },
+        {
+          "id": "sec-ops-emerg-gps-loss",
+          "title": "Loss of GPS Signal",
+          "content": "## What Happens When GPS is Lost\n\nWhen GPS is lost, the drone switches to **ATTI (Attitude) mode**:\n\n| Function | Status |\n|---|---|\n| Altitude hold | **Maintained** (barometer keeps altitude) |\n| Position hold | **Lost** (drone drifts with the wind) |\n| Pilot control | **Required** to prevent drift |\n\n## Key Point\n\nThe drone does NOT fall from the sky — it stays at altitude but moves with the wind.\n\n## How to Respond\n\n1. Maintain visual contact\n2. Use manual stick inputs to counteract drift\n3. Land as soon as safely possible\n\n## GPS Loss vs. Control Link Loss\n\n| Failure | Result |\n|---|---|\n| GPS loss | Position drift (pilot still has control) |\n| Control link loss | No commands can be sent (RTH activates) |\n\nThey are different failures requiring different responses.",
+          "bogeyman": {
+            "message": "GPS loss ≠ altitude loss. The barometer maintains altitude. The key issue is POSITION DRIFT, requiring constant pilot input to counteract wind.",
+            "mood": "happy"
+          }
+        },
+        {
+          "id": "sec-ops-emerg-ops-special",
+          "title": "Operations Over People and at Night",
+          "content": "## Operations Over People\n\nIf a non-participant enters your flight area during operations:\n- **Land the aircraft**, OR\n- **Move it away** from the person\n\nDo not continue flying over non-participants unless your operation qualifies under Part 107 Subpart D (Categories 1–4) and all requirements are met.\n\nIf an emergency requires flight over people (search and rescue, fire suppression), the remote PIC may invoke emergency authority under 14 CFR 107.21.\n\n## Night Operations Challenges\n\nNight operations present unique challenges:\n- Loss of visual references\n- Spatial disorientation\n- Difficulty judging distance and altitude\n\n## If You Lose Visual Contact at Night\n\n1. **Command the aircraft to hover/hold position** immediately\n2. **Stop all movement** until visual contact is re-established\n3. If you cannot re-establish visual contact, initiate descent to a known safe altitude or land\n\n## Frequency Spectrums\n\nMost consumer drones operate on unlicensed ISM bands:\n\n| Band | Congestion | Range |\n|---|---|---|\n| 2.4 GHz | High (shared with Wi-Fi, Bluetooth) | Longer |\n| 5.8 GHz | Lower | Shorter |\n\n**Sources of interference:** Wi-Fi access points, Bluetooth devices, microwave ovens, power lines, metal buildings, cell towers."
+        }
+      ],
+      "version": 1
+    },
+    {
+      "id": "les-ops-adm",
+      "moduleId": "mod-operations",
+      "title": "Aeronautical Decision-Making",
+      "order": 4,
+      "objectives": [
+        "Apply the DECIDE model to flight situations",
+        "Identify the five hazardous attitudes and their antidotes",
+        "Use IMSAFE and PAVE checklists for risk assessment",
+        "Understand crew resource management principles"
+      ],
+      "references": ["ref-ac1072", "ref-faa-h-8083-2"],
+      "acsRefs": ["acs-ua-v-d-k1", "acs-ua-v-d-k1a", "acs-ua-v-d-k1b", "acs-ua-v-d-k2", "acs-ua-v-d-k3", "acs-ua-v-d-k4", "acs-ua-v-d-k5"],
+      "estimatedMinutes": 40,
+      "sections": [
+        {
+          "id": "sec-ops-adm-intro",
+          "title": "What is ADM?",
+          "content": "## Aeronautical Decision-Making\n\nADM is a systematic approach to risk assessment and decision-making during flight operations.\n\n**Key Fact:** Approximately 80% of aviation accidents involve human error — ADM is designed to break the accident chain.\n\n## The DECIDE Model (Six Steps)\n\n1. **D**etect the change or problem\n2. **E**stimate the need to react (how urgent is it?)\n3. **C**hoose a desired outcome\n4. **I**dentify actions that could achieve that outcome\n5. **D**o the necessary action\n6. **E**valuate the effect of the action\n\nThis is a continuous loop — after evaluating, you detect again. Decision-making never stops during a flight.\n\n## The 3P Model\n\n1. **Perceive** hazards (using the PAVE checklist)\n2. **Process** the level of risk (assess severity and probability)\n3. **Perform** risk mitigation (take action to reduce risk)",
+          "bogeyman": {
+            "message": "Questions often present a scenario and ask which DECIDE step is being demonstrated. Know the sequence: Detect, Estimate, Choose, Identify, Do, Evaluate.",
+            "mood": "happy"
+          }
+        },
+        {
+          "id": "sec-ops-adm-hazardous",
+          "title": "The Five Hazardous Attitudes",
+          "content": "## The Five Hazardous Attitudes\n\n**This is one of the most heavily tested topics on the entire exam.** Memorize all five attitudes and their antidotes.\n\n| Attitude | Characteristic | Antidote |\n|---|---|---|\n| **Anti-authority** | \"Don't tell me what to do\" | \"Follow the rules — they are usually right\" |\n| **Impulsivity** | \"Do it quickly!\" | \"Not so fast — think first\" |\n| **Invulnerability** | \"It won't happen to me\" | \"It could happen to me\" |\n| **Macho** | \"I can do it — watch this\" | \"Taking chances is foolish\" |\n| **Resignation** | \"What's the use?\" | \"I'm not helpless — I can make a difference\" |\n\n## How to Identify Each in Exam Scenarios\n\n- **Anti-authority:** Pilot ignores rules, skips checklists, disregards NOTAMs\n- **Impulsivity:** Pilot rushes decisions under time pressure, skips preflight\n- **Invulnerability:** Pilot flies in marginal weather because \"I've done it before\"\n- **Macho:** Pilot takes unnecessary risks to impress a client\n- **Resignation:** VO sees hazard but doesn't say anything because \"the PIC already decided\"",
+          "bogeyman": {
+            "message": "MEMORIZE the five hazardous attitudes and their antidotes. Read scenario questions carefully — identify the attitude BEFORE looking at answer choices!",
+            "mood": "warning"
+          }
+        },
+        {
+          "id": "sec-ops-adm-imsafe",
+          "title": "The IMSAFE Checklist",
+          "content": "## Personal Fitness Assessment\n\nBefore every flight, assess yourself using IMSAFE:\n\n| Letter | Factor | Question to Ask |\n|---|---|---|\n| **I** | Illness | Am I sick or feeling unwell? |\n| **M** | Medication | Am I taking anything that could impair me? |\n| **S** | Stress | Am I under unusual stress? |\n| **A** | Alcohol | Have I had alcohol in the last 8 hours? Is my BAC below 0.04%? |\n| **F** | Fatigue | Am I well-rested? |\n| **E** | Emotion | Am I emotionally fit to make good decisions? |\n\n## Honest Self-Assessment\n\nThe key is honesty. Rationalizations like:\n- \"I'll be fine once we start\"\n- \"It's only mild stress\"\n\n...are exactly the kind of thinking that leads to accidents.\n\nIf any factor is negative, either **mitigate the issue** or **do not fly**."
+        },
+        {
+          "id": "sec-ops-adm-pave",
+          "title": "The PAVE Checklist",
+          "content": "## Operational Risk Assessment\n\nEvaluate four risk categories before the mission:\n\n| Letter | Factor | What to Assess |\n|---|---|---|\n| **P** | Pilot | Use IMSAFE; also consider currency and experience |\n| **A** | Aircraft | Condition, maintenance status, battery health, payload |\n| **V** | enVironment | Weather, terrain, airspace, EMI, time of day |\n| **E** | External pressures | Client pressure, time constraints, financial incentives |\n\n## External Pressures — The \"E\" Factor\n\nExternal pressures include:\n- Client demands (\"Fly NOW or we won't pay\")\n- Time constraints\n- Financial pressure\n- Peer pressure\n\n**The correct response:** Never let pressure override safety.",
+          "bogeyman": {
+            "message": "The FAA expects you to recognize when EXTERNAL PRESSURE is driving a poor decision. 'The client says fly NOW or they won't pay' is textbook external pressure — safety comes first!",
+            "mood": "warning"
+          }
+        },
+        {
+          "id": "sec-ops-adm-crm",
+          "title": "Crew Resource Management",
+          "content": "## What is CRM?\n\nCRM is the effective coordination, communication, and decision-making among all team members.\n\n## Key Principles for sUAS\n\n- Use standard, clear phraseology\n  - Good: \"Aircraft sighted, 2 o'clock, 500 feet, moving toward us\"\n  - Bad: \"Plane nearby\"\n- **Cross-monitor** — crew members watch each other's actions\n- Create a culture where anyone can raise safety concerns\n\n## Common CRM Failures\n\n| Failure | Hazardous Attitude |\n|---|---|\n| VO not speaking up about a hazard | Resignation |\n| PIC dismissing valid crew concerns | Anti-authority |\n| Unclear role assignments | Poor communication |\n\n## Effective Team Communication\n\n**Pre-flight briefing is mandatory.** Before every flight, the PIC must brief all personnel on:\n- Mission plan\n- Roles\n- Emergency procedures\n- Communication protocols\n\n**During flight:** The VO continuously provides situational updates. The PIC maintains control and makes safety decisions.\n\n**The Remote PIC has final authority** over all decisions, but effective CRM means taking crew input seriously."
+        },
+        {
+          "id": "sec-ops-adm-sa",
+          "title": "Situational Awareness",
+          "content": "## What is Situational Awareness?\n\nSituational awareness (SA) is your understanding of:\n1. **What's happening** around you\n2. **What it means** for safety\n3. **What's going to happen next** if you don't act\n\n## Three Levels of SA\n\n1. **Perception** — What is happening right now?\n2. **Comprehension** — What does it mean for safety?\n3. **Projection** — What will happen next if I don't act?\n\n## Common Causes of SA Loss\n\n| Cause | Example |\n|---|---|\n| Tunneling/fixation | Troubleshooting GPS while ignoring approaching aircraft |\n| Workload overload | Too many tasks competing for attention |\n| Fatigue and stress | Reduced cognitive capacity |\n| False assumptions | Assuming weather won't change |\n\n## Task Management Priority\n\n1. **Aviate** — Control the aircraft first\n2. **Navigate** — Know where you are\n3. **Communicate** — Tell others what's happening",
+          "bogeyman": {
+            "message": "If a question describes a pilot focused on one problem while ignoring everything else, the answer is 'loss of situational awareness' or 'fixation.'",
+            "mood": "happy"
+          }
+        }
+      ],
+      "version": 1
+    },
+    {
+      "id": "les-ops-physiology",
+      "moduleId": "mod-operations",
+      "title": "Physiology",
+      "order": 5,
+      "objectives": [
+        "State the alcohol and drug rules for remote pilots",
+        "Identify medications that affect fitness for flight",
+        "Explain physiological factors affecting vision and night operations",
+        "Describe stress, fatigue, and hyperventilation effects"
+      ],
+      "references": ["ref-ac1072", "ref-faa-h-8083-25"],
+      "acsRefs": ["acs-ua-v-e-k1", "acs-ua-v-e-k2", "acs-ua-v-e-k3", "acs-ua-v-e-k4", "acs-ua-v-e-k5", "acs-ua-v-e-k6", "acs-ua-v-e-k7", "acs-ua-v-e-k8", "acs-ua-v-e-k9"],
+      "estimatedMinutes": 35,
+      "sections": [
+        {
+          "id": "sec-ops-phys-alcohol",
+          "title": "Alcohol and Drug Rules",
+          "content": "## The Rules (14 CFR 107.27)\n\n| Rule | Requirement |\n|---|---|\n| \"Bottle to throttle\" | No alcohol within **8 hours** before acting as PIC, VO, or crew |\n| BAC limit | Blood alcohol must be below **0.04%** |\n| Both conditions | **BOTH** the 8-hour rule AND the BAC limit must be met |\n| Under the influence | Cannot operate while under the influence of any drug that impairs safety |\n\n## Critical Point: BOTH Requirements\n\nWaiting 8 hours is **not enough** if your BAC is still at or above 0.04%.\n\n**Both conditions must be satisfied.**\n\n## Example\n\nA pilot had two beers at 7:00 PM. At 4:00 AM (9 hours later), BAC is 0.02%.\n\n**Can they fly?** Yes — more than 8 hours have passed AND BAC is below 0.04%.\n\nHowever, the pilot should still honestly self-assess whether they feel any residual effects.",
+          "bogeyman": {
+            "message": "The FAA tests the BOTH requirement. 8 hours is not enough if BAC ≥ 0.04%. And BAC < 0.04% is not enough if less than 8 hours have passed. BOTH conditions must be met!",
+            "mood": "warning"
+          }
+        },
+        {
+          "id": "sec-ops-phys-medication",
+          "title": "Medication",
+          "content": "## Self-Assessment Requirement\n\nPart 107 does not require an FAA medical certificate, but the remote PIC must self-assess whether any medication impairs their ability to fly safely.\n\n## Sedating Medications (NOT Acceptable)\n\nFirst-generation antihistamines like **diphenhydramine (Benadryl)** cause significant drowsiness and impair judgment.\n\nEven some second-generation antihistamines like **cetirizine (Zyrtec)** can cause drowsiness in some individuals.\n\n## Potentially Acceptable Medications\n\nNon-sedating antihistamines:\n- **Loratadine (Claritin)**\n- **Fexofenadine (Allegra)**\n\nProvided the pilot verifies no adverse effects on their performance.\n\n## Decision Guide\n\n| Medication | Can You Fly? |\n|---|---|\n| Benadryl (diphenhydramine) | **No** — causes drowsiness |\n| Claritin (loratadine) | Likely yes (if no side effects) |\n| Allegra (fexofenadine) | Likely yes (if no side effects) |",
+          "bogeyman": {
+            "message": "If a question names a medication and asks if the pilot can fly, determine whether it's SEDATING. Benadryl = NO. Claritin = likely YES (if no side effects).",
+            "mood": "happy"
+          }
+        },
+        {
+          "id": "sec-ops-phys-stress",
+          "title": "Stress, Fatigue, and Hyperventilation",
+          "content": "## Stress Effects\n\n| Type | Effect |\n|---|---|\n| **Acute stress** | Initial response can enhance performance, but quickly degrades it if intense or prolonged |\n| **Chronic stress** | Steadily erodes judgment, situational awareness, and decision-making |\n\n## Fatigue\n\nFatigue directly attacks situational awareness and ADM.\n\n| Type | Recovery |\n|---|---|\n| Acute fatigue | Can be recovered with rest |\n| Chronic fatigue | Cannot be fixed with one good night of sleep — takes multiple nights |\n\n**\"I'll drink more coffee\"** is never the correct answer to fatigue. The only real countermeasure is adequate rest.\n\n## Hyperventilation\n\n**Cause:** Rapid or deep breathing removes too much CO₂ from the blood.\n\n**Symptoms:**\n- Dizziness\n- Tingling in lips and fingers\n- Lightheadedness\n- Impaired judgment\n\n**Treatment:**\n1. **Slow your breathing** deliberately\n2. Breathe into a paper bag (rebreathes CO₂)\n3. Symptoms subside within minutes",
+          "bogeyman": {
+            "message": "Hyperventilation treatment: SLOW the breathing rate. The paper bag method works by increasing CO₂ levels back to normal.",
+            "mood": "happy"
+          }
+        },
+        {
+          "id": "sec-ops-phys-dehydration",
+          "title": "Dehydration and Heatstroke",
+          "content": "## Dehydration\n\n**Key Fact:** By the time you feel thirsty, you've already lost enough fluid to affect your judgment.\n\n**Prevention:** Drink water *before* you're thirsty — at least one pint per hour during moderate outdoor work.\n\n**Effect on Remote Pilots:** Dehydration affects **mental** performance (decision-making, situational awareness), not just physical comfort.\n\n## Heatstroke\n\nHeatstroke is a life-threatening emergency where the body can no longer regulate its temperature.\n\n**Symptoms:**\n- Extreme confusion\n- Hot/dry skin\n- Potential loss of consciousness\n\n**Response:**\n1. Move the person to shade\n2. Cool them immediately\n3. Call 911"
+        },
+        {
+          "id": "sec-ops-phys-vision",
+          "title": "Vision and the Eye",
+          "content": "## Types of Vision\n\n| Type | When Used | Characteristics |\n|---|---|---|\n| Photopic (daylight) | Day operations | Cone cells provide sharp, color vision |\n| Scotopic (night) | Night operations | Rod cells provide black-and-white vision with high sensitivity but poor detail |\n\n## The Blind Spot\n\nWhere the optic nerve connects to the retina — approximately **15° from center**.\n\nNo photoreceptors at this point. Small objects can disappear if they fall directly in this area.\n\n## Empty-Field Myopia\n\nWhen looking at a featureless sky (no depth cues), your eyes naturally focus at a resting distance of about **3–6 feet**.\n\nDistant aircraft become invisible.\n\n**Prevention:** Regularly refocus on distant objects.\n\n## Scanning Technique\n\nDivide the sky into sectors and scan each for 1–2 seconds.\n\nSmall, systematic eye movements are more effective than large sweeping glances."
+        },
+        {
+          "id": "sec-ops-phys-night",
+          "title": "Night Physiology",
+          "content": "## Dark Adaptation\n\nYour eyes need **20–30 minutes** to fully adapt to darkness.\n\nDuring this time, avoid bright lights — especially white light.\n\nIf you're exposed to bright light after adapting, you must start the adaptation process over.\n\n## Cockpit/Ground Station Lighting\n\nUse **dim red light** for reading instruments and charts at night.\n\n- Red light **preserves** dark adaptation\n- White light **destroys** it\n\n## Off-Center Viewing\n\nAt night, look slightly to the side of objects (**10–20°**) rather than directly at them.\n\nRod cells (used in dim light) are more concentrated in the peripheral retina, making peripheral vision more effective in darkness.",
+          "bogeyman": {
+            "message": "Dark adaptation takes 20-30 minutes. Use RED light at night to preserve it — white light destroys dark adaptation. Use OFF-CENTER viewing for better night vision.",
+            "mood": "happy"
+          }
+        },
+        {
+          "id": "sec-ops-phys-illusions",
+          "title": "Night Illusions",
+          "content": "## Common Night Illusions\n\n### Autokinesis\n\nStaring at a single stationary light against a dark background for more than a few seconds causes it to **appear to move**.\n\n**Prevention:** Don't fixate on single lights — keep your eyes scanning.\n\n### False Horizon\n\nGround lights can be confused with stars, creating a false sense of what's level.\n\nThis can cause disorientation, especially over dark terrain with scattered lights.\n\n### Black Hole Approach\n\nApproaching a landing zone over dark, featureless terrain (water, desert) distorts your perception of the approach angle.\n\nCan lead to dangerous maneuvering.\n\n### Featureless Terrain Illusion\n\nOver flat, uniform surfaces (water, snow, desert), it's extremely difficult to judge altitude and distance.\n\n## Exam Identification\n\n| Description | Illusion |\n|---|---|\n| Stationary light appears to move | **Autokinesis** |\n| Confusion between ground lights and stars | **False horizon** |",
+          "bogeyman": {
+            "message": "AUTOKINESIS = stationary light appears to move. Happens when you stare at a single light for several seconds at night. Keep scanning to prevent it!",
+            "mood": "warning"
+          }
+        }
+      ],
+      "version": 1
+    },
+    {
+      "id": "les-ops-maintenance",
+      "moduleId": "mod-operations",
+      "title": "Maintenance and Inspection",
+      "order": 6,
+      "objectives": [
+        "Describe preflight inspection requirements",
+        "Identify who may perform sUAS maintenance",
+        "Explain night preflight requirements",
+        "Understand Declaration of Compliance for operations over people"
+      ],
+      "references": ["ref-ac1072", "ref-cfr107"],
+      "acsRefs": ["acs-ua-v-f-k1", "acs-ua-v-f-k2", "acs-ua-v-f-k3", "acs-ua-v-f-k4", "acs-ua-v-f-k5", "acs-ua-v-f-k6", "acs-ua-v-f-k7"],
+      "estimatedMinutes": 25,
+      "sections": [
+        {
+          "id": "sec-ops-maint-basic",
+          "title": "Basic Maintenance",
+          "content": "## What is Routine sUAS Maintenance?\n\nRoutine maintenance includes:\n- Propeller inspection and replacement\n- Motor cleaning\n- Battery servicing\n- Firmware updates\n- Sensor calibration\n\n## Key Difference from Manned Aircraft\n\n**Unlike manned aircraft, sUAS maintenance does not require an A&P (Airframe & Powerplant) mechanic.**\n\n**Any competent person** — including the owner/operator — can perform all maintenance.\n\nThis is the single biggest difference from manned aircraft maintenance.\n\n## Techniques to Mitigate Mechanical Failures\n\n| Component | Best Practice |\n|---|---|\n| Battery | Monitor voltage throughout flight; track cycle count; replace aging batteries |\n| Propellers | Inspect before every flight; replace per manufacturer schedule (typically 50–100 flight hours) |\n| Motors | Check for debris, corrosion, smooth bearing operation |\n| Firmware | Keep current; always test after updating |",
+          "bogeyman": {
+            "message": "Any competent person can maintain an sUAS — NO A&P mechanic certificate required. This is the biggest difference from manned aircraft maintenance!",
+            "mood": "happy"
+          }
+        },
+        {
+          "id": "sec-ops-maint-preflight",
+          "title": "Preflight Inspection",
+          "content": "## Regulatory Requirement\n\n14 CFR 107.49 requires the Remote PIC to ensure the sUAS is in a **condition for safe operation**.\n\n## Preflight Inspection Checklist\n\n### Structure\n- Check for cracks, loose fasteners, damage to arms/fuselage\n- Verify antenna condition\n- Confirm payload security\n\n### Propellers and Motors\n- Look for chips, cracks, bends in propellers\n- Spin motors briefly to check for smooth operation\n- **Any damaged propeller = do not fly**\n\n### Battery\n- Verify adequate charge for the mission\n- Check for swelling, damage, or leakage\n- Ensure contacts are clean and secure\n\n### Electronics\n- Power all systems and verify no error messages\n- Test gimbal/camera, telemetry display, receiver status\n\n### Compass\n- Calibrate before every flight per manufacturer recommendations\n- Calibrate at the launch site, away from metal structures, power lines, vehicles\n\n### GPS\n- Verify satellite lock (typically 8+ satellites)\n- Do not launch until position is stable\n\n### Control Link\n- Confirm transmitter is bound\n- Verify sticks respond correctly\n- Check failsafe settings"
+        },
+        {
+          "id": "sec-ops-maint-records",
+          "title": "Record Keeping",
+          "content": "## Record Keeping Requirements\n\nWhile Part 107 does not **specifically mandate** flight logs or maintenance logs, the FAA can request records upon inspection.\n\nMaintaining them demonstrates professionalism and due diligence.\n\n## Recommended Records\n\n### Flight Log\n- Date, time, location\n- PIC name\n- Duration\n- Mission summary\n- Issues encountered\n\n### Maintenance Log\n- Date\n- Work performed\n- Components replaced\n- Who performed the work\n\n### Battery Log\n- Battery ID\n- Charge cycle count\n- Problems noted\n- Replacement date\n\n## Who May Perform Maintenance?\n\n**Any competent person** can maintain an sUAS.\n\nNo A&P mechanic certificate is required.\n\nThe owner/operator can perform all maintenance tasks — from propeller replacement to motor swaps to firmware updates.\n\nManufacturer recommendations should be followed but are not legally binding unless referenced in a regulation.",
+          "bogeyman": {
+            "message": "Record keeping is RECOMMENDED best practice, not strictly required. But the FAA CAN request records, and having them shows compliance!",
+            "mood": "happy"
+          }
+        },
+        {
+          "id": "sec-ops-maint-night",
+          "title": "Night Preflight Requirements",
+          "content": "## Additional Night Preflight Checks\n\nIn addition to the standard preflight, night operations require:\n\n### Anti-Collision Light Test\n\nVerify the light is:\n- **Functional**\n- **Visible for 3 statute miles**\n\nThis is a **regulatory requirement**, not a suggestion.\n\n### Light Battery Check\n\nIf the anti-collision light has its own battery, verify adequate charge for the entire mission.\n\n### Strobe Pattern Verification\n\nConfirm the flash pattern is correct and visible from all directions.\n\n## Intensity Reduction\n\nThe anti-collision light intensity may be reduced if the Remote PIC determines full brightness would compromise safety — but it must still be visible for 3 statute miles.",
+          "bogeyman": {
+            "message": "Anti-collision lights must be visible for at least 3 STATUTE MILES during night operations. This must be verified during preflight!",
+            "mood": "warning"
+          }
+        },
+        {
+          "id": "sec-ops-maint-doc",
+          "title": "Declaration of Compliance",
+          "content": "## What is a Declaration of Compliance (DoC)?\n\nA Declaration of Compliance is documentation from the **manufacturer** certifying that a specific sUAS model meets the safety requirements for **Category 2 or Category 3 operations over people** under Part 107 Subpart D.\n\n## Key Facts\n\n| Fact | Detail |\n|---|---|\n| Who issues it? | The **manufacturer** (not the pilot) |\n| What's required? | The DoC must be **FAA-accepted** (not just a manufacturer claim) |\n| When needed? | Before conducting Cat 2 or Cat 3 operations over people |\n| Without DoC? | You **cannot** operate over non-participants |\n\n## Operations Over People Categories\n\n| Category | Requirements |\n|---|---|\n| Category 1 | Under 0.55 lbs, no exposed rotating parts |\n| Category 2 | FAA-accepted DoC required |\n| Category 3 | FAA-accepted DoC required, additional operational restrictions |\n| Category 4 | FAA airworthiness certificate required |",
+          "bogeyman": {
+            "message": "If a question asks what's needed before operating a Category 2 or 3 sUAS over people, the answer includes a manufacturer's Declaration of Compliance ACCEPTED by the FAA!",
+            "mood": "warning"
+          }
+        }
+      ],
+      "version": 1
+    }
+  ]
+}

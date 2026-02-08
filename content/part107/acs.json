@@ -1,0 +1,466 @@
+[
+  {
+    "id": "acs-ua-i-a",
+    "code": "UA.I.A",
+    "area": "Regulations",
+    "subject": "Applicable Regulations",
+    "description": "General operating rules for small UAS",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-i-a-k2",
+    "code": "UA.I.A.K2",
+    "area": "Regulations",
+    "subject": "Definitions",
+    "description": "Part 107 definitions including small unmanned aircraft",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-i-a-k3",
+    "code": "UA.I.A.K3",
+    "area": "Regulations",
+    "subject": "Falsification, Reproduction, Alteration",
+    "description": "Prohibition against falsification of records and documents",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-i-a-k4",
+    "code": "UA.I.A.K4",
+    "area": "Regulations",
+    "subject": "Accident Reporting",
+    "description": "Requirements for reporting accidents to the FAA",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-b",
+    "code": "UA.V.B",
+    "area": "Weather",
+    "subject": "Weather Sources and Effects",
+    "description": "Sources of weather data and effects on UAS performance",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-ii-a",
+    "code": "UA.II.A",
+    "area": "Airspace Classification",
+    "subject": "Airspace Classification and Operating Requirements",
+    "description": "National airspace system classifications and requirements for UAS operations",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-iii-a",
+    "code": "UA.III.A",
+    "area": "Loading and Performance",
+    "subject": "Loading and Performance",
+    "description": "Weight, balance, and performance factors affecting UAS flight",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-iv-a",
+    "code": "UA.IV.A",
+    "area": "Operations",
+    "subject": "Airport and Flight Operations",
+    "description": "Airport operations, emergency procedures, and crew resource management",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-iv-a-k1",
+    "code": "UA.IV.A.K1",
+    "area": "Loading and Performance",
+    "subject": "General Loading",
+    "description": "Weight-performance relationships and loading effects",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-iv-a-k1a",
+    "code": "UA.IV.A.K1a",
+    "area": "Loading and Performance",
+    "subject": "Effects of Loading Changes",
+    "description": "Effects of battery depletion, temperature, and altitude on performance",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-iv-a-k1b",
+    "code": "UA.IV.A.K1b",
+    "area": "Loading and Performance",
+    "subject": "Balance and Center of Gravity",
+    "description": "CG effects on stability and control",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-iv-a-k2",
+    "code": "UA.IV.A.K2",
+    "area": "Loading and Performance",
+    "subject": "Performance Data",
+    "description": "Using manufacturer performance data and density altitude calculations",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-a-k1",
+    "code": "UA.V.A.K1",
+    "area": "Operations",
+    "subject": "Radio Communications",
+    "description": "Radio procedures and phraseology",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-a-k2",
+    "code": "UA.V.A.K2",
+    "area": "Operations",
+    "subject": "CTAF Procedures",
+    "description": "Common Traffic Advisory Frequency procedures",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-a-k3",
+    "code": "UA.V.A.K3",
+    "area": "Operations",
+    "subject": "Phonetic Alphabet",
+    "description": "ICAO phonetic alphabet and number pronunciation",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-a-k4",
+    "code": "UA.V.A.K4",
+    "area": "Operations",
+    "subject": "ATC Light Signals",
+    "description": "Light gun signals for aircraft without radio",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-a-k5",
+    "code": "UA.V.A.K5",
+    "area": "Operations",
+    "subject": "ATIS",
+    "description": "Automatic Terminal Information Service",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-a-k6",
+    "code": "UA.V.A.K6",
+    "area": "Operations",
+    "subject": "UNICOM",
+    "description": "UNICOM frequencies and usage",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-a-k7",
+    "code": "UA.V.A.K7",
+    "area": "Operations",
+    "subject": "Radio Priorities",
+    "description": "Emergency and priority communications",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-a-k8",
+    "code": "UA.V.A.K8",
+    "area": "Operations",
+    "subject": "Radio Terminology",
+    "description": "Standard aviation radio terminology",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-b-k1",
+    "code": "UA.V.B.K1",
+    "area": "Operations",
+    "subject": "Airport Signs",
+    "description": "Runway signs and markings",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-b-k2",
+    "code": "UA.V.B.K2",
+    "area": "Operations",
+    "subject": "Runway Markings",
+    "description": "Runway surface markings and their meanings",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-b-k3",
+    "code": "UA.V.B.K3",
+    "area": "Operations",
+    "subject": "Traffic Patterns",
+    "description": "Airport traffic pattern procedures",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-b-k4",
+    "code": "UA.V.B.K4",
+    "area": "Operations",
+    "subject": "Pattern Direction",
+    "description": "Standard left and right traffic patterns",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-b-k5",
+    "code": "UA.V.B.K5",
+    "area": "Operations",
+    "subject": "Wind Indicators",
+    "description": "Windsock, tetrahedron, and segmented circle interpretation",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-b-k6",
+    "code": "UA.V.B.K6",
+    "area": "Operations",
+    "subject": "Taxiway Markings",
+    "description": "Taxiway markings and hold lines",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-b-k7",
+    "code": "UA.V.B.K7",
+    "area": "Operations",
+    "subject": "Heliport Markings",
+    "description": "Heliport identification and markings",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-b-k8",
+    "code": "UA.V.B.K8",
+    "area": "Operations",
+    "subject": "Airport Diagrams",
+    "description": "Reading airport diagrams and charts",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-c-k1",
+    "code": "UA.V.C.K1",
+    "area": "Operations",
+    "subject": "Emergency Procedures",
+    "description": "General emergency procedures for sUAS",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-c-k2",
+    "code": "UA.V.C.K2",
+    "area": "Operations",
+    "subject": "Lithium Battery Emergencies",
+    "description": "LiPo battery fire and thermal runaway procedures",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-c-k3",
+    "code": "UA.V.C.K3",
+    "area": "Operations",
+    "subject": "GPS Loss Procedures",
+    "description": "Procedures for loss of GPS signal",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-c-k4",
+    "code": "UA.V.C.K4",
+    "area": "Operations",
+    "subject": "Link Loss Procedures",
+    "description": "Procedures for loss of command and control link",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-c-k5",
+    "code": "UA.V.C.K5",
+    "area": "Operations",
+    "subject": "Return to Home",
+    "description": "RTH functionality and configuration",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-c-k6",
+    "code": "UA.V.C.K6",
+    "area": "Operations",
+    "subject": "Flyaway Prevention",
+    "description": "Preventing and responding to flyaway situations",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-c-k7",
+    "code": "UA.V.C.K7",
+    "area": "Operations",
+    "subject": "Emergency Landing",
+    "description": "Emergency landing site selection and procedures",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-d-k1",
+    "code": "UA.V.D.K1",
+    "area": "Operations",
+    "subject": "Aeronautical Decision-Making",
+    "description": "ADM principles and frameworks",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-d-k1a",
+    "code": "UA.V.D.K1a",
+    "area": "Operations",
+    "subject": "DECIDE Model",
+    "description": "The DECIDE decision-making model",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-d-k1b",
+    "code": "UA.V.D.K1b",
+    "area": "Operations",
+    "subject": "Risk Management",
+    "description": "PAVE and IMSAFE risk assessment",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-d-k2",
+    "code": "UA.V.D.K2",
+    "area": "Operations",
+    "subject": "Situational Awareness",
+    "description": "Maintaining situational awareness during operations",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-d-k3",
+    "code": "UA.V.D.K3",
+    "area": "Operations",
+    "subject": "Crew Resource Management",
+    "description": "CRM principles for multi-crew operations",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-d-k4",
+    "code": "UA.V.D.K4",
+    "area": "Operations",
+    "subject": "Hazardous Attitudes",
+    "description": "Five hazardous attitudes and antidotes",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-d-k5",
+    "code": "UA.V.D.K5",
+    "area": "Operations",
+    "subject": "Stress Management",
+    "description": "Managing stress during flight operations",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-e-k1",
+    "code": "UA.V.E.K1",
+    "area": "Operations",
+    "subject": "Alcohol and Drugs",
+    "description": "Regulations regarding alcohol and drug use",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-e-k2",
+    "code": "UA.V.E.K2",
+    "area": "Operations",
+    "subject": "Medications",
+    "description": "Effects of medications on flight safety",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-e-k3",
+    "code": "UA.V.E.K3",
+    "area": "Operations",
+    "subject": "Hypoxia",
+    "description": "Effects of hypoxia on performance",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-e-k4",
+    "code": "UA.V.E.K4",
+    "area": "Operations",
+    "subject": "Hyperventilation",
+    "description": "Causes and effects of hyperventilation",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-e-k5",
+    "code": "UA.V.E.K5",
+    "area": "Operations",
+    "subject": "Spatial Disorientation",
+    "description": "Visual illusions and disorientation",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-e-k6",
+    "code": "UA.V.E.K6",
+    "area": "Operations",
+    "subject": "Night Vision",
+    "description": "Vision physiology and night operations",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-e-k7",
+    "code": "UA.V.E.K7",
+    "area": "Operations",
+    "subject": "Fatigue",
+    "description": "Effects of fatigue on flight safety",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-e-k8",
+    "code": "UA.V.E.K8",
+    "area": "Operations",
+    "subject": "Dehydration",
+    "description": "Effects of dehydration on performance",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-e-k9",
+    "code": "UA.V.E.K9",
+    "area": "Operations",
+    "subject": "Dark Adaptation",
+    "description": "Dark adaptation and its effects on night vision",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-f-k1",
+    "code": "UA.V.F.K1",
+    "area": "Operations",
+    "subject": "Preflight Inspection",
+    "description": "Preflight inspection requirements and procedures",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-f-k2",
+    "code": "UA.V.F.K2",
+    "area": "Operations",
+    "subject": "Condition for Safe Flight",
+    "description": "Determining aircraft condition for safe flight",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-f-k3",
+    "code": "UA.V.F.K3",
+    "area": "Operations",
+    "subject": "Maintenance Records",
+    "description": "Maintenance record requirements",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-f-k4",
+    "code": "UA.V.F.K4",
+    "area": "Operations",
+    "subject": "Battery Management",
+    "description": "Battery care and maintenance",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-f-k5",
+    "code": "UA.V.F.K5",
+    "area": "Operations",
+    "subject": "Firmware Updates",
+    "description": "Firmware update considerations",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-f-k6",
+    "code": "UA.V.F.K6",
+    "area": "Operations",
+    "subject": "Night Preflight",
+    "description": "Additional preflight considerations for night operations",
+    "version": 1
+  },
+  {
+    "id": "acs-ua-v-f-k7",
+    "code": "UA.V.F.K7",
+    "area": "Operations",
+    "subject": "Declaration of Compliance",
+    "description": "DoC requirements for operations over people",
+    "version": 1
+  }
+]

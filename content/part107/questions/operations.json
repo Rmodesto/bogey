@@ -1,0 +1,347 @@
+[
+  {
+    "id": "q-ops-001",
+    "stem": "What is the standard direction of turns in an airport traffic pattern?",
+    "choices": [
+      { "id": "q-ops-001-a", "text": "Left turns", "isCorrect": true },
+      { "id": "q-ops-001-b", "text": "Right turns", "isCorrect": false },
+      { "id": "q-ops-001-c", "text": "Alternating left and right", "isCorrect": false },
+      { "id": "q-ops-001-d", "text": "Determined by wind direction", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "The standard traffic pattern uses left turns.",
+      "reason": "Unless otherwise indicated (by light signals, airport markings, or chart notation), all turns in the traffic pattern are made to the left. Right-hand traffic patterns are the exception and are noted on sectional charts.",
+      "keyTakeaway": "Standard pattern = left turns at 1,000 AGL. Right-hand patterns are the exception and are always specifically designated.",
+      "references": ["ref-aim"]
+    },
+    "domain": "Operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-airport",
+    "acsRefs": ["acs-ua-v-b-k4"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-002",
+    "stem": "Which hazardous attitude is characterized by the thought 'It won't happen to me'?",
+    "choices": [
+      { "id": "q-ops-002-a", "text": "Invulnerability", "isCorrect": true },
+      { "id": "q-ops-002-b", "text": "Macho", "isCorrect": false },
+      { "id": "q-ops-002-c", "text": "Resignation", "isCorrect": false },
+      { "id": "q-ops-002-d", "text": "Anti-authority", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Invulnerability is the belief that accidents happen to others but not to oneself.",
+      "reason": "The FAA identifies five hazardous attitudes: anti-authority, impulsivity, invulnerability, macho, and resignation. Invulnerability leads pilots to take unnecessary risks because they believe they are immune to accidents.",
+      "keyTakeaway": "The antidote to invulnerability is: 'It could happen to me.' Recognizing that you are not immune to accidents is the first step to safer operations.",
+      "references": ["ref-ac10756"]
+    },
+    "domain": "Operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-adm",
+    "acsRefs": ["acs-ua-v-d-k4"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-003",
+    "stem": "What should a remote pilot do if a manned aircraft is observed approaching the UAS operating area?",
+    "choices": [
+      { "id": "q-ops-003-a", "text": "Immediately yield right-of-way by descending or moving away", "isCorrect": true },
+      { "id": "q-ops-003-b", "text": "Maintain altitude and position since the UAS has right-of-way", "isCorrect": false },
+      { "id": "q-ops-003-c", "text": "Climb above the manned aircraft", "isCorrect": false },
+      { "id": "q-ops-003-d", "text": "Flash the UAS anti-collision lights to alert the manned aircraft", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "The remote pilot must immediately yield right-of-way.",
+      "reason": "Under 14 CFR 107.37, a remote pilot must yield right-of-way to all other aircraft, whether manned or unmanned. The safest response is to descend and/or move the UAS away from the approaching aircraft.",
+      "keyTakeaway": "UAS always yield to manned aircraft — no exceptions. Descend and move away immediately. Do not assume the manned pilot can see your drone.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "Operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-airport",
+    "acsRefs": ["acs-ua-v-b"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-004",
+    "stem": "A remote pilot monitoring CTAF hears: 'Springfield traffic, Cessna Three Four Five Alpha Bravo, turning base runway 18, Springfield.' Where is this aircraft?",
+    "choices": [
+      { "id": "q-ops-004-a", "text": "Making a 90-degree turn toward runway 18, descending for landing", "isCorrect": true },
+      { "id": "q-ops-004-b", "text": "Climbing on departure from runway 18", "isCorrect": false },
+      { "id": "q-ops-004-c", "text": "Flying parallel to runway 18 in the opposite direction of landing", "isCorrect": false },
+      { "id": "q-ops-004-d", "text": "On final approach, about to touch down on runway 18", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Making a 90-degree turn toward runway 18, descending for landing.",
+      "reason": "The base leg is the third-to-last leg of the traffic pattern, after downwind. The aircraft has turned 90° from the downwind leg and is now heading toward the runway, descending. The next call would be 'turning final.'",
+      "keyTakeaway": "Know the five traffic pattern legs IN ORDER: upwind, crosswind, downwind, base, final. The base leg comes just before final approach.",
+      "references": ["ref-aim"]
+    },
+    "domain": "Operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-radio",
+    "acsRefs": ["acs-ua-v-a-k3"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-005",
+    "stem": "Which type of airport sign has a red background with white lettering?",
+    "choices": [
+      { "id": "q-ops-005-a", "text": "Mandatory instruction sign — requires compliance (hold short, no entry)", "isCorrect": true },
+      { "id": "q-ops-005-b", "text": "Location sign — identifies where you are", "isCorrect": false },
+      { "id": "q-ops-005-c", "text": "Directional sign — points to another taxiway", "isCorrect": false },
+      { "id": "q-ops-005-d", "text": "Information sign — provides general airport data", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Mandatory instruction sign — requires compliance.",
+      "reason": "Red background = mandatory. Pilots must comply with these signs. Yellow background with black text = location signs. Black background with yellow text = directional signs.",
+      "keyTakeaway": "RED = Required to comply (mandatory). Yellow background = You are here. Black background = Bearing/direction to follow.",
+      "references": ["ref-aim"]
+    },
+    "domain": "Operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-airport",
+    "acsRefs": ["acs-ua-v-b-k3"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-006",
+    "stem": "The drone's control link is lost during flight. The pre-programmed Return-to-Home function activates but the drone does not return. The most likely cause is:",
+    "choices": [
+      { "id": "q-ops-006-a", "text": "GPS signal is unavailable or unreliable", "isCorrect": true },
+      { "id": "q-ops-006-b", "text": "Battery is depleted", "isCorrect": false },
+      { "id": "q-ops-006-c", "text": "The anti-collision light is not functioning", "isCorrect": false },
+      { "id": "q-ops-006-d", "text": "Wind speed exceeds the drone's maximum", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "GPS signal is unavailable or unreliable.",
+      "reason": "RTH depends entirely on GPS for navigation back to the home point. If GPS is lost, degraded, or experiencing interference, RTH cannot function. The drone may continue drifting, resulting in a fly-away.",
+      "keyTakeaway": "RTH is NOT foolproof. It depends ENTIRELY on GPS. If GPS is lost or degraded, RTH will fail.",
+      "references": ["ref-ac1072"]
+    },
+    "domain": "Operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-emergency",
+    "acsRefs": ["acs-ua-v-c-k3"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-007",
+    "stem": "A remote pilot is about to fly a mission. The client says, 'We're losing daylight — launch right now or we won't pay for today.' The pilot skips the preflight inspection and launches. Which hazardous attitude is the pilot displaying?",
+    "choices": [
+      { "id": "q-ops-007-a", "text": "Impulsivity", "isCorrect": true },
+      { "id": "q-ops-007-b", "text": "Anti-authority", "isCorrect": false },
+      { "id": "q-ops-007-c", "text": "Macho", "isCorrect": false },
+      { "id": "q-ops-007-d", "text": "Invulnerability", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Impulsivity.",
+      "reason": "The pilot is acting on the urge to 'do it quickly' under time and financial pressure without thinking through the consequences. The antidote is 'Not so fast — think first.' While external pressure created the situation, the pilot's response — rushing without a preflight — is impulsivity.",
+      "keyTakeaway": "Impulsivity = 'Do something quickly!' The antidote is 'Not so fast — think first.' External pressure is the cause, but impulsivity is the pilot's attitude in response.",
+      "references": ["ref-ac10756"]
+    },
+    "domain": "Operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-adm",
+    "acsRefs": ["acs-ua-v-d-k4"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-008",
+    "stem": "A Visual Observer notices an aircraft approaching the drone's operating area but doesn't say anything because 'the PIC already decided to fly and won't want to stop.' Which hazardous attitude is the VO displaying?",
+    "choices": [
+      { "id": "q-ops-008-a", "text": "Resignation", "isCorrect": true },
+      { "id": "q-ops-008-b", "text": "Anti-authority", "isCorrect": false },
+      { "id": "q-ops-008-c", "text": "Invulnerability", "isCorrect": false },
+      { "id": "q-ops-008-d", "text": "Macho", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Resignation.",
+      "reason": "The VO feels helpless — 'What's the use? I can't change the PIC's decision.' The antidote is 'I'm not helpless — I can make a difference.' Every crew member has both the responsibility and authority to speak up for safety.",
+      "keyTakeaway": "Resignation = 'What's the use?' The antidote is 'I'm not helpless — I can make a difference.' Every team member must speak up about safety concerns.",
+      "references": ["ref-ac10756"]
+    },
+    "domain": "Operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-adm",
+    "acsRefs": ["acs-ua-v-d-k4"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-009",
+    "stem": "What is the appropriate treatment for hyperventilation?",
+    "choices": [
+      { "id": "q-ops-009-a", "text": "Slow the breathing rate and breathe into a paper bag", "isCorrect": true },
+      { "id": "q-ops-009-b", "text": "Breathe faster to increase oxygen intake", "isCorrect": false },
+      { "id": "q-ops-009-c", "text": "Inhale pure oxygen from a supplemental supply", "isCorrect": false },
+      { "id": "q-ops-009-d", "text": "Immediately land the aircraft and seek medical attention", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Slow the breathing rate and breathe into a paper bag.",
+      "reason": "Hyperventilation removes too much CO₂ from the blood. The treatment is to increase CO₂ levels by slowing breathing and/or rebreathing into a paper bag. Symptoms resolve within minutes.",
+      "keyTakeaway": "Hyperventilation treatment: SLOW the breathing rate. The paper bag method works by increasing CO₂ levels back to normal.",
+      "references": ["ref-ac1072"]
+    },
+    "domain": "Operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-physiology",
+    "acsRefs": ["acs-ua-v-e-k4"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-010",
+    "stem": "A remote pilot had two beers at 7:00 PM. The next morning at 4:00 AM (9 hours later), the pilot's BAC is 0.02%. Can the pilot legally operate an sUAS?",
+    "choices": [
+      { "id": "q-ops-010-a", "text": "Yes — both the 8-hour rule and the 0.04% BAC limit are satisfied", "isCorrect": true },
+      { "id": "q-ops-010-b", "text": "No — the pilot must wait 12 hours after consuming alcohol", "isCorrect": false },
+      { "id": "q-ops-010-c", "text": "No — the pilot's BAC must be 0.00%", "isCorrect": false },
+      { "id": "q-ops-010-d", "text": "Yes — only the 8-hour rule applies to Part 107 operations", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Yes — both the 8-hour rule and the 0.04% BAC limit are satisfied.",
+      "reason": "More than 8 hours have passed (9 hours), and the BAC is 0.02% — below the 0.04% limit. Both conditions of 14 CFR 107.27 are met. However, the pilot should also honestly self-assess whether they feel any residual effects.",
+      "keyTakeaway": "BOTH requirements must be met: 8 hours since alcohol AND BAC below 0.04%. Meeting just one is not enough.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "Operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-physiology",
+    "acsRefs": ["acs-ua-v-e-k2"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-011",
+    "stem": "During a night operation, a remote pilot stares at a single light on a tower for several seconds. The light appears to slowly drift upward. This is an example of:",
+    "choices": [
+      { "id": "q-ops-011-a", "text": "Autokinesis", "isCorrect": true },
+      { "id": "q-ops-011-b", "text": "False horizon", "isCorrect": false },
+      { "id": "q-ops-011-c", "text": "Black hole approach", "isCorrect": false },
+      { "id": "q-ops-011-d", "text": "Empty-field myopia", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Autokinesis.",
+      "reason": "Autokinesis occurs when a stationary light viewed against a dark background for several seconds appears to move. Small involuntary eye movements cause the brain to interpret the light as moving.",
+      "keyTakeaway": "AUTOKINESIS = stationary light appears to move. Prevention: don't fixate on single lights — keep scanning.",
+      "references": ["ref-ac1072"]
+    },
+    "domain": "Operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-physiology",
+    "acsRefs": ["acs-ua-v-e-k9"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-012",
+    "stem": "Who may perform maintenance on an sUAS?",
+    "choices": [
+      { "id": "q-ops-012-a", "text": "Any competent person, including the owner/operator", "isCorrect": true },
+      { "id": "q-ops-012-b", "text": "Only an FAA-certified A&P mechanic", "isCorrect": false },
+      { "id": "q-ops-012-c", "text": "Only the manufacturer or an authorized service center", "isCorrect": false },
+      { "id": "q-ops-012-d", "text": "Only a person who holds a Remote Pilot Certificate", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Any competent person, including the owner/operator.",
+      "reason": "Unlike manned aircraft, sUAS maintenance does not require an A&P mechanic. The owner/operator can perform all maintenance. This is the biggest difference from manned aircraft maintenance regulations.",
+      "keyTakeaway": "No A&P mechanic required for sUAS maintenance. Any competent person can do it.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "Operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-maintenance",
+    "acsRefs": ["acs-ua-v-f-k5"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-013",
+    "stem": "An sUAS loses GPS signal during flight. The aircraft switches to ATTI mode. What happens?",
+    "choices": [
+      { "id": "q-ops-013-a", "text": "The aircraft maintains altitude but drifts with the wind", "isCorrect": true },
+      { "id": "q-ops-013-b", "text": "The aircraft immediately descends and lands", "isCorrect": false },
+      { "id": "q-ops-013-c", "text": "The aircraft climbs to RTH altitude and returns home", "isCorrect": false },
+      { "id": "q-ops-013-d", "text": "All motors stop and the aircraft falls", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "The aircraft maintains altitude but drifts with the wind.",
+      "reason": "In ATTI (Attitude) mode, the barometer maintains altitude and the IMU maintains attitude (level flight), but without GPS the aircraft has no position reference. It will drift with wind unless the pilot actively corrects with stick inputs.",
+      "keyTakeaway": "GPS loss ≠ altitude loss. The barometer maintains altitude. The key issue is POSITION DRIFT, requiring constant pilot input.",
+      "references": ["ref-ac1072"]
+    },
+    "domain": "Operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-emergency",
+    "acsRefs": ["acs-ua-v-c-k4"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-014",
+    "stem": "Before a night flight, what must the remote PIC verify about the anti-collision light?",
+    "choices": [
+      { "id": "q-ops-014-a", "text": "It is visible for at least 3 statute miles", "isCorrect": true },
+      { "id": "q-ops-014-b", "text": "It is visible for at least 1 statute mile", "isCorrect": false },
+      { "id": "q-ops-014-c", "text": "It flashes at least 40 times per minute", "isCorrect": false },
+      { "id": "q-ops-014-d", "text": "It uses red and green navigation lights", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "It is visible for at least 3 statute miles.",
+      "reason": "14 CFR 107.29 requires anti-collision lighting visible for at least 3 statute miles during night operations. This must be verified during the preflight inspection.",
+      "keyTakeaway": "Anti-collision lights must be visible for 3 STATUTE MILES at night. This is a regulatory requirement.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "Operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-maintenance",
+    "acsRefs": ["acs-ua-v-f-k6"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-015",
+    "stem": "What does the 'E' in the PAVE checklist represent?",
+    "choices": [
+      { "id": "q-ops-015-a", "text": "External pressures", "isCorrect": true },
+      { "id": "q-ops-015-b", "text": "Equipment condition", "isCorrect": false },
+      { "id": "q-ops-015-c", "text": "Elevation of the operating area", "isCorrect": false },
+      { "id": "q-ops-015-d", "text": "Emergency procedures", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "External pressures.",
+      "reason": "PAVE stands for Pilot, Aircraft, enVironment, and External pressures. External pressures include client demands, time constraints, financial pressure, and peer pressure — any force that might push you toward an unsafe decision.",
+      "keyTakeaway": "PAVE = Pilot, Aircraft, enVironment, External pressures. Never let external pressure override safety.",
+      "references": ["ref-ac10756"]
+    },
+    "domain": "Operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-adm",
+    "acsRefs": ["acs-ua-v-d-k5"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  }
+]
