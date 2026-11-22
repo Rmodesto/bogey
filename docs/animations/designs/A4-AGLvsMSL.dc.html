@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AGL versus MSL, scrub player</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+a{color:#0e1114}a:hover{color:#000}
+
+</style>
+</helmet>
+<div style="width: 720px; height: 820px; box-sizing: border-box; padding: 24px; background: #f6f8fa; color: #0e1114; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 16px">
+<h1 style="margin: 0; font-size: 24px; font-weight: 600">AGL versus MSL</h1>
+<span style="font-size: 13px; padding: 6px 12px; border-radius: 8px; background: #2b2f33; color: #a9cfe3; font-weight: 600">Airspace</span>
+</div>
+<div style="position: relative; width: 672px; height: 420px; background: #e7f2f8; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden">
+<div style="position: absolute; left: 0; right: 0; bottom: 0; height: 40px; background: #a9cfe3; border-top: 2px solid #0e1114"></div>
+<div style="position: absolute; left: 12px; bottom: 12px; font-size: 12px; font-weight: 600">Sea level, 0 ft MSL</div>
+<div style="position: absolute; left: 0; right: 0; bottom: 42px; height: {{groundH}}; background: #e3e6ea; border-top: 2px solid #0e1114"></div>
+<div style="position: absolute; left: 450px; bottom: {{labelBottom}}; font-size: 12px; font-weight: 600; background: #FFFFFF; padding: 0 4px; border-radius: 3px">Ground: {{elevText}} ft MSL</div>
+<div style="position: absolute; left: 330px; bottom: {{towerBottom}}; width: 10px; height: 57px; background: #0e1114"></div>
+<div style="position: absolute; left: 330px; bottom: {{topBottom}}; width: 10px; height: 10px; border-radius: 50%; background: #b42318"></div>
+<div style="position: absolute; left: 290px; bottom: 42px; height: {{mslH}}; border-left: 2px solid #6fa6c6"></div>
+<div style="position: absolute; left: 150px; bottom: {{mslLabelBottom}}; font-size: 14px; font-weight: 600; background: #FFFFFF; padding: 0 4px; border-radius: 3px">{{mslText}} ft MSL</div>
+<div style="position: absolute; left: 378px; bottom: {{towerBottom}}; height: 57px; border-left: 2px solid #4f7d14"></div>
+<div style="position: absolute; left: 388px; bottom: {{aglLabelBottom}}; font-size: 14px; font-weight: 600; color: #33590a; background: #FFFFFF; padding: 0 4px; border-radius: 3px">316 ft AGL</div>
+<div style="position: absolute; left: 12px; top: 12px; padding: 10px 14px; background: #FFFFFF; border-radius: 10px; display: flex; align-items: center; gap: 12px">
+<svg aria-hidden="true" width="22" height="30" viewBox="0 0 22 30" fill="none" stroke="#1F4E9A" stroke-width="2.5" stroke-linejoin="round"><path d="M3 28L11 4l8 24"></path><circle cx="11" cy="28" r="1.5" fill="#1F4E9A"></circle></svg>
+<div style="display: flex; flex-direction: column; font-variant-numeric: tabular-nums">
+<span style="font-size: 12px">Chart obstacle symbol</span>
+<span style="font-size: 22px; font-weight: 600; color: #1F4E9A">{{mslPlain}}</span>
+<span style="font-size: 18px; color: #1F4E9A">(316)</span>
+</div>
+</div>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.4; min-height: 42px">{{caption}}</p>
+<div style="display: flex">
+<div style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 260px">
+<label for="a4-elev" style="font-size: 13px; font-weight: 600">Ground elevation: {{elevText}} ft MSL</label>
+<input id="a4-elev" type="range" min="0" max="1500" step="1" value="{{elev}}" onChange="{{onElev}}" style="width: 100%; height: 44px; accent-color: #7fbf2e">
+</div>
+</div>
+<div style="margin-top: auto; padding: 14px 16px; background: #0e1114; color: #ffffff; border-radius: 12px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
+<p style="margin: 0; font-size: 17px; font-weight: 600; line-height: 1.35">Top number: feet above sea level (MSL). In parentheses: feet above the ground (AGL).</p>
+<span style="flex-shrink: 0; font-size: 12px; font-weight: 600; padding: 6px 10px; border-radius: 8px; background: #2b2f33; color: #a9cfe3; white-space: nowrap; font-variant-numeric: tabular-nums">FAA chart guide</span>
+</div>
+<div style="display: flex; align-items: center; gap: 10px">
+<svg aria-hidden="true" width="48" height="52" viewBox="0 0 48 52" fill="none" style="flex-shrink: 0">
+<path d="M5 52C5 45 13 41.5 24 41.5C35 41.5 43 45 43 52Z" fill="#a9cfe3"></path>
+<path d="M19 41.5L24 47L29 41.5" stroke="#6fa6c6" stroke-width="1.5" stroke-linejoin="round"></path>
+<rect x="29" y="45.5" width="9" height="4.5" rx="1.5" fill="#9cd94a"></rect>
+<rect x="20" y="33" width="8" height="9" fill="#dcbf98"></rect>
+<path d="M12 14Q12 6 24 6Q36 6 36 14L36 26Q36 31 31.5 34.5L27.5 37.5Q24 39.5 20.5 37.5L16.5 34.5Q12 31 12 26Z" fill="#f0d6b4"></path>
+<path d="M10.5 17Q9.5 3 24 3Q38.5 3 37.5 17L35 13.5Q24 9.5 13 13.5Z" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8" stroke-linejoin="round"></path>
+<rect x="7" y="15" width="5.5" height="11.5" rx="2" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8"></rect>
+<rect x="35.5" y="15" width="5.5" height="11.5" rx="2" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8"></rect>
+<path d="M12.5 16L35.5 16L34.5 23Q30 25.8 26 22.6L24 21.6L22 22.6Q18 25.8 13.5 23Z" fill="#6fa6c6" stroke="#2b2f33" stroke-width="0.8" stroke-linejoin="round"></path>
+<path d="M15 18L21.5 18" stroke="#e7f2f8" stroke-width="1.1" stroke-linecap="round"></path>
+<path d="M27.5 19.5h5" stroke="#9cd94a" stroke-width="1.1" stroke-linecap="round"></path>
+<path d="M20.5 30.5Q24 32.6 27.5 30.5" stroke="#2b2f33" stroke-width="1.4" stroke-linecap="round"></path>
+<path d="M9.5 26Q10.5 33.5 18.5 34" stroke="#8a9198" stroke-width="1.5" stroke-linecap="round"></path>
+<circle cx="19.5" cy="34" r="1.7" fill="#9cd94a"></circle>
+</svg>
+<p style="margin: 0; padding: 8px 12px; background: #eaf6d8; border: 2px solid #9cd94a; border-radius: 13px; color: #2b2f33; font-size: 13px; line-height: 1.5">Part 107 limits are AGL. Use the number in parentheses.</p>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":720,"height":820}}'>
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { elev: 957 }; }
+renderVals() {
+const elev = this.state.elev, msl = elev + 316;
+const gH = Math.round(elev * 0.18);
+const f = (n) => n.toLocaleString('en-US');
+return {
+elev: elev, elevText: f(elev), mslText: f(msl), mslPlain: String(msl),
+groundH: gH + 'px', towerBottom: (42 + gH) + 'px', topBottom: (42 + gH + 57) + 'px',
+mslH: (gH + 57) + 'px', mslLabelBottom: (42 + Math.round((gH + 57) / 2) - 8) + 'px', aglLabelBottom: (42 + gH + 20) + 'px',
+labelBottom: (42 + Math.max(0, gH - 24)) + 'px',
+caption: 'Move the ground: the top number changes and the number in parentheses does not. At this site, 400 ft AGL is ' + f(elev + 400) + ' ft MSL.',
+onElev: (e) => this.setState({ elev: Number(e.target.value) })
+};
+}
+}
+</script>
+</body>
+</html>

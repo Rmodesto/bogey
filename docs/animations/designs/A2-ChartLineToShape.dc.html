@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chart line to shape, scrub player</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+a{color:#0e1114}a:hover{color:#000}
+
+</style>
+</helmet>
+<div style="width: 720px; height: 820px; box-sizing: border-box; padding: 24px; background: #f6f8fa; color: #0e1114; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 16px">
+<h1 style="margin: 0; font-size: 24px; font-weight: 600">Chart line to shape</h1>
+<span style="font-size: 13px; padding: 6px 12px; border-radius: 8px; background: #2b2f33; color: #a9cfe3; font-weight: 600">Airspace</span>
+</div>
+<div style="position: relative; width: 672px; height: 420px; background: #e7f2f8; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden">
+<div style="position: absolute; left: 12px; top: 12px; bottom: 12px; width: 280px; display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 12px; font-weight: 600">On the chart</div>
+<sc-for list="{{items}}" as="it" hint-placeholder-count="5">
+<button type="button" onClick="{{it.pick}}" aria-pressed="{{it.pressed}}" style="flex: 1 1 0; display: flex; align-items: center; gap: 12px; padding: 0 12px; border-radius: 12px; cursor: pointer; font-family: inherit; color: #0e1114; text-align: left; background: #FFFFFF; border: {{it.btnBorder}}">
+<span aria-hidden="true" style="flex-shrink: 0; width: 40px; height: 40px; box-sizing: border-box; border-radius: 50%; border: {{it.swatch}}"></span>
+<span style="font-size: 14px; font-weight: 600">{{it.line}}</span>
+</button>
+</sc-for>
+</div>
+<div style="position: absolute; left: 304px; top: 12px; right: 12px; bottom: 12px; border-radius: 10px; background: #FFFFFF; overflow: hidden">
+<div style="position: absolute; left: 12px; top: 10px; right: 12px; display: flex; flex-direction: column; align-items: flex-start; gap: 6px">
+<span style="font-size: 12px; font-weight: 600">In the sky, seen from the side</span>
+<span style="font-size: 20px; font-weight: 600">{{className}}</span>
+<sc-if value="{{free}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 999px; background: #9cd94a; color: #0e1114; font-size: 14px; font-weight: 600"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#0e1114" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3.2L13 5"></path></svg><span>No authorization needed</span></div>
+</sc-if>
+<sc-if value="{{auth}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 999px; background: #FFFFFF; color: #0e1114; border: 2px solid #0e1114; font-size: 14px; font-weight: 600"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#0e1114" stroke-width="2" stroke-linecap="round"><rect x="3.5" y="7" width="9" height="6.5" rx="1"></rect><path d="M5.5 7V5a2.5 2.5 0 015 0v2"></path></svg><span>Authorization needed</span></div>
+</sc-if>
+</div>
+<div style="position: absolute; left: 0; right: 0; bottom: 0; height: 44px; background: #e3e6ea; border-top: 2px solid #0e1114"></div>
+<div style="position: absolute; left: 12px; bottom: 14px; font-size: 11px">Surface</div>
+<sc-for list="{{rects}}" as="r" hint-placeholder-count="3"><div style="position: absolute; box-sizing: border-box; left: {{r.l}}; bottom: {{r.b}}; width: {{r.w}}; height: {{r.h}}; border: {{r.bd}}; border-bottom: {{r.bb}}; background: {{r.bg}}"></div></sc-for>
+<div style="position: absolute; left: 12px; bottom: 54px; font-size: 12px; font-weight: 600; color: #33590a">{{below}}</div>
+</div>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.4; min-height: 42px">{{caption}}</p>
+<div style="font-size: 13px; color: #2b2f33">Tap a line style to see the airspace it draws. Shapes are simplified and not to scale.</div>
+<div style="margin-top: auto; padding: 14px 16px; background: #0e1114; color: #ffffff; border-radius: 12px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
+<p style="margin: 0; font-size: 17px; font-weight: 600; line-height: 1.35">Solid blue: B. Solid magenta: C. Dashed blue: D. Dashed magenta: Class E at the surface. Shaded magenta: Class E from 700 ft AGL.</p>
+<span style="flex-shrink: 0; font-size: 12px; font-weight: 600; padding: 6px 10px; border-radius: 8px; background: #2b2f33; color: #a9cfe3; white-space: nowrap; font-variant-numeric: tabular-nums">FAA chart guide</span>
+</div>
+<div style="display: flex; align-items: center; gap: 10px">
+<svg aria-hidden="true" width="48" height="52" viewBox="0 0 48 52" fill="none" style="flex-shrink: 0">
+<path d="M5 52C5 45 13 41.5 24 41.5C35 41.5 43 45 43 52Z" fill="#a9cfe3"></path>
+<path d="M19 41.5L24 47L29 41.5" stroke="#6fa6c6" stroke-width="1.5" stroke-linejoin="round"></path>
+<rect x="29" y="45.5" width="9" height="4.5" rx="1.5" fill="#9cd94a"></rect>
+<rect x="20" y="33" width="8" height="9" fill="#dcbf98"></rect>
+<path d="M12 14Q12 6 24 6Q36 6 36 14L36 26Q36 31 31.5 34.5L27.5 37.5Q24 39.5 20.5 37.5L16.5 34.5Q12 31 12 26Z" fill="#f0d6b4"></path>
+<path d="M10.5 17Q9.5 3 24 3Q38.5 3 37.5 17L35 13.5Q24 9.5 13 13.5Z" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8" stroke-linejoin="round"></path>
+<rect x="7" y="15" width="5.5" height="11.5" rx="2" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8"></rect>
+<rect x="35.5" y="15" width="5.5" height="11.5" rx="2" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8"></rect>
+<path d="M12.5 16L35.5 16L34.5 23Q30 25.8 26 22.6L24 21.6L22 22.6Q18 25.8 13.5 23Z" fill="#6fa6c6" stroke="#2b2f33" stroke-width="0.8" stroke-linejoin="round"></path>
+<path d="M15 18L21.5 18" stroke="#e7f2f8" stroke-width="1.1" stroke-linecap="round"></path>
+<path d="M27.5 19.5h5" stroke="#9cd94a" stroke-width="1.1" stroke-linecap="round"></path>
+<path d="M20.5 30.5Q24 32.6 27.5 30.5" stroke="#2b2f33" stroke-width="1.4" stroke-linecap="round"></path>
+<path d="M9.5 26Q10.5 33.5 18.5 34" stroke="#8a9198" stroke-width="1.5" stroke-linecap="round"></path>
+<circle cx="19.5" cy="34" r="1.7" fill="#9cd94a"></circle>
+</svg>
+<p style="margin: 0; padding: 8px 12px; background: #eaf6d8; border: 2px solid #9cd94a; border-radius: 13px; color: #2b2f33; font-size: 13px; line-height: 1.5">Dashed magenta reaches the surface. Shaded magenta does not.</p>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":720,"height":820}}'>
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { sel: 0 }; }
+renderVals() {
+const BL = '#1F4E9A', MG = '#8E1C5E', bF = 'rgba(31,78,154,0.12)', mF = 'rgba(142,28,94,0.12)';
+const px = (n) => n + 'px';
+const R = (l, b, w, h, bd, bg, bb) => ({ l: px(l), b: px(b), w: px(w), h: px(h), bd: bd, bg: bg, bb: bb || bd });
+const items = [
+{ line: 'Solid blue', swatch: '3px solid ' + BL, cls: 'Class B', auth: true, below: '', cap: 'Solid blue lines outline Class B: stacked tiers that widen with height around the busiest airports. Only the inner tier reaches the surface.', rects: [R(150, 44, 60, 250, '2.5px solid ' + BL, bF), R(115, 130, 130, 164, '2.5px solid ' + BL, bF), R(75, 210, 210, 84, '2.5px solid ' + BL, bF)] },
+{ line: 'Solid magenta', swatch: '3px solid ' + MG, cls: 'Class C', auth: true, below: '', cap: 'Solid magenta lines outline Class C: an inner core from the surface and a wider shelf above it.', rects: [R(145, 44, 70, 190, '2.5px solid ' + MG, mF), R(95, 120, 170, 114, '2.5px solid ' + MG, mF)] },
+{ line: 'Dashed blue', swatch: '3px dashed ' + BL, cls: 'Class D', auth: true, below: '', cap: 'A dashed blue line outlines Class D: a single cylinder from the surface around a smaller towered airport.', rects: [R(125, 44, 110, 130, '2.5px dashed ' + BL, bF)] },
+{ line: 'Dashed magenta', swatch: '3px dashed ' + MG, cls: 'Class E from the surface', auth: true, below: '', cap: 'A dashed magenta line means Class E begins at the surface. When it is designated for an airport, it needs authorization.', rects: [R(110, 44, 140, 150, '2.5px dashed ' + MG, mF)] },
+{ line: 'Shaded magenta band', swatch: '9px solid rgba(142,28,94,0.35)', cls: 'Class E from 700 ft AGL', auth: false, below: 'Class G below 700 ft AGL', cap: 'A soft magenta band means Class E starts at 700 ft AGL. Below it is Class G, so a drone at 400 ft AGL or lower needs no authorization.', rects: [R(20, 124, 320, 170, 'none', mF, '6px solid rgba(142,28,94,0.4)')] }
+];
+const sel = this.state.sel, s = items[sel];
+return {
+className: s.cls, auth: s.auth, free: !s.auth, caption: s.cap, rects: s.rects, below: s.below,
+items: items.map((it, n) => ({ line: it.line, swatch: it.swatch, pressed: sel === n ? 'true' : 'false', btnBorder: sel === n ? '3px solid #0e1114' : '1.5px solid #e3e6ea', pick: () => this.setState({ sel: n }) }))
+};
+}
+}
+</script>
+</body>
+</html>

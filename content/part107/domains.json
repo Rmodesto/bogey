@@ -1,0 +1,42 @@
+[
+  {
+    "id": "dom-regulations",
+    "name": "Regulations",
+    "acsArea": "Regulations",
+    "acsCode": "UA.I",
+    "order": 1,
+    "version": 1
+  },
+  {
+    "id": "dom-airspace",
+    "name": "Airspace Classification",
+    "acsArea": "Airspace Classification and Operating Requirements",
+    "acsCode": "UA.II",
+    "order": 2,
+    "version": 1
+  },
+  {
+    "id": "dom-weather",
+    "name": "Weather",
+    "acsArea": "Weather",
+    "acsCode": "UA.III",
+    "order": 3,
+    "version": 1
+  },
+  {
+    "id": "dom-loading",
+    "name": "Loading and Performance",
+    "acsArea": "Loading and Performance",
+    "acsCode": "UA.IV",
+    "order": 4,
+    "version": 1
+  },
+  {
+    "id": "dom-operations",
+    "name": "Operations",
+    "acsArea": "Operations",
+    "acsCode": "UA.V",
+    "order": 5,
+    "version": 1
+  }
+]

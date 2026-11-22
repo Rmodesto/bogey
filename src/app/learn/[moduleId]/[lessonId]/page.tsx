@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
-import ReactMarkdown from "react-markdown";
+import AnnotatedMarkdown from "@/components/AnnotatedMarkdown";
 import { ArrowLeft, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
 import { getModule, getLesson, getAdjacentLessons, queryQuestions } from "@/lib/part107/service";
 import Bogeyman from "@/components/Bogeyman";
@@ -29,7 +29,7 @@ export default function LessonViewer() {
   if (!mod || !lesson) {
     return (
       <div className="min-h-screen bg-fog-gray flex items-center justify-center">
-        <p className="text-slate">Lesson not found.</p>
+        <p className="text-slate text-[13px]">Lesson not found.</p>
       </div>
     );
   }
@@ -53,15 +53,15 @@ export default function LessonViewer() {
   return (
     <div className="min-h-screen bg-fog-gray">
       {/* Header */}
-      <header className="bg-white border-b border-divider-gray px-6 py-4">
+      <header className="bg-white border-b border-divider-gray px-[21px] py-[13px]">
         <div className="max-w-[1200px] mx-auto flex justify-between items-center">
           <Link
             href="/learn"
-            className="flex items-center gap-2 text-slate hover:text-jet-black text-sm"
+            className="flex items-center gap-[8px] text-slate hover:text-jet-black text-[13px]"
           >
             <ArrowLeft className="w-4 h-4" /> Back to Modules
           </Link>
-          <span className="flex items-center gap-2 text-sm text-slate">
+          <span className="flex items-center gap-[8px] text-[13px] text-slate">
             <BookOpen className="w-4 h-4" />
             Section {activeSectionIndex + 1} of {sections.length}
           </span>
@@ -83,30 +83,30 @@ export default function LessonViewer() {
           <div className="sticky top-[34px] space-y-[21px]">
             {/* Lesson info card */}
             <div className="bg-white border border-divider-gray rounded-[13px] p-[34px]">
-              <p className="text-xs text-slate uppercase tracking-wider mb-[13px]">
+              <p className="text-[8px] text-slate uppercase tracking-[0.1em] mb-[8px]">
                 {lesson.estimatedMinutes} min &middot; Lesson {lessonIndex + 1}/{totalLessons}
               </p>
-              <h2 className="text-[22px] font-semibold text-jet-black mb-[8px]">
+              <h2 className="text-[21px] font-semibold text-jet-black mb-[8px]">
                 {lesson.title}
               </h2>
-              <p className="text-sm text-slate leading-relaxed mb-[21px]">
+              <p className="text-[13px] text-slate leading-[1.8] mb-[21px]">
                 {lesson.objectives[0]}
               </p>
 
               {/* Section list */}
-              <div className="space-y-[4px]">
+              <div className="space-y-[8px]">
                 {sections.map((section, i) => (
                   <button
                     key={section.id}
                     onClick={() => goToSection(i)}
-                    className={`w-full text-left px-[13px] py-[8px] rounded-[8px] text-sm transition-colors ${
+                    className={`w-full text-left px-[13px] py-[8px] rounded-[8px] text-[13px] transition-colors border-l-[3px] ${
                       i === activeSectionIndex
-                        ? "bg-volt-mist text-jet-black"
-                        : "text-slate hover:text-jet-black hover:bg-fog-gray"
+                        ? "border-l-deep-ice-blue bg-volt-mist text-jet-black"
+                        : "border-l-transparent text-slate hover:text-jet-black hover:bg-fog-gray"
                     }`}
                   >
                     {i === activeSectionIndex && (
-                      <p className="text-[10px] font-bold uppercase tracking-wider text-jet-black mb-[2px]">
+                      <p className="text-[8px] font-bold uppercase tracking-[0.1em] text-deep-ice-blue mb-[2px]">
                         Current Section
                       </p>
                     )}
@@ -126,7 +126,7 @@ export default function LessonViewer() {
                 talking={!!activeBogey?.message}
               />
               {activeBogey?.message && (
-                <p className="text-sm text-slate italic mt-[13px] text-center leading-relaxed">
+                <p className="text-[13px] text-slate italic mt-[13px] text-center leading-[1.8]">
                   &ldquo;{activeBogey.message}&rdquo;
                 </p>
               )}
@@ -138,13 +138,37 @@ export default function LessonViewer() {
         <div className="flex-1 min-w-0">
           <div className="bg-white border border-divider-gray rounded-[13px] p-[34px] md:p-[55px]">
             {/* Section title */}
-            <h1 className="text-[28px] font-semibold text-jet-black mb-[34px]">
+            <h1 className="text-[34px] font-semibold text-jet-black mb-[34px] leading-[1.2]">
               {activeSection.title}
             </h1>
 
             {/* Section content */}
-            <div className="prose prose-sm max-w-none prose-headings:text-jet-black prose-p:text-slate prose-strong:text-jet-black prose-li:text-slate prose-p:leading-[1.8] prose-li:leading-[1.8] prose-table:text-sm">
-              <ReactMarkdown>{activeSection.content}</ReactMarkdown>
+            <div
+              className={[
+                "prose max-w-none",
+                // Headings — clear section breaks
+                "prose-headings:text-jet-black prose-headings:font-semibold",
+                "prose-h2:text-[21px] prose-h2:mt-[55px] prose-h2:mb-[13px]",
+                "prose-h3:text-[21px] prose-h3:mt-[34px] prose-h3:mb-[13px]",
+                // Visual divider above h2 sections (except first child)
+                "[&>h2:not(:first-child)]:pt-[21px] [&>h2:not(:first-child)]:border-t [&>h2:not(:first-child)]:border-divider-gray",
+                // Body — graphite for WCAG AA compliance
+                "prose-p:text-graphite prose-p:text-[13px] prose-p:leading-[1.8] prose-p:mb-[21px]",
+                "prose-strong:text-jet-black",
+                // Lists — generous spacing for visual grouping
+                "prose-ul:my-[34px] prose-ol:my-[34px]",
+                "prose-li:text-graphite prose-li:text-[13px] prose-li:leading-[1.8] prose-li:my-[13px]",
+                // Blockquotes — callout card treatment
+                "prose-blockquote:border-l-deep-ice-blue prose-blockquote:bg-mist-blue prose-blockquote:rounded-r-[8px]",
+                "prose-blockquote:py-[13px] prose-blockquote:px-[21px] prose-blockquote:my-[34px]",
+                "prose-blockquote:not-italic prose-blockquote:text-graphite prose-blockquote:text-[13px]",
+                // Tables
+                "prose-table:text-[13px] prose-table:my-[34px]",
+                // Links
+                "prose-a:text-deep-ice-blue prose-a:no-underline hover:prose-a:underline",
+              ].join(" ")}
+            >
+              <AnnotatedMarkdown content={activeSection.content} />
             </div>
 
             {/* Visualizer */}
@@ -176,7 +200,7 @@ export default function LessonViewer() {
               {activeSectionIndex > 0 ? (
                 <button
                   onClick={() => goToSection(activeSectionIndex - 1)}
-                  className="flex items-center gap-[8px] text-slate hover:text-jet-black text-sm"
+                  className="flex items-center gap-[8px] text-slate hover:text-jet-black text-[13px]"
                 >
                   <ChevronLeft className="w-4 h-4" />
                   Previous
@@ -188,21 +212,21 @@ export default function LessonViewer() {
               {!isLastSection ? (
                 <button
                   onClick={() => goToSection(activeSectionIndex + 1)}
-                  className="bg-volt-green text-jet-black text-sm font-semibold px-[21px] py-[10px] rounded-full hover:bg-volt-lime transition-colors"
+                  className="bg-volt-green text-jet-black text-[13px] font-semibold px-[21px] py-[8px] rounded-full hover:bg-volt-lime transition-colors"
                 >
                   Continue
                 </button>
               ) : next ? (
                 <Link
                   href={`/learn/${moduleId}/${next.id}`}
-                  className="bg-volt-green text-jet-black text-sm font-semibold px-[21px] py-[10px] rounded-full hover:bg-volt-lime transition-colors"
+                  className="bg-volt-green text-jet-black text-[13px] font-semibold px-[21px] py-[8px] rounded-full hover:bg-volt-lime transition-colors"
                 >
                   Next Lesson
                 </Link>
               ) : (
                 <Link
                   href="/learn"
-                  className="bg-volt-green text-jet-black text-sm font-semibold px-[21px] py-[10px] rounded-full hover:bg-volt-lime transition-colors"
+                  className="bg-volt-green text-jet-black text-[13px] font-semibold px-[21px] py-[8px] rounded-full hover:bg-volt-lime transition-colors"
                 >
                   Back to Modules
                 </Link>
@@ -216,7 +240,7 @@ export default function LessonViewer() {
               {prev ? (
                 <Link
                   href={`/learn/${moduleId}/${prev.id}`}
-                  className="flex items-center gap-[8px] text-slate hover:text-jet-black text-sm"
+                  className="flex items-center gap-[8px] text-slate hover:text-jet-black text-[13px]"
                 >
                   <ChevronLeft className="w-4 h-4" />
                   {prev.title}
@@ -227,7 +251,7 @@ export default function LessonViewer() {
               {next ? (
                 <Link
                   href={`/learn/${moduleId}/${next.id}`}
-                  className="flex items-center gap-[8px] text-slate hover:text-jet-black text-sm"
+                  className="flex items-center gap-[8px] text-slate hover:text-jet-black text-[13px]"
                 >
                   {next.title}
                   <ChevronRight className="w-4 h-4" />
@@ -245,7 +269,7 @@ export default function LessonViewer() {
             <div className="w-[34px] h-[34px] bg-mist-blue rounded-full flex items-center justify-center shrink-0">
               <BookOpen className="w-4 h-4 text-deep-ice-blue" />
             </div>
-            <p className="text-sm text-slate italic leading-relaxed">
+            <p className="text-[13px] text-slate italic leading-[1.8]">
               {activeBogey.message}
             </p>
           </div>

@@ -77,7 +77,7 @@ export default function Bogeyman({
               mood === "warning" ? "border-b-red-400" : "border-b-volt-green"
             }`}
           />
-          <p className="text-sm text-jet-black leading-relaxed">{message}</p>
+          <p className="text-[13px] text-graphite leading-[1.8]">{message}</p>
         </div>
       )}
     </div>

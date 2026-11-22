@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { CheckCircle, XCircle, RotateCcw, TrendingUp, Home } from "lucide-react";
 import { getExamQuestions } from "@/lib/part107/compat";
+import { passThreshold } from "@/lib/part107/active";
 
 const examQuestions = getExamQuestions();
 import Card from "@/components/Card";
@@ -26,7 +27,9 @@ function ResultsContent() {
   const userAnswers: (number | null)[] = JSON.parse(searchParams.get("answers") || "[]");
 
   const percentage = Math.round((score / total) * 100);
-  const passed = percentage >= 70;
+  // Pass/fail is a count comparison, never a rounded percentage
+  const required = passThreshold(total);
+  const passed = score >= required;
   const minutes = Math.floor(timeSpent / 60);
   const seconds = timeSpent % 60;
 
@@ -77,6 +80,7 @@ function ResultsContent() {
               </div>
               <div>
                 <p className="text-5xl font-semibold text-jet-black">{score}/{total}</p>
+                <p className="text-slate text-xs mt-1">{required} of {total} needed to pass</p>
                 <p className="text-slate text-sm">Correct</p>
               </div>
               <div>

@@ -1,5 +1,16 @@
 import { z } from "zod";
 
+// --- Domain (registry of exam content areas) ---
+export const DomainSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  acsArea: z.string(),
+  acsCode: z.string().regex(/^UA\.[IVX]+$/),
+  order: z.number().int().min(1),
+  version: z.number(),
+});
+export type Domain = z.infer<typeof DomainSchema>;
+
 // --- FAA Reference ---
 export const FAARefSchema = z.object({
   id: z.string(),

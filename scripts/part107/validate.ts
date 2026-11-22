@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import {
+  DomainSchema,
   FAARefSchema,
   ACSRefSchema,
   FigureAssetSchema,
@@ -9,6 +10,7 @@ import {
   ExamBlueprintSchema,
 } from "../../src/lib/part107/schema";
 import type {
+  Domain,
   FAAReference,
   ACSRef,
   FigureAsset,
@@ -17,6 +19,7 @@ import type {
   Question,
   ExamBlueprint,
 } from "../../src/lib/part107/schema";
+import { allocateByWeight } from "../../src/lib/part107/allocate";
 
 const CONTENT_DIR = path.resolve(__dirname, "../../content/part107");
 
@@ -65,6 +68,7 @@ export interface ValidationResult {
   errors: string[];
   warnings: string[];
   data: {
+    domains: Domain[];
     references: FAAReference[];
     acsRefs: ACSRef[];
     figures: FigureAsset[];
@@ -80,6 +84,7 @@ export function validate(): ValidationResult {
   const warnings: string[] = [];
 
   // 1. Parse all content
+  let domains: Domain[] = [];
   let references: FAAReference[] = [];
   let acsRefs: ACSRef[] = [];
   let figures: FigureAsset[] = [];
@@ -87,6 +92,20 @@ export function validate(): ValidationResult {
   const lessons: Lesson[] = [];
   const questions: Question[] = [];
   let blueprints: ExamBlueprint[] = [];
+
+  try {
+    const raw = readJSON(path.join(CONTENT_DIR, "domains.json"));
+    domains = raw.map((r: unknown, i: number) => {
+      const result = DomainSchema.safeParse(r);
+      if (!result.success) {
+        errors.push(`domains.json[${i}]: ${result.error.message}`);
+        return null;
+      }
+      return result.data;
+    }).filter(Boolean);
+  } catch (e: any) {
+    errors.push(`Failed to read domains.json: ${e.message}`);
+  }
 
   try {
     const raw = readJSON(path.join(CONTENT_DIR, "references.json"));
@@ -190,6 +209,7 @@ export function validate(): ValidationResult {
     }
     allIds.set(id, source);
   }
+  domains.forEach((r) => checkId(r.id, "domains"));
   references.forEach((r) => checkId(r.id, "references"));
   acsRefs.forEach((r) => checkId(r.id, "acs"));
   figures.forEach((r) => checkId(r.id, "figures"));
@@ -199,6 +219,12 @@ export function validate(): ValidationResult {
   blueprints.forEach((r) => checkId(r.id, "blueprints"));
 
   // 3. Referential integrity
+  const domainIds = new Set(domains.map((d) => d.id));
+  const domainNames = new Set<string>();
+  for (const d of domains) {
+    if (domainNames.has(d.name)) errors.push(`Duplicate domain name "${d.name}" in domains.json`);
+    domainNames.add(d.name);
+  }
   const refIds = new Set(references.map((r) => r.id));
   const acsIds = new Set(acsRefs.map((r) => r.id));
   const figureIdSet = new Set(figures.map((r) => r.id));
@@ -206,6 +232,7 @@ export function validate(): ValidationResult {
   const lessonIds = new Set(lessons.map((r) => r.id));
 
   for (const mod of modules) {
+    if (!domainIds.has(mod.domain)) errors.push(`Module "${mod.id}" references unknown domain "${mod.domain}"`);
     for (const lid of mod.lessonIds) {
       if (!lessonIds.has(lid)) errors.push(`Module "${mod.id}" references missing lesson "${lid}"`);
     }
@@ -227,6 +254,7 @@ export function validate(): ValidationResult {
   }
 
   for (const q of questions) {
+    if (!domainIds.has(q.domain)) errors.push(`Question "${q.id}" references unknown domain "${q.domain}"`);
     if (!moduleIds.has(q.moduleId)) errors.push(`Question "${q.id}" references missing module "${q.moduleId}"`);
     if (q.lessonId && !lessonIds.has(q.lessonId)) errors.push(`Question "${q.id}" references missing lesson "${q.lessonId}"`);
     for (const rid of q.explanation.references) {
@@ -251,9 +279,21 @@ export function validate(): ValidationResult {
       errors.push(`Blueprint "${bp.id}" domain weights sum to ${weightSum}, expected ~1.0`);
     }
     for (const dw of bp.domainWeights) {
-      const domainQs = questions.filter((q) => q.domain === dw.domain && q.status === "active");
-      if (domainQs.length === 0) {
-        errors.push(`Blueprint "${bp.id}" references domain "${dw.domain}" with no active questions`);
+      if (!domainIds.has(dw.domain)) {
+        errors.push(`Blueprint "${bp.id}" references unknown domain "${dw.domain}"`);
+      }
+    }
+    // A draw must always be fillable: every domain needs enough active
+    // questions to cover its allocated share of the exam. Hard error —
+    // the generator would otherwise silently backfill or shorten the exam.
+    const targets = allocateByWeight(bp.domainWeights, bp.totalQuestions);
+    for (const dw of bp.domainWeights) {
+      const target = targets.get(dw.domain) ?? 0;
+      const active = questions.filter((q) => q.domain === dw.domain && q.status === "active").length;
+      if (active < target) {
+        errors.push(
+          `Blueprint "${bp.id}" needs ${target} active questions in domain "${dw.domain}" but only ${active} exist`
+        );
       }
     }
   }
@@ -271,7 +311,7 @@ export function validate(): ValidationResult {
   return {
     errors,
     warnings,
-    data: { references, acsRefs, figures, modules, lessons, questions, blueprints },
+    data: { domains, references, acsRefs, figures, modules, lessons, questions, blueprints },
   };
 }
 

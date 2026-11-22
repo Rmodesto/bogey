@@ -19,24 +19,43 @@ function main() {
     process.exit(1);
   }
 
-  const { references, acsRefs, figures, modules, lessons, questions, blueprints } = result.data;
+  const { domains, references, acsRefs, figures, modules, lessons, questions, blueprints } = result.data;
 
-  // Build reference lookup
+  // Build reference lookups
   const refMap = new Map(references.map((r) => [r.id, r]));
+  const domainMap = new Map(domains.map((d) => [d.id, d]));
+  // Authored records hold a domain id; generated output carries the display
+  // name in `domain` (so pages and tests see prose) plus the id in `domainId`.
+  const resolveDomain = (id: string) => domainMap.get(id)!.name;
 
-  // Denormalize questions: resolve FAA refs inline
+  // Denormalize questions: resolve FAA refs and domain inline
   const denormalizedQuestions = questions.map((q) => ({
     ...q,
+    domain: resolveDomain(q.domain),
+    domainId: q.domain,
     explanation: {
       ...q.explanation,
       resolvedReferences: q.explanation.references.map((rid) => refMap.get(rid)).filter(Boolean),
     },
   }));
 
-  // Denormalize modules: embed lessons
+  // Denormalize modules: embed lessons, resolve domain
   const denormalizedModules = modules.map((m) => ({
     ...m,
+    domain: resolveDomain(m.domain),
+    domainId: m.domain,
     lessons: lessons.filter((l) => l.moduleId === m.id).sort((a, b) => a.order - b.order),
+  }));
+
+  // Denormalize blueprints: resolve domain on each weight so the generator's
+  // question matching (q.domain === dw.domain) keeps working on names
+  const denormalizedBlueprints = blueprints.map((bp) => ({
+    ...bp,
+    domainWeights: bp.domainWeights.map((dw) => ({
+      ...dw,
+      domain: resolveDomain(dw.domain),
+      domainId: dw.domain,
+    })),
   }));
 
   // Write output
@@ -51,7 +70,8 @@ function main() {
   console.log("\nGenerating output...");
   write("questions.json", denormalizedQuestions);
   write("modules.json", denormalizedModules);
-  write("blueprints.json", blueprints);
+  write("blueprints.json", denormalizedBlueprints);
+  write("domains.json", domains);
   write("references.json", references);
   write("acs.json", acsRefs);
   write("figures.json", figures);
@@ -60,6 +80,7 @@ function main() {
     generatedAt: new Date().toISOString(),
     contentVersion: "1.0.0",
     counts: {
+      domains: domains.length,
       questions: questions.length,
       modules: modules.length,
       lessons: lessons.length,

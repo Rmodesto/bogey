@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Category sorter, scenario player</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+a{color:#0e1114}a:hover{color:#000}
+
+@keyframes bprop{0%,100%{transform:scaleX(1)}50%{transform:scaleX(0.12)}}
+.pblade{transform-box:fill-box;transform-origin:center;animation:bprop 0.5s linear infinite}
+.pdisc{opacity:0;transition:opacity 0.25s ease}
+.fly .pblade{animation-duration:0.1s}
+.fly .pdisc{opacity:0.65}
+@media (prefers-reduced-motion: reduce){.pblade{animation:none}}
+</style>
+</helmet>
+<div style="width: 720px; height: 820px; box-sizing: border-box; padding: 24px; background: #f6f8fa; color: #0e1114; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 16px">
+<h1 style="margin: 0; font-size: 24px; font-weight: 600">Category sorter</h1>
+<span style="font-size: 13px; padding: 6px 12px; border-radius: 8px; background: #2b2f33; color: #a9cfe3; font-weight: 600">Regulations</span>
+</div>
+<div style="width: 672px; height: 420px; box-sizing: border-box; padding: 16px; background: #FFFFFF; border: 1px solid #e3e6ea; border-radius: 12px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; gap: 16px; padding: 12px 16px; border-radius: 12px; background: #e7f2f8">
+<svg aria-hidden="true" width="110" height="50" viewBox="0 0 88 40" fill="none" style="flex-shrink: 0"><rect x="42.5" y="3" width="3" height="6" fill="#0e1114"></rect><ellipse class="pdisc" cx="44" cy="2.6" rx="11" ry="2.6" fill="#9cd94a"></ellipse><rect class="pblade" x="33" y="1.3" width="22" height="2.6" rx="1.3" fill="#9cd94a" stroke="#0e1114" stroke-width="1.2"></rect><ellipse class="pdisc" cx="16" cy="6.5" rx="14" ry="2.6" fill="#9cd94a"></ellipse><rect class="pblade" x="2" y="5.2" width="28" height="2.6" rx="1.3" fill="#9cd94a" stroke="#0e1114" stroke-width="1.2"></rect><ellipse class="pdisc" cx="72" cy="6.5" rx="14" ry="2.6" fill="#9cd94a"></ellipse><rect class="pblade" x="58" y="5.2" width="28" height="2.6" rx="1.3" fill="#9cd94a" stroke="#0e1114" stroke-width="1.2"></rect><rect x="13" y="8" width="6" height="8" rx="2" fill="#0e1114"></rect><rect x="69" y="8" width="6" height="8" rx="2" fill="#0e1114"></rect><path d="M17 14L34 17M71 14L54 17" stroke="#2b2f33" stroke-width="4.5" stroke-linecap="round"></path><path d="M36 25L29 37M52 25L59 37M24 37.5h10M54 37.5h10" stroke="#0e1114" stroke-width="2.5" stroke-linecap="round" fill="none"></path><rect x="40.5" y="25" width="7" height="4" fill="#0e1114"></rect><circle cx="44" cy="32" r="4.5" fill="#2b2f33" stroke="#0e1114" stroke-width="1.5"></circle><circle cx="44" cy="32" r="1.7" fill="#a9cfe3"></circle><rect x="33" y="8" width="22" height="18" rx="4" fill="#a9cfe3" stroke="#0e1114" stroke-width="2"></rect><rect x="36.5" y="12" width="15" height="6" rx="2" fill="#0e1114"></rect><circle cx="50" cy="22" r="1.7" fill="#9cd94a"></circle></svg>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 14px; font-weight: 600">{{droneLabel}}</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<sc-for list="{{chips}}" as="c" hint-placeholder-count="4"><span style="font-size: 13px; padding: 4px 10px; border: 1.5px solid #0e1114; border-radius: 999px; background: #FFFFFF">{{c.label}}</span></sc-for>
+</div>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; flex-grow: 1">
+<sc-for list="{{bins}}" as="b" hint-placeholder-count="4">
+<button type="button" onClick="{{b.pick}}" style="display: flex; flex-direction: column; align-items: flex-start; text-align: left; gap: 6px; padding: 12px; border-radius: 12px; cursor: pointer; font-family: inherit; color: #0e1114; border: {{b.border}}; background: {{b.bg}}">
+<span style="font-size: 17px; font-weight: 600">{{b.name}}</span>
+<span style="font-size: 13px; line-height: 1.35">{{b.test}}</span>
+<span style="margin-top: auto; font-size: 13px; font-weight: 600; color: {{b.markInk}}">{{b.mark}}</span>
+</button>
+</sc-for>
+</div>
+<div style="min-height: 44px; display: flex; align-items: center; padding: 8px 12px; border-radius: 12px; font-size: 14px; font-weight: 500; line-height: 1.4; border: {{fbBorder}}; color: {{fbInk}}; background: {{fbBg}}">{{feedback}}</div>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.4; min-height: 42px">{{caption}}</p>
+<div style="display: flex; align-items: center; gap: 12px">
+<span style="font-size: 14px; font-weight: 600; font-variant-numeric: tabular-nums">{{progress}}</span>
+<button type="button" onClick="{{nextDrone}}" style="min-height: 44px; padding: 0 16px; font: 600 14px 'Helvetica Neue', Helvetica, Arial, sans-serif; border-radius: 999px; cursor: pointer; margin-left: auto; border: 2px solid #9cd94a; background: #9cd94a; color: #0e1114">{{nextLabel}}</button>
+</div>
+<div style="margin-top: auto; padding: 14px 16px; background: #0e1114; color: #ffffff; border-radius: 12px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
+<p style="margin: 0; font-size: 17px; font-weight: 600; line-height: 1.35">Flight over people is allowed in four categories. No waiver is needed when the drone meets one.</p>
+<span style="flex-shrink: 0; font-size: 12px; font-weight: 600; padding: 6px 10px; border-radius: 8px; background: #2b2f33; color: #a9cfe3; white-space: nowrap; font-variant-numeric: tabular-nums">Part 107 rules</span>
+</div>
+<div style="display: flex; align-items: center; gap: 10px">
+<svg aria-hidden="true" width="48" height="52" viewBox="0 0 48 52" fill="none" style="flex-shrink: 0">
+<path d="M5 52C5 45 13 41.5 24 41.5C35 41.5 43 45 43 52Z" fill="#a9cfe3"></path>
+<path d="M19 41.5L24 47L29 41.5" stroke="#6fa6c6" stroke-width="1.5" stroke-linejoin="round"></path>
+<rect x="29" y="45.5" width="9" height="4.5" rx="1.5" fill="#9cd94a"></rect>
+<rect x="20" y="33" width="8" height="9" fill="#dcbf98"></rect>
+<path d="M12 14Q12 6 24 6Q36 6 36 14L36 26Q36 31 31.5 34.5L27.5 37.5Q24 39.5 20.5 37.5L16.5 34.5Q12 31 12 26Z" fill="#f0d6b4"></path>
+<path d="M10.5 17Q9.5 3 24 3Q38.5 3 37.5 17L35 13.5Q24 9.5 13 13.5Z" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8" stroke-linejoin="round"></path>
+<rect x="7" y="15" width="5.5" height="11.5" rx="2" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8"></rect>
+<rect x="35.5" y="15" width="5.5" height="11.5" rx="2" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8"></rect>
+<path d="M12.5 16L35.5 16L34.5 23Q30 25.8 26 22.6L24 21.6L22 22.6Q18 25.8 13.5 23Z" fill="#6fa6c6" stroke="#2b2f33" stroke-width="0.8" stroke-linejoin="round"></path>
+<path d="M15 18L21.5 18" stroke="#e7f2f8" stroke-width="1.1" stroke-linecap="round"></path>
+<path d="M27.5 19.5h5" stroke="#9cd94a" stroke-width="1.1" stroke-linecap="round"></path>
+<path d="M20.5 30.5Q24 32.6 27.5 30.5" stroke="#2b2f33" stroke-width="1.4" stroke-linecap="round"></path>
+<path d="M9.5 26Q10.5 33.5 18.5 34" stroke="#8a9198" stroke-width="1.5" stroke-linecap="round"></path>
+<circle cx="19.5" cy="34" r="1.7" fill="#9cd94a"></circle>
+</svg>
+<p style="margin: 0; padding: 8px 12px; background: #eaf6d8; border: 2px solid #9cd94a; border-radius: 13px; color: #2b2f33; font-size: 13px; line-height: 1.5">11 goes with Category 2, 25 with Category 3.</p>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":720,"height":820}}'>
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { i: 0, pick: 0, score: 0 }; }
+renderVals() {
+const drones = [
+{ w: '0.5 lb', chips: ['Weight 0.5 lb', 'No exposed rotating parts', 'No category label', 'No airworthiness certificate'], a: 1, why: 'It weighs 0.55 lb or less and has no exposed rotating parts that would lacerate skin.' },
+{ w: '1.2 lb', chips: ['Weight 1.2 lb', 'Prop guards fitted', 'Label: Category 2', 'On an FAA-accepted declaration of compliance'], a: 2, why: 'It is labeled Category 2 and listed on an FAA-accepted declaration of compliance.' },
+{ w: '4 lb', chips: ['Weight 4 lb', 'Label: Category 3', 'On an FAA-accepted declaration of compliance', 'No airworthiness certificate'], a: 3, why: 'It is labeled Category 3, so it may fly over people only on restricted sites or without sustained flight over them.' },
+{ w: '30 lb', chips: ['Weight 30 lb', 'No category label', 'Airworthiness certificate (Part 21)'], a: 4, why: 'It holds an airworthiness certificate issued under Part 21.' }
+];
+const tests = ['0.55 lb or less, no exposed rotating parts', 'Injury limit 11 ft-lb, declared and labeled', 'Injury limit 25 ft-lb, declared and labeled, restricted sites only', 'Has an airworthiness certificate'];
+const i = this.state.i, pick = this.state.pick, d = drones[i];
+const right = pick === d.a;
+const wrongWhy = ['', 'Category 1 stops at 0.55 lb. This drone weighs ' + d.w + '.', 'Category 2 needs a declaration of compliance and a Category 2 label. This drone is not labeled Category 2.', 'Category 3 needs a declaration of compliance and a Category 3 label. This drone is not labeled Category 3.', 'Category 4 needs an airworthiness certificate. This drone has none.'];
+let feedback = 'Which category lets this drone fly over people? Pick one.', fbBorder = '2px solid #e3e6ea', fbInk = '#0e1114', fbBg = '#FFFFFF';
+if (pick && right) { feedback = 'Correct: Category ' + d.a + '. ' + d.why; fbBorder = '2px solid #7fbf2e'; fbBg = '#eaf6d8'; }
+else if (pick) { feedback = 'Not Category ' + pick + '. ' + wrongWhy[pick]; fbBorder = '2px dashed #b42318'; fbInk = '#b42318'; }
+return {
+droneLabel: 'Drone ' + (i + 1) + ' of 4',
+progress: 'Drone ' + (i + 1) + ' of 4',
+chips: d.chips.map((c) => ({ label: c })),
+bins: [1, 2, 3, 4].map((n) => {
+const mine = pick === n;
+return {
+name: 'Category ' + n, test: tests[n - 1],
+border: mine && right ? '2px solid #7fbf2e' : mine ? '2px dashed #b42318' : '2px solid #0e1114',
+bg: mine && right ? '#eaf6d8' : '#FFFFFF',
+mark: mine && right ? 'Correct' : mine ? 'Not this one' : '',
+markInk: mine && right ? '#33590a' : '#b42318',
+pick: () => this.setState({ pick: n })
+};
+}),
+feedback: feedback, fbBorder: fbBorder, fbInk: fbInk, fbBg: fbBg,
+caption: 'Read the spec chips, then pick the category. A wrong pick tells you which requirement the drone fails.',
+nextLabel: i === 3 ? 'Start over' : 'Next drone',
+nextDrone: () => this.setState({ i: (i + 1) % 4, pick: 0 })
+};
+}
+}
+</script>
+</body>
+</html>

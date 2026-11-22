@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The traffic pattern, loop player</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+a{color:#0e1114}a:hover{color:#000}
+
+</style>
+</helmet>
+<div style="width: 720px; height: 820px; box-sizing: border-box; padding: 24px; background: #f6f8fa; color: #0e1114; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 16px">
+<h1 style="margin: 0; font-size: 24px; font-weight: 600">The traffic pattern</h1>
+<span style="font-size: 13px; padding: 6px 12px; border-radius: 8px; background: #2b2f33; color: #a9cfe3; font-weight: 600">Operations</span>
+</div>
+<div style="position: relative; width: 672px; height: 420px; background: #e7f2f8; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden">
+<div style="position: absolute; left: 130px; bottom: 98px; width: 410px; height: 202px; box-sizing: border-box; border: 2px dashed #8a9198"></div>
+<div style="position: absolute; left: 236px; bottom: 90px; width: 200px; height: 16px; background: #2b2f33"></div>
+<div style="position: absolute; left: 242px; bottom: 91px; font-size: 11px; font-weight: 600; color: #FFFFFF">9</div>
+<div style="position: absolute; left: 416px; bottom: 91px; font-size: 11px; font-weight: 600; color: #FFFFFF">27</div>
+<div style="position: absolute; left: 448px; bottom: 106px; font-size: 12px; font-weight: 600; background: #FFFFFF; padding: 0 4px; border-radius: 3px">Upwind</div>
+<div style="position: absolute; left: 550px; bottom: 192px; font-size: 12px; font-weight: 600; background: #FFFFFF; padding: 0 4px; border-radius: 3px">Crosswind</div>
+<div style="position: absolute; left: 300px; bottom: 308px; font-size: 12px; font-weight: 600; background: #FFFFFF; padding: 0 4px; border-radius: 3px">Downwind</div>
+<div style="position: absolute; left: 84px; bottom: 192px; font-size: 12px; font-weight: 600; background: #FFFFFF; padding: 0 4px; border-radius: 3px">Base</div>
+<div style="position: absolute; left: 150px; bottom: 106px; font-size: 12px; font-weight: 600; background: #FFFFFF; padding: 0 4px; border-radius: 3px">Final</div>
+<div style="position: absolute; left: {{planeLeft}}; bottom: {{planeBottom}}; width: 32px; height: 32px; transform: rotate({{planeRot}}); transition: left 2s ease-in-out, bottom 2s ease-in-out, transform 0.8s ease">
+<svg role="img" aria-label="Airplane" width="32" height="32" viewBox="0 0 32 32" fill="#0e1114"><path d="M30 16l-9-3-5-9h-3l3 9H8l-3-4H2l2 7-2 7h3l3-4h8l-3 9h3l5-9z"></path></svg>
+</div>
+<div style="position: absolute; left: 250px; bottom: 12px; width: 300px; height: 52px; box-sizing: border-box; border: 2.5px dashed #4f7d14; background: rgba(127,191,46,0.10); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; color: #33590a">Drone operating area, clear of the pattern</div>
+<div style="position: absolute; right: 12px; top: 12px; display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; padding: 4px 8px; border-radius: 8px; background: #FFFFFF">
+<svg aria-hidden="true" width="26" height="12" viewBox="0 0 26 12" fill="none" stroke="#0e1114" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6H3M8 1L3 6l5 5"></path></svg><span>Wind from the east</span>
+</div>
+<div style="position: absolute; left: 12px; top: 12px; width: 440px; box-sizing: border-box; padding: 8px 12px; background: #FFFFFF; border: 2px solid #6fa6c6; border-radius: 12px; display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 11px; font-weight: 600; color: #2b2f33">On the CTAF</span>
+<span style="font-size: 13px; line-height: 1.4">{{call}}</span>
+</div>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.4; min-height: 42px">{{caption}}</p>
+<div style="display: flex; align-items: center; gap: 10px">
+<button type="button" aria-label="Play or pause" onClick="{{toggle}}" style="width: 44px; height: 44px; border-radius: 999px; border: 2px solid #9cd94a; background: #9cd94a; cursor: pointer; display: flex; align-items: center; justify-content: center">
+<sc-if value="{{isPlaying}}" hint-placeholder-val="{{ true }}"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="#0e1114"><rect x="3" y="2" width="3.5" height="12"></rect><rect x="9.5" y="2" width="3.5" height="12"></rect></svg></sc-if>
+<sc-if value="{{isPaused}}" hint-placeholder-val="{{ false }}"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="#0e1114"><path d="M4 2l10 6-10 6z"></path></svg></sc-if>
+</button>
+<button type="button" onClick="{{replay}}" style="min-height: 44px; padding: 0 16px; font: 600 14px 'Helvetica Neue', Helvetica, Arial, sans-serif; border-radius: 999px; cursor: pointer; border: 2px solid #0e1114; background: #FFFFFF; color: #0e1114">Replay</button>
+<button type="button" onClick="{{prev}}" style="min-height: 44px; padding: 0 16px; font: 600 14px 'Helvetica Neue', Helvetica, Arial, sans-serif; border-radius: 999px; cursor: pointer; border: 2px solid #0e1114; background: #FFFFFF; color: #0e1114">Back</button>
+<button type="button" onClick="{{next}}" style="min-height: 44px; padding: 0 16px; font: 600 14px 'Helvetica Neue', Helvetica, Arial, sans-serif; border-radius: 999px; cursor: pointer; border: 2px solid #0e1114; background: #FFFFFF; color: #0e1114">Next</button>
+<div aria-hidden="true" style="display: flex; align-items: center; gap: 8px; margin-left: 8px">
+<sc-for list="{{dots}}" as="d" hint-placeholder-count="6"><span style="height: 10px; border-radius: 5px; width: {{d.w}}; background: {{d.bg}}; transition: width 0.3s ease"></span></sc-for>
+</div>
+<span style="margin-left: auto; font-size: 13px; font-variant-numeric: tabular-nums">{{beatLabel}}</span>
+</div>
+<div style="margin-top: auto; padding: 14px 16px; background: #0e1114; color: #ffffff; border-radius: 12px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
+<p style="margin: 0; font-size: 17px; font-weight: 600; line-height: 1.35">Standard pattern: left turns. Upwind, crosswind, downwind, base, final.</p>
+<span style="flex-shrink: 0; font-size: 12px; font-weight: 600; padding: 6px 10px; border-radius: 8px; background: #2b2f33; color: #a9cfe3; white-space: nowrap; font-variant-numeric: tabular-nums">FAA airport procedures</span>
+</div>
+<div style="display: flex; align-items: center; gap: 10px">
+<svg aria-hidden="true" width="48" height="52" viewBox="0 0 48 52" fill="none" style="flex-shrink: 0">
+<path d="M5 52C5 45 13 41.5 24 41.5C35 41.5 43 45 43 52Z" fill="#a9cfe3"></path>
+<path d="M19 41.5L24 47L29 41.5" stroke="#6fa6c6" stroke-width="1.5" stroke-linejoin="round"></path>
+<rect x="29" y="45.5" width="9" height="4.5" rx="1.5" fill="#9cd94a"></rect>
+<rect x="20" y="33" width="8" height="9" fill="#dcbf98"></rect>
+<path d="M12 14Q12 6 24 6Q36 6 36 14L36 26Q36 31 31.5 34.5L27.5 37.5Q24 39.5 20.5 37.5L16.5 34.5Q12 31 12 26Z" fill="#f0d6b4"></path>
+<path d="M10.5 17Q9.5 3 24 3Q38.5 3 37.5 17L35 13.5Q24 9.5 13 13.5Z" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8" stroke-linejoin="round"></path>
+<rect x="7" y="15" width="5.5" height="11.5" rx="2" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8"></rect>
+<rect x="35.5" y="15" width="5.5" height="11.5" rx="2" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8"></rect>
+<path d="M12.5 16L35.5 16L34.5 23Q30 25.8 26 22.6L24 21.6L22 22.6Q18 25.8 13.5 23Z" fill="#6fa6c6" stroke="#2b2f33" stroke-width="0.8" stroke-linejoin="round"></path>
+<path d="M15 18L21.5 18" stroke="#e7f2f8" stroke-width="1.1" stroke-linecap="round"></path>
+<path d="M27.5 19.5h5" stroke="#9cd94a" stroke-width="1.1" stroke-linecap="round"></path>
+<path d="M20.5 30.5Q24 32.6 27.5 30.5" stroke="#2b2f33" stroke-width="1.4" stroke-linecap="round"></path>
+<path d="M9.5 26Q10.5 33.5 18.5 34" stroke="#8a9198" stroke-width="1.5" stroke-linecap="round"></path>
+<circle cx="19.5" cy="34" r="1.7" fill="#9cd94a"></circle>
+</svg>
+<p style="margin: 0; padding: 8px 12px; background: #eaf6d8; border: 2px solid #9cd94a; border-radius: 13px; color: #2b2f33; font-size: 13px; line-height: 1.5">Hear "left base" and you should know which corner to watch.</p>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":720,"height":820}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+const reduce = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+this.state = { beat: reduce ? 6 : 1, playing: !reduce };
+}
+componentDidMount() {
+this.timer = setInterval(() => {
+if (!this.state.playing) return;
+if (this.state.beat >= 6) { this.setState({ playing: false }); return; }
+this.setState({ beat: this.state.beat + 1 });
+}, 2600);
+}
+componentWillUnmount() { clearInterval(this.timer); }
+loopVals() {
+const beat = this.state.beat;
+const playing = this.state.playing;
+return {
+isPlaying: playing,
+isPaused: !playing,
+beatLabel: 'Beat ' + beat + ' of 6',
+dots: [1, 2, 3, 4, 5, 6].map((n) => ({ bg: n <= beat ? '#0e1114' : '#c3c9d0', w: n === beat ? '22px' : '10px' })),
+toggle: () => { if (!playing && beat >= 6) this.setState({ beat: 1, playing: true }); else this.setState({ playing: !playing }); },
+replay: () => this.setState({ beat: 1, playing: true }),
+prev: () => this.setState({ beat: Math.max(1, beat - 1), playing: false }),
+next: () => this.setState({ beat: Math.min(6, beat + 1), playing: false })
+};
+}
+
+renderVals() {
+const beat = this.state.beat;
+const pos = [[470, 98, 0], [540, 200, -90], [336, 300, -180], [130, 200, -270], [190, 98, -360], [330, 98, -360]];
+const who = 'Millbrook traffic, Skyhawk 517 Romeo Charlie, ';
+const calls = [who + 'departing runway 9, remaining in the pattern, Millbrook.', who + 'left crosswind, runway 9, Millbrook.', who + 'left downwind, runway 9, Millbrook.', who + 'left base, runway 9, Millbrook.', who + 'final, runway 9, Millbrook.', who + 'clear of runway 9, Millbrook.'];
+const captions = ['Upwind: the airplane takes off into the wind on runway 9, heading east.', 'Crosswind: the first left turn, climbing away from the runway.', 'Downwind: flying back past the runway, parallel to it, opposite the landing direction.', 'Base: another left turn, descending toward the approach end.', 'Final: lined up with the runway, low and descending. This is where it passes closest to the ground.', 'Each call tells you the leg. Listen, picture where the airplane is, and stay clear of the pattern.'];
+const p = pos[beat - 1];
+return Object.assign(this.loopVals(), {
+caption: captions[beat - 1], call: calls[beat - 1],
+planeLeft: (p[0] - 16) + 'px', planeBottom: (p[1] - 16) + 'px', planeRot: p[2] + 'deg'
+});
+}
+}
+</script>
+</body>
+</html>

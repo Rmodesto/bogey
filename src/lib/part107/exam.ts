@@ -1,4 +1,5 @@
 import { loadQuestions, loadExamBlueprints } from "./loaders";
+import { allocateByWeight } from "./allocate";
 import type { DenormalizedQuestion } from "./loaders";
 
 export type GeneratedQuestion = DenormalizedQuestion;
@@ -22,6 +23,8 @@ function shuffle<T>(arr: T[], rng: () => number): T[] {
   }
   return a;
 }
+
+export { allocateByWeight } from "./allocate";
 
 export interface GenerateExamOptions {
   blueprintId: string;
@@ -49,12 +52,14 @@ export function generateExam(options: GenerateExamOptions): GeneratedQuestion[] 
   const selected = new Set<string>();
   const result: DenormalizedQuestion[] = [];
 
-  // 1. Fulfill per-domain minimums
+  // 1. Draw each domain's share of the exam, set by the blueprint weights
+  const targets = allocateByWeight(bp.domainWeights, totalQuestions);
   for (const dw of bp.domainWeights) {
     const pool = shuffle(questionsByDomain.get(dw.domain) || [], rng);
+    const target = targets.get(dw.domain) ?? 0;
     let count = 0;
     for (const q of pool) {
-      if (count >= dw.minQuestions) break;
+      if (count >= target) break;
       if (!selected.has(q.id)) {
         result.push(q);
         selected.add(q.id);
@@ -63,7 +68,7 @@ export function generateExam(options: GenerateExamOptions): GeneratedQuestion[] 
     }
   }
 
-  // 2. Fill remaining slots by weighted random selection
+  // 2. If a domain ran short of questions, fill the gap from the rest of the bank
   const remaining = totalQuestions - result.length;
   if (remaining > 0) {
     const pool = allQuestions.filter((q) => !selected.has(q.id));

@@ -1,4 +1,4 @@
-import type { FAAReference, ACSRef, FigureAsset, ExamBlueprint, LessonSection } from "./schema";
+import type { Domain, FAAReference, ACSRef, FigureAsset, ExamBlueprint, LessonSection } from "./schema";
 
 // These types represent the denormalized build output
 export interface DenormalizedQuestion {
@@ -13,6 +13,7 @@ export interface DenormalizedQuestion {
     resolvedReferences: FAAReference[];
   };
   domain: string;
+  domainId: string;
   moduleId: string;
   lessonId?: string;
   acsRefs?: string[];
@@ -27,6 +28,7 @@ export interface DenormalizedModule {
   title: string;
   description: string;
   domain: string;
+  domainId: string;
   order: number;
   lessonIds: string[];
   references: string[];
@@ -47,12 +49,18 @@ export interface DenormalizedModule {
   }[];
 }
 
+// Generated blueprints carry the resolved domain name plus the id on each weight
+export type DenormalizedBlueprint = Omit<ExamBlueprint, "domainWeights"> & {
+  domainWeights: (ExamBlueprint["domainWeights"][number] & { domainId: string })[];
+};
+
 // Static imports from generated content
 import questionsData from "../../../generated/part107/questions.json";
 import modulesData from "../../../generated/part107/modules.json";
 import blueprintsData from "../../../generated/part107/blueprints.json";
 import referencesData from "../../../generated/part107/references.json";
 import acsData from "../../../generated/part107/acs.json";
+import domainsData from "../../../generated/part107/domains.json";
 import figuresData from "../../../generated/part107/figures.json";
 
 export function loadQuestions(): DenormalizedQuestion[] {
@@ -63,8 +71,12 @@ export function loadModules(): DenormalizedModule[] {
   return modulesData as DenormalizedModule[];
 }
 
-export function loadExamBlueprints(): ExamBlueprint[] {
-  return blueprintsData as ExamBlueprint[];
+export function loadExamBlueprints(): DenormalizedBlueprint[] {
+  return blueprintsData as DenormalizedBlueprint[];
+}
+
+export function loadDomains(): Domain[] {
+  return domainsData as Domain[];
 }
 
 export function loadReferences(): FAAReference[] {

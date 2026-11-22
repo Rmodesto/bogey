@@ -1,6 +1,5 @@
 import { loadQuestions, loadModules, loadExamBlueprints } from "./loaders";
-import type { DenormalizedQuestion, DenormalizedModule } from "./loaders";
-import type { ExamBlueprint } from "./schema";
+import type { DenormalizedQuestion, DenormalizedModule, DenormalizedBlueprint } from "./loaders";
 export { generateExam } from "./exam";
 export type { GeneratedQuestion, GenerateExamOptions } from "./exam";
 
@@ -74,10 +73,10 @@ export function getAdjacentLessons(moduleId: string, lessonId: string) {
   };
 }
 
-export function getBlueprint(id: string): ExamBlueprint | undefined {
+export function getBlueprint(id: string): DenormalizedBlueprint | undefined {
   return loadExamBlueprints().find((b) => b.id === id);
 }
 
-export function listBlueprints(): ExamBlueprint[] {
+export function listBlueprints(): DenormalizedBlueprint[] {
   return loadExamBlueprints();
 }

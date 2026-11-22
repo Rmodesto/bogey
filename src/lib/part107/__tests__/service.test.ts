@@ -34,22 +34,22 @@ describe("service", () => {
   });
 
   it("getLesson returns lesson with sections", () => {
-    const lesson = getLesson("mod-regulations", "les-reg-ops");
+    const lesson = getLesson("mod-regulations", "les-reg-general");
     expect(lesson).toBeDefined();
     expect(lesson!.sections.length).toBeGreaterThan(0);
     expect(lesson!.estimatedMinutes).toBeGreaterThan(0);
   });
 
   it("getAdjacentLessons returns correct prev/next", () => {
-    const { prev, next } = getAdjacentLessons("mod-regulations", "les-reg-ops");
+    const { prev, next } = getAdjacentLessons("mod-regulations", "les-reg-general");
     expect(prev).toBeNull();
     expect(next).toBeDefined();
-    expect(next!.id).toBe("les-reg-responsibilities");
+    expect(next!.id).toBe("les-reg-reporting");
 
-    const adj2 = getAdjacentLessons("mod-regulations", "les-reg-responsibilities");
+    const adj2 = getAdjacentLessons("mod-regulations", "les-reg-reporting");
     expect(adj2.prev).toBeDefined();
-    expect(adj2.prev!.id).toBe("les-reg-ops");
-    expect(adj2.next).toBeNull();
+    expect(adj2.prev!.id).toBe("les-reg-general");
+    expect(adj2.next).toBeDefined();
   });
 
   it("loaded lessons include estimatedMinutes and sections", () => {

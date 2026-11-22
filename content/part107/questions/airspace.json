@@ -5,68 +5,65 @@
     "choices": [
       { "id": "q-as-001-a", "text": "Class G", "isCorrect": true },
       { "id": "q-as-001-b", "text": "Class B", "isCorrect": false },
-      { "id": "q-as-001-c", "text": "Class C", "isCorrect": false },
-      { "id": "q-as-001-d", "text": "Class D", "isCorrect": false }
+      { "id": "q-as-001-c", "text": "Class D", "isCorrect": false }
     ],
     "explanation": {
       "correct": "Class G (uncontrolled) airspace does not require prior authorization.",
-      "reason": "Class G airspace is uncontrolled airspace where Part 107 operations can be conducted without ATC authorization. Classes B, C, D, and surface E require LAANC or FAA airspace authorization.",
-      "keyTakeaway": "Class G is the only airspace class where Part 107 pilots can fly freely without any airspace authorization.",
-      "references": ["ref-aim"]
+      "reason": "Class G is uncontrolled airspace, so 14 CFR 107.41 does not apply to it. Class B and Class D are controlled airspace, and 107.41 requires prior ATC authorization (LAANC or FAA DroneZone) before a small unmanned aircraft operates in them.",
+      "keyTakeaway": "Class G never needs airspace authorization. Class B, C, and D always do, and Class E needs it only inside the surface area designated for an airport.",
+      "references": ["ref-cfr107", "ref-aim"]
     },
-    "domain": "Airspace Classification",
+    "domain": "dom-airspace",
     "moduleId": "mod-airspace",
     "lessonId": "les-as-class-e-g",
-    "acsRefs": ["acs-ua-ii-a"],
+    "acsRefs": ["acs-ua-ii-a-k1e"],
     "difficulty": "easy",
     "status": "active",
-    "version": 1
+    "version": 2
   },
   {
     "id": "q-as-002",
     "stem": "What type of airspace is designated by a 'P' followed by a number on a sectional chart?",
     "choices": [
-      { "id": "q-as-002-a", "text": "Prohibited area", "isCorrect": true },
-      { "id": "q-as-002-b", "text": "Private airport", "isCorrect": false },
-      { "id": "q-as-002-c", "text": "Parachute jump area", "isCorrect": false },
-      { "id": "q-as-002-d", "text": "Positive control area", "isCorrect": false }
+      { "id": "q-as-002-a", "text": "Private airport", "isCorrect": false },
+      { "id": "q-as-002-b", "text": "Parachute jump area", "isCorrect": false },
+      { "id": "q-as-002-c", "text": "Prohibited area", "isCorrect": true }
     ],
     "explanation": {
       "correct": "A 'P' designation indicates a prohibited area.",
-      "reason": "Prohibited areas (e.g., P-56 over the White House) are areas where flight is completely prohibited for security or national welfare reasons. No aircraft, including UAS, may enter without specific authorization.",
-      "keyTakeaway": "Prohibited areas are absolute no-fly zones. Restricted areas (R-XXX) may be used when not active, but prohibited areas are always off-limits.",
-      "references": ["ref-aim"]
+      "reason": "Prohibited areas (for example P-56 over the White House) are established for security or national welfare and are charted with a 'P' and a number. Private airports and parachute jump areas use different chart symbols.",
+      "keyTakeaway": "Under 14 CFR 107.45 you may not fly in a prohibited or restricted area without permission from the using or controlling agency. In practice, plan to stay out of prohibited areas entirely.",
+      "references": ["ref-aim", "ref-cfr107"]
     },
-    "domain": "Airspace Classification",
+    "domain": "dom-airspace",
     "moduleId": "mod-airspace",
     "lessonId": "les-as-special",
-    "acsRefs": ["acs-ua-ii-a"],
+    "acsRefs": ["acs-ua-ii-a-k2"],
     "difficulty": "medium",
     "status": "active",
-    "version": 1
+    "version": 2
   },
   {
     "id": "q-as-003",
     "stem": "What system provides near-real-time airspace authorization for Part 107 operations in controlled airspace?",
     "choices": [
-      { "id": "q-as-003-a", "text": "LAANC", "isCorrect": true },
-      { "id": "q-as-003-b", "text": "NOTAM", "isCorrect": false },
-      { "id": "q-as-003-c", "text": "ATIS", "isCorrect": false },
-      { "id": "q-as-003-d", "text": "CTAF", "isCorrect": false }
+      { "id": "q-as-003-a", "text": "NOTAM", "isCorrect": false },
+      { "id": "q-as-003-b", "text": "LAANC", "isCorrect": true },
+      { "id": "q-as-003-c", "text": "ATIS", "isCorrect": false }
     ],
     "explanation": {
       "correct": "LAANC (Low Altitude Authorization and Notification Capability) provides near-real-time authorization.",
-      "reason": "LAANC automates the airspace authorization process using UAS Facility Maps that define maximum allowable altitudes. Approved apps can request and receive authorization in near-real-time.",
-      "keyTakeaway": "LAANC is the fastest authorization method. If LAANC isn't available for your area, manual authorization through FAA DroneZone can take up to 90 days.",
+      "reason": "LAANC, the Low Altitude Authorization and Notification Capability, automates airspace authorization using UAS Facility Maps that set the highest altitude that can be approved in each grid. Approved apps request and receive authorization in near-real time. A NOTAM is a notice about a time-critical condition or restriction and grants nothing. ATIS is a recorded broadcast of weather and airport information at busier airports.",
+      "keyTakeaway": "LAANC is the fastest way to get authorization. Where LAANC is not available, request authorization through FAA DroneZone well ahead of the flight.",
       "references": ["ref-cfr107"]
     },
-    "domain": "Airspace Classification",
+    "domain": "dom-airspace",
     "moduleId": "mod-airspace",
     "lessonId": "les-as-controlled",
-    "acsRefs": ["acs-ua-ii-a"],
+    "acsRefs": ["acs-ua-ii-b-k2"],
     "difficulty": "easy",
     "status": "active",
-    "version": 1
+    "version": 2
   },
   {
     "id": "q-as-004",
@@ -74,158 +71,745 @@
     "choices": [
       { "id": "q-as-004-a", "text": "Dashed magenta line", "isCorrect": true },
       { "id": "q-as-004-b", "text": "Solid magenta shading", "isCorrect": false },
-      { "id": "q-as-004-c", "text": "Blue shading", "isCorrect": false },
-      { "id": "q-as-004-d", "text": "Solid blue circle", "isCorrect": false }
+      { "id": "q-as-004-c", "text": "Solid blue circle", "isCorrect": false }
     ],
     "explanation": {
       "correct": "A dashed magenta line indicates Class E airspace that extends to the surface.",
       "reason": "The dashed magenta line is critical for Part 107 pilots because it indicates where Class E begins at the surface (requiring authorization). A faded magenta shading indicates where Class E transitions from 1,200 AGL down to 700 AGL — still Class G at the surface.",
       "keyTakeaway": "DASHED magenta = Class E to surface = authorization required. FADED magenta shading = Class E starts at 700 AGL, so below 700 AGL is still Class G.",
-      "references": ["ref-aim"]
+      "references": ["ref-chartguide", "ref-aim"]
     },
-    "domain": "Airspace Classification",
+    "domain": "dom-airspace",
     "moduleId": "mod-airspace",
     "lessonId": "les-as-class-e-g",
-    "acsRefs": ["acs-ua-ii-a"],
+    "acsRefs": ["acs-ua-ii-a-k1d"],
     "difficulty": "hard",
     "status": "active",
-    "version": 1
+    "version": 2
   },
   {
     "id": "q-as-005",
     "stem": "What is indicated by a Military Training Route labeled 'IR-206' on a sectional chart?",
     "choices": [
-      { "id": "q-as-005-a", "text": "IFR route flown at or above 1,500 feet AGL with segments below", "isCorrect": true },
-      { "id": "q-as-005-b", "text": "VFR route flown below 1,500 feet AGL", "isCorrect": false },
-      { "id": "q-as-005-c", "text": "Instrument approach route for military aircraft", "isCorrect": false },
-      { "id": "q-as-005-d", "text": "Restricted airspace for military operations", "isCorrect": false }
+      { "id": "q-as-005-a", "text": "An IFR military training route with at least one segment above 1,500 feet AGL", "isCorrect": true },
+      { "id": "q-as-005-b", "text": "A VFR military training route that is flown entirely at or below 1,500 feet AGL", "isCorrect": false },
+      { "id": "q-as-005-c", "text": "Restricted airspace reserved for military operations", "isCorrect": false }
     ],
     "explanation": {
-      "correct": "IR routes are IFR routes; the 3-digit number indicates segments at or above 1,500 feet AGL.",
-      "reason": "MTRs starting with 'IR' are flown under IFR; 'VR' routes are VFR. A 3-digit route number means at least one segment is at or above 1,500 feet AGL. A 4-digit number means the entire route is below 1,500 feet AGL.",
-      "keyTakeaway": "3-digit = segments above 1,500 AGL. 4-digit = entire route below 1,500 AGL. Watch for the 4-digit routes — they're at drone altitudes!",
+      "correct": "IR means the route is flown under IFR, and a three-digit number means at least one segment is above 1,500 feet AGL.",
+      "reason": "Military training routes are labeled IR (flown under IFR) or VR (flown under VFR). A three-digit number means one or more segments are above 1,500 feet AGL. A four-digit number means the whole route is at or below 1,500 feet AGL. An MTR is not restricted airspace, so no permission is needed, but military aircraft may be moving faster than 250 knots.",
+      "keyTakeaway": "Four digits = entire route at or below 1,500 feet AGL, which is where drones fly. Three digits = at least one segment above 1,500 feet AGL.",
       "references": ["ref-aim"]
     },
-    "domain": "Airspace Classification",
+    "domain": "dom-airspace",
     "moduleId": "mod-airspace",
     "lessonId": "les-as-tfr-mtr",
-    "acsRefs": ["acs-ua-ii-a"],
+    "acsRefs": ["acs-ua-ii-a-k3"],
     "difficulty": "hard",
     "status": "active",
-    "version": 1
+    "version": 2
   },
   {
     "id": "q-as-006",
     "stem": "Which type of special-use airspace is NOT depicted on VFR sectional charts?",
     "choices": [
-      { "id": "q-as-006-a", "text": "Controlled Firing Areas (CFA)", "isCorrect": true },
-      { "id": "q-as-006-b", "text": "Military Operations Areas (MOA)", "isCorrect": false },
-      { "id": "q-as-006-c", "text": "Prohibited Areas", "isCorrect": false },
-      { "id": "q-as-006-d", "text": "Restricted Areas", "isCorrect": false }
+      { "id": "q-as-006-a", "text": "Military Operations Areas (MOA)", "isCorrect": false },
+      { "id": "q-as-006-b", "text": "Restricted Areas", "isCorrect": false },
+      { "id": "q-as-006-c", "text": "Controlled Firing Areas (CFA)", "isCorrect": true }
     ],
     "explanation": {
       "correct": "Controlled Firing Areas (CFA) are NOT depicted on VFR sectional charts.",
-      "reason": "CFAs are areas where activities could be hazardous to nonparticipating aircraft. However, they are not charted because operations are suspended when radar or observers detect an approaching aircraft. This is the only special-use airspace NOT shown on sectional charts.",
+      "reason": "A controlled firing area holds activities that could be hazardous to nonparticipating aircraft, but the activity is suspended as soon as spotter aircraft, radar, or ground lookouts see an aircraft approaching. Because nonparticipating aircraft never have to change course, CFAs are not charted. MOAs and restricted areas are charted.",
       "keyTakeaway": "CFAs are 'invisible' on charts because they suspend operations when aircraft approach. All other special-use airspace is charted.",
       "references": ["ref-aim"]
     },
-    "domain": "Airspace Classification",
+    "domain": "dom-airspace",
     "moduleId": "mod-airspace",
     "lessonId": "les-as-special",
-    "acsRefs": ["acs-ua-ii-a"],
+    "acsRefs": ["acs-ua-ii-a-k2"],
     "difficulty": "hard",
     "status": "active",
-    "version": 1
+    "version": 2
   },
   {
     "id": "q-as-007",
     "stem": "Class B airspace surrounding major airports typically extends from the surface up to:",
     "choices": [
-      { "id": "q-as-007-a", "text": "10,000 feet MSL", "isCorrect": true },
-      { "id": "q-as-007-b", "text": "5,000 feet AGL", "isCorrect": false },
-      { "id": "q-as-007-c", "text": "18,000 feet MSL", "isCorrect": false },
-      { "id": "q-as-007-d", "text": "2,500 feet AGL", "isCorrect": false }
+      { "id": "q-as-007-a", "text": "18,000 feet MSL", "isCorrect": false },
+      { "id": "q-as-007-b", "text": "2,500 feet AGL", "isCorrect": false },
+      { "id": "q-as-007-c", "text": "10,000 feet MSL", "isCorrect": true }
     ],
     "explanation": {
       "correct": "Class B airspace typically extends from the surface up to 10,000 feet MSL.",
-      "reason": "Class B airspace surrounds the nation's busiest airports and typically extends from the surface to 10,000 feet MSL. The airspace is depicted as a series of concentric circles or arcs resembling an inverted wedding cake.",
+      "reason": "Class B airspace surrounds the nation's busiest airports and generally extends from the surface to 10,000 feet MSL. Each Class B area is individually tailored and looks like an upside-down wedding cake. 18,000 feet MSL is the floor of Class A, and 2,500 feet AGL is the typical top of Class D.",
       "keyTakeaway": "Class B = 'Big' airports (major commercial). Goes from surface to typically 10,000 MSL in an inverted wedding cake shape.",
       "references": ["ref-aim"]
     },
-    "domain": "Airspace Classification",
+    "domain": "dom-airspace",
     "moduleId": "mod-airspace",
     "lessonId": "les-as-controlled",
-    "acsRefs": ["acs-ua-ii-a"],
+    "acsRefs": ["acs-ua-ii-a-k1a"],
     "difficulty": "medium",
     "status": "active",
-    "version": 1
-  },
-  {
-    "id": "q-as-008",
-    "stem": "What color are airports depicted on sectional charts when they have an operating control tower?",
-    "choices": [
-      { "id": "q-as-008-a", "text": "Blue", "isCorrect": true },
-      { "id": "q-as-008-b", "text": "Magenta", "isCorrect": false },
-      { "id": "q-as-008-c", "text": "Green", "isCorrect": false },
-      { "id": "q-as-008-d", "text": "Yellow", "isCorrect": false }
-    ],
-    "explanation": {
-      "correct": "Towered airports are depicted in blue on sectional charts.",
-      "reason": "Airports with operating control towers are shown in blue. Non-towered airports are shown in magenta. This is one of the most fundamental chart-reading skills tested on the exam.",
-      "keyTakeaway": "Blue = towered airport. Magenta = non-towered airport. This is heavily tested!",
-      "references": ["ref-aim"]
-    },
-    "domain": "Airspace Classification",
-    "moduleId": "mod-airspace",
-    "lessonId": "les-as-controlled",
-    "acsRefs": ["acs-ua-ii-a"],
-    "difficulty": "easy",
-    "status": "active",
-    "version": 1
+    "version": 2
   },
   {
     "id": "q-as-009",
     "stem": "During night operations under Part 107, what lighting is required on the sUAS?",
     "choices": [
-      { "id": "q-as-009-a", "text": "Anti-collision lighting visible for at least 3 statute miles", "isCorrect": true },
-      { "id": "q-as-009-b", "text": "Navigation lights visible for at least 1 statute mile", "isCorrect": false },
-      { "id": "q-as-009-c", "text": "Landing lights visible for at least 5 statute miles", "isCorrect": false },
-      { "id": "q-as-009-d", "text": "No lighting is required if the pilot has completed night training", "isCorrect": false }
+      { "id": "q-as-009-a", "text": "Navigation lights visible for at least 1 statute mile", "isCorrect": false },
+      { "id": "q-as-009-b", "text": "No lighting is required if the pilot has completed night training", "isCorrect": false },
+      { "id": "q-as-009-c", "text": "Anti-collision lighting visible for at least 3 statute miles", "isCorrect": true }
     ],
     "explanation": {
       "correct": "Anti-collision lighting visible for at least 3 statute miles is required.",
-      "reason": "14 CFR 107.29 requires anti-collision lighting visible for at least 3 statute miles during civil twilight and night operations. The remote PIC may reduce intensity if it would create a safety hazard, but it must remain visible for 3 SM.",
-      "keyTakeaway": "Night operations require anti-collision lighting visible for 3 statute miles. This is mandatory, not optional.",
+      "reason": "14 CFR 107.29 requires lighted anti-collision lighting visible for at least 3 statute miles, with a flash rate sufficient to avoid a collision, during night and civil twilight operations. The remote PIC may reduce the intensity, but not turn the light off, if doing so is in the interest of safety. Night training does not replace the lighting requirement.",
+      "keyTakeaway": "Night and civil twilight flights need anti-collision lighting visible for 3 statute miles. Statute miles, not nautical.",
       "references": ["ref-cfr107"]
     },
-    "domain": "Airspace Classification",
+    "domain": "dom-airspace",
     "moduleId": "mod-airspace",
     "lessonId": "les-as-night",
-    "acsRefs": ["acs-ua-ii-a"],
+    "acsRefs": ["acs-ua-ii-b-k10"],
     "difficulty": "medium",
     "status": "active",
-    "version": 1
+    "version": 2
   },
   {
     "id": "q-as-010",
     "stem": "A Temporary Flight Restriction (TFR) is issued for a presidential visit. What should a Part 107 pilot do?",
     "choices": [
-      { "id": "q-as-010-a", "text": "Check NOTAMs and avoid the TFR area completely", "isCorrect": true },
-      { "id": "q-as-010-b", "text": "Contact the local tower for clearance to fly", "isCorrect": false },
-      { "id": "q-as-010-c", "text": "Fly below 200 feet AGL to avoid conflict", "isCorrect": false },
-      { "id": "q-as-010-d", "text": "Request a waiver through LAANC", "isCorrect": false }
+      { "id": "q-as-010-a", "text": "Contact the local tower for clearance to fly", "isCorrect": false },
+      { "id": "q-as-010-b", "text": "Request a waiver through LAANC", "isCorrect": false },
+      { "id": "q-as-010-c", "text": "Check NOTAMs and avoid the TFR area completely", "isCorrect": true }
     ],
     "explanation": {
       "correct": "Check NOTAMs and avoid the TFR area completely.",
-      "reason": "TFRs for VIP movements (presidential visits, etc.) are highly restricted and enforced by armed military aircraft. UAS operations are prohibited within these TFRs. There is no waiver process for VIP TFRs — the only option is to avoid the area.",
-      "keyTakeaway": "VIP TFRs are absolute no-fly zones. No LAANC, no waivers, no exceptions. Check NOTAMs before every flight!",
-      "references": ["ref-aim"]
+      "reason": "VIP temporary flight restrictions are issued by FDC NOTAM under 14 CFR 91.141, and 14 CFR 107.47 requires remote pilots to comply with them. A control tower cannot clear a drone into the TFR, and LAANC grants controlled-airspace authorization, not relief from a TFR.",
+      "keyTakeaway": "Check for TFRs before every flight. A LAANC authorization does not override a TFR.",
+      "references": ["ref-cfr107", "ref-cfr91", "ref-aim"]
     },
-    "domain": "Airspace Classification",
+    "domain": "dom-airspace",
     "moduleId": "mod-airspace",
     "lessonId": "les-as-tfr-mtr",
-    "acsRefs": ["acs-ua-ii-a"],
+    "acsRefs": ["acs-ua-ii-a-k3"],
     "difficulty": "medium",
+    "status": "active",
+    "version": 2
+  },
+  {
+    "id": "q-as-011",
+    "stem": "On a sectional chart, a job site lies inside a solid blue ring labeled 100 over 40 (100/40). The ground there is at 600 feet MSL, and no other airspace is charted beneath the ring. A drone flown at 300 feet AGL at this site is:",
+    "choices": [
+      { "id": "q-as-011-a", "text": "Inside Class B airspace, so ATC authorization is required before the flight", "isCorrect": false },
+      { "id": "q-as-011-b", "text": "Below the floor of Class B airspace, so no ATC authorization is needed", "isCorrect": true },
+      { "id": "q-as-011-c", "text": "Inside Class A airspace", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Below the floor of Class B airspace, so no ATC authorization is needed.",
+      "reason": "Solid blue lines mark Class B airspace, and the numbers give its ceiling and floor in hundreds of feet MSL. 100/40 means Class B from 4,000 to 10,000 feet MSL in that ring. A drone at 300 feet AGL over 600-foot terrain is at 900 feet MSL, far below the 4,000-foot floor. Class A begins at 18,000 feet MSL.",
+      "keyTakeaway": "Read the Class B fraction: top number is the ceiling, bottom number is the floor, both in hundreds of feet MSL. SFC means it reaches the ground.",
+      "references": ["ref-chartguide", "ref-aim", "ref-cfr107"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-controlled",
+    "acsRefs": ["acs-ua-ii-a-k1a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-012",
+    "stem": "How is Class B airspace depicted on a sectional chart?",
+    "choices": [
+      { "id": "q-as-012-a", "text": "Solid magenta lines", "isCorrect": false },
+      { "id": "q-as-012-b", "text": "Dashed blue lines", "isCorrect": false },
+      { "id": "q-as-012-c", "text": "Solid blue lines", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Solid blue lines.",
+      "reason": "Class B airspace is outlined with solid blue lines. Solid magenta lines outline Class C, and dashed blue lines outline Class D.",
+      "keyTakeaway": "Solid blue = B. Solid magenta = C. Dashed blue = D. Dashed magenta = Class E at the surface.",
+      "references": ["ref-chartguide"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-controlled",
+    "acsRefs": ["acs-ua-ii-a-k1a"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-013",
+    "stem": "A remote pilot plans to fly at 200 feet AGL beneath the outer shelf of Class C airspace. The shelf is labeled 43 over 15 (43/15), field elevation is 300 feet MSL, and the airspace below the shelf is Class G. Is ATC authorization required?",
+    "choices": [
+      { "id": "q-as-013-a", "text": "Yes, because any flight inside the outer ring of Class C needs authorization", "isCorrect": false },
+      { "id": "q-as-013-b", "text": "No, because the drone stays below the 1,500-foot MSL floor of the shelf", "isCorrect": true },
+      { "id": "q-as-013-c", "text": "Yes, because Class C always extends to the surface", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No, because the drone stays below the 1,500-foot MSL floor of the shelf.",
+      "reason": "The label 43/15 means the Class C shelf extends from 1,500 feet MSL to 4,300 feet MSL. A drone at 200 feet AGL over 300-foot terrain is at 500 feet MSL, below the shelf and in Class G airspace. Only the inner core of Class C, labeled with SFC, extends to the surface.",
+      "keyTakeaway": "Class C has an inner surface area and an outer shelf. Under the shelf you are not in Class C.",
+      "references": ["ref-chartguide", "ref-aim", "ref-cfr107"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-controlled",
+    "acsRefs": ["acs-ua-ii-a-k1b"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-014",
+    "stem": "Which description fits the usual shape of Class C airspace?",
+    "choices": [
+      { "id": "q-as-014-a", "text": "A single 4 NM radius cylinder from the surface up to 2,500 feet above the airport, with no shelf areas", "isCorrect": false },
+      { "id": "q-as-014-b", "text": "A 5 NM radius core from the surface and a 10 NM radius shelf from 1,200 feet, both up to 4,000 feet above the airport", "isCorrect": true },
+      { "id": "q-as-014-c", "text": "A 30 NM radius area from the surface up to 10,000 feet MSL, with several layered shelves", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "A 5 NM radius core from the surface and a 10 NM radius shelf from 1,200 feet, both up to 4,000 feet above the airport.",
+      "reason": "The AIM describes Class C airspace as usually having a 5 NM radius surface area that extends to 4,000 feet above the airport elevation, and a 10 NM radius shelf area from 1,200 feet up to 4,000 feet above the airport elevation. A single small cylinder to 2,500 feet describes typical Class D. Each area is individually tailored.",
+      "keyTakeaway": "Class C: 5 NM core to the surface, 10 NM shelf starting at 1,200 feet above the airport.",
+      "references": ["ref-aim"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-controlled",
+    "acsRefs": ["acs-ua-ii-a-k1b"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-015",
+    "stem": "An airport is surrounded by a dashed blue line, and a dashed blue box nearby contains the number 27. What does the number mean?",
+    "choices": [
+      { "id": "q-as-015-a", "text": "Class D extends from the surface up to and including 2,700 feet AGL", "isCorrect": false },
+      { "id": "q-as-015-b", "text": "Class D extends from the surface up to and including 2,700 feet MSL", "isCorrect": true },
+      { "id": "q-as-015-c", "text": "Class D begins at 2,700 feet MSL and extends upward to the base of Class A", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Class D extends from the surface up to and including 2,700 feet MSL.",
+      "reason": "A dashed blue line marks Class D airspace. The number in the dashed box is the ceiling of the Class D airspace in hundreds of feet MSL, so 27 means 2,700 feet MSL. A minus sign in front of the number would mean up to but not including that altitude.",
+      "keyTakeaway": "Class D ceiling: number in the dashed box, hundreds of feet MSL.",
+      "references": ["ref-chartguide", "ref-aim"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-controlled",
+    "acsRefs": ["acs-ua-ii-a-k1c"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-016",
+    "stem": "A Class D airport has a part-time control tower. A remote pilot wants to fly 1 mile from the airport after the tower has closed for the night. What should the pilot do first?",
+    "choices": [
+      { "id": "q-as-016-a", "text": "Fly without checking further, because all airspace becomes Class G whenever a control tower is closed", "isCorrect": false },
+      { "id": "q-as-016-b", "text": "Phone the closed tower and leave a message describing the flight", "isCorrect": false },
+      { "id": "q-as-016-c", "text": "Check the Chart Supplement to see what class of airspace is in effect when the tower is closed", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Check the Chart Supplement to see what class of airspace is in effect when the tower is closed.",
+      "reason": "When a part-time tower closes, the Class D airspace changes to either Class E surface area or Class G, as published in the Chart Supplement. If it becomes a Class E surface area designated for the airport, 14 CFR 107.41 still requires authorization. If it becomes Class G, it does not. A voicemail is not an authorization.",
+      "keyTakeaway": "Tower closed does not always mean Class G. The Chart Supplement tells you what the airspace becomes.",
+      "references": ["ref-aim", "ref-cfr107"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-controlled",
+    "acsRefs": ["acs-ua-ii-a-k1c"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-017",
+    "stem": "A small non-towered airport sits inside an area of shaded (fading) magenta on the sectional chart. No dashed lines surround the airport. At what altitude does Class E airspace begin there?",
+    "choices": [
+      { "id": "q-as-017-a", "text": "The surface", "isCorrect": false },
+      { "id": "q-as-017-b", "text": "700 feet AGL", "isCorrect": true },
+      { "id": "q-as-017-c", "text": "1,200 feet AGL", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "700 feet AGL.",
+      "reason": "Shaded magenta marks areas where the floor of Class E airspace is 700 feet AGL. Below that, down to the surface, the airspace is Class G. Class E at the surface would be shown by a dashed magenta line. A 1,200-foot AGL floor is what applies in most areas outside the magenta shading.",
+      "keyTakeaway": "Fuzzy magenta = Class E starts at 700 feet AGL, so a drone at or below 400 feet AGL there is in Class G.",
+      "references": ["ref-chartguide", "ref-aim"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-class-e-g",
+    "acsRefs": ["acs-ua-ii-a-k1d"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-018",
+    "stem": "A dashed magenta line encloses a rectangular Class E extension that juts out from a Class D airport's dashed blue circle. A remote pilot plans to fly at 200 feet AGL inside the extension, outside the Class D circle. Is ATC authorization required?",
+    "choices": [
+      { "id": "q-as-018-a", "text": "Yes. All airspace enclosed by a dashed magenta line requires ATC authorization at any altitude", "isCorrect": false },
+      { "id": "q-as-018-b", "text": "Yes. Class E airspace always requires ATC authorization for any flight that is conducted below 400 feet AGL", "isCorrect": false },
+      { "id": "q-as-018-c", "text": "No. Authorization is needed only in the Class E surface area designated for an airport, not in an extension", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "No. Authorization is needed only in the Class E surface area designated for an airport, not in an extension.",
+      "reason": "14 CFR 107.41 requires authorization in Class B, C, or D airspace or within the lateral boundaries of the surface area of Class E airspace designated for an airport. FAA guidance treats Class E surface extensions to Class B, C, or D airspace as not covered by that rule. The pilot must still stay out of the Class D circle and avoid interfering with airport traffic.",
+      "keyTakeaway": "Class E surface area for an airport: authorization. Class E extension: no authorization, but stay alert for arriving and departing aircraft.",
+      "references": ["ref-cfr107", "ref-aim"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-class-e-g",
+    "acsRefs": ["acs-ua-ii-a-k1d"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-019",
+    "stem": "A remote pilot is flying at 350 feet AGL, 3 miles from a non-towered airport that is depicted in magenta with shaded magenta around it. In what class of airspace is the drone?",
+    "choices": [
+      { "id": "q-as-019-a", "text": "Class E", "isCorrect": false },
+      { "id": "q-as-019-b", "text": "Class D", "isCorrect": false },
+      { "id": "q-as-019-c", "text": "Class G", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Class G.",
+      "reason": "Shaded magenta means Class E begins at 700 feet AGL, so from the surface to 700 feet AGL the airspace is Class G. Class D would be shown with a dashed blue line and needs an operating control tower. Being near an airport does not by itself make the airspace controlled.",
+      "keyTakeaway": "Most low-altitude drone flying happens in Class G. The chart, not the presence of an airport, tells you the class.",
+      "references": ["ref-chartguide", "ref-aim"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-class-e-g",
+    "acsRefs": ["acs-ua-ii-a-k1e"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-020",
+    "stem": "A planned flight is inside an active military operations area (MOA). What does Part 107 require?",
+    "choices": [
+      { "id": "q-as-020-a", "text": "No permission is required, but the pilot should use extra caution", "isCorrect": true },
+      { "id": "q-as-020-b", "text": "Permission from the using agency is required, as for a restricted area", "isCorrect": false },
+      { "id": "q-as-020-c", "text": "A LAANC authorization is required whenever the MOA is active", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No permission is required, but the pilot should use extra caution.",
+      "reason": "A MOA separates certain military training from IFR traffic. Flight in a MOA is not prohibited, and 14 CFR 107.45 covers only prohibited and restricted areas. The AIM advises extreme caution when a MOA is active. LAANC applies to controlled airspace around airports.",
+      "keyTakeaway": "MOA = caution, not permission. Check the chart or NOTAMs for its hours and altitudes.",
+      "references": ["ref-aim", "ref-cfr107"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-special",
+    "acsRefs": ["acs-ua-ii-a-k2"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-021",
+    "stem": "Which statement describes a warning area?",
+    "choices": [
+      { "id": "q-as-021-a", "text": "Airspace from 3 NM outward from the U.S. coast that may contain hazardous activity", "isCorrect": true },
+      { "id": "q-as-021-b", "text": "Airspace over a national park where flight below 2,000 feet AGL should be avoided", "isCorrect": false },
+      { "id": "q-as-021-c", "text": "Airspace around a towered airport where two-way radio contact is required", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Airspace from 3 NM outward from the U.S. coast that may contain hazardous activity.",
+      "reason": "The AIM defines a warning area as airspace of defined dimensions, extending from 3 nautical miles outward from the coast of the United States, that contains activity that may be hazardous to nonparticipating aircraft. It may lie over domestic or international waters.",
+      "keyTakeaway": "Warning area = offshore hazard area, charted with a W and a number.",
+      "references": ["ref-aim"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-special",
+    "acsRefs": ["acs-ua-ii-a-k2"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-022",
+    "stem": "What does an alert area (for example A-211) on a sectional chart tell a remote pilot?",
+    "choices": [
+      { "id": "q-as-022-a", "text": "Flight within the area is prohibited at all times without permission", "isCorrect": false },
+      { "id": "q-as-022-b", "text": "It may contain a high volume of pilot training or unusual aerial activity", "isCorrect": true },
+      { "id": "q-as-022-c", "text": "A temporary flight restriction is in effect there until further notice", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "It may contain a high volume of pilot training or unusual aerial activity.",
+      "reason": "Alert areas are charted to inform pilots of areas that may contain a high volume of pilot training or an unusual type of aerial activity. No permission is needed, and everyone flying there remains responsible for collision avoidance. Prohibited areas are marked with a P, and temporary flight restrictions are issued by NOTAM.",
+      "keyTakeaway": "Alert area: legal to fly, but expect a lot of traffic.",
+      "references": ["ref-aim"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-special",
+    "acsRefs": ["acs-ua-ii-a-k2"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-023",
+    "stem": "A sectional chart shows a gray line labeled VR1207 crossing a planned drone flight area. What should the remote pilot expect?",
+    "choices": [
+      { "id": "q-as-023-a", "text": "Military aircraft under VFR at or below 1,500 feet AGL, possibly above 250 knots", "isCorrect": true },
+      { "id": "q-as-023-b", "text": "Military aircraft under IFR, always above 1,500 feet AGL and below 250 knots", "isCorrect": false },
+      { "id": "q-as-023-c", "text": "A restricted area that requires permission from the using agency to enter", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Military aircraft under VFR at or below 1,500 feet AGL, possibly above 250 knots.",
+      "reason": "VR marks a military training route flown under VFR. A four-digit number means no segment of the route is above 1,500 feet AGL. Aircraft on these routes may exceed 250 knots. A military training route is not restricted airspace, and no permission is needed, but the route is flown at the altitudes drones use.",
+      "keyTakeaway": "Four-digit route = low route. Treat it as a strong reason to use a visual observer and keep listening and looking.",
+      "references": ["ref-aim", "ref-chartguide"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-tfr-mtr",
+    "acsRefs": ["acs-ua-ii-a-k3"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-024",
+    "stem": "A sectional chart shows a national security area (NSA) over an industrial site. What is a remote pilot expected to do?",
+    "choices": [
+      { "id": "q-as-024-a", "text": "Voluntarily avoid flying through the area, and check NOTAMs in case flight has been prohibited", "isCorrect": true },
+      { "id": "q-as-024-b", "text": "Nothing at all, because a national security area is only a chart label and carries no request or restriction", "isCorrect": false },
+      { "id": "q-as-024-c", "text": "Request a LAANC authorization before entering", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Voluntarily avoid flying through the area, and check NOTAMs in case flight has been prohibited.",
+      "reason": "The AIM describes national security areas as airspace where pilots are requested to voluntarily avoid flying, because of a need for increased security and safety of ground facilities. Flight can be temporarily prohibited by NOTAM under 14 CFR 99.7, and 14 CFR 107.47 then requires compliance.",
+      "keyTakeaway": "National security area: avoidance is requested, and it becomes mandatory when a NOTAM says so.",
+      "references": ["ref-aim", "ref-cfr107"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-tfr-mtr",
+    "acsRefs": ["acs-ua-ii-a-k3"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-025",
+    "stem": "A job site lies within a terminal radar service area (TRSA), outside the Class D airspace of the primary airport, in Class G airspace at the surface. What authorization does the remote pilot need for a flight at 300 feet AGL?",
+    "choices": [
+      { "id": "q-as-025-a", "text": "A LAANC authorization, because a TRSA is controlled in the same way as Class C", "isCorrect": false },
+      { "id": "q-as-025-b", "text": "None, because a TRSA is not a class of airspace that requires authorization", "isCorrect": true },
+      { "id": "q-as-025-c", "text": "Permission from the using agency that operates the radar service", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "None, because a TRSA is not a class of airspace that requires authorization.",
+      "reason": "A TRSA is an area where participating pilots can receive additional radar services. It does not fit any of the airspace classes and is not regulatory. 14 CFR 107.41 requires authorization only in Class B, C, D, and the surface area of Class E designated for an airport, so the primary airport's Class D still needs authorization, but the Class G site does not.",
+      "keyTakeaway": "TRSA rings (solid black or gray) do not change the airspace class. Look at what class actually lies under them.",
+      "references": ["ref-aim", "ref-cfr107"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-tfr-mtr",
+    "acsRefs": ["acs-ua-ii-a-k3"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-026",
+    "stem": "A remote pilot is working in Class G airspace during the day. Scattered cloud bases are at 800 feet AGL and visibility is 5 statute miles. Which statement is correct?",
+    "choices": [
+      { "id": "q-as-026-a", "text": "The drone only has to remain clear of clouds, because the airspace is Class G", "isCorrect": false },
+      { "id": "q-as-026-b", "text": "The drone may fly up to 400 feet AGL, because the visibility is above 3 statute miles", "isCorrect": false },
+      { "id": "q-as-026-c", "text": "The drone must stay at or below 300 feet AGL and 2,000 feet horizontally from the clouds", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "The drone must stay at or below 300 feet AGL and 2,000 feet horizontally from the clouds.",
+      "reason": "14 CFR 107.51 sets the same minimums in every class of airspace: 3 statute miles visibility, 500 feet below clouds, and 2,000 feet horizontally from clouds. 800 - 500 = 300 feet AGL. 'Clear of clouds' is a Part 91 rule for manned aircraft in some Class G airspace and does not apply to Part 107.",
+      "keyTakeaway": "Part 107 weather minimums do not change with airspace class. Do not borrow the manned-aircraft VFR table.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-class-e-g",
+    "acsRefs": ["acs-ua-ii-b-k1"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-027",
+    "stem": "A LAANC app shows a UAS Facility Map grid value of 100 over a job site in Class C airspace. What does this mean?",
+    "choices": [
+      { "id": "q-as-027-a", "text": "Requests at or below 100 feet AGL can be authorized in near-real time", "isCorrect": true },
+      { "id": "q-as-027-b", "text": "Drones must stay at least 100 feet away from all people and structures", "isCorrect": false },
+      { "id": "q-as-027-c", "text": "Flight is prohibited below 100 feet AGL anywhere inside that grid square", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Requests at or below 100 feet AGL can be authorized in near-real time.",
+      "reason": "UAS Facility Maps show the maximum altitude, in feet AGL, at which the FAA can authorize Part 107 operations in each grid without additional safety analysis. A request at or below the grid value can be approved through LAANC in near-real time. Higher requests, up to 400 feet, need further coordination with ATC.",
+      "keyTakeaway": "The grid value is a ceiling for automatic approval, measured in feet AGL.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-controlled",
+    "acsRefs": ["acs-ua-ii-b-k2"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-028",
+    "stem": "A remote pilot has a LAANC authorization for 200 feet AGL in Class D airspace. On arrival, visibility at the site is 2 statute miles in haze. May the flight be made?",
+    "choices": [
+      { "id": "q-as-028-a", "text": "No, because the authorization does not change the 3-statute-mile visibility minimum", "isCorrect": true },
+      { "id": "q-as-028-b", "text": "Yes, because an ATC authorization overrides the Part 107 weather minimums", "isCorrect": false },
+      { "id": "q-as-028-c", "text": "Yes, provided the pilot stays below 100 feet AGL and uses a visual observer throughout", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No, because the authorization does not change the 3-statute-mile visibility minimum.",
+      "reason": "An airspace authorization satisfies 14 CFR 107.41 only. Every other Part 107 rule still applies, including the 3-statute-mile visibility minimum in 14 CFR 107.51. Relief from the visibility rule would need a certificate of waiver.",
+      "keyTakeaway": "Authorization gets you into the airspace. It does not relax any other rule.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-controlled",
+    "acsRefs": ["acs-ua-ii-b-k2"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-029",
+    "stem": "A remote pilot plans to fly a quarter mile from the runway of a non-towered airport in Class G airspace. Under Part 107, the pilot:",
+    "choices": [
+      { "id": "q-as-029-a", "text": "Must notify the airport manager at least 24 hours before the flight takes place", "isCorrect": false },
+      { "id": "q-as-029-b", "text": "Must stay at least 5 miles from the airport unless the airport operator approves the flight", "isCorrect": false },
+      { "id": "q-as-029-c", "text": "Needs no authorization, but must not interfere with airport operations or traffic patterns", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Needs no authorization, but must not interfere with airport operations or traffic patterns.",
+      "reason": "Class G airspace needs no ATC authorization. 14 CFR 107.43 prohibits operating a small unmanned aircraft in a manner that interferes with operations and traffic patterns at any airport, heliport, or seaplane base, and 107.37 requires yielding to all aircraft. Part 107 has no 5-mile rule and no notification rule.",
+      "keyTakeaway": "Near a Class G airport: legal without authorization, but manned traffic comes first. Monitor the CTAF and stay clear of the pattern.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-controlled",
+    "acsRefs": ["acs-ua-ii-b-k3"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-030",
+    "stem": "A remote pilot sees a large unmanned free balloon drifting toward the flight area. What does the AIM advise?",
+    "choices": [
+      { "id": "q-as-030-a", "text": "Fly directly beneath it, where the air is calmer", "isCorrect": false },
+      { "id": "q-as-030-b", "text": "Avoid flying beneath it", "isCorrect": true },
+      { "id": "q-as-030-c", "text": "Climb to pass close to it for a better look", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Avoid flying beneath it.",
+      "reason": "The AIM advises against flight beneath unmanned balloons. They often carry payloads and trailing lines or antennas that are hard to see, and a payload may be released or fall. Flying beneath one is exactly the hazard the AIM warns about, however calm the air there seems. Climbing close for a look brings the drone near those lines and the payload.",
+      "keyTakeaway": "Never fly under an unmanned balloon.",
+      "references": ["ref-aim"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-tfr-mtr",
+    "acsRefs": ["acs-ua-ii-b-k4b"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-031",
+    "stem": "Why should a remote pilot avoid flying a drone over or close to an operating smoke stack or cooling tower?",
+    "choices": [
+      { "id": "q-as-031-a", "text": "The structure blocks GPS reception for several miles in every direction", "isCorrect": false },
+      { "id": "q-as-031-b", "text": "The rising plume can cause turbulence and loss of control, and may be invisible", "isCorrect": true },
+      { "id": "q-as-031-c", "text": "Smoke stacks and cooling towers are always located inside restricted areas", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "The rising plume can cause turbulence and loss of control, and may be invisible.",
+      "reason": "The AIM warns that thermal plumes from smoke stacks and cooling towers can produce significant turbulence and can affect aircraft performance and control, and that a plume may be invisible. The hazard is strongest in calm wind and close to the stack.",
+      "keyTakeaway": "Give smoke stacks and cooling towers a wide berth, staying upwind when you can.",
+      "references": ["ref-aim"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-tfr-mtr",
+    "acsRefs": ["acs-ua-ii-b-k4f"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-032",
+    "stem": "A remote pilot is inspecting farmland next to a tall guyed antenna tower. How far out from the tower can the supporting guy wires extend?",
+    "choices": [
+      { "id": "q-as-032-a", "text": "No more than 100 feet horizontally", "isCorrect": false },
+      { "id": "q-as-032-b", "text": "About 1,500 feet horizontally", "isCorrect": true },
+      { "id": "q-as-032-c", "text": "Only as far as the tower's lights are visible", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "About 1,500 feet horizontally.",
+      "reason": "The AIM warns that guy wires can extend about 1,500 feet horizontally from a structure and are difficult to see, and it recommends avoiding skeletal structures by at least 2,000 feet horizontally. One hundred feet badly understates their reach. Lighting is no guide to where the wires are, because the lights are on the tower and the wires are not lighted.",
+      "keyTakeaway": "Guy wires reach far beyond the tower and are close to invisible. Plan the flight path around them.",
+      "references": ["ref-aim"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-tfr-mtr",
+    "acsRefs": ["acs-ua-ii-b-k4g"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-033",
+    "stem": "Which is an acceptable way to get the current NOTAMs for a planned flight area?",
+    "choices": [
+      { "id": "q-as-033-a", "text": "Call Flight Service at 1-800-WX-BRIEF or use the FAA's online NOTAM search", "isCorrect": true },
+      { "id": "q-as-033-b", "text": "Read the notes printed on the most recent edition of the sectional chart", "isCorrect": false },
+      { "id": "q-as-033-c", "text": "Listen to the nearest airport's ATIS broadcast and rely on that alone", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Call Flight Service at 1-800-WX-BRIEF or use the FAA's online NOTAM search.",
+      "reason": "NOTAMs are time-critical notices that are not known far enough in advance to be published on charts. They are available from Flight Service, including by phone at 1-800-WX-BRIEF, and from the FAA's online NOTAM search. An ATIS broadcast may mention some local NOTAMs but is not a complete source.",
+      "keyTakeaway": "Check NOTAMs before every flight. Charts cannot show temporary restrictions.",
+      "references": ["ref-aim", "ref-ac1072"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-tfr-mtr",
+    "acsRefs": ["acs-ua-ii-b-k5"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-034",
+    "stem": "Temporary flight restrictions are published in which type of NOTAM?",
+    "choices": [
+      { "id": "q-as-034-a", "text": "FDC NOTAMs, which are regulatory", "isCorrect": true },
+      { "id": "q-as-034-b", "text": "NOTAM (D), which only describes runway and taxiway conditions", "isCorrect": false },
+      { "id": "q-as-034-c", "text": "Pointer NOTAMs, which are advisory only", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "FDC NOTAMs, which are regulatory.",
+      "reason": "Flight Data Center (FDC) NOTAMs carry regulatory information such as temporary flight restrictions and changes to instrument procedures. NOTAM (D) information covers conditions at airports and navigation facilities, such as runway closures and lighting outages, and is not where flight restrictions are issued. A pointer NOTAM only highlights another NOTAM so that it is not missed.",
+      "keyTakeaway": "FDC NOTAM = regulatory. A TFR in an FDC NOTAM is binding on drone pilots.",
+      "references": ["ref-aim"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-tfr-mtr",
+    "acsRefs": ["acs-ua-ii-b-k5"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-035",
+    "stem": "Which piece of personal equipment helps a remote pilot most with checklists and controller settings at night while protecting night vision?",
+    "choices": [
+      { "id": "q-as-035-a", "text": "A bright white headlamp aimed at the controller", "isCorrect": false },
+      { "id": "q-as-035-b", "text": "A flashlight with a dim red light", "isCorrect": true },
+      { "id": "q-as-035-c", "text": "Polarized sunglasses", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "A flashlight with a dim red light.",
+      "reason": "The Pilot's Handbook of Aeronautical Knowledge explains that dim red light has the least effect on dark adaptation, while white light degrades it quickly. Sunglasses reduce the light reaching the eyes and make night vision worse.",
+      "keyTakeaway": "At night use the dimmest red light that lets you read. One blast of white light costs you many minutes of dark adaptation.",
+      "references": ["ref-phak", "ref-ac1072"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-night",
+    "acsRefs": ["acs-ua-ii-b-k6"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-036",
+    "stem": "At night a remote pilot sees a tower marked with steady and flashing red lights. During the day the same tower shows bright white strobes. These lights are:",
+    "choices": [
+      { "id": "q-as-036-a", "text": "A signal that the tower is inside controlled airspace", "isCorrect": false },
+      { "id": "q-as-036-b", "text": "Obstruction lighting that warns aircraft of the structure", "isCorrect": true },
+      { "id": "q-as-036-c", "text": "A rotating beacon that marks a heliport", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Obstruction lighting that warns aircraft of the structure.",
+      "reason": "The AIM describes obstruction lighting as aviation red obstruction lights at night, and medium- or high-intensity flashing white lights that may be used by day or night. The lighting marks the structure as a hazard and says nothing about the class of airspace. A heliport beacon flashes green, yellow, and white.",
+      "keyTakeaway": "Red lights or white strobes on a structure mean an obstruction. Guy wires around it are not lighted.",
+      "references": ["ref-aim"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-night",
+    "acsRefs": ["acs-ua-ii-b-k7"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-037",
+    "stem": "Why is a daylight survey of the site valuable before a night operation?",
+    "choices": [
+      { "id": "q-as-037-a", "text": "Many obstacles, such as wires, trees, and shorter towers, are unlighted and cannot be seen at night", "isCorrect": true },
+      { "id": "q-as-037-b", "text": "FAA rules require every obstacle to be lighted, so the survey is only needed to map where the lights are", "isCorrect": false },
+      { "id": "q-as-037-c", "text": "Drones cannot record a home point in the dark", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Many obstacles, such as wires, trees, and shorter towers, are unlighted and cannot be seen at night.",
+      "reason": "Obstruction lighting is generally required only on taller structures, so power lines, trees, and many structures below about 200 feet AGL have no lights. AC 107-2A recommends learning the location of ground hazards before night operations because they are hard to see in the dark.",
+      "keyTakeaway": "If it is not lighted, you will not see it at night. Find the hazards in daylight.",
+      "references": ["ref-ac1072", "ref-aim"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-night",
+    "acsRefs": ["acs-ua-ii-b-k8"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-as-038",
+    "stem": "At night a remote pilot sees an airplane's red light and green light at the same time, with the red light on the observer's right. The airplane is:",
+    "choices": [
+      { "id": "q-as-038-a", "text": "Flying away from the observer", "isCorrect": false },
+      { "id": "q-as-038-b", "text": "Flying toward the observer", "isCorrect": true },
+      { "id": "q-as-038-c", "text": "Crossing from right to left", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Flying toward the observer.",
+      "reason": "An airplane carries a red position light on its left wingtip, a green light on its right wingtip, and a white light on its tail. Seeing red and green together means the observer is looking at the front of the airplane. With the airplane's left wing on the observer's right, it is head-on. Seen from behind, only the white tail light would show.",
+      "keyTakeaway": "Red and green together = it is coming at you. Descend and get out of the way.",
+      "references": ["ref-phak", "ref-cfr91"]
+    },
+    "domain": "dom-airspace",
+    "moduleId": "mod-airspace",
+    "lessonId": "les-as-night",
+    "acsRefs": ["acs-ua-ii-b-k9"],
+    "difficulty": "hard",
     "status": "active",
     "version": 1
   }

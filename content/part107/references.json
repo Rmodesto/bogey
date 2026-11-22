@@ -28,22 +28,22 @@
   },
   {
     "id": "ref-ac9157d",
-    "title": "Aircraft Weight and Balance Control — AC 91-57D",
-    "docId": "AC-91-57D"
+    "title": "Aircraft Weight and Balance Handbook (FAA-H-8083-1B)",
+    "docId": "FAA-H-8083-1B"
   },
   {
     "id": "ref-ac10756",
-    "title": "Small Unmanned Aircraft Systems (sUAS) — AC 107-2",
-    "docId": "AC-107-2",
-    "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_107-2.pdf",
-    "revisionDate": "2016-06-21"
+    "title": "Small Unmanned Aircraft System (Small UAS) — AC 107-2A",
+    "docId": "AC-107-2A",
+    "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_107-2A.pdf",
+    "revisionDate": "2021-02-01"
   },
   {
     "id": "ref-ac1072",
-    "title": "Small Unmanned Aircraft Systems (sUAS) — AC 107-2",
-    "docId": "AC-107-2",
-    "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_107-2.pdf",
-    "revisionDate": "2016-06-21"
+    "title": "Small Unmanned Aircraft System (Small UAS) — AC 107-2A",
+    "docId": "AC-107-2A",
+    "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_107-2A.pdf",
+    "revisionDate": "2021-02-01"
   },
   {
     "id": "ref-faa-h-8083-2",
@@ -56,5 +56,61 @@
     "title": "Pilot's Handbook of Aeronautical Knowledge (FAA-H-8083-25B)",
     "docId": "FAA-H-8083-25B",
     "url": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+  },
+  {
+    "id": "ref-cfr3",
+    "title": "14 CFR Part 3, Subpart D — Falsification, Reproduction, Alteration, Omission, or Incorrect Statements",
+    "docId": "14-CFR-3",
+    "url": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-A/part-3/subpart-D",
+    "section": "Subpart D",
+    "revisionDate": "2025-11-03"
+  },
+  {
+    "id": "ref-cfr48",
+    "title": "14 CFR Part 48 — Registration and Marking Requirements for Small Unmanned Aircraft",
+    "docId": "14-CFR-48",
+    "url": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-C/part-48",
+    "section": "Part 48"
+  },
+  {
+    "id": "ref-cfr89",
+    "title": "14 CFR Part 89 — Remote Identification of Unmanned Aircraft",
+    "docId": "14-CFR-89",
+    "url": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-89",
+    "section": "Part 89"
+  },
+  {
+    "id": "ref-cfr91",
+    "title": "14 CFR Part 91 — General Operating and Flight Rules",
+    "docId": "14-CFR-91",
+    "url": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91",
+    "section": "Part 91"
+  },
+  {
+    "id": "ref-studyguide",
+    "title": "Remote Pilot – Small Unmanned Aircraft Systems Study Guide (FAA-G-8082-22)",
+    "docId": "FAA-G-8082-22",
+    "url": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/remote_pilot_study_guide.pdf"
+  },
+  {
+    "id": "ref-awh",
+    "title": "Aviation Weather Handbook (FAA-H-8083-28)",
+    "docId": "FAA-H-8083-28"
+  },
+  {
+    "id": "ref-chartguide",
+    "title": "FAA Aeronautical Chart Users' Guide",
+    "docId": "Chart-Users-Guide",
+    "url": "https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/aero_guide/"
+  },
+  {
+    "id": "ref-safo-lithium",
+    "title": "FAA Safety Alerts for Operators on lithium batteries (SAFO 09013, 10017, 15010)",
+    "docId": "SAFO-09013-10017-15010"
+  },
+  {
+    "id": "ref-ac150520032",
+    "title": "Reporting Wildlife Aircraft Strikes — AC 150/5200-32",
+    "docId": "AC-150/5200-32"
   }
 ]

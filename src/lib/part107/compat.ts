@@ -1,5 +1,6 @@
 import { loadQuestions } from "./loaders";
 import { generateExam } from "./exam";
+import { ACTIVE_BLUEPRINT_ID, ACTIVE_SEED } from "./active";
 import type { DenormalizedQuestion } from "./loaders";
 
 // Legacy Question interface matching src/data/questions.ts
@@ -42,6 +43,6 @@ export function getStudyQuestions(): LegacyQuestion[] {
 }
 
 export function getExamQuestions(): LegacyQuestion[] {
-  const exam = generateExam({ blueprintId: "bp-practice-01", seed: 42 });
+  const exam = generateExam({ blueprintId: ACTIVE_BLUEPRINT_ID, seed: ACTIVE_SEED });
   return exam.map((q, i) => toLegacyQuestion(q, i));
 }

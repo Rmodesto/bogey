@@ -5,8 +5,10 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Clock, Grid3X3, Flag, ChevronLeft, ChevronRight } from "lucide-react";
 import { getExamQuestions } from "@/lib/part107/compat";
+import { getActiveBlueprint } from "@/lib/part107/active";
 
 const examQuestions = getExamQuestions();
+const timeLimitSeconds = getActiveBlueprint().timeLimitSeconds;
 import { formatTime } from "@/lib/utils";
 import Button from "@/components/Button";
 
@@ -20,7 +22,7 @@ export default function ExamSimulator() {
   const [flagged, setFlagged] = useState<boolean[]>(
     () => new Array(examQuestions.length).fill(false)
   );
-  const [timeRemaining, setTimeRemaining] = useState(7200);
+  const [timeRemaining, setTimeRemaining] = useState(timeLimitSeconds);
   const [showNav, setShowNav] = useState(false);
 
   useEffect(() => {
@@ -45,7 +47,7 @@ export default function ExamSimulator() {
     const params = new URLSearchParams({
       score: String(score),
       total: String(examQuestions.length),
-      time: String(7200 - timeRemaining),
+      time: String(timeLimitSeconds - timeRemaining),
       answers: JSON.stringify(answers),
     });
     router.push(`/results?${params.toString()}`);
