@@ -1,6 +1,7 @@
 "use client";
 
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { ReactNode, Children, isValidElement, cloneElement } from "react";
 
 const GLOSSARY: Record<string, string> = {
@@ -121,6 +122,7 @@ function processChildren(children: ReactNode): ReactNode {
 export default function AnnotatedMarkdown({ content }: { content: string }) {
   return (
     <ReactMarkdown
+      remarkPlugins={[remarkGfm]}
       components={{
         p: ({ children, ...props }) => (
           <p {...props}>{processChildren(children)}</p>
@@ -128,8 +130,28 @@ export default function AnnotatedMarkdown({ content }: { content: string }) {
         li: ({ children, ...props }) => (
           <li {...props}>{processChildren(children)}</li>
         ),
+        table: ({ children, ...props }) => (
+          <div className="overflow-x-auto my-[21px]">
+            <table {...props} className="w-full text-[13px] border-collapse">
+              {children}
+            </table>
+          </div>
+        ),
+        th: ({ children, ...props }) => (
+          <th
+            {...props}
+            className="text-left font-semibold text-jet-black bg-fog-gray border border-divider-gray px-[13px] py-[8px]"
+          >
+            {processChildren(children)}
+          </th>
+        ),
         td: ({ children, ...props }) => (
-          <td {...props}>{processChildren(children)}</td>
+          <td
+            {...props}
+            className="text-graphite border border-divider-gray px-[13px] py-[8px] leading-[1.6] align-top"
+          >
+            {processChildren(children)}
+          </td>
         ),
         blockquote: ({ children, ...props }) => (
           <blockquote {...props}>{processChildren(children)}</blockquote>
