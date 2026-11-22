@@ -12,7 +12,17 @@ export const STAGE_H = 420;
 
 // Scales a 672x420 design-space stage to the container width via transform,
 // so animation layouts keep their absolute-pixel geometry from the designs.
-function ScaledStage({ children, dark }: { children: ReactNode; dark: boolean }) {
+function ScaledStage({
+  children,
+  dark,
+  height = STAGE_H,
+  bg,
+}: {
+  children: ReactNode;
+  dark: boolean;
+  height?: number;
+  bg?: string;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
 
@@ -27,16 +37,17 @@ function ScaledStage({ children, dark }: { children: ReactNode; dark: boolean })
   }, []);
 
   return (
-    <div ref={ref} className="w-full" style={{ height: STAGE_H * scale }}>
+    <div ref={ref} className="w-full" style={{ height: height * scale }}>
       <div
         className={`relative rounded-[12px] overflow-hidden ${
           dark ? "bg-graphite border border-slate/30" : "bg-mist-blue border border-divider-gray"
         }`}
         style={{
           width: STAGE_W,
-          height: STAGE_H,
+          height,
           transform: `scale(${scale})`,
           transformOrigin: "top left",
+          ...(bg ? { background: bg, transition: "background 0.4s linear" } : {}),
         }}
       >
         {children}
@@ -57,6 +68,8 @@ export default function AnimationFrame({
   bogeymanLine,
   liveAnnouncement,
   dark = false,
+  stageHeight,
+  stageBg,
 }: {
   title: string;
   category: string;
@@ -69,6 +82,8 @@ export default function AnimationFrame({
   bogeymanLine: string;
   liveAnnouncement: string;
   dark?: boolean;
+  stageHeight?: number;
+  stageBg?: string;
 }) {
   return (
     <div
@@ -118,7 +133,7 @@ export default function AnimationFrame({
       </div>
 
       {/* Stage */}
-      <ScaledStage dark={dark}>{stage}</ScaledStage>
+      <ScaledStage dark={dark} height={stageHeight} bg={stageBg}>{stage}</ScaledStage>
 
       {/* Caption */}
       <p className="m-0 text-[15px] leading-[1.4] min-h-[42px]">{caption}</p>

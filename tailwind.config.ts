@@ -22,6 +22,9 @@ const config: Config = {
         slate: "#8a9198",
         "fog-gray": "#f6f8fa",
         "divider-gray": "#e3e6ea",
+        // Sectional-chart airspace colors only (A1, A2, A4 chart symbology)
+        "chart-blue": "#1F4E9A",
+        "chart-magenta": "#8E1C5E",
       },
       fontFamily: {
         sans: [

@@ -120,6 +120,7 @@
         },
         {
           "id": "sec-ops-airport-traffic",
+          "visualizer": { "type": "anim-traffic-pattern" },
           "title": "Traffic Patterns",
           "content": "## Standard Traffic Pattern\n\nThe standard traffic pattern is a **left-hand rectangular pattern** with five legs:\n\n1. **Upwind** — climbing along the runway heading after takeoff\n2. **Crosswind** — 90° turn from upwind, still climbing\n3. **Downwind** — parallel to the runway in the opposite direction (the longest leg)\n4. **Base** — 90° turn toward the runway, descending\n5. **Final** — aligned with the runway, on approach to land\n\n## Standard Pattern Altitude\n\n**1,000 feet AGL** for propeller-driven aircraft.\n\n## Right-Hand Patterns\n\nSome airports use right-hand traffic due to terrain, noise, or other factors. Check the Chart Supplement or look for the traffic pattern indicator on the segmented circle.\n\n## Segmented Circle\n\nA visual indicator system at non-towered airports:\n- L-shaped extensions show traffic pattern direction\n- Wind cone indicates current wind direction\n\n## Why This Matters for UAS\n\n- Aircraft on approach/departure are at **low altitude** — conflict risk is highest\n- Pattern altitude is well above 400 feet, but aircraft on departure, base, and final descend and climb through the altitudes drones use\n- Watch for aircraft in the pattern when operating near airports",
           "bogeyman": {

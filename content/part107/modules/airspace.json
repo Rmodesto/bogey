@@ -28,6 +28,8 @@
       "sections": [
         {
           "id": "sec-as-overview",
+          "visualizer": { "type": "anim-airspace-stack" },
+          "visualizers": [{ "type": "airspace" }],
           "title": "The National Airspace System",
           "content": "## The Big Picture\n\nThe National Airspace System (NAS) is divided into **controlled** and **uncontrolled** airspace. As a Part 107 pilot, your key question is: **in which airspace do I need authorization?**\n\n| Need Authorization | Fly Freely |\n|---|---|\n| Class B | Class E (non-surface) |\n| Class C | Class G |\n| Class D | |\n| Class E surface area (E2) | |\n\n## Authorization Methods\n\n**LAANC (Preferred):** Near-real-time approval through approved apps\n\nFAADroneZone: For requests LAANC cannot handle. It is slower, so apply well ahead of the flight"
         },
@@ -79,6 +81,7 @@
         },
         {
           "id": "sec-as-class-e-chart",
+          "visualizers": [{ "type": "anim-chart-line-to-shape" }],
           "title": "Reading Class E on Sectional Charts",
           "content": "## The Critical Distinction\n\n| Class E Type | Starts At | Sectional Chart | Authorization? |\n|---|---|---|---|\n| E2 (Surface Area) | Surface | **Dashed magenta line** | **YES** |\n| E5 (Transition, 700 ft) | 700 ft AGL | Faded magenta shading | No |\n| E6 (En Route, 1,200 ft) | 1,200 ft AGL | Faded blue shading | No |\n\n## Why Non-Surface Class E Doesn't Matter\n\nPart 107 operations are limited to 400 ft AGL. If Class E starts at 700 ft or 1,200 ft, you're operating in Class G below that floor — no authorization needed.\n\n## Exam Strategy\n\nThe exam will show you a sectional chart and ask if authorization is needed:\n\n1. Look for **dashed magenta line** around the airport\n2. If dashed magenta → Class E surface → **authorization needed**\n3. If faded/shaded magenta → Class E starts at 700 ft → **no authorization** (you're in Class G at 400 ft)",
           "visualizer": { "type": "airspace" }
@@ -197,6 +200,7 @@
         },
         {
           "id": "sec-as-ground-hazards",
+          "visualizer": { "type": "anim-agl-vs-msl" },
           "title": "Ground Hazards at Night",
           "content": "## Ground Structure Lighting\n\nTall structures are marked with obstruction lighting:\n\n- **Aviation red obstruction lights**, steady and flashing, at night\n- **Medium- or high-intensity flashing white lights**, which may be used by day or night\n\nThe lighting marks the structure as a hazard. It says nothing about the class of airspace.\n\n## Guy Wires\n\nTall towers are often held up by guy wires. The AIM warns that the wires can extend about **1,500 feet horizontally** from the structure and are hard to see even in daylight. It recommends staying at least **2,000 feet horizontally** from skeletal structures. The wires are not lighted.\n\n## Hazards WITHOUT Lighting\n\nObstruction lighting is generally found only on taller structures. At night, many ground hazards are invisible:\n\n- **Power lines and telephone wires**\n- **Trees and vegetation**\n- **Shorter towers, buildings, fences, and poles**\n- **Terrain changes** (hills, ditches)\n- **Temporary structures** (cranes, construction equipment)\n\n## Mitigation\n\n- **Survey the site in daylight** before a night operation\n- Note the position and height of every obstacle in the flight area\n- Plan altitudes and a return path that clear them\n- Do not rely on obstacle-avoidance sensors alone"
         }

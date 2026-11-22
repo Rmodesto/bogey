@@ -71,6 +71,7 @@
         },
         {
           "id": "sec-wx-metar-sky",
+          "visualizer": { "type": "anim-ceiling-to-altitude" },
           "title": "Sky Condition and Ceiling",
           "content": "## Cloud Coverage\n\nClouds are reported in **oktas** (eighths of sky covered):\n\n| Code | Coverage | Oktas | Creates a Ceiling? |\n|---|---|---|---|\n| **SKC/CLR** | Clear | 0/8 | No |\n| **FEW** | Few | 1–2/8 | **No** |\n| **SCT** | Scattered | 3–4/8 | **No** |\n| **BKN** | Broken | 5–7/8 | **YES** |\n| **OVC** | Overcast | 8/8 | **YES** |\n\n**Height is in hundreds of feet AGL:**\n\n| Code | Meaning |\n|---|---|\n| **FEW030** | Few clouds at 3,000 ft AGL |\n| **BKN015** | Broken at 1,500 ft AGL — this IS the ceiling |\n| **OVC008** | Overcast at 800 ft AGL — this IS the ceiling |\n\n## The Ceiling Definition\n\nThe ceiling is the height of the **lowest BKN or OVC layer**, or the vertical visibility (VV) into an obscuration. FEW and SCT do NOT create a ceiling.\n\n**Example:** FEW010 SCT025 BKN040 OVC080\n- FEW at 1,000 ft — not a ceiling\n- SCT at 2,500 ft — not a ceiling\n- **BKN at 4,000 ft — THIS is the ceiling**\n- OVC at 8,000 ft — also a ceiling layer, but BKN below is \"official\"",
           "bogeyman": {
