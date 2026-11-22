@@ -85,7 +85,22 @@ export type Question = z.infer<typeof QuestionSchema>;
 
 // --- Visualizer Config ---
 export const VisualizerConfigSchema = z.object({
-  type: z.enum(["airspace", "metar"]),
+  type: z.enum([
+    "airspace",
+    "metar",
+    // Phase 1 lesson animations (docs/animations/HANDOFF.md)
+    "anim-altitude-limit",
+    "anim-cloud-box",
+    "anim-day-twilight-night",
+    "anim-category-sorter",
+    "anim-remote-id",
+    "anim-airspace-stack",
+    "anim-chart-line-to-shape",
+    "anim-agl-vs-msl",
+    "anim-ceiling-to-altitude",
+    "anim-traffic-pattern",
+    "anim-load-factor",
+  ]),
   config: z.record(z.string(), z.unknown()).optional(),
 });
 export type VisualizerConfig = z.infer<typeof VisualizerConfigSchema>;
@@ -103,6 +118,7 @@ export const LessonSectionSchema = z.object({
   title: z.string(),
   content: z.string(),
   visualizer: VisualizerConfigSchema.optional(),
+  visualizers: z.array(VisualizerConfigSchema).optional(),
   bogeyman: BogeymanConfigSchema.optional(),
 });
 export type LessonSection = z.infer<typeof LessonSectionSchema>;

@@ -7,8 +7,7 @@ import AnnotatedMarkdown from "@/components/AnnotatedMarkdown";
 import { ArrowLeft, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
 import { getModule, getLesson, getAdjacentLessons, queryQuestions } from "@/lib/part107/service";
 import Bogeyman from "@/components/Bogeyman";
-import AirspaceVisualizer from "@/components/AirspaceVisualizer";
-import METARDecoder from "@/components/METARDecoder";
+import { VISUALIZER_REGISTRY } from "@/components/animations/registry";
 import LessonQuiz from "@/components/LessonQuiz";
 
 export default function LessonViewer() {
@@ -171,17 +170,16 @@ export default function LessonViewer() {
               <AnnotatedMarkdown content={activeSection.content} />
             </div>
 
-            {/* Visualizer */}
-            {activeSection.visualizer?.type === "airspace" && (
-              <div className="mt-[34px]">
-                <AirspaceVisualizer />
-              </div>
-            )}
-
-            {activeSection.visualizer?.type === "metar" && (
-              <div className="mt-[34px]">
-                <METARDecoder metarString="KMCO 121853Z 09008KT 10SM -RA SCT025 BKN040 18/14 A2990" />
-              </div>
+            {/* Visualizers — a section may carry one or several */}
+            {[...(activeSection.visualizer ? [activeSection.visualizer] : []), ...(activeSection.visualizers ?? [])].map(
+              (viz, i) => {
+                const Visualizer = VISUALIZER_REGISTRY[viz.type];
+                return Visualizer ? (
+                  <div key={`${viz.type}-${i}`} className="mt-[34px]">
+                    <Visualizer />
+                  </div>
+                ) : null;
+              }
             )}
 
             {/* Quiz on last section */}
