@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Stable and unstable air, loop player</title>
+<script src="./_runtime/react.js"></script>
+<script src="./_runtime/react-dom.js"></script>
+<script src="./_runtime/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+a{color:#0e1114}a:hover{color:#000}
+
+@keyframes bprop{0%,100%{transform:scaleX(1)}50%{transform:scaleX(0.12)}}
+.pblade{transform-box:fill-box;transform-origin:center;animation:bprop 0.5s linear infinite}
+.pdisc{opacity:0;transition:opacity 0.25s ease}
+.fly .pblade{animation-duration:0.1s}
+.fly .pdisc{opacity:0.65}
+@media (prefers-reduced-motion: reduce){.pblade{animation:none}}
+
+</style>
+</helmet>
+<div style="width: 720px; height: 820px; box-sizing: border-box; padding: 24px; background: #f6f8fa; color: #0e1114; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 16px">
+<h1 style="margin: 0; font-size: 24px; font-weight: 600">Stable and unstable air</h1>
+<span style="font-size: 13px; padding: 6px 12px; border-radius: 8px; background: #2b2f33; color: #a9cfe3; font-weight: 600">Weather</span>
+</div>
+<div style="position: relative; width: 672px; height: 420px; background: #f6f8fa; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden">
+<svg aria-hidden="true" width="672" height="420" viewBox="0 0 672 420" fill="none" style="position: absolute; left: 0; top: 0">
+<rect x="116" y="40" width="262" height="150" rx="10" fill="#e7f2f8" stroke="#e3e6ea"></rect><rect x="390" y="40" width="262" height="150" rx="10" fill="#e7f2f8" stroke="#e3e6ea"></rect>
+<path d="M116 172h262M390 172h262" stroke="#0e1114" stroke-width="2"></path>
+<rect x="136" y="62" width="222" height="22" rx="11" fill="#FFFFFF" stroke="#0e1114" stroke-width="2"></rect><rect x="150" y="92" width="196" height="20" rx="10" fill="#FFFFFF" stroke="#0e1114" stroke-width="2"></rect><rect x="116" y="120" width="262" height="52" fill="#8a9198" opacity="0.25"></rect><path d="M160 124l-5 14M177 124l-5 14M194 124l-5 14M211 124l-5 14M228 124l-5 14M245 124l-5 14M262 124l-5 14M279 124l-5 14M296 124l-5 14M313 124l-5 14M330 124l-5 14M347 124l-5 14" stroke="#6fa6c6" stroke-width="2.5" stroke-linecap="round"></path>
+<path d="M470 150Q455 101 480 82Q490 46 520 52Q550 46 560 82Q585 101 570 150Z" fill="#FFFFFF" stroke="#0e1114" stroke-width="2" stroke-linejoin="round"></path><path d="M492 154l-5 14M510 154l-5 14M528 154l-5 14M546 154l-5 14" stroke="#6fa6c6" stroke-width="2.5" stroke-linecap="round"></path><path d="M430 150V90M424 99l6-9 6 9" stroke="#0e1114" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path><path d="M610 150V90M604 99l6-9 6 9" stroke="#0e1114" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<div style="position: absolute; left: 116px; top: 14px; width: 262px; text-align: center; font-size: 15px; font-weight: 600">Stable air</div>
+<div style="position: absolute; left: 390px; top: 14px; width: 262px; text-align: center; font-size: 15px; font-weight: 600">Unstable air</div>
+<div style="position: absolute; left: 20px; right: 20px; top: 204px; display: flex; flex-direction: column; gap: 8px">
+<div style="display: grid; grid-template-columns: 96px 1fr 1fr; gap: 10px; align-items: center; opacity: {{o2}}; transition: opacity 0.6s ease, transform 0.8s ease"><div style="font-size: 12px; font-weight: 600; color: #2b2f33">Clouds</div><div style="padding: 6px 10px; border-radius: 8px; background: #FFFFFF; border: 1.5px solid #0e1114; font-size: 13.5px; font-weight: 600">Layered (stratiform)</div><div style="padding: 6px 10px; border-radius: 8px; background: #FFFFFF; border: 1.5px solid #0e1114; font-size: 13.5px; font-weight: 600">Towering (cumuliform)</div></div>
+<div style="display: grid; grid-template-columns: 96px 1fr 1fr; gap: 10px; align-items: center; opacity: {{o3}}; transition: opacity 0.6s ease, transform 0.8s ease"><div style="font-size: 12px; font-weight: 600; color: #2b2f33">Air</div><div style="padding: 6px 10px; border-radius: 8px; background: #FFFFFF; border: 1.5px solid #0e1114; font-size: 13.5px; font-weight: 600">Smooth</div><div style="padding: 6px 10px; border-radius: 8px; background: #FFFFFF; border: 1.5px solid #0e1114; font-size: 13.5px; font-weight: 600">Turbulent</div></div>
+<div style="display: grid; grid-template-columns: 96px 1fr 1fr; gap: 10px; align-items: center; opacity: {{o4}}; transition: opacity 0.6s ease, transform 0.8s ease"><div style="font-size: 12px; font-weight: 600; color: #2b2f33">Precipitation</div><div style="padding: 6px 10px; border-radius: 8px; background: #FFFFFF; border: 1.5px solid #0e1114; font-size: 13.5px; font-weight: 600">Steady, continuous</div><div style="padding: 6px 10px; border-radius: 8px; background: #FFFFFF; border: 1.5px solid #0e1114; font-size: 13.5px; font-weight: 600">Showery</div></div>
+<div style="display: grid; grid-template-columns: 96px 1fr 1fr; gap: 10px; align-items: center; opacity: {{o5}}; transition: opacity 0.6s ease, transform 0.8s ease"><div style="font-size: 12px; font-weight: 600; color: #2b2f33">Visibility</div><div style="padding: 6px 10px; border-radius: 8px; background: #FFFFFF; border: 1.5px solid #0e1114; font-size: 13.5px; font-weight: 600">Fair to poor, in haze</div><div style="padding: 6px 10px; border-radius: 8px; background: #FFFFFF; border: 1.5px solid #0e1114; font-size: 13.5px; font-weight: 600">Good, outside the showers</div></div>
+</div>
+<div style="position: absolute; left: 20px; right: 20px; bottom: 12px; font-size: 12.5px; font-weight: 600; color: #b42318; text-align: center; opacity: {{o6}}; transition: opacity 0.6s ease, transform 0.8s ease">Smooth air and good visibility do not come together.</div>
+</div>
+<p aria-live="polite" style="margin: 0; font-size: 15px; line-height: 1.4; min-height: 42px">{{caption}}</p>
+<div style="display: flex; align-items: center; gap: 10px">
+<button type="button" aria-label="Play or pause" onClick="{{toggle}}" style="width: 44px; height: 44px; border-radius: 999px; border: 2px solid #9cd94a; background: #9cd94a; cursor: pointer; display: flex; align-items: center; justify-content: center">
+<sc-if value="{{isPlaying}}" hint-placeholder-val="{{ true }}"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="#0e1114"><rect x="3" y="2" width="3.5" height="12"></rect><rect x="9.5" y="2" width="3.5" height="12"></rect></svg></sc-if>
+<sc-if value="{{isPaused}}" hint-placeholder-val="{{ false }}"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="#0e1114"><path d="M4 2l10 6-10 6z"></path></svg></sc-if>
+</button>
+<button type="button" onClick="{{replay}}" style="min-height: 44px; padding: 0 16px; font: 600 14px 'Helvetica Neue', Helvetica, Arial, sans-serif; border-radius: 999px; cursor: pointer; border: 2px solid #0e1114; background: #FFFFFF; color: #0e1114">Replay</button>
+<button type="button" onClick="{{prev}}" style="min-height: 44px; padding: 0 16px; font: 600 14px 'Helvetica Neue', Helvetica, Arial, sans-serif; border-radius: 999px; cursor: pointer; border: 2px solid #0e1114; background: #FFFFFF; color: #0e1114">Back</button>
+<button type="button" onClick="{{next}}" style="min-height: 44px; padding: 0 16px; font: 600 14px 'Helvetica Neue', Helvetica, Arial, sans-serif; border-radius: 999px; cursor: pointer; border: 2px solid #0e1114; background: #FFFFFF; color: #0e1114">Next</button>
+<div aria-hidden="true" style="display: flex; align-items: center; gap: 8px; margin-left: 8px">
+<sc-for list="{{dots}}" as="d" hint-placeholder-count="6"><span style="height: 10px; border-radius: 5px; width: {{d.w}}; background: {{d.bg}}; transition: width 0.3s ease"></span></sc-for>
+</div>
+<span style="margin-left: auto; font-size: 13px; font-variant-numeric: tabular-nums">{{beatLabel}}</span>
+</div>
+<div style="margin-top: auto; padding: 14px 16px; background: #0e1114; color: #ffffff; border-radius: 12px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
+<p style="margin: 0; font-size: 17px; font-weight: 600; line-height: 1.35">Stable: layered cloud, smooth air, steady rain, poor visibility. Unstable: towering cloud, bumps, showers, good visibility.</p>
+<span style="flex-shrink: 0; font-size: 12px; font-weight: 600; padding: 6px 10px; border-radius: 8px; background: #2b2f33; color: #a9cfe3; white-space: nowrap; font-variant-numeric: tabular-nums">FAA weather handbook</span>
+</div>
+<div style="display: flex; align-items: center; gap: 10px">
+<svg aria-hidden="true" width="48" height="52" viewBox="0 0 48 52" fill="none" style="flex-shrink: 0">
+<path d="M5 52C5 45 13 41.5 24 41.5C35 41.5 43 45 43 52Z" fill="#a9cfe3"></path>
+<path d="M19 41.5L24 47L29 41.5" stroke="#6fa6c6" stroke-width="1.5" stroke-linejoin="round"></path>
+<rect x="29" y="45.5" width="9" height="4.5" rx="1.5" fill="#9cd94a"></rect>
+<rect x="20" y="33" width="8" height="9" fill="#dcbf98"></rect>
+<path d="M12 14Q12 6 24 6Q36 6 36 14L36 26Q36 31 31.5 34.5L27.5 37.5Q24 39.5 20.5 37.5L16.5 34.5Q12 31 12 26Z" fill="#f0d6b4"></path>
+<path d="M10.5 17Q9.5 3 24 3Q38.5 3 37.5 17L35 13.5Q24 9.5 13 13.5Z" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8" stroke-linejoin="round"></path>
+<rect x="7" y="15" width="5.5" height="11.5" rx="2" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8"></rect>
+<rect x="35.5" y="15" width="5.5" height="11.5" rx="2" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8"></rect>
+<path d="M12.5 16L35.5 16L34.5 23Q30 25.8 26 22.6L24 21.6L22 22.6Q18 25.8 13.5 23Z" fill="#6fa6c6" stroke="#2b2f33" stroke-width="0.8" stroke-linejoin="round"></path>
+<path d="M15 18L21.5 18" stroke="#e7f2f8" stroke-width="1.1" stroke-linecap="round"></path>
+<path d="M27.5 19.5h5" stroke="#9cd94a" stroke-width="1.1" stroke-linecap="round"></path>
+<path d="M20.5 30.5Q24 32.6 27.5 30.5" stroke="#2b2f33" stroke-width="1.4" stroke-linecap="round"></path>
+<path d="M9.5 26Q10.5 33.5 18.5 34" stroke="#8a9198" stroke-width="1.5" stroke-linecap="round"></path>
+<circle cx="19.5" cy="34" r="1.7" fill="#9cd94a"></circle>
+</svg>
+<p style="margin: 0; padding: 8px 12px; background: #eaf6d8; border: 2px solid #9cd94a; border-radius: 13px; color: #2b2f33; font-size: 13px; line-height: 1.5">Hazy and calm, or clear and bumpy. Pick which one today is.</p>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":720,"height":820}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+const reduce = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+this.state = { beat: reduce ? 6 : 1, playing: !reduce };
+}
+componentDidMount() {
+this.timer = setInterval(() => {
+if (!this.state.playing) return;
+if (this.state.beat >= 6) { this.setState({ playing: false }); return; }
+this.setState({ beat: this.state.beat + 1 });
+}, 2600);
+}
+componentWillUnmount() { clearInterval(this.timer); }
+loopVals() {
+const beat = this.state.beat;
+const playing = this.state.playing;
+return {
+isPlaying: playing,
+isPaused: !playing,
+beatLabel: 'Beat ' + beat + ' of 6',
+dots: [1, 2, 3, 4, 5, 6].map((n) => ({ bg: n <= beat ? '#0e1114' : '#c3c9d0', w: n === beat ? '22px' : '10px' })),
+toggle: () => { if (!playing && beat >= 6) this.setState({ beat: 1, playing: true }); else this.setState({ playing: !playing }); },
+replay: () => this.setState({ beat: 1, playing: true }),
+prev: () => this.setState({ beat: Math.max(1, beat - 1), playing: false }),
+next: () => this.setState({ beat: Math.min(6, beat + 1), playing: false })
+};
+}
+
+renderVals() {
+const beat = this.state.beat;
+const captions = ["Stable air resists moving up and down. Unstable air, once it starts to rise, keeps rising.", "Clouds: stable air makes flat layers. Unstable air builds upward into towers.", "The ride: stable air is smooth. Unstable air is turbulent.", "Precipitation: stable air gives steady rain. Unstable air gives showers.", "Visibility: stable air traps haze and smoke near the ground. Unstable air mixes it away.", "The trap: each kind of air has one good trait and one bad one. Smooth goes with hazy; clear goes with bumpy."];
+return Object.assign(this.loopVals(), {
+caption: captions[beat - 1],
+o2: beat >= 2 ? 1 : 0, o3: beat >= 3 ? 1 : 0, o4: beat >= 4 ? 1 : 0, o5: beat >= 5 ? 1 : 0, o6: beat >= 6 ? 1 : 0
+});
+}
+}
+</script>
+</body>
+</html>

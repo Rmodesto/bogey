@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Density altitude, scrub player</title>
+<script src="./_runtime/react.js"></script>
+<script src="./_runtime/react-dom.js"></script>
+<script src="./_runtime/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+a{color:#0e1114}a:hover{color:#000}
+
+@keyframes bprop{0%,100%{transform:scaleX(1)}50%{transform:scaleX(0.12)}}
+.pblade{transform-box:fill-box;transform-origin:center;animation:bprop 0.5s linear infinite}
+.pdisc{opacity:0;transition:opacity 0.25s ease}
+.fly .pblade{animation-duration:0.1s}
+.fly .pdisc{opacity:0.65}
+@media (prefers-reduced-motion: reduce){.pblade{animation:none}}
+
+</style>
+</helmet>
+<div style="width: 720px; height: 820px; box-sizing: border-box; padding: 24px; background: #f6f8fa; color: #0e1114; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 16px">
+<h1 style="margin: 0; font-size: 24px; font-weight: 600">Density altitude</h1>
+<span style="font-size: 13px; padding: 6px 12px; border-radius: 8px; background: #2b2f33; color: #a9cfe3; font-weight: 600">Weather</span>
+</div>
+<div style="position: relative; width: 672px; height: 420px; background: #e7f2f8; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden">
+<div aria-hidden="true" style="position: absolute; left: 0; top: 0; right: 0; bottom: 56px; background-image: radial-gradient(circle, #6fa6c6 2.5px, rgba(0,0,0,0) 3px); background-size: {{dot}} {{dot}}; opacity: 0.7; transition: background-size 0.2s linear"></div>
+<div style="position: absolute; left: 0; right: 0; bottom: 0; height: 56px; background: #e3e6ea; border-top: 2px solid #0e1114"></div>
+<div style="position: absolute; left: 300px; bottom: {{dB}}; width: 64px; height: 24px; transition: bottom 0.2s linear"><svg aria-hidden="true" width="88" height="40.0" viewBox="0 0 88 40" fill="none" class="{{flyClass}}" style="position: absolute; left: -12px; bottom: 0"><rect x="42.5" y="3" width="3" height="6" fill="#0e1114"></rect><ellipse class="pdisc" cx="44" cy="2.6" rx="11" ry="2.6" fill="#9cd94a"></ellipse><rect class="pblade" x="33" y="1.3" width="22" height="2.6" rx="1.3" fill="#9cd94a" stroke="#0e1114" stroke-width="1.2"></rect><ellipse class="pdisc" cx="16" cy="6.5" rx="14" ry="2.6" fill="#9cd94a"></ellipse><rect class="pblade" x="2" y="5.2" width="28" height="2.6" rx="1.3" fill="#9cd94a" stroke="#0e1114" stroke-width="1.2"></rect><ellipse class="pdisc" cx="72" cy="6.5" rx="14" ry="2.6" fill="#9cd94a"></ellipse><rect class="pblade" x="58" y="5.2" width="28" height="2.6" rx="1.3" fill="#9cd94a" stroke="#0e1114" stroke-width="1.2"></rect><rect x="13" y="8" width="6" height="8" rx="2" fill="#0e1114"></rect><rect x="69" y="8" width="6" height="8" rx="2" fill="#0e1114"></rect><path d="M17 14L34 17M71 14L54 17" stroke="#2b2f33" stroke-width="4.5" stroke-linecap="round"></path><path d="M36 25L29 37M52 25L59 37M24 37.5h10M54 37.5h10" stroke="#0e1114" stroke-width="2.5" stroke-linecap="round" fill="none"></path><rect x="40.5" y="25" width="7" height="4" fill="#0e1114"></rect><circle cx="44" cy="32" r="4.5" fill="#2b2f33" stroke="#0e1114" stroke-width="1.5"></circle><circle cx="44" cy="32" r="1.7" fill="#a9cfe3"></circle><rect x="33" y="8" width="22" height="18" rx="4" fill="#a9cfe3" stroke="#0e1114" stroke-width="2"></rect><rect x="36.5" y="12" width="15" height="6" rx="2" fill="#0e1114"></rect><circle cx="50" cy="22" r="1.7" fill="#9cd94a"></circle></svg></div>
+<div style="position: absolute; left: 20px; top: 16px; width: 290px; box-sizing: border-box; padding: 10px 12px; border-radius: 12px; background: #FFFFFF; border: 2px solid #0e1114">
+<div style="font-size: 12px; font-weight: 600; color: #2b2f33">Density altitude</div>
+<div style="font-size: 26px; font-weight: 600; font-variant-numeric: tabular-nums">{{daText}} ft</div>
+<div style="font-size: 12.5px; line-height: 1.4">{{feel}}</div>
+</div>
+<div style="position: absolute; right: 20px; top: 16px; width: 250px; box-sizing: border-box; padding: 10px 12px; border-radius: 12px; background: #FFFFFF; border: 1.5px solid #e3e6ea">
+<div style="font-size: 12px; font-weight: 600; margin-bottom: 4px">Climb and lift (illustrative)</div>
+<div style="height: 16px; border: 1.5px solid #0e1114; border-radius: 4px; overflow: hidden"><div style="width: {{perfW}}; height: 100%; background: {{perfFill}}; transition: width 0.2s linear"></div></div>
+<div style="font-size: 12px; margin-top: 6px">Standard temperature here: {{std}}°C</div>
+</div>
+<div style="position: absolute; left: 20px; bottom: 64px; font-size: 12px; background: #FFFFFF; padding: 0 4px; border-radius: 3px">Dots are air molecules. Standard pressure assumed.</div>
+</div>
+<p aria-live="polite" style="margin: 0; font-size: 15px; line-height: 1.4; min-height: 42px">{{caption}}</p>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 260px">
+<label for="w4-e" style="font-size: 13px; font-weight: 600">Field elevation: {{elevText}} ft</label>
+<input id="w4-e" type="range" min="0" max="8000" step="500" value="{{e}}" aria-valuetext="{{eText}}" onChange="{{onE}}" style="width: 100%; height: 44px; accent-color: #7fbf2e">
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 260px">
+<label for="w4-t" style="font-size: 13px; font-weight: 600">Temperature: {{t}}°C</label>
+<input id="w4-t" type="range" min="-10" max="40" step="1" value="{{t}}" aria-valuetext="{{tText}}" onChange="{{onT}}" style="width: 100%; height: 44px; accent-color: #7fbf2e">
+</div>
+</div>
+<div style="margin-top: auto; padding: 14px 16px; background: #0e1114; color: #ffffff; border-radius: 12px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
+<p style="margin: 0; font-size: 17px; font-weight: 600; line-height: 1.35">High, hot, and humid air is thin air. Thin air means less lift and less climb.</p>
+<span style="flex-shrink: 0; font-size: 12px; font-weight: 600; padding: 6px 10px; border-radius: 8px; background: #2b2f33; color: #a9cfe3; white-space: nowrap; font-variant-numeric: tabular-nums">FAA pilot handbook</span>
+</div>
+<div style="display: flex; align-items: center; gap: 10px">
+<svg aria-hidden="true" width="48" height="52" viewBox="0 0 48 52" fill="none" style="flex-shrink: 0">
+<path d="M5 52C5 45 13 41.5 24 41.5C35 41.5 43 45 43 52Z" fill="#a9cfe3"></path>
+<path d="M19 41.5L24 47L29 41.5" stroke="#6fa6c6" stroke-width="1.5" stroke-linejoin="round"></path>
+<rect x="29" y="45.5" width="9" height="4.5" rx="1.5" fill="#9cd94a"></rect>
+<rect x="20" y="33" width="8" height="9" fill="#dcbf98"></rect>
+<path d="M12 14Q12 6 24 6Q36 6 36 14L36 26Q36 31 31.5 34.5L27.5 37.5Q24 39.5 20.5 37.5L16.5 34.5Q12 31 12 26Z" fill="#f0d6b4"></path>
+<path d="M10.5 17Q9.5 3 24 3Q38.5 3 37.5 17L35 13.5Q24 9.5 13 13.5Z" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8" stroke-linejoin="round"></path>
+<rect x="7" y="15" width="5.5" height="11.5" rx="2" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8"></rect>
+<rect x="35.5" y="15" width="5.5" height="11.5" rx="2" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8"></rect>
+<path d="M12.5 16L35.5 16L34.5 23Q30 25.8 26 22.6L24 21.6L22 22.6Q18 25.8 13.5 23Z" fill="#6fa6c6" stroke="#2b2f33" stroke-width="0.8" stroke-linejoin="round"></path>
+<path d="M15 18L21.5 18" stroke="#e7f2f8" stroke-width="1.1" stroke-linecap="round"></path>
+<path d="M27.5 19.5h5" stroke="#9cd94a" stroke-width="1.1" stroke-linecap="round"></path>
+<path d="M20.5 30.5Q24 32.6 27.5 30.5" stroke="#2b2f33" stroke-width="1.4" stroke-linecap="round"></path>
+<path d="M9.5 26Q10.5 33.5 18.5 34" stroke="#8a9198" stroke-width="1.5" stroke-linecap="round"></path>
+<circle cx="19.5" cy="34" r="1.7" fill="#9cd94a"></circle>
+</svg>
+<p style="margin: 0; padding: 8px 12px; background: #eaf6d8; border: 2px solid #9cd94a; border-radius: 13px; color: #2b2f33; font-size: 13px; line-height: 1.5">High density altitude means thin air, not dense air.</p>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":720,"height":820}}'>
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { e: 3000, t: 35 }; }
+bump() {
+this.setState({ moving: true });
+clearTimeout(this.flyTimer);
+this.flyTimer = setTimeout(() => this.setState({ moving: false }), 700);
+}
+componentWillUnmount() { clearTimeout(this.flyTimer); }
+renderVals() {
+const e = this.state.e, t = this.state.t;
+const std = 15 - 2 * e / 1000, da = Math.round(e + 120 * (t - std));
+const perf = Math.max(8, Math.min(100, 100 - da / 140));
+const fmt = (n) => (n < 0 ? '−' : '') + Math.abs(n).toLocaleString('en-US');
+const diff = da - e;
+return {
+flyClass: this.state.moving ? 'fly' : '', e: e, t: t, eText: e + ' feet elevation', tText: t + ' degrees Celsius',
+elevText: fmt(e), daText: fmt(da), std: std,
+feel: diff > 200 ? 'The drone performs as if it were ' + fmt(diff) + ' ft higher than it is.' : diff < -200 ? 'Colder than standard: the air is denser, and performance is better.' : 'Close to standard conditions.',
+dot: Math.max(14, Math.min(46, 20 + da / 450)).toFixed(1) + 'px',
+perfW: perf + '%', perfFill: perf < 45 ? '#b42318' : '#9cd94a', dB: (70 + perf * 1.6) + 'px',
+caption: 'Pressure altitude ' + fmt(e) + ' ft. Standard temperature there is ' + std + '°C and it is ' + t + '°C, a difference of ' + fmt(t - std) + '°C. ' + fmt(e) + ' + (120 × ' + fmt(t - std) + ') = ' + fmt(da) + ' ft.',
+onE: (ev) => { this.setState({ e: Number(ev.target.value) }); this.bump(); },
+onT: (ev) => { this.setState({ t: Number(ev.target.value) }); this.bump(); }
+};
+}
+}
+</script>
+</body>
+</html>

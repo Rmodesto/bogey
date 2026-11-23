@@ -61,6 +61,7 @@
         },
         {
           "id": "sec-ops-radio-phraseology",
+          "visualizer": { "type": "anim-ctaf-call" },
           "title": "Radio Phraseology",
           "content": "## Altitudes (below 18,000 feet)\n\nStated as separate digits of the thousands plus hundreds:\n- 1,500 feet = \"One thousand five hundred\"\n- 10,500 feet = \"One zero thousand five hundred\"\n- Flight Level 250 (at/above 18,000 ft) = \"Flight level two five zero\"\n\n## Directions\n\nAviation radio communications use **magnetic headings**, not true headings.\n\n## Speed\n\nAviation uses **knots** (nautical miles per hour), not miles per hour.\n\n## Time\n\nAll aviation times are stated in **UTC (Zulu time)**, using the 24-hour clock.\n\n- 2:30 PM local (EST) = 1930Z (Zulu)\n- Written as 1930Z or 19:30 UTC\n\n## Self-Announce Format\n\n**Standard format:**\n\"[Airport name] traffic, [aircraft type and N-number], [position], [altitude], [intentions], [airport name]\"\n\n**Example:**\n\"Riverside traffic, Cessna Four Seven Six Five Juliet, 10 miles south, 2,000 feet, inbound for landing runway 27, Riverside.\"",
           "bogeyman": {
@@ -106,6 +107,7 @@
         },
         {
           "id": "sec-ops-airport-markings",
+          "visualizer": { "type": "anim-runway-signs" },
           "title": "Runway Markings",
           "content": "## Runway Numbering\n\nThe runway number is the **magnetic heading divided by 10** and rounded.\n\n- A runway oriented 270° magnetic is **Runway 27**\n- The opposite end is **Runway 09** (180° difference)\n\n## Color Rules\n\n- **White** markings = on the runway\n- **Yellow** markings = on taxiways and non-runway areas\n- **Yellow chevrons** = blast pad (not for taxiing, takeoff, or landing)\n\n## Displaced Threshold\n\nWhite arrows along the centerline lead to a threshold bar set back from the physical runway end.\n\n- Landing aircraft must touch down **beyond** the displaced threshold\n- The area before it **can** be used for takeoff and rollout\n\n## Key Markings\n\n| Marking | Description |\n|---|---|\n| Threshold markings | White stripes at beginning of landing portion |\n| Centerline | White dashed line down the middle |\n| Touchdown zone | Groups of stripes on each side of centerline |\n| Hold short lines | Four yellow lines (two solid, two dashed) |"
         },
@@ -130,6 +132,7 @@
         },
         {
           "id": "sec-ops-airport-lighting",
+          "visualizer": { "type": "anim-airport-lighting" },
           "title": "Airport Lighting",
           "content": "## Runway Edge Lights\n\nWhite along the length. On instrument runways, yellow replaces white for the last 2,000 feet, or half the runway length if that is less, to mark a caution zone.\n\n## Visual Glide Slope Indicators\n\n**VASI/PAPI** provide descent guidance using red/white light patterns:\n- Both give a standard **3-degree glide path**\n- PAPI uses four light boxes on the left side of the runway\n\n## Rotating Beacons\n\n| Airport Type | Beacon Pattern |\n|---|---|\n| Civilian airport | Alternating **white and green** |\n| Military airport | Two quick white flashes then green (white-white-green) |\n| Heliport | Green, yellow, and white |\n| Lighted water airport (seaplane base) | White and yellow |\n\n## Pilot-Controlled Lighting (PCL)\n\nAt non-towered airports, pilots activate runway lights via microphone clicks:\n- **7 clicks** = highest intensity\n- **5 clicks** = medium\n- **3 clicks** = low\n\n## Sources for Airport Data\n\n| Source | Information Provided |\n|---|---|\n| Sectional Charts | Airport location, type, runway configuration, frequencies, airspace |\n| Chart Supplements (A/FD) | Detailed info: runway dimensions, surface, fuel, lighting, hours |",
           "bogeyman": {
@@ -175,6 +178,7 @@
         },
         {
           "id": "sec-ops-emerg-lithium",
+          "visualizer": { "type": "anim-battery-failure" },
           "title": "Lithium Battery Hazards",
           "content": "## Safe Battery Practices\n\nLithium batteries store a lot of energy in a small package. Damage, overcharging, a short circuit, or overheating can make one catch fire.\n\n### Inspection and Handling\n\n- Inspect batteries before every flight and before charging\n- **Swelling, dents, punctures, or leaking** mean the battery is damaged\n- Remove a damaged battery from service. Do not fly it, charge it, or press it flat\n- Dispose of it according to the manufacturer's instructions\n\n### Safe Transportation\n\n- Protect the terminals from short circuits\n- Keep batteries from being crushed or punctured\n- Follow the manufacturer's instructions and airline rules when traveling by air. Spare lithium batteries belong in carry-on baggage, not checked baggage\n\n### Safe Charging\n\n- Use the manufacturer's charger and settings\n- Charge on a surface that will not burn\n- **Do not leave charging batteries unattended**\n- Stop charging if a battery becomes hot or swells\n\n### Safe Usage\n\n- Follow the manufacturer's limits for temperature and storage\n- Land with a reserve instead of running the battery to empty"
         },
@@ -189,6 +193,8 @@
         },
         {
           "id": "sec-ops-emerg-link-loss",
+          "visualizers": [{ "type": "anim-radio-los" }],
+          "visualizer": { "type": "anim-lost-link" },
           "title": "Loss of Control Link",
           "content": "## When Control Link is Lost\n\nWhen the radio link between your controller and the drone is lost, you can no longer send commands. The primary safety feature is **Return-to-Home (RTH)**.\n\n## How RTH Works\n\n1. The aircraft automatically climbs to a pre-set safety altitude\n2. Navigates back to its takeoff point using GPS\n3. Descends and lands at the home point\n\n## Critical Limitation: RTH Depends on GPS\n\nIf GPS is unavailable or unreliable (urban canyons, indoor, interference), **RTH may fail**.\n\nA failed RTH with a lost control link can result in a **fly-away** — the drone drifts uncontrolled.\n\n## Prevention\n\n- Verify a stable GPS position before launch\n- Pre-program RTH altitude above surrounding obstacles\n- Check the lost-link failsafe setting before the mission\n- Maintain visual line of sight\n- Monitor signal strength throughout flight",
           "bogeyman": {
@@ -239,6 +245,7 @@
         },
         {
           "id": "sec-ops-adm-hazardous",
+          "visualizer": { "type": "anim-hazardous-attitudes" },
           "title": "The Five Hazardous Attitudes",
           "content": "## The Five Hazardous Attitudes\n\nMemorize all five attitudes and their antidotes.\n\n| Attitude | Characteristic | Antidote |\n|---|---|---|\n| **Anti-authority** | \"Don't tell me what to do\" | \"Follow the rules — they are usually right\" |\n| **Impulsivity** | \"Do it quickly!\" | \"Not so fast — think first\" |\n| **Invulnerability** | \"It won't happen to me\" | \"It could happen to me\" |\n| **Macho** | \"I can do it — watch this\" | \"Taking chances is foolish\" |\n| **Resignation** | \"What's the use?\" | \"I'm not helpless — I can make a difference\" |\n\n## How to Identify Each in Exam Scenarios\n\n- **Anti-authority:** Pilot ignores rules, skips checklists, disregards NOTAMs\n- **Impulsivity:** Pilot rushes decisions under time pressure, skips preflight\n- **Invulnerability:** Pilot flies in marginal weather because \"I've done it before\"\n- **Macho:** Pilot takes unnecessary risks to impress a client\n- **Resignation:** VO sees hazard but doesn't say anything because \"the PIC already decided\"",
           "bogeyman": {
@@ -253,6 +260,7 @@
         },
         {
           "id": "sec-ops-adm-pave",
+          "visualizer": { "type": "anim-risk-loop" },
           "title": "The PAVE Checklist",
           "content": "## Operational Risk Assessment\n\nEvaluate four risk categories before the mission:\n\n| Letter | Factor | What to Assess |\n|---|---|---|\n| **P** | Pilot | Use IMSAFE; also consider currency and experience |\n| **A** | Aircraft | Condition, maintenance status, battery health, payload |\n| **V** | enVironment | Weather, terrain, airspace, EMI, time of day |\n| **E** | External pressures | Client pressure, time constraints, financial incentives |\n\n## External Pressures — The \"E\" Factor\n\nExternal pressures include:\n- Client demands (\"Fly NOW or we won't pay\")\n- Time constraints\n- Financial pressure\n- Peer pressure\n\n**The correct response:** Never let pressure override safety.",
           "bogeyman": {
@@ -331,6 +339,7 @@
         },
         {
           "id": "sec-ops-phys-night",
+          "visualizer": { "type": "anim-night-vision" },
           "title": "Night Physiology",
           "content": "## Dark Adaptation\n\nYour eyes need about **30 minutes** to fully adapt to darkness.\n\nDuring this time, avoid bright lights — especially white light.\n\nIf you're exposed to bright light after adapting, you must start the adaptation process over.\n\n## Cockpit/Ground Station Lighting\n\nUse **dim red light** for reading instruments and charts at night.\n\n- Red light **preserves** dark adaptation\n- White light **destroys** it\n\n## Off-Center Viewing\n\nAt night, look slightly to the side of objects rather than directly at them.\n\nRod cells (used in dim light) are more concentrated in the peripheral retina, making peripheral vision more effective in darkness.",
           "bogeyman": {
@@ -340,6 +349,7 @@
         },
         {
           "id": "sec-ops-phys-illusions",
+          "visualizer": { "type": "anim-night-illusions" },
           "title": "Night Illusions",
           "content": "## Common Night Illusions\n\n### Autokinesis\n\nStaring at a single stationary light against a dark background for more than a few seconds causes it to **appear to move**.\n\n**Prevention:** Don't fixate on single lights — keep your eyes scanning.\n\n### False Horizon\n\nGround lights can be confused with stars, creating a false sense of what's level.\n\nThis can cause disorientation, especially over dark terrain with scattered lights.\n\n### Black Hole Approach\n\nApproaching a landing zone over dark, featureless terrain (water, desert) distorts your perception of the approach angle.\n\nCan lead to dangerous maneuvering.\n\n### Featureless Terrain Illusion\n\nOver flat, uniform surfaces (water, snow, desert), it's extremely difficult to judge altitude and distance.\n\n## Exam Identification\n\n| Description | Illusion |\n|---|---|\n| Stationary light appears to move | **Autokinesis** |\n| Confusion between ground lights and stars | **False horizon** |",
           "bogeyman": {
@@ -376,6 +386,7 @@
         },
         {
           "id": "sec-ops-maint-preflight",
+          "visualizer": { "type": "anim-preflight" },
           "title": "Preflight Inspection",
           "content": "## Regulatory Requirement\n\n14 CFR 107.15 requires the remote PIC to check, before each flight, that the sUAS is in a condition for safe operation. 14 CFR 107.49 lists what the preflight assessment must cover.\n\n## Preflight Inspection Checklist\n\n### Structure\n- Check for cracks, loose fasteners, damage to arms/fuselage\n- Verify antenna condition\n- Confirm payload security\n\n### Propellers and Motors\n- Look for chips, cracks, bends in propellers\n- Spin motors briefly to check for smooth operation\n- **Any damaged propeller = do not fly**\n\n### Battery\n- Verify adequate charge for the mission\n- Check for swelling, damage, or leakage\n- Ensure contacts are clean and secure\n\n### Electronics\n- Power all systems and verify no error messages\n- Test gimbal/camera, telemetry display, receiver status\n\n### Compass\n- Calibrate when the manufacturer's instructions call for it\n- Calibrate at the launch site, away from metal structures, power lines, vehicles\n\n### GPS\n- Verify satellite lock\n- Do not launch until position is stable\n\n### Control Link\n- Confirm transmitter is bound\n- Verify sticks respond correctly\n- Check failsafe settings"
         },

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Angle of attack and stall, scrub player</title>
+<script src="./_runtime/react.js"></script>
+<script src="./_runtime/react-dom.js"></script>
+<script src="./_runtime/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+a{color:#0e1114}a:hover{color:#000}
+
+@keyframes bprop{0%,100%{transform:scaleX(1)}50%{transform:scaleX(0.12)}}
+.pblade{transform-box:fill-box;transform-origin:center;animation:bprop 0.5s linear infinite}
+.pdisc{opacity:0;transition:opacity 0.25s ease}
+.fly .pblade{animation-duration:0.1s}
+.fly .pdisc{opacity:0.65}
+@media (prefers-reduced-motion: reduce){.pblade{animation:none}}
+
+</style>
+</helmet>
+<div style="width: 720px; height: 820px; box-sizing: border-box; padding: 24px; background: #f6f8fa; color: #0e1114; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 16px">
+<h1 style="margin: 0; font-size: 24px; font-weight: 600">Angle of attack and stall</h1>
+<span style="font-size: 13px; padding: 6px 12px; border-radius: 8px; background: #2b2f33; color: #a9cfe3; font-weight: 600">Loading &amp; Performance</span>
+</div>
+<div style="position: relative; width: 672px; height: 420px; background: #e7f2f8; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden">
+<svg aria-hidden="true" width="672" height="420" viewBox="0 0 672 420" fill="none" style="position: absolute; left: 0; top: 0">
+<path d="M30 250H640" stroke="#8a9198" stroke-width="1.5" stroke-dasharray="4 6"></path><text x="36" y="268" font-size="12" font-weight="400" fill="#0e1114" text-anchor="start" style="">Oncoming air</text>
+<path d="M30 140H200M30 180H190M30 320H200M30 360H210" stroke="#0e1114" stroke-width="2" stroke-dasharray="10 8"></path>
+<g style="opacity: {{oSmooth}}; transition: opacity 0.6s ease, transform 0.8s ease"><path d="M200 140Q330 100 470 150T640 170M190 180Q330 150 470 190T640 210" stroke="#0e1114" stroke-width="2" stroke-dasharray="10 8" fill="none"></path></g>
+<g style="opacity: {{oSep}}; transition: opacity 0.6s ease, transform 0.8s ease"><path d="M200 140Q280 96 340 110M190 180Q260 150 310 150" stroke="#0e1114" stroke-width="2" stroke-dasharray="10 8" fill="none"></path><path d="M360 130q40 -6 36 26q-8 26 -32 12q-12 -14 6 -20M430 150q44 0 36 36q-12 28 -38 12M510 150q40 4 30 38q-12 24 -34 10M390 200q36 0 30 30q-10 22 -30 10" stroke="#b42318" stroke-width="2.5" fill="none" stroke-linecap="round"></path><text x="470" y="110" font-size="12" font-weight="600" fill="#b42318" text-anchor="middle" style="">Airflow has separated</text></g>
+<path d="M200 320Q330 330 470 300T640 290M210 360Q330 370 470 340T640 330" stroke="#0e1114" stroke-width="2" stroke-dasharray="10 8" fill="none"></path>
+<g style="transform: rotate({{rot}}); transform-origin: 336px 250px; transition: transform 0.15s linear"><path d="M216 250Q236 212 336 216Q420 222 456 250Q400 262 336 262Q250 264 216 250Z" fill="#a9cfe3" stroke="#0e1114" stroke-width="2.5" stroke-linejoin="round"></path><path d="M216 250H456" stroke="#0e1114" stroke-width="1.2" stroke-dasharray="5 5"></path></g>
+</svg>
+<div style="position: absolute; left: 20px; top: 16px; width: 230px; box-sizing: border-box; padding: 10px 12px; border-radius: 12px; background: #FFFFFF; border: 1.5px solid #e3e6ea">
+<div style="font-size: 12px; font-weight: 600; margin-bottom: 4px">Lift (illustrative)</div>
+<div style="height: 16px; border: 1.5px solid #0e1114; border-radius: 4px; overflow: hidden"><div style="width: {{liftW}}; height: 100%; background: {{liftFill}}; transition: width 0.15s linear"></div></div>
+</div>
+<div style="position: absolute; right: 20px; top: 16px; display: flex; flex-direction: column; align-items: flex-end; gap: 6px">
+<div style="font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums; background: #FFFFFF; padding: 0 4px; border-radius: 3px">{{a}}° · {{s}} kt</div>
+<sc-if value="{{legal}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 999px; background: #9cd94a; color: #0e1114; font-size: 14px; font-weight: 600"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#0e1114" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3.2L13 5"></path></svg><span>Flying</span></div>
+</sc-if><sc-if value="{{notLegal}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 999px; background: #FFFFFF; color: #b42318; border: 2px solid #b42318; font-size: 14px; font-weight: 600"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#b42318" stroke-width="2.5" stroke-linecap="round"><path d="M4 4l8 8M12 4l-8 8"></path></svg><span>Stalled</span></div>
+</sc-if>
+</div>
+<div style="position: absolute; right: 12px; bottom: 10px; font-size: 12px">Critical angle shown as 16° for this example wing</div>
+</div>
+<p aria-live="polite" style="margin: 0; font-size: 15px; line-height: 1.4; min-height: 42px">{{caption}}</p>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 260px">
+<label for="l3-a" style="font-size: 13px; font-weight: 600">Angle of attack: {{a}}°</label>
+<input id="l3-a" type="range" min="0" max="24" step="1" value="{{a}}" aria-valuetext="{{aText}}" onChange="{{onA}}" style="width: 100%; height: 44px; accent-color: #7fbf2e">
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 260px">
+<label for="l3-s" style="font-size: 13px; font-weight: 600">Airspeed: {{s}} kt</label>
+<input id="l3-s" type="range" min="30" max="90" step="5" value="{{s}}" aria-valuetext="{{sText}}" onChange="{{onS}}" style="width: 100%; height: 44px; accent-color: #7fbf2e">
+</div>
+</div>
+<div style="margin-top: auto; padding: 14px 16px; background: #0e1114; color: #ffffff; border-radius: 12px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
+<p style="margin: 0; font-size: 17px; font-weight: 600; line-height: 1.35">A wing stalls when it exceeds its critical angle of attack. That can happen at any airspeed.</p>
+<span style="flex-shrink: 0; font-size: 12px; font-weight: 600; padding: 6px 10px; border-radius: 8px; background: #2b2f33; color: #a9cfe3; white-space: nowrap; font-variant-numeric: tabular-nums">FAA pilot handbook</span>
+</div>
+<div style="display: flex; align-items: center; gap: 10px">
+<svg aria-hidden="true" width="48" height="52" viewBox="0 0 48 52" fill="none" style="flex-shrink: 0">
+<path d="M5 52C5 45 13 41.5 24 41.5C35 41.5 43 45 43 52Z" fill="#a9cfe3"></path>
+<path d="M19 41.5L24 47L29 41.5" stroke="#6fa6c6" stroke-width="1.5" stroke-linejoin="round"></path>
+<rect x="29" y="45.5" width="9" height="4.5" rx="1.5" fill="#9cd94a"></rect>
+<rect x="20" y="33" width="8" height="9" fill="#dcbf98"></rect>
+<path d="M12 14Q12 6 24 6Q36 6 36 14L36 26Q36 31 31.5 34.5L27.5 37.5Q24 39.5 20.5 37.5L16.5 34.5Q12 31 12 26Z" fill="#f0d6b4"></path>
+<path d="M10.5 17Q9.5 3 24 3Q38.5 3 37.5 17L35 13.5Q24 9.5 13 13.5Z" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8" stroke-linejoin="round"></path>
+<rect x="7" y="15" width="5.5" height="11.5" rx="2" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8"></rect>
+<rect x="35.5" y="15" width="5.5" height="11.5" rx="2" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8"></rect>
+<path d="M12.5 16L35.5 16L34.5 23Q30 25.8 26 22.6L24 21.6L22 22.6Q18 25.8 13.5 23Z" fill="#6fa6c6" stroke="#2b2f33" stroke-width="0.8" stroke-linejoin="round"></path>
+<path d="M15 18L21.5 18" stroke="#e7f2f8" stroke-width="1.1" stroke-linecap="round"></path>
+<path d="M27.5 19.5h5" stroke="#9cd94a" stroke-width="1.1" stroke-linecap="round"></path>
+<path d="M20.5 30.5Q24 32.6 27.5 30.5" stroke="#2b2f33" stroke-width="1.4" stroke-linecap="round"></path>
+<path d="M9.5 26Q10.5 33.5 18.5 34" stroke="#8a9198" stroke-width="1.5" stroke-linecap="round"></path>
+<circle cx="19.5" cy="34" r="1.7" fill="#9cd94a"></circle>
+</svg>
+<p style="margin: 0; padding: 8px 12px; background: #eaf6d8; border: 2px solid #9cd94a; border-radius: 13px; color: #2b2f33; font-size: 13px; line-height: 1.5">Speed does not cause a stall. Angle does.</p>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":720,"height":820}}'>
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { a: 6, s: 60 }; }
+renderVals() {
+const a = this.state.a, s = this.state.s, stalled = a > 16;
+const lift = stalled ? Math.max(20, 100 - (a - 16) * 9) : 20 + a * 5;
+let caption;
+if (stalled) caption = 'At ' + a + '° the wing is past its critical angle. The airflow has broken away from the top surface and lift drops, even at ' + s + ' knots.';
+else if (a >= 13) caption = 'At ' + a + '° lift is near its peak. A little more and the wing reaches its critical angle.';
+else caption = 'At ' + a + '° the air follows the wing smoothly. Raising the angle makes more lift, up to a point. Changing the airspeed does not change that point.';
+return {
+a: a, s: s, aText: a + ' degrees angle of attack, ' + (stalled ? 'stalled' : 'flying'), sText: s + ' knots',
+rot: (-a) + 'deg', oSmooth: stalled ? 0 : 1, oSep: stalled ? 1 : 0,
+liftW: lift + '%', liftFill: stalled ? '#b42318' : '#9cd94a', legal: !stalled, notLegal: stalled, caption: caption,
+onA: (e) => this.setState({ a: Number(e.target.value) }),
+onS: (e) => this.setState({ s: Number(e.target.value) })
+};
+}
+}
+</script>
+</body>
+</html>

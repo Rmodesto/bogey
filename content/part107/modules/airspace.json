@@ -46,6 +46,7 @@
         },
         {
           "id": "sec-as-class-d",
+          "visualizer": { "type": "anim-laanc" },
           "title": "Class D Airspace",
           "content": "## What It Is\n\nClass D surrounds **smaller towered airports** — airports with an operating control tower but less traffic than B or C. Think regional airports or military airfields with towers.\n\n## Shape and Dimensions\n\n- **Horizontal:** Generally 4-5 NM radius\n- **Vertical:** Surface to about 2,500 ft above the airport. The chart shows the actual ceiling, in hundreds of feet MSL, in a dashed blue box\n- Shape is roughly circular, may be modified for instrument approaches\n\n## How to Identify on Sectional Charts\n\n**Dashed blue lines** forming a roughly circular shape.\n\n> **Memory aid:** Class **D**ashed = Class **D**\n\n## Part 107 Rules\n\n- **Authorization required:** Yes — LAANC or DroneZone\n- If tower is part-time, Class D typically reverts to Class E or G when closed\n- Check Chart Supplement for tower operating hours",
           "bogeyman": {
@@ -81,7 +82,7 @@
         },
         {
           "id": "sec-as-class-e-chart",
-          "visualizers": [{ "type": "anim-chart-line-to-shape" }],
+          "visualizers": [{ "type": "anim-chart-line-to-shape" }, { "type": "anim-lat-long" }],
           "title": "Reading Class E on Sectional Charts",
           "content": "## The Critical Distinction\n\n| Class E Type | Starts At | Sectional Chart | Authorization? |\n|---|---|---|---|\n| E2 (Surface Area) | Surface | **Dashed magenta line** | **YES** |\n| E5 (Transition, 700 ft) | 700 ft AGL | Faded magenta shading | No |\n| E6 (En Route, 1,200 ft) | 1,200 ft AGL | Faded blue shading | No |\n\n## Why Non-Surface Class E Doesn't Matter\n\nPart 107 operations are limited to 400 ft AGL. If Class E starts at 700 ft or 1,200 ft, you're operating in Class G below that floor — no authorization needed.\n\n## Exam Strategy\n\nThe exam will show you a sectional chart and ask if authorization is needed:\n\n1. Look for **dashed magenta line** around the airport\n2. If dashed magenta → Class E surface → **authorization needed**\n3. If faded/shaded magenta → Class E starts at 700 ft → **no authorization** (you're in Class G at 400 ft)",
           "visualizer": { "type": "airspace" }
@@ -110,6 +111,7 @@
       "sections": [
         {
           "id": "sec-as-sua-overview",
+          "visualizer": { "type": "anim-special-use" },
           "title": "Special-Use Airspace Overview",
           "content": "## What It Is\n\nSpecial-use airspace (SUA) separates certain military and hazardous activities from other traffic. As a drone pilot, you need to know:\n\n- Which types you may not enter without permission\n- Which just require **awareness**\n\n## The Six Types\n\n| Type | Can You Fly? | On Charts? |\n|---|---|---|\n| **Prohibited (P)** | **Not without permission** from the using agency | Yes — blue hatching |\n| **Restricted (R)** | **Only with permission** from the using or controlling agency | Yes — blue hatching |\n| **Warning (W)** | Yes, with caution | Yes |\n| **MOA** | Yes, with caution | Yes — magenta hatching |\n| **Alert** | Yes, with awareness | Yes — magenta hatching |\n| **CFA** | Yes | **NO — not on charts** |"
         },
@@ -146,6 +148,7 @@
       "sections": [
         {
           "id": "sec-as-tfr",
+          "visualizer": { "type": "anim-tfr-mtr" },
           "title": "Temporary Flight Restrictions",
           "content": "## What TFRs Are\n\nTFRs are **temporary airspace restrictions** that can pop up anywhere, anytime. They restrict all aircraft — including drones — from operating in the affected area.\n\n## Common Triggers\n\n- **Presidential/VIP movement**\n- **Wildfires** (\"If you fly, they can't\" — operating near a wildfire TFR is a federal offense)\n- **Sporting events** (NFL, MLB, NASCAR — typically 3 NM radius, surface to 3,000 ft AGL)\n- **Disaster relief** (hurricanes, earthquakes)\n- **Space launches**\n- **Special security events**\n\n## How to Check for TFRs\n\n1. **tfr.faa.gov** — official FAA TFR site\n2. **B4UFLY app** — shows TFRs on a map\n3. **LAANC apps** — integrated TFR alerts\n4. **Flight Service** — 1-800-WX-BRIEF\n5. **NOTAMs** — notams.faa.gov\n\n## Part 107 Requirements\n\nUnder 14 CFR 107.47, Part 107 pilots must comply with all flight restrictions under Parts 91 and 99 — this includes TFRs. **Ignorance is not an excuse.** Check before every flight."
         },
@@ -191,6 +194,7 @@
         },
         {
           "id": "sec-as-manned-lights",
+          "visualizer": { "type": "anim-night-lights" },
           "title": "Manned Aircraft Lighting",
           "content": "## Know the Lights to Stay Safe\n\nUnderstanding manned aircraft lighting helps you see and avoid at night.\n\n| Light | Color | Location |\n|---|---|---|\n| Position (navigation) lights | Red on the **left** wingtip, green on the **right** wingtip, white on the tail | Wingtips and tail |\n| Anti-collision lights | Red or white, flashing or rotating | Fuselage or wingtips |\n| Landing lights | White, very bright | Nose, wing, or landing gear |\n\n## Reading Direction From Position Lights\n\n| You see | The aircraft is |\n|---|---|\n| **Red and green together**, red on your right | Pointed at you: flying toward you |\n| **Red only** | Showing you its left side: crossing from your right to your left |\n| **Green only** | Showing you its right side: crossing from your left to your right |\n| **White only** | Showing you its tail: flying away from you |\n\nA bright landing light that grows steadily brighter is also an aircraft coming your way. Yield early.",
           "bogeyman": {
@@ -200,6 +204,7 @@
         },
         {
           "id": "sec-as-ground-hazards",
+          "visualizers": [{ "type": "anim-invisible-hazards" }],
           "visualizer": { "type": "anim-agl-vs-msl" },
           "title": "Ground Hazards at Night",
           "content": "## Ground Structure Lighting\n\nTall structures are marked with obstruction lighting:\n\n- **Aviation red obstruction lights**, steady and flashing, at night\n- **Medium- or high-intensity flashing white lights**, which may be used by day or night\n\nThe lighting marks the structure as a hazard. It says nothing about the class of airspace.\n\n## Guy Wires\n\nTall towers are often held up by guy wires. The AIM warns that the wires can extend about **1,500 feet horizontally** from the structure and are hard to see even in daylight. It recommends staying at least **2,000 feet horizontally** from skeletal structures. The wires are not lighted.\n\n## Hazards WITHOUT Lighting\n\nObstruction lighting is generally found only on taller structures. At night, many ground hazards are invisible:\n\n- **Power lines and telephone wires**\n- **Trees and vegetation**\n- **Shorter towers, buildings, fences, and poles**\n- **Terrain changes** (hills, ditches)\n- **Temporary structures** (cranes, construction equipment)\n\n## Mitigation\n\n- **Survey the site in daylight** before a night operation\n- Note the position and height of every obstacle in the flight area\n- Plan altitudes and a return path that clear them\n- Do not rely on obstacle-avoidance sensors alone"

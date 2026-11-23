@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TAF as a timeline, scrub player</title>
+<script src="./_runtime/react.js"></script>
+<script src="./_runtime/react-dom.js"></script>
+<script src="./_runtime/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+a{color:#0e1114}a:hover{color:#000}
+
+@keyframes bprop{0%,100%{transform:scaleX(1)}50%{transform:scaleX(0.12)}}
+.pblade{transform-box:fill-box;transform-origin:center;animation:bprop 0.5s linear infinite}
+.pdisc{opacity:0;transition:opacity 0.25s ease}
+.fly .pblade{animation-duration:0.1s}
+.fly .pdisc{opacity:0.65}
+@media (prefers-reduced-motion: reduce){.pblade{animation:none}}
+
+</style>
+</helmet>
+<div style="width: 720px; height: 820px; box-sizing: border-box; padding: 24px; background: #f6f8fa; color: #0e1114; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 16px">
+<h1 style="margin: 0; font-size: 24px; font-weight: 600">TAF as a timeline</h1>
+<span style="font-size: 13px; padding: 6px 12px; border-radius: 8px; background: #2b2f33; color: #a9cfe3; font-weight: 600">Weather</span>
+</div>
+<div style="position: relative; width: 672px; height: 420px; background: #e7f2f8; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden">
+<div style="position: absolute; left: 14px; top: 12px; right: 14px; font: 600 12.5px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; line-height: 1.55; padding: 8px 10px; border-radius: 8px; background: #FFFFFF; border: 1.5px solid #e3e6ea">
+<div><span style="background: {{hBase}}; padding: 1px 3px; border-radius: 3px">TAF KXYZ 121720Z 1218/1318 18010KT P6SM SCT040</span></div>
+<div>&nbsp;<span style="background: {{hTempo}}; padding: 1px 3px; border-radius: 3px">TEMPO 1220/1222 4SM -SHRA BKN030</span></div>
+<div>&nbsp;<span style="background: {{hFm}}; padding: 1px 3px; border-radius: 3px">FM130000 24015G25KT 2SM +TSRA OVC010</span></div>
+<div>&nbsp;<span style="background: {{hBec}}; padding: 1px 3px; border-radius: 3px">BECMG 1306/1308 30010KT P6SM SCT040</span></div>
+</div>
+<svg aria-hidden="true" width="672" height="420" viewBox="0 0 672 420" fill="none" style="position: absolute; left: 0; top: 0">
+<rect x="36" y="150" width="150" height="40" fill="#eaf6d8" stroke="#0e1114" stroke-width="1.5"></rect><text x="111.0" y="175" font-size="12" font-weight="600" fill="#0e1114" text-anchor="middle" style="">Base</text>
+<rect x="86" y="124" width="50" height="22" fill="#FFFFFF" stroke="#0e1114" stroke-width="1.5" stroke-dasharray="5 4"></rect><text x="111.0" y="140" font-size="11" font-weight="600" fill="#0e1114" text-anchor="middle" style="">TEMPO</text>
+<rect x="186" y="150" width="150" height="40" fill="rgba(180,35,24,0.14)" stroke="#0e1114" stroke-width="1.5"></rect><text x="261.0" y="175" font-size="12" font-weight="600" fill="#0e1114" text-anchor="middle" style="">FM: complete change</text>
+<rect x="336" y="150" width="50" height="40" fill="#f6f8fa" stroke="#0e1114" stroke-width="1.5" stroke-dasharray="5 4"></rect><text x="361.0" y="175" font-size="10" font-weight="600" fill="#0e1114" text-anchor="middle" style="">BECMG</text>
+<rect x="386" y="150" width="250" height="40" fill="#eaf6d8" stroke="#0e1114" stroke-width="1.5"></rect><text x="511.0" y="175" font-size="12" font-weight="600" fill="#0e1114" text-anchor="middle" style="">After the change</text>
+<path d="M36 196v10" stroke="#0e1114" stroke-width="1.2"></path><path d="M61 196v5" stroke="#0e1114" stroke-width="1.2"></path><path d="M86 196v5" stroke="#0e1114" stroke-width="1.2"></path><path d="M111 196v5" stroke="#0e1114" stroke-width="1.2"></path><path d="M136 196v5" stroke="#0e1114" stroke-width="1.2"></path><path d="M161 196v5" stroke="#0e1114" stroke-width="1.2"></path><path d="M186 196v10" stroke="#0e1114" stroke-width="1.2"></path><path d="M211 196v5" stroke="#0e1114" stroke-width="1.2"></path><path d="M236 196v5" stroke="#0e1114" stroke-width="1.2"></path><path d="M261 196v5" stroke="#0e1114" stroke-width="1.2"></path><path d="M286 196v5" stroke="#0e1114" stroke-width="1.2"></path><path d="M311 196v5" stroke="#0e1114" stroke-width="1.2"></path><path d="M336 196v10" stroke="#0e1114" stroke-width="1.2"></path><path d="M361 196v5" stroke="#0e1114" stroke-width="1.2"></path><path d="M386 196v5" stroke="#0e1114" stroke-width="1.2"></path><path d="M411 196v5" stroke="#0e1114" stroke-width="1.2"></path><path d="M436 196v5" stroke="#0e1114" stroke-width="1.2"></path><path d="M461 196v5" stroke="#0e1114" stroke-width="1.2"></path><path d="M486 196v10" stroke="#0e1114" stroke-width="1.2"></path><path d="M511 196v5" stroke="#0e1114" stroke-width="1.2"></path><path d="M536 196v5" stroke="#0e1114" stroke-width="1.2"></path><path d="M561 196v5" stroke="#0e1114" stroke-width="1.2"></path><path d="M586 196v5" stroke="#0e1114" stroke-width="1.2"></path><path d="M611 196v5" stroke="#0e1114" stroke-width="1.2"></path><path d="M636 196v10" stroke="#0e1114" stroke-width="1.2"></path><text x="36.0" y="222" font-size="11" font-weight="600" fill="#0e1114" text-anchor="middle" style="">18Z</text><text x="111.0" y="222" font-size="11" font-weight="400" fill="#0e1114" text-anchor="middle" style="">21Z</text><text x="186.0" y="222" font-size="11" font-weight="600" fill="#0e1114" text-anchor="middle" style="">00Z</text><text x="261.0" y="222" font-size="11" font-weight="400" fill="#0e1114" text-anchor="middle" style="">03Z</text><text x="336.0" y="222" font-size="11" font-weight="600" fill="#0e1114" text-anchor="middle" style="">06Z</text><text x="411.0" y="222" font-size="11" font-weight="400" fill="#0e1114" text-anchor="middle" style="">09Z</text><text x="486.0" y="222" font-size="11" font-weight="600" fill="#0e1114" text-anchor="middle" style="">12Z</text><text x="561.0" y="222" font-size="11" font-weight="400" fill="#0e1114" text-anchor="middle" style="">15Z</text><text x="636.0" y="222" font-size="11" font-weight="600" fill="#0e1114" text-anchor="middle" style="">18Z</text>
+<text x="36.0" y="240" font-size="11" font-weight="400" fill="#0e1114" text-anchor="middle" style="">12th</text><text x="186.0" y="240" font-size="11" font-weight="400" fill="#0e1114" text-anchor="middle" style="">13th</text>
+</svg>
+<div aria-hidden="true" style="position: absolute; left: {{cx}}; top: 116px; height: 96px; border-left: 3px solid #0e1114; transition: left 0.1s linear"></div>
+<div style="position: absolute; left: 36px; bottom: 20px; right: 36px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap">
+<div style="font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums; background: #FFFFFF; padding: 0 6px; border-radius: 3px">{{when}}</div>
+<div style="font-size: 14px; font-weight: 600">{{cond}}</div>
+<sc-if value="{{legal}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 999px; background: #9cd94a; color: #0e1114; font-size: 14px; font-weight: 600"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#0e1114" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3.2L13 5"></path></svg><span>3 SM or more</span></div>
+</sc-if><sc-if value="{{notLegal}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 999px; background: #FFFFFF; color: #b42318; border: 2px solid #b42318; font-size: 14px; font-weight: 600"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#b42318" stroke-width="2.5" stroke-linecap="round"><path d="M4 4l8 8M12 4l-8 8"></path></svg><span>Below 3 SM</span></div>
+</sc-if>
+</div>
+</div>
+<p aria-live="polite" style="margin: 0; font-size: 15px; line-height: 1.4; min-height: 42px">{{caption}}</p>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 260px">
+<label for="w2-h" style="font-size: 13px; font-weight: 600">Forecast time: {{when}}</label>
+<input id="w2-h" type="range" min="0" max="24" step="1" value="{{h}}" aria-valuetext="{{hText}}" onChange="{{onH}}" style="width: 100%; height: 44px; accent-color: #7fbf2e">
+</div>
+</div>
+<div style="margin-top: auto; padding: 14px 16px; background: #0e1114; color: #ffffff; border-radius: 12px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
+<p style="margin: 0; font-size: 17px; font-weight: 600; line-height: 1.35">FM is a complete change. TEMPO is temporary. BECMG is gradual. Every time is Zulu.</p>
+<span style="flex-shrink: 0; font-size: 12px; font-weight: 600; padding: 6px 10px; border-radius: 8px; background: #2b2f33; color: #a9cfe3; white-space: nowrap; font-variant-numeric: tabular-nums">FAA weather handbook</span>
+</div>
+<div style="display: flex; align-items: center; gap: 10px">
+<svg aria-hidden="true" width="48" height="52" viewBox="0 0 48 52" fill="none" style="flex-shrink: 0">
+<path d="M5 52C5 45 13 41.5 24 41.5C35 41.5 43 45 43 52Z" fill="#a9cfe3"></path>
+<path d="M19 41.5L24 47L29 41.5" stroke="#6fa6c6" stroke-width="1.5" stroke-linejoin="round"></path>
+<rect x="29" y="45.5" width="9" height="4.5" rx="1.5" fill="#9cd94a"></rect>
+<rect x="20" y="33" width="8" height="9" fill="#dcbf98"></rect>
+<path d="M12 14Q12 6 24 6Q36 6 36 14L36 26Q36 31 31.5 34.5L27.5 37.5Q24 39.5 20.5 37.5L16.5 34.5Q12 31 12 26Z" fill="#f0d6b4"></path>
+<path d="M10.5 17Q9.5 3 24 3Q38.5 3 37.5 17L35 13.5Q24 9.5 13 13.5Z" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8" stroke-linejoin="round"></path>
+<rect x="7" y="15" width="5.5" height="11.5" rx="2" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8"></rect>
+<rect x="35.5" y="15" width="5.5" height="11.5" rx="2" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8"></rect>
+<path d="M12.5 16L35.5 16L34.5 23Q30 25.8 26 22.6L24 21.6L22 22.6Q18 25.8 13.5 23Z" fill="#6fa6c6" stroke="#2b2f33" stroke-width="0.8" stroke-linejoin="round"></path>
+<path d="M15 18L21.5 18" stroke="#e7f2f8" stroke-width="1.1" stroke-linecap="round"></path>
+<path d="M27.5 19.5h5" stroke="#9cd94a" stroke-width="1.1" stroke-linecap="round"></path>
+<path d="M20.5 30.5Q24 32.6 27.5 30.5" stroke="#2b2f33" stroke-width="1.4" stroke-linecap="round"></path>
+<path d="M9.5 26Q10.5 33.5 18.5 34" stroke="#8a9198" stroke-width="1.5" stroke-linecap="round"></path>
+<circle cx="19.5" cy="34" r="1.7" fill="#9cd94a"></circle>
+</svg>
+<p style="margin: 0; padding: 8px 12px; background: #eaf6d8; border: 2px solid #9cd94a; border-radius: 13px; color: #2b2f33; font-size: 13px; line-height: 1.5">1218 is the 12th at 1800 Zulu. It is a day and an hour.</p>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":720,"height":820}}'>
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { h: 1 }; }
+renderVals() {
+const h = this.state.h, z = (18 + h) % 24, day = h < 6 ? 12 : 13;
+const pad = (n) => (n < 10 ? '0' : '') + n;
+let seg, cond, ok, caption;
+if (h >= 14) { seg = 'bec'; cond = 'Wind 300° at 10 kt · more than 6 SM · scattered 4,000 ft'; ok = true; caption = 'After 0800Z the BECMG change is complete: the new conditions hold.'; }
+else if (h >= 12) { seg = 'bec'; cond = 'Changing gradually to 300° at 10 kt, more than 6 SM'; ok = false; caption = 'BECMG 1306/1308: a gradual change between 0600Z and 0800Z on the 13th. Until it is complete, plan on the worse conditions.'; }
+else if (h >= 6) { seg = 'fm'; cond = 'Wind 240° at 15 gusting 25 kt · 2 SM · thunderstorm, heavy rain · overcast 1,000 ft'; ok = false; caption = 'FM130000: from 0000Z on the 13th, a complete change. Everything before it is replaced.'; }
+else if (h >= 2 && h < 4) { seg = 'tempo'; cond = 'At times 4 SM, light rain showers, broken 3,000 ft'; ok = true; caption = 'TEMPO 1220/1222: between 2000Z and 2200Z, temporary dips lasting less than an hour at a time. The base forecast still applies in between.'; }
+else { seg = 'base'; cond = 'Wind 180° at 10 kt · more than 6 SM · scattered 4,000 ft'; ok = true; caption = 'The base forecast. 1218/1318 means valid from the 12th at 1800Z to the 13th at 1800Z.'; }
+const hl = (k) => seg === k ? '#9cd94a' : 'rgba(0,0,0,0)';
+return {
+h: h, hText: 'the ' + day + 'th at ' + pad(z) + '00 Zulu, ' + (ok ? 'visibility 3 statute miles or more' : 'below 3 statute miles or changing'),
+when: day + 'th · ' + pad(z) + '00Z', cond: cond, legal: ok, notLegal: !ok, caption: caption,
+cx: (36 + h * 25) + 'px', hBase: hl('base'), hTempo: hl('tempo'), hFm: hl('fm'), hBec: hl('bec'),
+onH: (e) => this.setState({ h: Number(e.target.value) })
+};
+}
+}
+</script>
+</body>
+</html>

@@ -60,9 +60,10 @@
       "sections": [
         {
           "id": "sec-wx-metar-overview",
+          "visualizer": { "type": "anim-metar-tour" },
           "title": "METAR Format",
           "content": "## Reading a METAR\n\nMETARs are **real-time weather observations** from airports. They're issued hourly (with special reports when conditions change). You must be able to decode every element.\n\n## METAR Format Order\n\n```\n[Type] [Station] [Date/Time] [Modifier] [Wind] [Visibility] [Weather] [Sky Condition] [Temp/Dewpoint] [Altimeter] [Remarks]\n```\n\n## Complete Example\n\n**METAR KORD 121856Z 22015G25KT 6SM -RA BR BKN015 OVC025 18/16 A2978 RMK AO2**\n\n| Element | Code | Meaning |\n|---|---|---|\n| Report type | **METAR** | Routine hourly observation |\n| Station | **KORD** | Chicago O'Hare |\n| Date/Time | **121856Z** | 12th day, 1856 UTC |\n| Wind | **22015G25KT** | From 220° at 15 kt, gusting 25 kt |\n| Visibility | **6SM** | 6 statute miles |\n| Weather | **-RA BR** | Light rain and mist |\n| Sky Condition | **BKN015 OVC025** | Broken at 1,500 ft, Overcast at 2,500 ft |\n| Temp/Dewpoint | **18/16** | 18°C / 16°C (small spread, so fog or low cloud is possible) |\n| Altimeter | **A2978** | 29.78 inches Hg |",
-          "visualizer": { "type": "metar" }
+          "visualizers": [{ "type": "metar" }]
         },
         {
           "id": "sec-wx-metar-wind",
@@ -112,6 +113,7 @@
         },
         {
           "id": "sec-wx-taf-changes",
+          "visualizer": { "type": "anim-taf-timeline" },
           "title": "Change Indicators",
           "content": "## FM, TEMPO, BECMG, PROB\n\n| Indicator | Meaning | Duration |\n|---|---|---|\n| **FM** (From) | Complete change to new conditions | Starts new forecast period |\n| **TEMPO** | Temporary fluctuation | Lasts **less than 1 hour** at a time |\n| **BECMG** | Gradual transition | Change occurs over the period shown, usually up to 2 hours |\n| **PROB30** | About a 30% probability | Used for thunderstorms and precipitation |\n\n## Understanding TEMPO\n\nTEMPO 1223/1302 2SM +TSRA OVC008CB\n\n- Between 2300Z on the 12th and 0200Z on the 13th\n- Temporarily: 2SM visibility, thunderstorm with heavy rain, overcast at 800 ft with cumulonimbus\n- Each occurrence lasts **less than 1 hour**\n\n## Understanding BECMG\n\nBECMG 1306/1308 30010KT P6SM SCT040\n\n- Between 0600Z and 0800Z on the 13th\n- Conditions will gradually become: wind 300° at 10 kt, visibility >6SM, scattered at 4,000 ft\n\n## Exam Tip\n\nAll TAF times are in UTC (Zulu). Be ready to convert them to local time."
         }
@@ -134,6 +136,7 @@
       "sections": [
         {
           "id": "sec-wx-density-concept",
+          "visualizer": { "type": "anim-density-altitude" },
           "title": "Understanding Density Altitude",
           "content": "## What It Is\n\nDensity altitude is the **altitude at which the air \"feels\" based on its density**, regardless of your actual altitude. It's the single most important performance concept in aviation weather.\n\n## The Formula\n\n**Density Altitude = Pressure Altitude + [120 × (Outside Air Temp – Standard Temp)]**\n\nWhere:\n- Standard temperature at sea level = 15°C\n- Temperature decreases ~2°C per 1,000 feet\n\n## The Three Enemies of Performance\n\n**\"High, Hot, and Humid\"** = High density altitude = Degraded performance\n\n| Factor | Why It Hurts |\n|---|---|\n| **High elevation** | Less air pressure = thinner air |\n| **High temperature** | Warm air expands = thinner air |\n| **High humidity** | Water vapor is lighter than dry air |"
         },
@@ -148,6 +151,7 @@
         },
         {
           "id": "sec-wx-stability",
+          "visualizer": { "type": "anim-stable-unstable" },
           "title": "Stable and Unstable Air",
           "content": "## What Stability Means\n\nStable air resists vertical movement. Unstable air, once it starts to rise, keeps rising. Which one you have decides the kind of cloud, the ride, and the visibility.\n\n## Stable Versus Unstable\n\n| | Stable air | Unstable air |\n|---|---|---|\n| Clouds | **Stratiform** (layered) | **Cumuliform** (piled up, towering) |\n| Air | Smooth | Turbulent |\n| Precipitation | Steady, continuous | Showery |\n| Visibility | Fair to poor, in haze and smoke | Good, outside the showers |\n\n## Why\n\n- In stable air, haze and smoke stay trapped near the surface, so visibility suffers even though the air is smooth.\n- Unstable air mixes vertically. That clears the haze and produces bumps, building cumulus, and, with enough moisture and lift, thunderstorms.\n- A **temperature inversion**, where air gets warmer with height, is a stable layer. Expect smooth air and poor visibility beneath it.\n\n## What It Means for a Remote Pilot\n\n- Stable day: watch the **visibility** and the **ceiling**. A low stratus deck can put the 500-foot cloud clearance rule in charge of your maximum altitude.\n- Unstable day: watch for **gusts, turbulence, and building cumulus**.\n\n## Common Trap\n\nGood visibility goes with unstable air, and smooth air goes with stable air. The two \"good\" traits do not come together.",
           "bogeyman": {
@@ -157,6 +161,7 @@
         },
         {
           "id": "sec-wx-wind-effects",
+          "visualizer": { "type": "anim-wind-obstacles" },
           "title": "Wind Effects on Performance",
           "content": "## How Wind Affects Your sUAS\n\n**Headwind (flying into the wind):**\n- Reduces ground speed\n- Increases battery consumption\n- Reduces effective range\n\n**Tailwind (wind behind you):**\n- Increases ground speed going out\n- BUT you fly into the wind coming back\n- Can push you past planned range before you realize\n\n**Crosswind:**\n- Drone must \"crab\" (angle into wind)\n- Reduces effective forward speed\n- Can cause handling difficulties\n\n## Mechanical Turbulence\n\nWhen wind flows over obstacles, it creates **turbulence on the downwind (lee) side**.\n\n**Avoid:**\n- Flying on downwind side of buildings or ridges\n- Flying in gaps between buildings (wind tunnel effect)\n- Low altitude in gusty conditions near structures\n\n## Wind Shear\n\nSudden change in wind speed or direction. Can cause:\n- Sudden loss of altitude\n- Loss of control\n- Unexpected position changes\n\nMost common near frontal boundaries, thunderstorms, and temperature inversions."
         }
@@ -179,6 +184,7 @@
       "sections": [
         {
           "id": "sec-wx-thunderstorms",
+          "visualizer": { "type": "anim-thunderstorm" },
           "title": "Thunderstorms and Microbursts",
           "content": "## Three Ingredients\n\nA thunderstorm needs all three:\n\n1. **Moisture** — sufficient water vapor\n2. **Instability** — an atmosphere that lets rising air keep rising\n3. **Lifting action** — a front, terrain, or surface heating that starts the air moving up\n\n## The Three Stages\n\n| Stage | What is happening |\n|---|---|\n| **Cumulus** | Continuous updrafts build the cloud |\n| **Mature** | Begins when **precipitation starts to fall** from the cloud base. Updrafts and downdrafts exist together, and the storm is at its most violent |\n| **Dissipating** | Downdrafts dominate and the storm weakens |\n\n## Hazards\n\nTurbulence, strong and shifting surface winds, wind shear, hail, lightning, and heavy rain. Several of these reach well beyond the visible storm.\n\n## Microbursts\n\nA microburst is a small, intense downdraft that spreads outward when it reaches the ground.\n\n- The AIM describes downdrafts as strong as **6,000 feet per minute**\n- The change from headwind to tailwind across one can be as much as **90 knots**\n- An individual microburst seldom lasts longer than **15 minutes**\n- They occur with convective activity such as thunderstorms\n\nAn aircraft flying through one meets a headwind, then a downdraft, then a tailwind, and loses performance when it can least afford to.\n\n## Safety Rule\n\nDo not fly with a thunderstorm in the area. The AIM advises pilots to avoid severe thunderstorms by at least 20 miles.",
           "bogeyman": {
@@ -188,6 +194,7 @@
         },
         {
           "id": "sec-wx-fog",
+          "visualizer": { "type": "anim-fog" },
           "title": "Types of Fog",
           "content": "## The Four Types You Need to Know\n\n### Radiation Fog\n\n- Forms on **clear, calm nights** when ground radiates heat\n- Most common in valleys and low areas\n- Usually burns off after sunrise as the ground warms\n- Requires: clear skies, light wind, high humidity\n\n### Advection Fog\n\n- Warm, moist air moves over a **cold surface**\n- Can form with wind (unlike radiation fog)\n- **Does NOT burn off** with sunrise — can persist all day\n- Common along coastlines (marine layer)\n\n### Upslope Fog\n\n- Moist air pushed **up a slope** by wind\n- Persists as long as upslope wind continues\n- Common on windward sides of mountains\n\n### Steam Fog (Evaporation Fog)\n\n- **Cold air** moves over **warm water**\n- Water evaporates and immediately condenses\n- Appears as \"steam\" rising from water\n\n## Predicting Fog from METAR\n\nLook at temperature/dewpoint spread:\n- **18/16** (2° spread) → fog forming or imminent\n- **22/08** (14° spread) → fog very unlikely",
           "bogeyman": {
@@ -197,6 +204,7 @@
         },
         {
           "id": "sec-wx-icing",
+          "visualizer": { "type": "anim-fronts" },
           "title": "Icing and Other Hazards",
           "content": "## Icing\n\nStructural ice forms when two things are present together:\n\n- **Visible moisture**, such as cloud, fog, or precipitation\n- **Freezing temperatures** on the aircraft's surfaces\n\nCold, dry air does not produce it, and neither does warm, humid air.\n\n| What ices | Effect |\n|---|---|\n| Propellers | Changes the blade shape: less thrust, more vibration |\n| Airframe | Adds weight and disturbs the airflow |\n| Sensors | Camera, GPS antenna, and barometer can be covered |\n\nCold also reduces battery performance, so an icing day is a short-endurance day twice over.\n\n## Lightning\n\n- A strike destroys the aircraft's electronics\n- Nearby strikes can disrupt GPS, the control link, and sensors\n- Lightning can strike well away from the storm that produces it\n\nIf there is a thunderstorm in the area, do not fly, and get the crew under cover.\n\n## Hail and Tornadoes\n\n- **Hail** forms in thunderstorms with strong updrafts. It can be thrown out of the storm and fall in clear air some distance from it.\n- **Tornadoes** come from severe thunderstorms.\n\nBoth are reasons to stay well away from any thunderstorm, not hazards to manage in flight.\n\n## Air Masses and Fronts\n\nA front is the boundary between two air masses. Its passage brings a change in temperature, a shift in wind direction, and a change in pressure.\n\n| Front | Typical weather |\n|---|---|\n| **Cold** | Moves faster. A narrow band of cumuliform cloud, showers or thunderstorms, gusty winds, and a sharp wind shift, followed by cooler, clearer air |\n| **Warm** | Moves slower. A wide area of stratiform cloud, steady precipitation, low ceilings, and poor visibility |\n| **Stationary** | Little movement. The weather along it can persist for days |\n| **Occluded** | A cold front has overtaken a warm front. A mix of both kinds of weather |\n\nFor a remote pilot, an approaching front means the wind, the ceiling, and the visibility are all about to change. Check the TAF for when."
         }

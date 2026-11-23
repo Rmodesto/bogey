@@ -33,6 +33,7 @@
         },
         {
           "id": "sec-lp-weight-effects",
+          "visualizer": { "type": "anim-angle-of-attack" },
           "title": "How Payload Affects Flight Characteristics",
           "content": "## Endurance (Flight Time)\n\nEvery bit of payload makes the motors work harder and draw more current from the battery. Flight time goes down.\n\n## Range\n\nRange decreases with added weight because the aircraft uses its battery faster and covers less ground before it must return.\n\n## Climb Rate\n\nA heavier aircraft climbs more slowly, because more of the available power is used just to stay airborne.\n\n## Maneuverability\n\nA heavier aircraft responds more slowly to control inputs and takes more room and more time to stop, turn, or recover.\n\n## Fixed-Wing Aircraft: Stall Speed and Takeoff\n\nFor a fixed-wing sUAS, more weight means:\n\n- A **higher stall speed**\n- A longer takeoff run and a higher landing speed\n- A reduced rate of climb\n\n## Altitude and Heat\n\nIn thin air, propellers and wings produce less lift. An aircraft that hovers easily at sea level with a full payload may struggle with the same load at a high-elevation site on a hot day. Weight and density altitude work against you together.",
           "bogeyman": {
@@ -121,6 +122,7 @@
       "sections": [
         {
           "id": "sec-lp-cg-definition",
+          "visualizer": { "type": "anim-center-of-gravity" },
           "title": "What is Center of Gravity?",
           "content": "## Center of Gravity Definition\n\nThe **center of gravity (CG)** is the single point where the aircraft's total weight is balanced. If you could hang the drone from one point and have it sit perfectly level, that point is the CG.\n\n## Why CG Matters\n\nEven if your drone is within its total weight limit, **where** that weight is positioned matters enormously. An unbalanced drone can be uncontrollable.\n\n## Critical Fact: CG is Not Fixed\n\nThe CG shifts whenever you:\n- Add or remove payload\n- Reposition payload\n\nA battery weighs the same charged or discharged, so the CG does not move during an ordinary flight unless something shifts or is released.\n\n## The Core Concept\n\nA drone can be within its total weight limit but **outside its CG limits**. Both limits must be satisfied for safe operation."
         },
@@ -210,6 +212,7 @@
         },
         {
           "id": "sec-lp-high-hot-humid",
+          "visualizer": { "type": "anim-heavy-hot-high" },
           "title": "High, Hot, and Humid",
           "content": "## The Three Enemies of Performance\n\nA simple memory aid for density altitude and performance:\n\n- **High** elevation = less air density\n- **Hot** temperature = less air density\n- **Humid** air = slightly less air density (a smaller effect than the other two)\n\nAll three increase density altitude and reduce performance.\n\n## Worst-Case Scenario\n\n**A high-elevation airport on a hot, humid summer afternoon.**\n\nThis is when you'll see:\n- Maximum density altitude\n- Minimum payload capacity\n- Shortest flight times\n- Most reduced climb performance\n\n## Memory Aid\n\n**\"High, hot, and humid = horrible performance.\"**",
           "bogeyman": {
