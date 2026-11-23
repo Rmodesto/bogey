@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Latitude and longitude, scrub player</title>
+<script src="./_runtime/react.js"></script>
+<script src="./_runtime/react-dom.js"></script>
+<script src="./_runtime/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+a{color:#0e1114}a:hover{color:#000}
+
+@keyframes bprop{0%,100%{transform:scaleX(1)}50%{transform:scaleX(0.12)}}
+.pblade{transform-box:fill-box;transform-origin:center;animation:bprop 0.5s linear infinite}
+.pdisc{opacity:0;transition:opacity 0.25s ease}
+.fly .pblade{animation-duration:0.1s}
+.fly .pdisc{opacity:0.65}
+@media (prefers-reduced-motion: reduce){.pblade{animation:none}}
+
+</style>
+</helmet>
+<div style="width: 720px; height: 820px; box-sizing: border-box; padding: 24px; background: #f6f8fa; color: #0e1114; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 16px">
+<h1 style="margin: 0; font-size: 24px; font-weight: 600">Latitude and longitude</h1>
+<span style="font-size: 13px; padding: 6px 12px; border-radius: 8px; background: #2b2f33; color: #a9cfe3; font-weight: 600">Airspace</span>
+</div>
+<div style="position: relative; width: 672px; height: 420px; background: #e7f2f8; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden">
+<svg aria-hidden="true" width="672" height="420" viewBox="0 0 672 420" fill="none" style="position: absolute; left: 0; top: 0">
+<rect x="100" y="50" width="500" height="300" fill="#FFFFFF"></rect>
+<path d="M200 50v300M300 50v300M500 50v300M100 250h500M100 150h500" stroke="#e3e6ea" stroke-width="1"></path>
+<path d="M100 50v300M400 50v300M100 350h500M100 50h500" stroke="#0e1114" stroke-width="1.8"></path>
+<path d="M100 40v20" stroke="#0e1114" stroke-width="1"></path><path d="M100 340v20" stroke="#0e1114" stroke-width="1"></path><path d="M110 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M110 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M120 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M120 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M130 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M130 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M140 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M140 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M150 43v14" stroke="#0e1114" stroke-width="1"></path><path d="M150 343v14" stroke="#0e1114" stroke-width="1"></path><path d="M160 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M160 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M170 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M170 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M180 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M180 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M190 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M190 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M200 40v20" stroke="#0e1114" stroke-width="1"></path><path d="M200 340v20" stroke="#0e1114" stroke-width="1"></path><path d="M210 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M210 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M220 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M220 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M230 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M230 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M240 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M240 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M250 43v14" stroke="#0e1114" stroke-width="1"></path><path d="M250 343v14" stroke="#0e1114" stroke-width="1"></path><path d="M260 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M260 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M270 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M270 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M280 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M280 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M290 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M290 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M300 40v20" stroke="#0e1114" stroke-width="1"></path><path d="M300 340v20" stroke="#0e1114" stroke-width="1"></path><path d="M310 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M310 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M320 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M320 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M330 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M330 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M340 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M340 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M350 43v14" stroke="#0e1114" stroke-width="1"></path><path d="M350 343v14" stroke="#0e1114" stroke-width="1"></path><path d="M360 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M360 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M370 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M370 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M380 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M380 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M390 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M390 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M400 40v20" stroke="#0e1114" stroke-width="1"></path><path d="M400 340v20" stroke="#0e1114" stroke-width="1"></path><path d="M410 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M410 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M420 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M420 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M430 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M430 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M440 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M440 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M450 43v14" stroke="#0e1114" stroke-width="1"></path><path d="M450 343v14" stroke="#0e1114" stroke-width="1"></path><path d="M460 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M460 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M470 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M470 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M480 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M480 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M490 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M490 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M500 40v20" stroke="#0e1114" stroke-width="1"></path><path d="M500 340v20" stroke="#0e1114" stroke-width="1"></path><path d="M510 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M510 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M520 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M520 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M530 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M530 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M540 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M540 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M550 43v14" stroke="#0e1114" stroke-width="1"></path><path d="M550 343v14" stroke="#0e1114" stroke-width="1"></path><path d="M560 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M560 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M570 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M570 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M580 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M580 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M590 46v8" stroke="#0e1114" stroke-width="1"></path><path d="M590 346v8" stroke="#0e1114" stroke-width="1"></path><path d="M600 40v20" stroke="#0e1114" stroke-width="1"></path><path d="M600 340v20" stroke="#0e1114" stroke-width="1"></path><path d="M90 350h20" stroke="#0e1114" stroke-width="1"></path><path d="M390 350h20" stroke="#0e1114" stroke-width="1"></path><path d="M96 340h8" stroke="#0e1114" stroke-width="1"></path><path d="M396 340h8" stroke="#0e1114" stroke-width="1"></path><path d="M96 330h8" stroke="#0e1114" stroke-width="1"></path><path d="M396 330h8" stroke="#0e1114" stroke-width="1"></path><path d="M96 320h8" stroke="#0e1114" stroke-width="1"></path><path d="M396 320h8" stroke="#0e1114" stroke-width="1"></path><path d="M96 310h8" stroke="#0e1114" stroke-width="1"></path><path d="M396 310h8" stroke="#0e1114" stroke-width="1"></path><path d="M93 300h14" stroke="#0e1114" stroke-width="1"></path><path d="M393 300h14" stroke="#0e1114" stroke-width="1"></path><path d="M96 290h8" stroke="#0e1114" stroke-width="1"></path><path d="M396 290h8" stroke="#0e1114" stroke-width="1"></path><path d="M96 280h8" stroke="#0e1114" stroke-width="1"></path><path d="M396 280h8" stroke="#0e1114" stroke-width="1"></path><path d="M96 270h8" stroke="#0e1114" stroke-width="1"></path><path d="M396 270h8" stroke="#0e1114" stroke-width="1"></path><path d="M96 260h8" stroke="#0e1114" stroke-width="1"></path><path d="M396 260h8" stroke="#0e1114" stroke-width="1"></path><path d="M90 250h20" stroke="#0e1114" stroke-width="1"></path><path d="M390 250h20" stroke="#0e1114" stroke-width="1"></path><path d="M96 240h8" stroke="#0e1114" stroke-width="1"></path><path d="M396 240h8" stroke="#0e1114" stroke-width="1"></path><path d="M96 230h8" stroke="#0e1114" stroke-width="1"></path><path d="M396 230h8" stroke="#0e1114" stroke-width="1"></path><path d="M96 220h8" stroke="#0e1114" stroke-width="1"></path><path d="M396 220h8" stroke="#0e1114" stroke-width="1"></path><path d="M96 210h8" stroke="#0e1114" stroke-width="1"></path><path d="M396 210h8" stroke="#0e1114" stroke-width="1"></path><path d="M93 200h14" stroke="#0e1114" stroke-width="1"></path><path d="M393 200h14" stroke="#0e1114" stroke-width="1"></path><path d="M96 190h8" stroke="#0e1114" stroke-width="1"></path><path d="M396 190h8" stroke="#0e1114" stroke-width="1"></path><path d="M96 180h8" stroke="#0e1114" stroke-width="1"></path><path d="M396 180h8" stroke="#0e1114" stroke-width="1"></path><path d="M96 170h8" stroke="#0e1114" stroke-width="1"></path><path d="M396 170h8" stroke="#0e1114" stroke-width="1"></path><path d="M96 160h8" stroke="#0e1114" stroke-width="1"></path><path d="M396 160h8" stroke="#0e1114" stroke-width="1"></path><path d="M90 150h20" stroke="#0e1114" stroke-width="1"></path><path d="M390 150h20" stroke="#0e1114" stroke-width="1"></path><path d="M96 140h8" stroke="#0e1114" stroke-width="1"></path><path d="M396 140h8" stroke="#0e1114" stroke-width="1"></path><path d="M96 130h8" stroke="#0e1114" stroke-width="1"></path><path d="M396 130h8" stroke="#0e1114" stroke-width="1"></path><path d="M96 120h8" stroke="#0e1114" stroke-width="1"></path><path d="M396 120h8" stroke="#0e1114" stroke-width="1"></path><path d="M96 110h8" stroke="#0e1114" stroke-width="1"></path><path d="M396 110h8" stroke="#0e1114" stroke-width="1"></path><path d="M93 100h14" stroke="#0e1114" stroke-width="1"></path><path d="M393 100h14" stroke="#0e1114" stroke-width="1"></path><path d="M96 90h8" stroke="#0e1114" stroke-width="1"></path><path d="M396 90h8" stroke="#0e1114" stroke-width="1"></path><path d="M96 80h8" stroke="#0e1114" stroke-width="1"></path><path d="M396 80h8" stroke="#0e1114" stroke-width="1"></path><path d="M96 70h8" stroke="#0e1114" stroke-width="1"></path><path d="M396 70h8" stroke="#0e1114" stroke-width="1"></path><path d="M96 60h8" stroke="#0e1114" stroke-width="1"></path><path d="M396 60h8" stroke="#0e1114" stroke-width="1"></path><path d="M90 50h20" stroke="#0e1114" stroke-width="1"></path><path d="M390 50h20" stroke="#0e1114" stroke-width="1"></path>
+<text x="100" y="376" font-size="12" font-weight="600" fill="#0e1114" text-anchor="middle" style="">98°00′ W</text><text x="400" y="376" font-size="12" font-weight="600" fill="#0e1114" text-anchor="middle" style="">97°30′ W</text><text x="590" y="376" font-size="12" font-weight="400" fill="#0e1114" text-anchor="middle" style="">97°10′</text>
+<text x="92" y="354" font-size="12" font-weight="600" fill="#0e1114" text-anchor="end" style="">35°00′ N</text><text x="92" y="54" font-size="12" font-weight="600" fill="#0e1114" text-anchor="end" style="">35°30′ N</text>
+<text x="350" y="400" font-size="12" font-weight="400" fill="#0e1114" text-anchor="middle" style="">Longitude: the number gets smaller going east →</text>
+<path d="M34 300V110M28 120l6-10 6 10" stroke="#0e1114" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+<text x="24" y="205" font-size="12" fill="#0e1114" text-anchor="middle" transform="rotate(-90 24 205)">Latitude: bigger going north</text>
+</svg>
+<div aria-hidden="true" style="position: absolute; left: {{cx}}; top: 50px; height: 300px; border-left: 2px solid #b42318; transition: left 0.1s linear"></div>
+<div aria-hidden="true" style="position: absolute; left: 100px; top: {{cy}}; width: 500px; border-top: 2px solid #b42318; transition: top 0.1s linear"></div>
+<div aria-hidden="true" style="position: absolute; left: {{cx}}; top: {{cy}}; width: 14px; height: 14px; margin: -8px 0 0 -8px; border-radius: 50%; border: 2px solid #b42318; background: #FFFFFF; transition: left 0.1s linear, top 0.1s linear"></div>
+<div style="position: absolute; left: 110px; top: 12px; font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums; background: #FFFFFF; padding: 0 6px; border-radius: 3px">{{readout}}</div>
+<div style="position: absolute; right: 14px; top: 16px; font-size: 12px">Each tick is 1 minute</div>
+</div>
+<p aria-live="polite" style="margin: 0; font-size: 15px; line-height: 1.4; min-height: 42px">{{caption}}</p>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 260px">
+<label for="a8-x" style="font-size: 13px; font-weight: 600">Move west or east: {{lon}}</label>
+<input id="a8-x" type="range" min="0" max="50" step="1" value="{{x}}" aria-valuetext="{{xText}}" onChange="{{onX}}" style="width: 100%; height: 44px; accent-color: #7fbf2e">
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 260px">
+<label for="a8-y" style="font-size: 13px; font-weight: 600">Move south or north: {{lat}}</label>
+<input id="a8-y" type="range" min="0" max="30" step="1" value="{{y}}" aria-valuetext="{{yText}}" onChange="{{onY}}" style="width: 100%; height: 44px; accent-color: #7fbf2e">
+</div>
+</div>
+<div style="margin-top: auto; padding: 14px 16px; background: #0e1114; color: #ffffff; border-radius: 12px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
+<p style="margin: 0; font-size: 17px; font-weight: 600; line-height: 1.35">Latitude counts up going north. In the United States, longitude counts up going west. 60 minutes make one degree.</p>
+<span style="flex-shrink: 0; font-size: 12px; font-weight: 600; padding: 6px 10px; border-radius: 8px; background: #2b2f33; color: #a9cfe3; white-space: nowrap; font-variant-numeric: tabular-nums">FAA chart guide</span>
+</div>
+<div style="display: flex; align-items: center; gap: 10px">
+<svg aria-hidden="true" width="48" height="52" viewBox="0 0 48 52" fill="none" style="flex-shrink: 0">
+<path d="M5 52C5 45 13 41.5 24 41.5C35 41.5 43 45 43 52Z" fill="#a9cfe3"></path>
+<path d="M19 41.5L24 47L29 41.5" stroke="#6fa6c6" stroke-width="1.5" stroke-linejoin="round"></path>
+<rect x="29" y="45.5" width="9" height="4.5" rx="1.5" fill="#9cd94a"></rect>
+<rect x="20" y="33" width="8" height="9" fill="#dcbf98"></rect>
+<path d="M12 14Q12 6 24 6Q36 6 36 14L36 26Q36 31 31.5 34.5L27.5 37.5Q24 39.5 20.5 37.5L16.5 34.5Q12 31 12 26Z" fill="#f0d6b4"></path>
+<path d="M10.5 17Q9.5 3 24 3Q38.5 3 37.5 17L35 13.5Q24 9.5 13 13.5Z" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8" stroke-linejoin="round"></path>
+<rect x="7" y="15" width="5.5" height="11.5" rx="2" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8"></rect>
+<rect x="35.5" y="15" width="5.5" height="11.5" rx="2" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8"></rect>
+<path d="M12.5 16L35.5 16L34.5 23Q30 25.8 26 22.6L24 21.6L22 22.6Q18 25.8 13.5 23Z" fill="#6fa6c6" stroke="#2b2f33" stroke-width="0.8" stroke-linejoin="round"></path>
+<path d="M15 18L21.5 18" stroke="#e7f2f8" stroke-width="1.1" stroke-linecap="round"></path>
+<path d="M27.5 19.5h5" stroke="#9cd94a" stroke-width="1.1" stroke-linecap="round"></path>
+<path d="M20.5 30.5Q24 32.6 27.5 30.5" stroke="#2b2f33" stroke-width="1.4" stroke-linecap="round"></path>
+<path d="M9.5 26Q10.5 33.5 18.5 34" stroke="#8a9198" stroke-width="1.5" stroke-linecap="round"></path>
+<circle cx="19.5" cy="34" r="1.7" fill="#9cd94a"></circle>
+</svg>
+<p style="margin: 0; padding: 8px 12px; background: #eaf6d8; border: 2px solid #9cd94a; border-radius: 13px; color: #2b2f33; font-size: 13px; line-height: 1.5">Find the labeled line first, then count the ticks the right way.</p>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":720,"height":820}}'>
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { x: 18, y: 12 }; }
+renderVals() {
+const x = this.state.x, y = this.state.y;
+const pad = (n) => (n < 10 ? '0' : '') + n;
+const lonTotal = 98 * 60 - x, lonD = Math.floor(lonTotal / 60), lonM = lonTotal % 60;
+const lat = '35°' + pad(y) + '′ N', lon = lonD + '°' + pad(lonM) + '′ W';
+const fromLine = x <= 30 ? x + ' minutes east of the 98° line' : (x - 30) + ' minutes east of the 97°30′ line';
+return {
+x: x, y: y, xText: 'longitude ' + lonD + ' degrees ' + lonM + ' minutes west', yText: 'latitude 35 degrees ' + y + ' minutes north',
+lat: lat, lon: lon, readout: lat + ', ' + lon,
+cx: (100 + x * 10) + 'px', cy: (350 - y * 10) + 'px',
+caption: 'Latitude: ' + y + ' ticks north of the 35° line, so ' + lat + '. Longitude: ' + fromLine + ', and going east the number goes down, so ' + lon + '.',
+onX: (e) => this.setState({ x: Number(e.target.value) }),
+onY: (e) => this.setState({ y: Number(e.target.value) })
+};
+}
+}
+</script>
+</body>
+</html>

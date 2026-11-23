@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Eight hours and 0.04, scrub player</title>
+<script src="./_runtime/react.js"></script>
+<script src="./_runtime/react-dom.js"></script>
+<script src="./_runtime/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+a{color:#0e1114}a:hover{color:#000}
+
+@keyframes bprop{0%,100%{transform:scaleX(1)}50%{transform:scaleX(0.12)}}
+.pblade{transform-box:fill-box;transform-origin:center;animation:bprop 0.5s linear infinite}
+.pdisc{opacity:0;transition:opacity 0.25s ease}
+.fly .pblade{animation-duration:0.1s}
+.fly .pdisc{opacity:0.65}
+@media (prefers-reduced-motion: reduce){.pblade{animation:none}}
+
+</style>
+</helmet>
+<div style="width: 720px; height: 820px; box-sizing: border-box; padding: 24px; background: #f6f8fa; color: #0e1114; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 16px">
+<h1 style="margin: 0; font-size: 24px; font-weight: 600">Eight hours and 0.04</h1>
+<span style="font-size: 13px; padding: 6px 12px; border-radius: 8px; background: #2b2f33; color: #a9cfe3; font-weight: 600">Regulations</span>
+</div>
+<div style="position: relative; width: 672px; height: 420px; background: #e7f2f8; border: 1px solid #e3e6ea; border-radius: 12px; overflow: hidden">
+<div style="position: absolute; left: 0; right: 0; bottom: 0; height: 56px; background: #e3e6ea; border-top: 2px solid #0e1114"></div>
+<div style="position: absolute; left: 36px; top: 22px; font-size: 14px; font-weight: 600">Gate 1 · Hours since the last drink: {{hrs}}</div>
+<div style="position: absolute; right: 36px; top: 20px; font-size: 13px; font-weight: 600; padding: 2px 10px; border-radius: 999px; border: {{g1Border}}; background: {{g1Bg}}; color: {{g1Ink}}">{{g1}}</div>
+<div style="position: absolute; left: 36px; top: 54px; width: 600px; height: 26px; box-sizing: border-box; border: 1.5px solid #0e1114; border-radius: 5px; background: #FFFFFF; overflow: hidden"><div style="width: {{hrW}}; height: 100%; background: {{hrFill}}; transition: width 0.15s linear"></div></div>
+<div style="position: absolute; left: 435px; top: 44px; height: 46px; border-left: 3px solid #0e1114"></div>
+<div style="position: absolute; left: 36px; top: 86px; font-size: 12px">0 h</div>
+<div style="position: absolute; left: 418px; top: 92px; font-size: 12px; font-weight: 600">8 h</div>
+<div style="position: absolute; left: 612px; top: 86px; font-size: 12px">12 h</div>
+<div style="position: absolute; left: 36px; top: 140px; font-size: 14px; font-weight: 600">Gate 2 · Alcohol concentration: {{bacText}}</div>
+<div style="position: absolute; right: 36px; top: 138px; font-size: 13px; font-weight: 600; padding: 2px 10px; border-radius: 999px; border: {{g2Border}}; background: {{g2Bg}}; color: {{g2Ink}}">{{g2}}</div>
+<div style="position: absolute; left: 36px; top: 172px; width: 600px; height: 26px; box-sizing: border-box; border: 1.5px solid #0e1114; border-radius: 5px; background: linear-gradient(90deg, #eaf6d8 0 40%, #FFFFFF 40% 100%)"></div>
+<div style="position: absolute; left: 275px; top: 162px; height: 46px; border-left: 3px solid #0e1114"></div>
+<div style="position: absolute; left: {{bacX}}; top: 166px; width: 14px; height: 38px; margin-left: -7px; border-radius: 4px; background: {{bacFill}}; border: 2px solid #0e1114; box-sizing: border-box; transition: left 0.15s linear"></div>
+<div style="position: absolute; left: 36px; top: 204px; font-size: 12px">0.00</div>
+<div style="position: absolute; left: 258px; top: 210px; font-size: 12px; font-weight: 600">0.04</div>
+<div style="position: absolute; left: 456px; top: 204px; font-size: 12px; color: #2b2f33">0.08 is the driving limit, not this one</div>
+<div style="position: absolute; left: 515px; top: 172px; height: 26px; border-left: 1.5px dashed #8a9198"></div>
+<div style="position: absolute; left: 36px; bottom: 64px; display: flex; flex-direction: column; align-items: flex-start; gap: 6px">
+<div style="font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums; background: #FFFFFF; padding: 0 4px; border-radius: 3px">{{hrs}} h · {{bacText}}</div>
+<sc-if value="{{legal}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 999px; background: #9cd94a; color: #0e1114; font-size: 14px; font-weight: 600"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#0e1114" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3.2L13 5"></path></svg><span>Both gates open</span></div>
+</sc-if>
+<sc-if value="{{notLegal}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 999px; background: #FFFFFF; color: #b42318; border: 2px solid #b42318; font-size: 14px; font-weight: 600"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#b42318" stroke-width="2.5" stroke-linecap="round"><path d="M4 4l8 8M12 4l-8 8"></path></svg><span>Not legal to fly</span></div>
+</sc-if>
+</div>
+<div style="position: absolute; right: 60px; bottom: 56px; width: 64px; height: 24px"><svg aria-hidden="true" width="88" height="40.0" viewBox="0 0 88 40" fill="none" class="" style="position: absolute; left: -12px; bottom: 0"><rect x="42.5" y="3" width="3" height="6" fill="#0e1114"></rect><ellipse class="pdisc" cx="44" cy="2.6" rx="11" ry="2.6" fill="#9cd94a"></ellipse><rect class="pblade" x="33" y="1.3" width="22" height="2.6" rx="1.3" fill="#9cd94a" stroke="#0e1114" stroke-width="1.2"></rect><ellipse class="pdisc" cx="16" cy="6.5" rx="14" ry="2.6" fill="#9cd94a"></ellipse><rect class="pblade" x="2" y="5.2" width="28" height="2.6" rx="1.3" fill="#9cd94a" stroke="#0e1114" stroke-width="1.2"></rect><ellipse class="pdisc" cx="72" cy="6.5" rx="14" ry="2.6" fill="#9cd94a"></ellipse><rect class="pblade" x="58" y="5.2" width="28" height="2.6" rx="1.3" fill="#9cd94a" stroke="#0e1114" stroke-width="1.2"></rect><rect x="13" y="8" width="6" height="8" rx="2" fill="#0e1114"></rect><rect x="69" y="8" width="6" height="8" rx="2" fill="#0e1114"></rect><path d="M17 14L34 17M71 14L54 17" stroke="#2b2f33" stroke-width="4.5" stroke-linecap="round"></path><path d="M36 25L29 37M52 25L59 37M24 37.5h10M54 37.5h10" stroke="#0e1114" stroke-width="2.5" stroke-linecap="round" fill="none"></path><rect x="40.5" y="25" width="7" height="4" fill="#0e1114"></rect><circle cx="44" cy="32" r="4.5" fill="#2b2f33" stroke="#0e1114" stroke-width="1.5"></circle><circle cx="44" cy="32" r="1.7" fill="#a9cfe3"></circle><rect x="33" y="8" width="22" height="18" rx="4" fill="#a9cfe3" stroke="#0e1114" stroke-width="2"></rect><rect x="36.5" y="12" width="15" height="6" rx="2" fill="#0e1114"></rect><circle cx="50" cy="22" r="1.7" fill="#9cd94a"></circle></svg></div>
+<div style="position: absolute; right: 30px; bottom: 30px; font-size: 12px">Launch pad</div>
+</div>
+<p aria-live="polite" style="margin: 0; font-size: 15px; line-height: 1.4; min-height: 42px">{{caption}}</p>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 260px">
+<label for="r11-h" style="font-size: 13px; font-weight: 600">Hours since the last drink: {{hrs}}</label>
+<input id="r11-h" type="range" min="0" max="12" step="0.5" value="{{h}}" aria-valuetext="{{hText}}" onChange="{{onH}}" style="width: 100%; height: 44px; accent-color: #7fbf2e">
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px; flex: 1 1 260px">
+<label for="r11-b" style="font-size: 13px; font-weight: 600">Alcohol concentration: {{bacText}}</label>
+<input id="r11-b" type="range" min="0" max="10" step="1" value="{{b}}" aria-valuetext="{{bText}}" onChange="{{onB}}" style="width: 100%; height: 44px; accent-color: #7fbf2e">
+</div>
+</div>
+<div style="margin-top: auto; padding: 14px 16px; background: #0e1114; color: #ffffff; border-radius: 12px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
+<p style="margin: 0; font-size: 17px; font-weight: 600; line-height: 1.35">8 hours since the last drink, and below 0.04. Both, and never while under the influence.</p>
+<span style="flex-shrink: 0; font-size: 12px; font-weight: 600; padding: 6px 10px; border-radius: 8px; background: #2b2f33; color: #a9cfe3; white-space: nowrap; font-variant-numeric: tabular-nums">Part 107 rules</span>
+</div>
+<div style="display: flex; align-items: center; gap: 10px">
+<svg aria-hidden="true" width="48" height="52" viewBox="0 0 48 52" fill="none" style="flex-shrink: 0">
+<path d="M5 52C5 45 13 41.5 24 41.5C35 41.5 43 45 43 52Z" fill="#a9cfe3"></path>
+<path d="M19 41.5L24 47L29 41.5" stroke="#6fa6c6" stroke-width="1.5" stroke-linejoin="round"></path>
+<rect x="29" y="45.5" width="9" height="4.5" rx="1.5" fill="#9cd94a"></rect>
+<rect x="20" y="33" width="8" height="9" fill="#dcbf98"></rect>
+<path d="M12 14Q12 6 24 6Q36 6 36 14L36 26Q36 31 31.5 34.5L27.5 37.5Q24 39.5 20.5 37.5L16.5 34.5Q12 31 12 26Z" fill="#f0d6b4"></path>
+<path d="M10.5 17Q9.5 3 24 3Q38.5 3 37.5 17L35 13.5Q24 9.5 13 13.5Z" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8" stroke-linejoin="round"></path>
+<rect x="7" y="15" width="5.5" height="11.5" rx="2" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8"></rect>
+<rect x="35.5" y="15" width="5.5" height="11.5" rx="2" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8"></rect>
+<path d="M12.5 16L35.5 16L34.5 23Q30 25.8 26 22.6L24 21.6L22 22.6Q18 25.8 13.5 23Z" fill="#6fa6c6" stroke="#2b2f33" stroke-width="0.8" stroke-linejoin="round"></path>
+<path d="M15 18L21.5 18" stroke="#e7f2f8" stroke-width="1.1" stroke-linecap="round"></path>
+<path d="M27.5 19.5h5" stroke="#9cd94a" stroke-width="1.1" stroke-linecap="round"></path>
+<path d="M20.5 30.5Q24 32.6 27.5 30.5" stroke="#2b2f33" stroke-width="1.4" stroke-linecap="round"></path>
+<path d="M9.5 26Q10.5 33.5 18.5 34" stroke="#8a9198" stroke-width="1.5" stroke-linecap="round"></path>
+<circle cx="19.5" cy="34" r="1.7" fill="#9cd94a"></circle>
+</svg>
+<p style="margin: 0; padding: 8px 12px; background: #eaf6d8; border: 2px solid #9cd94a; border-radius: 13px; color: #2b2f33; font-size: 13px; line-height: 1.5">0.08 is the driving limit. For flying it is 0.04.</p>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":720,"height":820}}'>
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { h: 4, b: 2 }; }
+renderVals() {
+const h = this.state.h, b = this.state.b;
+const hOk = h >= 8, bOk = b < 4, ok = hOk && bOk;
+const bac = (b / 100).toFixed(2);
+let caption;
+if (ok) caption = 'Both gates are open: 8 hours have passed and the reading is below 0.04. You still may not fly while under the influence, whatever the numbers say.';
+else if (!hOk && bOk) caption = 'The reading is below 0.04, but only ' + h + ' hours have passed. The full 8 hours must pass as well.';
+else if (hOk) caption = '8 hours have passed, but the reading is ' + bac + '. It must be below 0.04; 0.04 itself is too high.';
+else caption = 'Neither gate is open: only ' + h + ' hours, and a reading of ' + bac + '.';
+const chip = (open) => open ? { border: '2px solid #9cd94a', bg: '#9cd94a', ink: '#0e1114', t: 'Open' } : { border: '2px solid #b42318', bg: '#FFFFFF', ink: '#b42318', t: 'Closed' };
+const c1 = chip(hOk), c2 = chip(bOk);
+return {
+h: h, b: b, hrs: h, bacText: bac, hText: h + ' hours since the last drink', bText: 'alcohol concentration ' + bac,
+hrW: (h / 12 * 100) + '%', hrFill: hOk ? '#9cd94a' : '#a9cfe3',
+bacX: (36 + b * 60) + 'px', bacFill: bOk ? '#9cd94a' : '#b42318',
+g1: c1.t, g1Border: c1.border, g1Bg: c1.bg, g1Ink: c1.ink, g2: c2.t, g2Border: c2.border, g2Bg: c2.bg, g2Ink: c2.ink,
+legal: ok, notLegal: !ok, caption: caption,
+onH: (e) => this.setState({ h: Number(e.target.value) }),
+onB: (e) => this.setState({ b: Number(e.target.value) })
+};
+}
+}
+</script>
+</body>
+</html>

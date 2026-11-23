@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Line of sight, scenario player</title>
+<script src="./_runtime/react.js"></script>
+<script src="./_runtime/react-dom.js"></script>
+<script src="./_runtime/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+a{color:#0e1114}a:hover{color:#000}
+
+@keyframes bprop{0%,100%{transform:scaleX(1)}50%{transform:scaleX(0.12)}}
+.pblade{transform-box:fill-box;transform-origin:center;animation:bprop 0.5s linear infinite}
+.pdisc{opacity:0;transition:opacity 0.25s ease}
+.fly .pblade{animation-duration:0.1s}
+.fly .pdisc{opacity:0.65}
+@media (prefers-reduced-motion: reduce){.pblade{animation:none}}
+
+</style>
+</helmet>
+<div style="width: 720px; height: 820px; box-sizing: border-box; padding: 24px; background: #f6f8fa; color: #0e1114; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 16px">
+<h1 style="margin: 0; font-size: 24px; font-weight: 600">Line of sight</h1>
+<span style="font-size: 13px; padding: 6px 12px; border-radius: 8px; background: #2b2f33; color: #a9cfe3; font-weight: 600">Regulations</span>
+</div>
+<div style="width: 672px; height: 420px; box-sizing: border-box; padding: 14px; background: #FFFFFF; border: 1px solid #e3e6ea; border-radius: 12px; display: flex; flex-direction: column; gap: 10px">
+<div style="position: relative; height: 196px; flex-shrink: 0; border-radius: 10px; background: #e7f2f8; overflow: hidden">
+<svg aria-hidden="true" width="642" height="196" viewBox="0 0 642 196" fill="none" style="position: absolute; left: 0; top: 0">
+<rect x="0" y="166" width="642" height="30" fill="#e3e6ea"></rect><path d="M0 166h642" stroke="#0e1114" stroke-width="2"></path>
+<rect x="300" y="60" width="84" height="106" fill="#FFFFFF" stroke="#0e1114" stroke-width="2"></rect>
+<path d="M316 80h14M354 80h14M316 104h14M354 104h14M316 128h14M354 128h14" stroke="#8a9198" stroke-width="8"></path>
+<g style="" transform="translate(84 166) scale(1.0)"><circle cx="0" cy="-34" r="7" fill="#2b2f33"></circle><path d="M-9 0L-9 -16Q-9 -25 0 -25Q9 -25 9 -16L9 0Z" fill="#2b2f33"></path></g>
+<text x="84" y="186" font-size="11" font-weight="600" fill="#0e1114" text-anchor="middle" style="">Pilot</text>
+<g style="opacity: {{oVN}}; transition: opacity 0.5s ease"><g style="" transform="translate(134 166) scale(1.0)"><circle cx="0" cy="-34" r="7" fill="#6fa6c6"></circle><path d="M-9 0L-9 -16Q-9 -25 0 -25Q9 -25 9 -16L9 0Z" fill="#6fa6c6"></path></g><text x="140" y="186" font-size="11" font-weight="600" fill="#0e1114" text-anchor="middle" style="">Observer</text></g>
+<g style="opacity: {{oVF}}; transition: opacity 0.5s ease"><g style="" transform="translate(566 166) scale(1.0)"><circle cx="0" cy="-34" r="7" fill="#6fa6c6"></circle><path d="M-9 0L-9 -16Q-9 -25 0 -25Q9 -25 9 -16L9 0Z" fill="#6fa6c6"></path></g><text x="566" y="186" font-size="11" font-weight="600" fill="#0e1114" text-anchor="middle" style="">Observer, on radio</text></g>
+<g style="opacity: {{oD1}}; transition: opacity 0.5s ease"><svg x="170" y="44" width="66" height="30.0" viewBox="0 0 88 40" fill="none" class="" style="overflow: visible; "><rect x="42.5" y="3" width="3" height="6" fill="#0e1114"></rect><ellipse class="pdisc" cx="44" cy="2.6" rx="11" ry="2.6" fill="#9cd94a"></ellipse><rect class="pblade" x="33" y="1.3" width="22" height="2.6" rx="1.3" fill="#9cd94a" stroke="#0e1114" stroke-width="1.2"></rect><ellipse class="pdisc" cx="16" cy="6.5" rx="14" ry="2.6" fill="#9cd94a"></ellipse><rect class="pblade" x="2" y="5.2" width="28" height="2.6" rx="1.3" fill="#9cd94a" stroke="#0e1114" stroke-width="1.2"></rect><ellipse class="pdisc" cx="72" cy="6.5" rx="14" ry="2.6" fill="#9cd94a"></ellipse><rect class="pblade" x="58" y="5.2" width="28" height="2.6" rx="1.3" fill="#9cd94a" stroke="#0e1114" stroke-width="1.2"></rect><rect x="13" y="8" width="6" height="8" rx="2" fill="#0e1114"></rect><rect x="69" y="8" width="6" height="8" rx="2" fill="#0e1114"></rect><path d="M17 14L34 17M71 14L54 17" stroke="#2b2f33" stroke-width="4.5" stroke-linecap="round"></path><path d="M36 25L29 37M52 25L59 37M24 37.5h10M54 37.5h10" stroke="#0e1114" stroke-width="2.5" stroke-linecap="round" fill="none"></path><rect x="40.5" y="25" width="7" height="4" fill="#0e1114"></rect><circle cx="44" cy="32" r="4.5" fill="#2b2f33" stroke="#0e1114" stroke-width="1.5"></circle><circle cx="44" cy="32" r="1.7" fill="#a9cfe3"></circle><rect x="33" y="8" width="22" height="18" rx="4" fill="#a9cfe3" stroke="#0e1114" stroke-width="2"></rect><rect x="36.5" y="12" width="15" height="6" rx="2" fill="#0e1114"></rect><circle cx="50" cy="22" r="1.7" fill="#9cd94a"></circle></svg></g>
+<g style="opacity: {{oD2}}; transition: opacity 0.5s ease"><svg x="430" y="50" width="66" height="30.0" viewBox="0 0 88 40" fill="none" class="" style="overflow: visible; "><rect x="42.5" y="3" width="3" height="6" fill="#0e1114"></rect><ellipse class="pdisc" cx="44" cy="2.6" rx="11" ry="2.6" fill="#9cd94a"></ellipse><rect class="pblade" x="33" y="1.3" width="22" height="2.6" rx="1.3" fill="#9cd94a" stroke="#0e1114" stroke-width="1.2"></rect><ellipse class="pdisc" cx="16" cy="6.5" rx="14" ry="2.6" fill="#9cd94a"></ellipse><rect class="pblade" x="2" y="5.2" width="28" height="2.6" rx="1.3" fill="#9cd94a" stroke="#0e1114" stroke-width="1.2"></rect><ellipse class="pdisc" cx="72" cy="6.5" rx="14" ry="2.6" fill="#9cd94a"></ellipse><rect class="pblade" x="58" y="5.2" width="28" height="2.6" rx="1.3" fill="#9cd94a" stroke="#0e1114" stroke-width="1.2"></rect><rect x="13" y="8" width="6" height="8" rx="2" fill="#0e1114"></rect><rect x="69" y="8" width="6" height="8" rx="2" fill="#0e1114"></rect><path d="M17 14L34 17M71 14L54 17" stroke="#2b2f33" stroke-width="4.5" stroke-linecap="round"></path><path d="M36 25L29 37M52 25L59 37M24 37.5h10M54 37.5h10" stroke="#0e1114" stroke-width="2.5" stroke-linecap="round" fill="none"></path><rect x="40.5" y="25" width="7" height="4" fill="#0e1114"></rect><circle cx="44" cy="32" r="4.5" fill="#2b2f33" stroke="#0e1114" stroke-width="1.5"></circle><circle cx="44" cy="32" r="1.7" fill="#a9cfe3"></circle><rect x="33" y="8" width="22" height="18" rx="4" fill="#a9cfe3" stroke="#0e1114" stroke-width="2"></rect><rect x="36.5" y="12" width="15" height="6" rx="2" fill="#0e1114"></rect><circle cx="50" cy="22" r="1.7" fill="#9cd94a"></circle></svg></g>
+<path d="M90 130L196 76" stroke="#4f7d14" stroke-width="2.5" style="opacity: {{oL1}}; transition: opacity 0.5s ease"></path>
+<path d="M140 130L198 78" stroke="#4f7d14" stroke-width="2.5" style="opacity: {{oL4}}; transition: opacity 0.5s ease"></path>
+<path d="M90 130L298 96" stroke="#b42318" stroke-width="2.5" stroke-dasharray="6 6" style="opacity: {{oL2}}; transition: opacity 0.5s ease"></path>
+<path d="M284 86l14 14M298 86l-14 14" stroke="#b42318" stroke-width="3" stroke-linecap="round" style="opacity: {{oL2}}; transition: opacity 0.5s ease"></path>
+<path d="M560 130L484 82" stroke="#4f7d14" stroke-width="2.5" style="opacity: {{oL3}}; transition: opacity 0.5s ease"></path>
+</svg>
+<div style="position: absolute; left: 30px; top: 96px; font-size: 12px; font-weight: 600; padding: 2px 8px; border: 1.5px solid #0e1114; border-radius: 999px; background: #FFFFFF">{{gear}}</div>
+<div style="position: absolute; left: 10px; top: 8px; max-width: 622px; font-size: 12.5px; font-weight: 600; background: #FFFFFF; padding: 2px 8px; border-radius: 6px">{{sceneLabel}}</div>
+</div>
+<div style="font-size: 15px; font-weight: 600; line-height: 1.3">{{question}}</div>
+<div role="group" aria-label="Answers" style="display: grid; grid-template-columns: repeat({{cols}}, minmax(0, 1fr)); gap: 8px">
+<sc-for list="{{opts}}" as="o" hint-placeholder-count="2">
+<button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 6px; text-align: left; padding: 8px 12px; border-radius: 10px; cursor: pointer; font: 600 14px 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.25; color: #0e1114; border: {{o.border}}; background: {{o.bg}}"><span>{{o.label}}</span><span style="font-size: 12px; color: {{o.markInk}}">{{o.mark}}</span></button>
+</sc-for>
+</div>
+<div aria-live="polite" style="flex-grow: 1; display: flex; align-items: center; padding: 6px 12px; border-radius: 10px; font-size: 13.5px; font-weight: 500; line-height: 1.4; border: {{fbBorder}}; color: {{fbInk}}; background: {{fbBg}}">{{feedback}}</div>
+</div>
+<p aria-live="polite" style="margin: 0; font-size: 15px; line-height: 1.4; min-height: 42px">{{caption}}</p>
+<div style="display: flex; align-items: center; gap: 12px">
+<span style="font-size: 14px; font-weight: 600; font-variant-numeric: tabular-nums">{{progress}}</span>
+<button type="button" onClick="{{back}}" style="min-height: 44px; padding: 0 16px; font: 600 14px 'Helvetica Neue', Helvetica, Arial, sans-serif; border-radius: 999px; cursor: pointer; margin-left: auto; border: 2px solid #0e1114; background: #FFFFFF; color: #0e1114">Back</button>
+<button type="button" onClick="{{nextOne}}" style="min-height: 44px; padding: 0 16px; font: 600 14px 'Helvetica Neue', Helvetica, Arial, sans-serif; border-radius: 999px; cursor: pointer; border: 2px solid #9cd94a; background: #9cd94a; color: #0e1114">{{nextLabel}}</button>
+</div>
+<div style="margin-top: auto; padding: 14px 16px; background: #0e1114; color: #ffffff; border-radius: 12px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
+<p style="margin: 0; font-size: 17px; font-weight: 600; line-height: 1.35">Keep the drone in sight with your own eyes for the whole flight. Glasses and contacts are the only aid allowed.</p>
+<span style="flex-shrink: 0; font-size: 12px; font-weight: 600; padding: 6px 10px; border-radius: 8px; background: #2b2f33; color: #a9cfe3; white-space: nowrap; font-variant-numeric: tabular-nums">Part 107 rules</span>
+</div>
+<div style="display: flex; align-items: center; gap: 10px">
+<svg aria-hidden="true" width="48" height="52" viewBox="0 0 48 52" fill="none" style="flex-shrink: 0">
+<path d="M5 52C5 45 13 41.5 24 41.5C35 41.5 43 45 43 52Z" fill="#a9cfe3"></path>
+<path d="M19 41.5L24 47L29 41.5" stroke="#6fa6c6" stroke-width="1.5" stroke-linejoin="round"></path>
+<rect x="29" y="45.5" width="9" height="4.5" rx="1.5" fill="#9cd94a"></rect>
+<rect x="20" y="33" width="8" height="9" fill="#dcbf98"></rect>
+<path d="M12 14Q12 6 24 6Q36 6 36 14L36 26Q36 31 31.5 34.5L27.5 37.5Q24 39.5 20.5 37.5L16.5 34.5Q12 31 12 26Z" fill="#f0d6b4"></path>
+<path d="M10.5 17Q9.5 3 24 3Q38.5 3 37.5 17L35 13.5Q24 9.5 13 13.5Z" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8" stroke-linejoin="round"></path>
+<rect x="7" y="15" width="5.5" height="11.5" rx="2" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8"></rect>
+<rect x="35.5" y="15" width="5.5" height="11.5" rx="2" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8"></rect>
+<path d="M12.5 16L35.5 16L34.5 23Q30 25.8 26 22.6L24 21.6L22 22.6Q18 25.8 13.5 23Z" fill="#6fa6c6" stroke="#2b2f33" stroke-width="0.8" stroke-linejoin="round"></path>
+<path d="M15 18L21.5 18" stroke="#e7f2f8" stroke-width="1.1" stroke-linecap="round"></path>
+<path d="M27.5 19.5h5" stroke="#9cd94a" stroke-width="1.1" stroke-linecap="round"></path>
+<path d="M20.5 30.5Q24 32.6 27.5 30.5" stroke="#2b2f33" stroke-width="1.4" stroke-linecap="round"></path>
+<path d="M9.5 26Q10.5 33.5 18.5 34" stroke="#8a9198" stroke-width="1.5" stroke-linecap="round"></path>
+<circle cx="19.5" cy="34" r="1.7" fill="#9cd94a"></circle>
+</svg>
+<p style="margin: 0; padding: 8px 12px; background: #eaf6d8; border: 2px solid #9cd94a; border-radius: 13px; color: #2b2f33; font-size: 13px; line-height: 1.5">A screen shows you the picture. It does not show you the drone.</p>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":720,"height":820}}'>
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { i: 0, pick: -1 }; }
+renderVals() {
+const S = [{"label": "The pilot wears eyeglasses and watches the drone directly.", "q": "Does this meet the line-of-sight rule?", "opts": ["Meets the rule", "Does not"], "a": 0, "why": "Glasses and contact lenses are allowed. They are the one aid the rule permits.", "v": {"oVN": 0, "oVF": 0, "oD1": 1, "oD2": 0, "oL1": 1, "oL2": 0, "oL3": 0, "oL4": 0, "gear": "Eyeglasses"}}, {"label": "The drone is far out. The pilot keeps track of it through binoculars.", "q": "Does this meet the line-of-sight rule?", "opts": ["Meets the rule", "Does not"], "a": 1, "why": "Vision must be unaided by any device other than corrective lenses. Binoculars cannot be how the drone is kept in sight.", "v": {"oVN": 0, "oVF": 0, "oD1": 1, "oD2": 0, "oL1": 0, "oL2": 0, "oL3": 0, "oL4": 0, "gear": "Binoculars"}}, {"label": "The pilot wears FPV goggles. Nobody else is watching the drone.", "q": "Does this meet the line-of-sight rule?", "opts": ["Meets the rule", "Does not"], "a": 1, "why": "Goggles show the camera view, not the aircraft. Someone on the crew must keep it in unaided sight.", "v": {"oVN": 0, "oVF": 0, "oD1": 1, "oD2": 0, "oL1": 0, "oL2": 0, "oL3": 0, "oL4": 0, "gear": "FPV goggles"}}, {"label": "The pilot wears FPV goggles. An observer beside them watches the drone and they keep talking.", "q": "Does this meet the line-of-sight rule?", "opts": ["Meets the rule", "Does not"], "a": 0, "why": "A visual observer may be the one who keeps the drone in sight, as long as the crew stays in communication.", "v": {"oVN": 1, "oVF": 0, "oD1": 1, "oD2": 0, "oL1": 0, "oL2": 0, "oL3": 0, "oL4": 1, "gear": "FPV goggles"}}, {"label": "The drone goes behind a building, out of the pilot’s sight. A distant observer can see it.", "q": "Does this meet the line-of-sight rule?", "opts": ["Meets the rule", "Does not"], "a": 1, "why": "The pilot, the person at the controls, and the observer must each be able to see the drone for the whole flight. An observer does not extend your range.", "v": {"oVN": 0, "oVF": 1, "oD1": 0, "oD2": 1, "oL1": 0, "oL2": 1, "oL3": 1, "oL4": 0, "gear": "No aid"}}];
+const n = S.length, i = this.state.i, p = this.state.pick, s = S[i];
+const right = p === s.a;
+let feedback = "Meets the rule, or does not? Make your call.", fbBorder = '2px solid #e3e6ea', fbInk = '#0e1114', fbBg = '#f6f8fa';
+if (p >= 0 && right) { feedback = 'Correct. ' + s.why; fbBorder = '2px solid #7fbf2e'; fbBg = '#eaf6d8'; }
+else if (p >= 0) { feedback = 'Not "' + s.opts[p] + '". ' + s.why; fbBorder = '2px dashed #b42318'; fbInk = '#b42318'; fbBg = '#FFFFFF'; }
+return Object.assign({
+sceneLabel: s.label, question: s.q, cols: s.opts.length > 3 ? 2 : s.opts.length,
+opts: s.opts.map((label, k) => {
+const mine = p === k, ok = mine && right;
+return { label: label, pressed: mine ? 'true' : 'false',
+border: ok ? '2px solid #7fbf2e' : mine ? '2px dashed #b42318' : '2px solid #0e1114',
+bg: ok ? '#eaf6d8' : '#FFFFFF', mark: ok ? 'Correct' : mine ? 'Not this' : '', markInk: ok ? '#33590a' : '#b42318',
+pick: () => this.setState({ pick: k }) };
+}),
+feedback: feedback, fbBorder: fbBorder, fbInk: fbInk, fbBg: fbBg,
+caption: "Each scene changes who is watching and how. Decide whether the crew still has line of sight.",
+progress: 'Scenario ' + (i + 1) + ' of ' + n,
+nextLabel: i === n - 1 ? 'Start over' : 'Next',
+nextOne: () => this.setState({ i: (i + 1) % n, pick: -1 }),
+back: () => this.setState({ i: Math.max(0, i - 1), pick: -1 })
+}, s.v);
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lights at night, scenario player</title>
+<script src="./_runtime/react.js"></script>
+<script src="./_runtime/react-dom.js"></script>
+<script src="./_runtime/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+a{color:#0e1114}a:hover{color:#000}
+
+@keyframes bprop{0%,100%{transform:scaleX(1)}50%{transform:scaleX(0.12)}}
+.pblade{transform-box:fill-box;transform-origin:center;animation:bprop 0.5s linear infinite}
+.pdisc{opacity:0;transition:opacity 0.25s ease}
+.fly .pblade{animation-duration:0.1s}
+.fly .pdisc{opacity:0.65}
+@media (prefers-reduced-motion: reduce){.pblade{animation:none}}
+
+</style>
+</helmet>
+<div style="width: 720px; height: 820px; box-sizing: border-box; padding: 24px; background: #f6f8fa; color: #0e1114; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 16px">
+<h1 style="margin: 0; font-size: 24px; font-weight: 600">Lights at night</h1>
+<span style="font-size: 13px; padding: 6px 12px; border-radius: 8px; background: #2b2f33; color: #a9cfe3; font-weight: 600">Airspace</span>
+</div>
+<div style="width: 672px; height: 420px; box-sizing: border-box; padding: 14px; background: #FFFFFF; border: 1px solid #e3e6ea; border-radius: 12px; display: flex; flex-direction: column; gap: 10px">
+<div style="position: relative; height: 196px; flex-shrink: 0; border-radius: 10px; background: #0e1114; overflow: hidden">
+<svg aria-hidden="true" width="642" height="196" viewBox="0 0 642 196" fill="none" style="position: absolute; left: 0; top: 0">
+<circle cx="40" cy="60" r="1" fill="#8a9198"></circle><circle cx="120" cy="30" r="1" fill="#8a9198"></circle><circle cx="210" cy="70" r="1" fill="#8a9198"></circle><circle cx="470" cy="40" r="1" fill="#8a9198"></circle><circle cx="540" cy="80" r="1" fill="#8a9198"></circle><circle cx="600" cy="30" r="1" fill="#8a9198"></circle><circle cx="90" cy="120" r="1" fill="#8a9198"></circle><circle cx="580" cy="130" r="1" fill="#8a9198"></circle><circle cx="330" cy="24" r="1" fill="#8a9198"></circle><circle cx="420" cy="150" r="1" fill="#8a9198"></circle>
+<path d="M0 176h642" stroke="#2b2f33" stroke-width="2"></path>
+<g style="opacity: {{oGL}}; transition: opacity 0.5s ease"><circle cx="271" cy="92" r="22" fill="#30a46c" opacity="0.25"></circle><circle cx="271" cy="92" r="10" fill="#30a46c"></circle><text x="271" y="136" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle" style="">Green</text></g><g style="opacity: {{oRR}}; transition: opacity 0.5s ease"><circle cx="371" cy="92" r="22" fill="#e5484d" opacity="0.25"></circle><circle cx="371" cy="92" r="10" fill="#e5484d"></circle><text x="371" y="136" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle" style="">Red</text></g>
+<g style="opacity: {{oR1}}; transition: opacity 0.5s ease"><circle cx="321" cy="92" r="22" fill="#e5484d" opacity="0.25"></circle><circle cx="321" cy="92" r="10" fill="#e5484d"></circle><text x="321" y="136" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle" style="">Red</text></g><g style="opacity: {{oG1}}; transition: opacity 0.5s ease"><circle cx="321" cy="92" r="22" fill="#30a46c" opacity="0.25"></circle><circle cx="321" cy="92" r="10" fill="#30a46c"></circle><text x="321" y="136" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle" style="">Green</text></g><g style="opacity: {{oW}}; transition: opacity 0.5s ease"><circle cx="321" cy="92" r="22" fill="#FFFFFF" opacity="0.25"></circle><circle cx="321" cy="92" r="10" fill="#FFFFFF"></circle><text x="321" y="136" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle" style="">White</text></g>
+<g style="opacity: {{oTower}}; transition: opacity 0.5s ease"><path d="M321 176V44" stroke="#8a9198" stroke-width="4"></path><path d="M311 176L321 60L331 176M313 150h16M315 120h12M317 90h8" stroke="#8a9198" stroke-width="1.5" fill="none"></path>
+<circle cx="321" cy="42" r="16" fill="#e5484d" opacity="0.25"></circle><circle cx="321" cy="42" r="7" fill="#e5484d"></circle><circle cx="321" cy="110" r="5" fill="#e5484d"></circle>
+<path d="M321 60L150 176M321 60L492 176M321 110L226 176M321 110L416 176" stroke="#8a9198" stroke-width="1" stroke-dasharray="2 7" opacity="0.5"></path>
+<text x="150" y="168" font-size="11" font-weight="600" fill="#FFFFFF" text-anchor="middle" style="">Guy wires: no lights</text><text x="350" y="46" font-size="11" font-weight="600" fill="#FFFFFF" text-anchor="start" style="">Red obstruction lights</text></g>
+</svg>
+<div style="position: absolute; left: 10px; top: 8px; max-width: 622px; font-size: 12.5px; font-weight: 600; background: #FFFFFF; padding: 2px 8px; border-radius: 6px">{{sceneLabel}}</div>
+</div>
+<div style="font-size: 15px; font-weight: 600; line-height: 1.3">{{question}}</div>
+<div role="group" aria-label="Answers" style="display: grid; grid-template-columns: repeat({{cols}}, minmax(0, 1fr)); gap: 8px">
+<sc-for list="{{opts}}" as="o" hint-placeholder-count="2">
+<button type="button" onClick="{{o.pick}}" aria-pressed="{{o.pressed}}" style="min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 6px; text-align: left; padding: 8px 12px; border-radius: 10px; cursor: pointer; font: 600 14px 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.25; color: #0e1114; border: {{o.border}}; background: {{o.bg}}"><span>{{o.label}}</span><span style="font-size: 12px; color: {{o.markInk}}">{{o.mark}}</span></button>
+</sc-for>
+</div>
+<div aria-live="polite" style="flex-grow: 1; display: flex; align-items: center; padding: 6px 12px; border-radius: 10px; font-size: 13.5px; font-weight: 500; line-height: 1.4; border: {{fbBorder}}; color: {{fbInk}}; background: {{fbBg}}">{{feedback}}</div>
+</div>
+<p aria-live="polite" style="margin: 0; font-size: 15px; line-height: 1.4; min-height: 42px">{{caption}}</p>
+<div style="display: flex; align-items: center; gap: 12px">
+<span style="font-size: 14px; font-weight: 600; font-variant-numeric: tabular-nums">{{progress}}</span>
+<button type="button" onClick="{{back}}" style="min-height: 44px; padding: 0 16px; font: 600 14px 'Helvetica Neue', Helvetica, Arial, sans-serif; border-radius: 999px; cursor: pointer; margin-left: auto; border: 2px solid #0e1114; background: #FFFFFF; color: #0e1114">Back</button>
+<button type="button" onClick="{{nextOne}}" style="min-height: 44px; padding: 0 16px; font: 600 14px 'Helvetica Neue', Helvetica, Arial, sans-serif; border-radius: 999px; cursor: pointer; border: 2px solid #9cd94a; background: #9cd94a; color: #0e1114">{{nextLabel}}</button>
+</div>
+<div style="margin-top: auto; padding: 14px 16px; background: #0e1114; color: #ffffff; border-radius: 12px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
+<p style="margin: 0; font-size: 17px; font-weight: 600; line-height: 1.35">Red is the left wing, green is the right wing, white is the tail.</p>
+<span style="flex-shrink: 0; font-size: 12px; font-weight: 600; padding: 6px 10px; border-radius: 8px; background: #2b2f33; color: #a9cfe3; white-space: nowrap; font-variant-numeric: tabular-nums">FAA pilot handbook</span>
+</div>
+<div style="display: flex; align-items: center; gap: 10px">
+<svg aria-hidden="true" width="48" height="52" viewBox="0 0 48 52" fill="none" style="flex-shrink: 0">
+<path d="M5 52C5 45 13 41.5 24 41.5C35 41.5 43 45 43 52Z" fill="#a9cfe3"></path>
+<path d="M19 41.5L24 47L29 41.5" stroke="#6fa6c6" stroke-width="1.5" stroke-linejoin="round"></path>
+<rect x="29" y="45.5" width="9" height="4.5" rx="1.5" fill="#9cd94a"></rect>
+<rect x="20" y="33" width="8" height="9" fill="#dcbf98"></rect>
+<path d="M12 14Q12 6 24 6Q36 6 36 14L36 26Q36 31 31.5 34.5L27.5 37.5Q24 39.5 20.5 37.5L16.5 34.5Q12 31 12 26Z" fill="#f0d6b4"></path>
+<path d="M10.5 17Q9.5 3 24 3Q38.5 3 37.5 17L35 13.5Q24 9.5 13 13.5Z" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8" stroke-linejoin="round"></path>
+<rect x="7" y="15" width="5.5" height="11.5" rx="2" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8"></rect>
+<rect x="35.5" y="15" width="5.5" height="11.5" rx="2" fill="#2b2f33" stroke="#8a9198" stroke-width="0.8"></rect>
+<path d="M12.5 16L35.5 16L34.5 23Q30 25.8 26 22.6L24 21.6L22 22.6Q18 25.8 13.5 23Z" fill="#6fa6c6" stroke="#2b2f33" stroke-width="0.8" stroke-linejoin="round"></path>
+<path d="M15 18L21.5 18" stroke="#e7f2f8" stroke-width="1.1" stroke-linecap="round"></path>
+<path d="M27.5 19.5h5" stroke="#9cd94a" stroke-width="1.1" stroke-linecap="round"></path>
+<path d="M20.5 30.5Q24 32.6 27.5 30.5" stroke="#2b2f33" stroke-width="1.4" stroke-linecap="round"></path>
+<path d="M9.5 26Q10.5 33.5 18.5 34" stroke="#8a9198" stroke-width="1.5" stroke-linecap="round"></path>
+<circle cx="19.5" cy="34" r="1.7" fill="#9cd94a"></circle>
+</svg>
+<p style="margin: 0; padding: 8px 12px; background: #eaf6d8; border: 2px solid #9cd94a; border-radius: 13px; color: #2b2f33; font-size: 13px; line-height: 1.5">Red and green together means it is coming at you. Yield early.</p>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":720,"height":820}}'>
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { i: 0, pick: -1 }; }
+renderVals() {
+const S = [{"label": "Night. An aircraft shows a green light on your left and a red light on your right.", "q": "Which way is the aircraft flying?", "opts": ["Toward you", "Away from you", "Crossing right to left", "Crossing left to right"], "a": 0, "why": "Red is on its left wing and green on its right. With red on your right, its nose is pointed at you.", "v": {"oGL": 1, "oRR": 1, "oR1": 0, "oG1": 0, "oW": 0, "oTower": 0}}, {"label": "Night. You see only a red light, moving.", "q": "Which way is the aircraft flying?", "opts": ["Toward you", "Away from you", "Crossing right to left", "Crossing left to right"], "a": 2, "why": "Red is the left wingtip. You are looking at its left side, so it is crossing from your right to your left.", "v": {"oGL": 0, "oRR": 0, "oR1": 1, "oG1": 0, "oW": 0, "oTower": 0}}, {"label": "Night. You see only a green light, moving.", "q": "Which way is the aircraft flying?", "opts": ["Toward you", "Away from you", "Crossing right to left", "Crossing left to right"], "a": 3, "why": "Green is the right wingtip. You are looking at its right side, so it is crossing from your left to your right.", "v": {"oGL": 0, "oRR": 0, "oR1": 0, "oG1": 1, "oW": 0, "oTower": 0}}, {"label": "Night. You see only a steady white light.", "q": "Which way is the aircraft flying?", "opts": ["Toward you", "Away from you", "Crossing right to left", "Crossing left to right"], "a": 1, "why": "The white position light is on the tail. You are behind it, and it is flying away.", "v": {"oGL": 0, "oRR": 0, "oR1": 0, "oG1": 0, "oW": 1, "oTower": 0}}, {"label": "Night. A tall tower shows red obstruction lights. You need to fly past it.", "q": "How much room do you give the tower?", "opts": ["Just clear the lights", "Stay well away from it"], "a": 1, "why": "Guy wires are not lighted. The AIM says they can reach about 1,500 ft out from a tower and advises staying 2,000 ft away.", "v": {"oGL": 0, "oRR": 0, "oR1": 0, "oG1": 0, "oW": 0, "oTower": 1}}];
+const n = S.length, i = this.state.i, p = this.state.pick, s = S[i];
+const right = p === s.a;
+let feedback = "Read the lights, then make your call.", fbBorder = '2px solid #e3e6ea', fbInk = '#0e1114', fbBg = '#f6f8fa';
+if (p >= 0 && right) { feedback = 'Correct. ' + s.why; fbBorder = '2px solid #7fbf2e'; fbBg = '#eaf6d8'; }
+else if (p >= 0) { feedback = 'Not "' + s.opts[p] + '". ' + s.why; fbBorder = '2px dashed #b42318'; fbInk = '#b42318'; fbBg = '#FFFFFF'; }
+return Object.assign({
+sceneLabel: s.label, question: s.q, cols: s.opts.length > 3 ? 2 : s.opts.length,
+opts: s.opts.map((label, k) => {
+const mine = p === k, ok = mine && right;
+return { label: label, pressed: mine ? 'true' : 'false',
+border: ok ? '2px solid #7fbf2e' : mine ? '2px dashed #b42318' : '2px solid #0e1114',
+bg: ok ? '#eaf6d8' : '#FFFFFF', mark: ok ? 'Correct' : mine ? 'Not this' : '', markInk: ok ? '#33590a' : '#b42318',
+pick: () => this.setState({ pick: k }) };
+}),
+feedback: feedback, fbBorder: fbBorder, fbInk: fbInk, fbBg: fbBg,
+caption: "Each light is named on screen, so the answer never depends on telling the colors apart.",
+progress: 'Scene ' + (i + 1) + ' of ' + n,
+nextLabel: i === n - 1 ? 'Start over' : 'Next',
+nextOne: () => this.setState({ i: (i + 1) % n, pick: -1 }),
+back: () => this.setState({ i: Math.max(0, i - 1), pick: -1 })
+}, s.v);
+}
+}
+</script>
+</body>
+</html>
