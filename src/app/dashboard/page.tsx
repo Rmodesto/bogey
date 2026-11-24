@@ -13,6 +13,8 @@ import Button from "@/components/Button";
 import ProgressBar from "@/components/ProgressBar";
 import { scoreColor } from "@/lib/utils";
 
+// Sample data: progress tracking is not wired up yet. Everything shown on
+// this page is illustrative until real attempt history exists.
 const domains = [
   { name: "Regulations", score: 87, questions: 120 },
   { name: "Airspace Classification", score: 92, questions: 85 },

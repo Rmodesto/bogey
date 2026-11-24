@@ -21,10 +21,20 @@ function barColor(pct: number) {
 
 function ResultsContent() {
   const searchParams = useSearchParams();
-  const score = Number(searchParams.get("score") || 0);
-  const total = Number(searchParams.get("total") || examQuestions.length);
-  const timeSpent = Number(searchParams.get("time") || 0);
-  const userAnswers: (number | null)[] = JSON.parse(searchParams.get("answers") || "[]");
+  // Query params are user-editable: clamp the numbers to what this exam can
+  // actually produce and never let a malformed answers payload crash the page.
+  const total = examQuestions.length;
+  const score = Math.min(Math.max(Number(searchParams.get("score")) || 0, 0), total);
+  const timeSpent = Math.max(Number(searchParams.get("time")) || 0, 0);
+  let userAnswers: (number | null)[] = [];
+  try {
+    const parsed = JSON.parse(searchParams.get("answers") || "[]");
+    if (Array.isArray(parsed)) {
+      userAnswers = parsed.map((a) => (typeof a === "number" ? a : null)).slice(0, total);
+    }
+  } catch {
+    userAnswers = [];
+  }
 
   const percentage = Math.round((score / total) * 100);
   // Pass/fail is a count comparison, never a rounded percentage

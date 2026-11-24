@@ -1,0 +1,13 @@
+route,render_mode,first_load_js_kb_gz,cold_transfer_kb,warm_transfer_kb,requests,server_invocations_per_view,est_compute_ms_per_view,third_party_calls,lcp_mobile_ms,tbt_mobile_ms,usd_per_1k_views,notes
+/,static,97.1,240.6,1.1,14,0,0,0,444,0,0.035,includes 113.9KB content chunk it does not need
+/learn,static,97.1,118.6,1.0,10,0,0,0,480,0,0.017,only route without the content chunk
+/dashboard,static,97.1,236.1,0.8,12,0,0,0,468,0,0.035,hardcoded mock data
+/study,static,216,231.7,0.6,11,0,0,0,440,0,0.034,full bank + answer key in client JS; interactions = 0 bytes
+/exam,static,216,232.1,0.6,11,0,0,0,440,0,0.034,exam generated client-side seed 42; interactions = 0 bytes
+/results,static,217,242.3,1.1,15,0,0,0,748,0,0.036,regenerates exam seed 42; trusts URL params
+/learn/mod-regulations/les-reg-general,dynamic,308,325.9,6.2,12,1,50 (est),0,448,0,0.053,SSR per view; markdown parsed client-side
+/learn/mod-airspace/les-as-controlled,dynamic,308,335.1,7.9,14,1,50 (est),0,456,0,0.053,SSR per view
+/learn/mod-weather/les-wx-metar,dynamic,308,336.3,8.6,14,1,50 (est),0,464,0,0.053,highest JS exec 164ms (markdown + decoder)
+/learn/mod-loading/les-lp-weight,dynamic,308,325.4,5.6,12,1,50 (est),0,444,0,0.053,SSR per view
+/learn/mod-operations/les-ops-radio,dynamic,308,325.4,5.6,12,1,50 (est),0,436,0,0.053,SSR per view
+/learn/mod-regulations/les-reg-operating,dynamic,308,326.2,6.4,12,1,50 (est),0,436,0,0.053,largest lesson by content (21.5KB sections JSON)

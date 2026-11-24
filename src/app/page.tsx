@@ -16,16 +16,16 @@ import Badge from "@/components/Badge";
 import Button from "@/components/Button";
 
 const stats = [
-  { value: "94%", label: "Pass Rate", icon: TrendingUp },
-  { value: "12,400+", label: "Pilots Certified", icon: CheckCircle },
-  { value: "FAA", label: "Approved Content", icon: Shield },
+  { value: "197", label: "Practice Questions", icon: TrendingUp },
+  { value: "25", label: "Lessons Across 5 Domains", icon: CheckCircle },
+  { value: "60", label: "Question Exam Simulator", icon: Shield },
 ];
 
 const features = [
   {
-    title: "Adaptive Learning",
+    title: "Structured Curriculum",
     description:
-      "Our system identifies weak areas and creates personalized study plans to target your knowledge gaps.",
+      "Twenty-five lessons across the five exam domains, built section by section around the FAA's own study references.",
     icon: Brain,
   },
   {
@@ -41,9 +41,9 @@ const features = [
     icon: BookOpen,
   },
   {
-    title: "Progress Tracking",
+    title: "Domain Breakdown",
     description:
-      "Monitor your readiness across all exam domains with detailed analytics and performance insights.",
+      "Every practice exam ends with a per-domain score breakdown so you can see where to focus next.",
     icon: BarChart3,
   },
   {
@@ -53,9 +53,9 @@ const features = [
     icon: Smartphone,
   },
   {
-    title: "Up-to-Date Content",
+    title: "Referenced Content",
     description:
-      "All questions and materials are regularly updated to reflect current FAA regulations and standards.",
+      "Questions and lessons cite the regulations and FAA handbooks they come from, so you can check the source.",
     icon: RefreshCw,
   },
 ];
@@ -80,7 +80,7 @@ export default function Landing() {
       <section className="max-w-7xl mx-auto px-6 py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <Badge>FAA-Approved Curriculum</Badge>
+            <Badge>Aligned with the FAA Part 107 ACS</Badge>
             <h1 className="text-5xl font-semibold text-jet-black leading-tight mb-4 mt-6">
               Pass Your Part 107 Drone Exam
             </h1>
@@ -146,8 +146,8 @@ export default function Landing() {
             Ready to Get Certified?
           </h2>
           <p className="text-slate mb-8 max-w-xl mx-auto">
-            Join thousands of professional drone pilots who trusted our platform
-            to pass their Part 107 exam on the first try.
+            Study the full Part 107 curriculum, drill the question bank, and sit
+            a realistic 60-question practice exam before you book the real one.
           </p>
           <Button href="/study" className="px-8 py-3.5">
             Begin Training Now
