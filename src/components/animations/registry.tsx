@@ -2,13 +2,13 @@
 
 import dynamic from "next/dynamic";
 import type { ComponentType } from "react";
-import AirspaceVisualizer from "@/components/AirspaceVisualizer";
-import METARDecoder from "@/components/METARDecoder";
 
 // Maps a LessonSection visualizer type to its component. Animation components
 // load with next/dynamic so they stay out of the lesson page's first load.
 // Types must match the VisualizerConfigSchema enum in src/lib/part107/schema.ts.
 
+const AirspaceVisualizer = dynamic(() => import("@/components/AirspaceVisualizer"));
+const METARDecoder = dynamic(() => import("@/components/METARDecoder"));
 const AltitudeLimit = dynamic(() => import("./AltitudeLimit"));
 const CloudBox = dynamic(() => import("./CloudBox"));
 const DayTwilightNight = dynamic(() => import("./DayTwilightNight"));
