@@ -1,5 +1,3 @@
-"use client";
-
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { ReactNode, Children, isValidElement, cloneElement } from "react";
