@@ -15,7 +15,7 @@ export default function AltitudeLimit({ dark = false }: { dark?: boolean }) {
   const [alt, setAlt] = useState(620);
   const [near, setNear] = useState(true);
   const [moving, setMoving] = useState(false);
-  const flyTimer = useRef<ReturnType<typeof setTimeout>>();
+  const flyTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const reducedMotion = useReducedMotion();
 
   // Propellers blur while the scene is being driven, for 700 ms after the

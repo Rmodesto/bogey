@@ -17,7 +17,7 @@ export default function HeavyHotAndHigh() {
   const [w, setW] = useState(20);
   const [d, setD] = useState(1000);
   const [moving, setMoving] = useState(false);
-  const flyTimer = useRef<ReturnType<typeof setTimeout>>();
+  const flyTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const reducedMotion = useReducedMotion();
 
   function bump() {

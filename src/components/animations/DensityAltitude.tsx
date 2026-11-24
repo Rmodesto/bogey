@@ -16,7 +16,7 @@ export default function DensityAltitude() {
   const [e, setE] = useState(3000);
   const [t, setT] = useState(35);
   const [moving, setMoving] = useState(false);
-  const flyTimer = useRef<ReturnType<typeof setTimeout>>();
+  const flyTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const reducedMotion = useReducedMotion();
 
   function bump() {

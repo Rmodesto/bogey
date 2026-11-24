@@ -15,7 +15,7 @@ import { AIRSPEED_KN, groundspeedState } from "./logic/groundspeed";
 export default function Groundspeed() {
   const [wind, setWind] = useState(0);
   const [moving, setMoving] = useState(false);
-  const flyTimer = useRef<ReturnType<typeof setTimeout>>();
+  const flyTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const reducedMotion = useReducedMotion();
 
   // Propellers blur while the scene is being driven, for 700 ms after the

@@ -15,12 +15,12 @@ export function generateStaticParams() {
   );
 }
 
-export default function LessonPage({
+export default async function LessonPage({
   params,
 }: {
-  params: { moduleId: string; lessonId: string };
+  params: Promise<{ moduleId: string; lessonId: string }>;
 }) {
-  const { moduleId, lessonId } = params;
+  const { moduleId, lessonId } = await params;
   const mod = getModule(moduleId);
   const lesson = getLesson(moduleId, lessonId);
   if (!mod || !lesson) notFound();

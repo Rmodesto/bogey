@@ -14,7 +14,7 @@ export default function CloudBox() {
   const [alt, setAlt] = useState(300);
   const [vis, setVis] = useState(4);
   const [moving, setMoving] = useState(false);
-  const flyTimer = useRef<ReturnType<typeof setTimeout>>();
+  const flyTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const reducedMotion = useReducedMotion();
 
   function bump() {

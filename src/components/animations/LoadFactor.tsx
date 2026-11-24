@@ -14,7 +14,7 @@ import { loadFactorState } from "./logic/loadFactor";
 export default function LoadFactor() {
   const [bank, setBank] = useState(45);
   const [moving, setMoving] = useState(false);
-  const flyTimer = useRef<ReturnType<typeof setTimeout>>();
+  const flyTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const reducedMotion = useReducedMotion();
 
   function bump() {
