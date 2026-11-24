@@ -10,7 +10,9 @@
     "part107:validate": "npx tsx scripts/part107/validate.ts",
     "part107:build-content": "npx tsx scripts/part107/build-content.ts",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "postbuild": "node scripts/check-budgets.mjs",
+    "check:budgets": "node scripts/check-budgets.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.563.0",
