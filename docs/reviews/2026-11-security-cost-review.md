@@ -143,3 +143,17 @@ Measured today (mobile, throttled): LCP 436–748 ms, TBT 0 ms, CLS 0.000 — th
 4. **PR d — lazy leftovers + dead code (S):** `dynamic()` for AirspaceVisualizer/METARDecoder, delete `src/data/questions.ts`.
 5. **PR e — CI budget check (S):** build-output parser failing on JS budgets or any ƒ route.
 6. **PR f — Next 15.5.x upgrade (M):** last, on its own branch, after a and b land.
+
+---
+
+## Addendum: fixes implemented 2026-11-24 (same day)
+
+All six proposed chunks landed as commits `4a5fb1b`, `8f8c2f3`, `bbc80d5`, `8e07a10`, `d0092a5`:
+
+- **(a)** Marketing claims replaced with true figures; dashboard labeled sample data; security headers + `poweredByHeader: false` live (verified in response headers); `.env*` ignored; `npm audit fix` applied; `/results` params clamped and crash-proofed.
+- **(b+c)** Lesson route: dynamic ƒ → SSG ● (all 25 prerendered, `generateStaticParams` + server component); markdown renders on the server (AnnotatedMarkdown is a server component); study/exam/results are server pages over client islands. The 113.9 KB content chunk is gone from the client: first-load JS fell from 216–217 KB to ~100 KB on study/exam/results and 308 KB → 144 KB on lessons (Next 14 numbers). Exam seed is random per attempt and travels to /results in the URL (seedless links fall back to the historical fixed draw). Verified in-browser: two consecutive attempts draw different exams; forged/malformed result URLs render safely.
+- **(d)** AirspaceVisualizer and METARDecoder lazy-load; dead `src/data/questions.ts` deleted.
+- **(e)** `scripts/check-budgets.mjs` runs as postbuild: fails the build if any route exceeds its first-load budget (110/130/180 KB) or is not fully prerendered.
+- **(f)** Next 15.5.29 + React 19. Production `npm audit` drops from 1 critical + 4 high to two advisories nested in next's bundled postcss. First-load JS rises ~10 KB everywhere (React 19 runtime); final numbers: lessons 151.9 KB, app screens ~107–109 KB, marketing 104.7 KB — all within budget, all routes prerendered.
+
+Checks after each chunk and at the end: 232/232 tests, lint clean, tsc clean, content validator green, production build + budget check green. Re-run `.review/measure-routes.mjs` against a `next start` to refresh the transfer/vitals columns in `screen-cost.csv`; the cost model's "after fixes" row now holds (zero SSR invocations anywhere).
