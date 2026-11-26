@@ -23,8 +23,15 @@ test.describe("lesson", () => {
     await page.goto(url);
 
     await expect(page.getByRole("button", { name: "Previous" })).toHaveCount(0);
-    await page.getByRole("button", { name: "Continue" }).click();
-    await expect(page.getByRole("button", { name: "Previous" })).toBeVisible();
+
+    // The section controls are prerendered, so they are clickable before the
+    // island hydrates and an early click is silently dropped. Playwright waits
+    // for visible-and-enabled, which hydration does not change — so retry the
+    // click until it takes effect rather than waiting a fixed time.
+    await expect(async () => {
+      await page.getByRole("button", { name: "Continue" }).click();
+      await expect(page.getByRole("button", { name: "Previous" })).toBeVisible({ timeout: 1_000 });
+    }).toPass({ timeout: 15_000 });
 
     await page.getByRole("button", { name: "Previous" }).click();
     await expect(page.getByRole("button", { name: "Previous" })).toHaveCount(0);
@@ -34,9 +41,11 @@ test.describe("lesson", () => {
     test.skip(lesson.sections.length < 2, "lesson has a single section");
     await page.goto(url);
     const last = lesson.sections[lesson.sections.length - 1];
-    await page.getByRole("button", { name: title(last.title) }).first().click();
-    // The last section swaps Continue for the next-lesson link.
-    await expect(page.getByRole("button", { name: "Continue" })).toHaveCount(0);
+    await expect(async () => {
+      await page.getByRole("button", { name: title(last.title) }).first().click();
+      // The last section swaps Continue for the next-lesson link.
+      await expect(page.getByRole("button", { name: "Continue" })).toHaveCount(0, { timeout: 1_000 });
+    }).toPass({ timeout: 15_000 });
     await expect(page.getByRole("link", { name: /Next Lesson|Back to/i }).first()).toBeVisible();
   });
 
