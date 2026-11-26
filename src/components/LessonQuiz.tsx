@@ -76,7 +76,7 @@ export default function LessonQuiz({
     const pct = Math.round((score / questions.length) * 100);
     return (
       <div className="max-w-[610px] w-full bg-mist-blue border-2 border-ice-blue rounded-[13px] p-[34px] text-center">
-        <h3 className="text-xl font-semibold text-jet-black mb-[8px]">Quiz Complete</h3>
+        <h3 data-testid="quiz-complete" className="text-xl font-semibold text-jet-black mb-[8px]">Quiz Complete</h3>
         <p className="text-4xl font-bold text-jet-black mb-[13px]">{pct}%</p>
         <p className="text-sm text-slate">
           You got {score} out of {questions.length} correct
@@ -111,6 +111,7 @@ export default function LessonQuiz({
           {q.choices.map((choice) => (
             <button
               key={choice.id}
+              data-testid="quiz-choice"
               onClick={() => handleSelect(choice.id)}
               className={choiceClass(choice.id)}
             >
