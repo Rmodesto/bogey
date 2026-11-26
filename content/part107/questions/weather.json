@@ -680,5 +680,115 @@
     "difficulty": "medium",
     "status": "active",
     "version": 1
+  },
+  {
+    "id": "q-wx-032",
+    "stem": "A remote pilot wants to see where fronts and pressure systems are expected to be tomorrow afternoon. Which product shows this?",
+    "choices": [
+      { "id": "q-wx-032-a", "text": "A short-range surface prognostic chart", "isCorrect": true },
+      { "id": "q-wx-032-b", "text": "The current surface analysis chart", "isCorrect": false },
+      { "id": "q-wx-032-c", "text": "The METAR for the nearest airport", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "A short-range surface prognostic chart.",
+      "reason": "The Aviation Weather Handbook (FAA-H-8083-28B), section 27.10, says Short-Range Surface Prog Charts forecast surface pressure systems, fronts, and precipitation, each chart showing a snapshot of the weather expected at its valid time. Section 25.2.3 says the surface analysis chart is an analysis of surface observations, so it shows current positions, not forecasts. A METAR is a current observation at one airport.",
+      "keyTakeaway": "Analysis charts show what is happening now. Prog charts show what is forecast.",
+      "references": ["ref-awh-28b"]
+    },
+    "domain": "dom-weather",
+    "moduleId": "mod-weather",
+    "lessonId": "les-wx-sources",
+    "acsRefs": ["acs-ua-iii-a-k4"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-wx-033",
+    "stem": "A warm front is forecast to reach the job site tomorrow. What conditions should the remote pilot expect in the hours before it arrives?",
+    "choices": [
+      { "id": "q-wx-033-a", "text": "A narrow line of storms with sudden gusty wind shifts", "isCorrect": false },
+      { "id": "q-wx-033-b", "text": "Clearing skies with unlimited visibility and dry air", "isCorrect": false },
+      { "id": "q-wx-033-c", "text": "Layered clouds, rain or drizzle, and poor visibility", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Layered clouds, rain or drizzle, and poor visibility.",
+      "reason": "The Aviation Weather Handbook, section 11.3.1, says warm fronts have a gentle slope that favors widespread layered (stratiform) clouds and precipitation ahead of the front, with fog possible, light to moderate rain or drizzle, and poor visibility. A narrow band of storms with abrupt wind shifts fits a fast-moving cold front (section 11.3.2). Clearing usually comes only after the warm front passes, and even then haze may linger.",
+      "keyTakeaway": "Warm front ahead: widespread low clouds, steady light precipitation, poor visibility.",
+      "references": ["ref-awh-28b"]
+    },
+    "domain": "dom-weather",
+    "moduleId": "mod-weather",
+    "lessonId": "les-wx-hazards",
+    "acsRefs": ["acs-ua-iii-b-k1d"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-wx-034",
+    "stem": "Under a dark thunderstorm base a few miles away, a remote pilot sees dust and debris whirling at the ground but no funnel cloud. What does the Aviation Weather Handbook say this can indicate?",
+    "choices": [
+      { "id": "q-wx-034-a", "text": "A tornado may be on the ground even without a funnel", "isCorrect": true },
+      { "id": "q-wx-034-b", "text": "Nothing serious, because tornadoes always show a funnel", "isCorrect": false },
+      { "id": "q-wx-034-c", "text": "Only a funnel cloud that has not reached the ground", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "A tornado may be on the ground even without a funnel.",
+      "reason": "The Aviation Weather Handbook, section 22.7.9, says a tornado is often, but not always, visible as a funnel cloud, and that when tornadoes occur without a visible funnel, debris at the surface is usually the indication of an intense circulation in contact with the ground. A funnel cloud, by definition, does not reach the surface, so debris whirling at the ground is not a funnel cloud. The pilot should land and take shelter.",
+      "keyTakeaway": "No funnel does not mean no tornado. Debris at the ground can mark one.",
+      "references": ["ref-awh-28b"]
+    },
+    "domain": "dom-weather",
+    "moduleId": "mod-weather",
+    "lessonId": "les-wx-hazards",
+    "acsRefs": ["acs-ua-iii-b-k1f"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-wx-035",
+    "stem": "The forecast calls for scattered weak showers in the morning and severe thunderstorms with strong updrafts building to great heights by afternoon. According to the Aviation Weather Handbook, when is large hail most likely?",
+    "choices": [
+      { "id": "q-wx-035-a", "text": "With the morning weak showers", "isCorrect": false },
+      { "id": "q-wx-035-b", "text": "Equally with both, since all rain clouds make hail", "isCorrect": false },
+      { "id": "q-wx-035-c", "text": "With the afternoon severe storms", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "With the afternoon severe storms.",
+      "reason": "The Aviation Weather Handbook, section 14.4.5, says hail is produced by thunderstorms, that storms with strong updrafts, large amounts of supercooled water, large cloud drops, and great vertical height favor hail, and that large hail occurs with severe thunderstorms with strong updrafts that have built to great heights. Weak showers lack those updrafts and heights, and ordinary rain clouds do not all make hail.",
+      "keyTakeaway": "Large hail comes from severe storms with strong updrafts built to great heights.",
+      "references": ["ref-awh-28b"]
+    },
+    "domain": "dom-weather",
+    "moduleId": "mod-weather",
+    "lessonId": "les-wx-hazards",
+    "acsRefs": ["acs-ua-iii-b-k1h"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-wx-036",
+    "stem": "At dusk, lightning flashes from a storm a few miles from a VLOS job. Apart from the risk of a strike, how can nearby lightning affect the operation?",
+    "choices": [
+      { "id": "q-wx-036-a", "text": "A close flash can briefly blind the pilot and break VLOS", "isCorrect": true },
+      { "id": "q-wx-036-b", "text": "Lightning only matters if it strikes the drone directly", "isCorrect": false },
+      { "id": "q-wx-036-c", "text": "Nearby flashes affect manned pilots only, not remote pilots", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "A close flash can briefly blind the pilot and break VLOS.",
+      "reason": "The Aviation Weather Handbook, section 22.7.2, says nearby lightning can blind the pilot, leaving the pilot momentarily unable to navigate by visual reference, and that every thunderstorm produces lightning. For a remote pilot, that can mean losing visual line of sight of the drone, which 14 CFR 107.31 requires. A strike is not the only hazard, and flash blindness affects anyone relying on their eyes, including a remote pilot or visual observer.",
+      "keyTakeaway": "Nearby lightning can flash-blind you and break visual line of sight.",
+      "references": ["ref-awh-28b", "ref-cfr107"]
+    },
+    "domain": "dom-weather",
+    "moduleId": "mod-weather",
+    "lessonId": "les-wx-hazards",
+    "acsRefs": ["acs-ua-iii-b-k1k"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
   }
 ]

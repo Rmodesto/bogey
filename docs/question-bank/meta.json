@@ -2158,5 +2158,269 @@
   "scenario": false,
   "needsFigure": false,
   "batch": 4
+ },
+ {
+  "id": "q-wx-032",
+  "acs": "UA.III.A.K4",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-wx-033",
+  "acs": "UA.III.B.K1d",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-wx-034",
+  "acs": "UA.III.B.K1f",
+  "level": 4,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-wx-035",
+  "acs": "UA.III.B.K1h",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-wx-036",
+  "acs": "UA.III.B.K1k",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-093",
+  "acs": "UA.V.A.K1",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-094",
+  "acs": "UA.V.A.K2",
+  "level": 2,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-095",
+  "acs": "UA.V.A.K3",
+  "level": 4,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-096",
+  "acs": "UA.V.A.K4",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-097",
+  "acs": "UA.V.A.K6",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-098",
+  "acs": "UA.V.B.K2",
+  "level": 5,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-099",
+  "acs": "UA.V.B.K3",
+  "level": 2,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-100",
+  "acs": "UA.V.B.K4",
+  "level": 4,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-101",
+  "acs": "UA.V.B.K6a",
+  "level": 4,
+  "scenario": true,
+  "needsFigure": true,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-102",
+  "acs": "UA.V.B.K6a",
+  "level": 3,
+  "scenario": false,
+  "needsFigure": true,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-103",
+  "acs": "UA.V.B.K6b",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-104",
+  "acs": "UA.V.C.K1",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-105",
+  "acs": "UA.V.C.K2b",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-106",
+  "acs": "UA.V.C.K2c",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-107",
+  "acs": "UA.V.C.K2d",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-108",
+  "acs": "UA.V.C.K3",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-109",
+  "acs": "UA.V.C.K3",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-110",
+  "acs": "UA.V.C.K6",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-111",
+  "acs": "UA.V.C.K6",
+  "level": 4,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-112",
+  "acs": "UA.V.C.K7",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-113",
+  "acs": "UA.V.D.K1a",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-114",
+  "acs": "UA.V.D.K5",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-115",
+  "acs": "UA.V.E.K7",
+  "level": 2,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-116",
+  "acs": "UA.V.E.K8",
+  "level": 4,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-117",
+  "acs": "UA.V.F.K2",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-118",
+  "acs": "UA.V.F.K3",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-119",
+  "acs": "UA.V.F.K7",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
+ },
+ {
+  "id": "q-ops-120",
+  "acs": "UA.V.F.K7",
+  "level": 4,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 5
  }
 ]
