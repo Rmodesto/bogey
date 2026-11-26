@@ -78,7 +78,7 @@ export default function ExamClient({
     return (
       <div className="min-h-screen bg-jet-black flex items-center justify-center">
         <div className="bg-graphite border border-slate/30 rounded-2xl p-10 max-w-lg w-full text-center">
-          <h1 className="text-3xl font-semibold text-white mb-3">BogeyMan Practice Exam</h1>
+          <h1 className="text-3xl font-semibold text-white mb-3">Bogeyman Practice Exam</h1>
           <p className="text-slate text-sm mb-8">
             This practice exam simulates the actual FAA Part 107 exam experience. You have 2 hours to answer {examQuestions.length} questions. Once started, the timer cannot be paused.
           </p>
