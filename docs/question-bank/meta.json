@@ -1022,5 +1022,413 @@
   "scenario": true,
   "needsFigure": false,
   "batch": 1
+ },
+ {
+  "id": "q-reg-134",
+  "acs": "UA.I.A.K2",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-135",
+  "acs": "UA.I.B.K1",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-136",
+  "acs": "UA.I.B.K1",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-137",
+  "acs": "UA.I.B.K5",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-138",
+  "acs": "UA.I.B.K5",
+  "level": 2,
+  "scenario": false,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-139",
+  "acs": "UA.I.B.K6a",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-140",
+  "acs": "UA.I.B.K6a",
+  "level": 3,
+  "scenario": false,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-141",
+  "acs": "UA.I.B.K7",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-142",
+  "acs": "UA.I.B.K7",
+  "level": 4,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-143",
+  "acs": "UA.I.B.K8",
+  "level": 2,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-144",
+  "acs": "UA.I.B.K8",
+  "level": 4,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-145",
+  "acs": "UA.I.B.K9",
+  "level": 2,
+  "scenario": false,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-146",
+  "acs": "UA.I.B.K9",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-147",
+  "acs": "UA.I.B.K10",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-148",
+  "acs": "UA.I.B.K10",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-149",
+  "acs": "UA.I.B.K10",
+  "level": 2,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-150",
+  "acs": "UA.I.B.K11",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-151",
+  "acs": "UA.I.B.K11",
+  "level": 2,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-152",
+  "acs": "UA.I.B.K14a",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-153",
+  "acs": "UA.I.B.K14a",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-154",
+  "acs": "UA.I.B.K14a",
+  "level": 2,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-155",
+  "acs": "UA.I.B.K16",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-156",
+  "acs": "UA.I.B.K16",
+  "level": 4,
+  "scenario": true,
+  "needsFigure": true,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-157",
+  "acs": "UA.I.B.K16",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-158",
+  "acs": "UA.I.B.K16",
+  "level": 2,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-159",
+  "acs": "UA.I.B.K16",
+  "level": 4,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-160",
+  "acs": "UA.I.B.K17",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-161",
+  "acs": "UA.I.B.K17",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-162",
+  "acs": "UA.I.B.K17",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-163",
+  "acs": "UA.I.B.K18",
+  "level": 4,
+  "scenario": true,
+  "needsFigure": true,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-164",
+  "acs": "UA.I.B.K19",
+  "level": 4,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-165",
+  "acs": "UA.I.B.K19",
+  "level": 2,
+  "scenario": false,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-166",
+  "acs": "UA.I.B.K21a",
+  "level": 4,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-167",
+  "acs": "UA.I.B.K21a",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-168",
+  "acs": "UA.I.B.K21a",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-169",
+  "acs": "UA.I.B.K21b",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-170",
+  "acs": "UA.I.B.K21b",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-171",
+  "acs": "UA.I.B.K21b",
+  "level": 4,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-172",
+  "acs": "UA.I.B.K21b",
+  "level": 2,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-173",
+  "acs": "UA.I.B.K21c",
+  "level": 3,
+  "scenario": false,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-174",
+  "acs": "UA.I.B.K21c",
+  "level": 2,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-175",
+  "acs": "UA.I.B.K21d",
+  "level": 4,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-176",
+  "acs": "UA.I.B.K21d",
+  "level": 4,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-177",
+  "acs": "UA.I.B.K21d",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-178",
+  "acs": "UA.I.B.K22",
+  "level": 4,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-179",
+  "acs": "UA.I.B.K24",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-180",
+  "acs": "UA.I.B.K24",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-181",
+  "acs": "UA.I.B.K25",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-182",
+  "acs": "UA.I.B.K25",
+  "level": 4,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-183",
+  "acs": "UA.I.B.K25",
+  "level": 3,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
+ },
+ {
+  "id": "q-reg-184",
+  "acs": "UA.I.B.K27",
+  "level": 4,
+  "scenario": true,
+  "needsFigure": false,
+  "batch": 2
  }
 ]

@@ -2946,5 +2946,1127 @@
     "difficulty": "easy",
     "status": "active",
     "version": 1
+  },
+  {
+    "id": "q-reg-134",
+    "stem": "A remote pilot's controller fails during preflight, and the aircraft itself is undamaged. Under the Part 107 definition, is the small UAS in a condition for safe operation?",
+    "choices": [
+      { "id": "q-reg-134-a", "text": "No, because the controller is part of the small UAS", "isCorrect": true },
+      { "id": "q-reg-134-b", "text": "Yes, because the small UAS means only the aircraft itself", "isCorrect": false },
+      { "id": "q-reg-134-c", "text": "No, because a mechanic must inspect the aircraft first", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No, because the controller is part of the small UAS.",
+      "reason": "14 CFR 107.3 defines a small unmanned aircraft system as the small unmanned aircraft and its associated elements, including communication links and the components that control it, that are required for safe and efficient operation. The control station is part of the system, so a failed controller means the system is not in a condition for safe operation under 107.15. The remote PIC must also be able to direct the aircraft under 107.19(e). Part 107 does not require a mechanic's inspection; the problem is that the controller is part of the small UAS (107.3).",
+      "keyTakeaway": "The 'system' in small UAS includes the control station and the links, not just the aircraft.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-general",
+    "acsRefs": ["acs-ua-i-a-k2"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-135",
+    "stem": "A remote pilot sells a registered drone to another company. Under Part 48, what must the seller do?",
+    "choices": [
+      { "id": "q-reg-135-a", "text": "Nothing; the registration transfers automatically to the buyer", "isCorrect": false },
+      { "id": "q-reg-135-b", "text": "Update the registration information within 14 calendar days of the sale", "isCorrect": true },
+      { "id": "q-reg-135-c", "text": "Remove the registration number from the aircraft and keep the certificate until it expires", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Update the registration information within 14 calendar days of the sale.",
+      "reason": "14 CFR 48.115(b)(2) requires the holder of a Certificate of Aircraft Registration to update the information in the web-based registration system within 14 calendar days when the registration must be cancelled for any reason, including sale or transfer. Registration does not pass to a buyer automatically; under 48.25(b), the owner must register in the owner's own legal name. Keeping the certificate until it expires does not meet the update requirement.",
+      "keyTakeaway": "Sold, destroyed, or exported? Update the registration within 14 calendar days.",
+      "references": ["ref-cfr48"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-general",
+    "acsRefs": ["acs-ua-i-b-k1"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-136",
+    "stem": "A small business owns three drones that it flies under Part 107. How must they be registered?",
+    "choices": [
+      { "id": "q-reg-136-a", "text": "One registration covers all three, as it does for recreational flyers", "isCorrect": false },
+      { "id": "q-reg-136-b", "text": "Only the largest drone, since the others weigh under 2 pounds", "isCorrect": false },
+      { "id": "q-reg-136-c", "text": "Each one must be registered on its own certificate", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Each one must be registered on its own certificate.",
+      "reason": "14 CFR 48.100(a) says a Certificate of Aircraft Registration for a small unmanned aircraft used for any purpose other than limited recreational operations constitutes registration for the aircraft identified on the application, and 48.30(a) sets the fee at $5 per aircraft. The single registration covering all of an owner's aircraft applies only to aircraft flown exclusively for recreation under 48.105. Every aircraft flown under Part 107 must be registered.",
+      "keyTakeaway": "Part 107: one registration per aircraft. Recreational: one registration per owner.",
+      "references": ["ref-cfr48", "ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-general",
+    "acsRefs": ["acs-ua-i-b-k1"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-137",
+    "stem": "A drone is losing power and must land within seconds. The remote PIC can reach either a crowded restaurant patio or an empty lawn slightly farther away. According to FAA guidance on in-flight emergencies, what should guide the choice?",
+    "choices": [
+      { "id": "q-reg-137-a", "text": "Landing as close as possible, even if that is over the patio", "isCorrect": false },
+      { "id": "q-reg-137-b", "text": "Taking the fastest action, even if it means the patio", "isCorrect": false },
+      { "id": "q-reg-137-c", "text": "Taking the action that minimizes injury and damage, here the empty lawn", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Taking the action that minimizes injury and damage, here the empty lawn.",
+      "reason": "14 CFR 107.21(a) lets the remote PIC deviate from Part 107 to the extent necessary to meet an in-flight emergency. AC 107-2A, paragraph 5.18, adds that emergency action should be taken in such a way as to minimize injury or damage to property, and 107.19(c) requires the remote PIC to ensure the aircraft poses no undue hazard to people in a loss of control. The nearest spot is not automatically right if it puts people at risk. Speed is not the test; AC 107-2A, paragraph 5.18, says emergency action should minimize injury or damage to property.",
+      "keyTakeaway": "In an emergency, deviate only as needed, and choose the option that keeps people and property safest.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-reporting",
+    "acsRefs": ["acs-ua-i-b-k5"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-138",
+    "stem": "Which situation is an in-flight emergency under Part 107?",
+    "choices": [
+      { "id": "q-reg-138-a", "text": "A client asks for the flight to be finished faster than planned", "isCorrect": false },
+      { "id": "q-reg-138-b", "text": "A motor fails over a road and the drone must land immediately", "isCorrect": true },
+      { "id": "q-reg-138-c", "text": "A battery the pilot knew before takeoff would not last the job", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "A motor fails over a road and the drone must land immediately.",
+      "reason": "AC 107-2A, paragraph 5.18, describes an in-flight emergency as an unexpected and unforeseen serious occurrence or situation that requires urgent, prompt action, and 14 CFR 107.21(a) allows deviation only for an emergency requiring immediate action. Schedule pressure from a client is not an emergency. A battery problem known before takeoff was foreseen and should have been handled in preflight under 107.49(d), which requires enough power for the intended operational time.",
+      "keyTakeaway": "Emergency = unexpected, serious, and needing immediate action. Foreseeable problems belong in preflight.",
+      "references": ["ref-ac1072", "ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-reporting",
+    "acsRefs": ["acs-ua-i-b-k5"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-139",
+    "stem": "A pilot wants to fly low and fast alongside moving cars on a busy highway to film a 'chase' scene, passing within a few feet of the vehicles. The drone stays in sight and below 400 feet AGL. This could violate Part 107 because:",
+    "choices": [
+      { "id": "q-reg-139-a", "text": "Part 107 bans all flight within 500 feet of any vehicle on a road", "isCorrect": false },
+      { "id": "q-reg-139-b", "text": "It could be careless or reckless operation endangering others", "isCorrect": true },
+      { "id": "q-reg-139-c", "text": "Highways are restricted areas under 107.45 that require permission", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "It could be careless or reckless operation endangering others.",
+      "reason": "14 CFR 107.23(a) prohibits operating a small UAS in a careless or reckless manner so as to endanger the life or property of another. Flying within a few feet of moving traffic puts drivers and vehicles at risk even when the altitude and line-of-sight limits are met. Part 107 has no 500-foot vehicle buffer, and a highway is not a restricted area under 107.45. Flying over moving vehicles is also limited by 107.145.",
+      "keyTakeaway": "Endangering people or property can be careless or reckless, even within every numeric limit.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k6a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-140",
+    "stem": "An operator asks the FAA for a waiver so that it can perform an operation that would otherwise be careless or reckless. Can 14 CFR 107.23 be waived?",
+    "choices": [
+      { "id": "q-reg-140-a", "text": "Yes, like every section of Part 107 except the airspace rules", "isCorrect": false },
+      { "id": "q-reg-140-b", "text": "No; 107.23 is not on the list of rules that can be waived", "isCorrect": true },
+      { "id": "q-reg-140-c", "text": "No; only Part 107's airspace rules can ever be waived", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No; 107.23 is not on the list of rules that can be waived.",
+      "reason": "14 CFR 107.205 lists the Part 107 sections a certificate of waiver can cover: 107.25, 107.29(a)(2) and (b), 107.31, 107.33, 107.35, 107.37(a), 107.39, 107.41, 107.51, and 107.145. Section 107.23, hazardous operation, is not on the list, so it cannot be waived. An airspace authorization under 107.41 has nothing to do with 107.23. Many non-airspace sections can be waived under 107.205, such as 107.31 and 107.39; 107.23 is simply not among them.",
+      "keyTakeaway": "Careless or reckless operation cannot be waived.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k6a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-141",
+    "stem": "A film crew wants to fly a drone from a helicopter that is moving over open, empty desert. Under Part 107 this is:",
+    "choices": [
+      { "id": "q-reg-141-a", "text": "Prohibited, because no one may fly a drone from a moving aircraft", "isCorrect": true },
+      { "id": "q-reg-141-b", "text": "Allowed, because the area is sparsely populated", "isCorrect": false },
+      { "id": "q-reg-141-c", "text": "Prohibited, because helicopters may never carry drones aboard", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Prohibited, because no one may fly a drone from a moving aircraft.",
+      "reason": "14 CFR 107.25(a) prohibits operating a small UAS from a moving aircraft. The sparsely populated exception in 107.25(b) applies only to moving land or water-borne vehicles, not to aircraft. Section 107.25 is waivable under 107.205(a), but there is no exception without a waiver. Carrying a drone aboard is not the problem; operating it from the moving aircraft is (107.25(a)).",
+      "keyTakeaway": "Moving car or boat: possible over sparsely populated areas. Moving aircraft: never without a waiver.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k7"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-142",
+    "stem": "A delivery company wants to launch drones carrying packages for paying customers from a moving van in a rural area. Can it get a waiver to do this?",
+    "choices": [
+      { "id": "q-reg-142-a", "text": "Yes; 107.25 can be waived for any purpose, including deliveries", "isCorrect": false },
+      { "id": "q-reg-142-b", "text": "No waiver is needed, because the area is sparsely populated", "isCorrect": false },
+      { "id": "q-reg-142-c", "text": "No; that use of a moving vehicle cannot be waived", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "No; that use of a moving vehicle cannot be waived.",
+      "reason": "14 CFR 107.25(b) prohibits operating from a moving land or water-borne vehicle when the aircraft is transporting another person's property for compensation or hire. Section 107.205(a) allows a waiver of 107.25 but states that no waiver will be issued to allow carriage of the property of another for compensation or hire. AC 107-2A, paragraph 5.15.1, repeats that this limitation cannot be waived. The sparsely populated exception does not cover carrying property for hire.",
+      "keyTakeaway": "Paid deliveries from a moving vehicle: prohibited, and no waiver is available.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k7"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-143",
+    "stem": "The visual observer for a job had a beer with lunch two hours ago. The remote PIC has not had any alcohol. May the observer take part in the flight?",
+    "choices": [
+      { "id": "q-reg-143-a", "text": "Yes, because the alcohol rules apply only to the remote PIC", "isCorrect": false },
+      { "id": "q-reg-143-b", "text": "No; the 8-hour rule applies to visual observers too", "isCorrect": true },
+      { "id": "q-reg-143-c", "text": "No; observers must avoid alcohol for 24 hours before a flight", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No; the 8-hour rule applies to visual observers too.",
+      "reason": "14 CFR 107.27 applies 14 CFR 91.17 and 91.19 to the person manipulating the controls, the remote PIC, and the visual observer. Section 91.17(a)(1) prohibits acting within 8 hours after drinking any alcohol. Being under 0.04 does not cure a drink within 8 hours, because each condition in 91.17(a) stands on its own. The rule is 8 hours, the same as for the remote PIC, not 24.",
+      "keyTakeaway": "The alcohol rules cover the remote PIC, the person at the controls, and the visual observer.",
+      "references": ["ref-cfr107", "ref-cfr91", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k8"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-144",
+    "stem": "A person asks a remote pilot to fly a package of marijuana across town by drone. No Federal or State authorization covers the carriage. Under Part 107, this is:",
+    "choices": [
+      { "id": "q-reg-144-a", "text": "Prohibited, because 91.19 bans knowingly carrying such drugs", "isCorrect": true },
+      { "id": "q-reg-144-b", "text": "Allowed where State law permits recreational marijuana use", "isCorrect": false },
+      { "id": "q-reg-144-c", "text": "Prohibited, because Part 107 bans every medication too", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Prohibited, because 91.19 bans knowingly carrying such drugs.",
+      "reason": "14 CFR 107.27 requires the remote PIC, the person at the controls, and the visual observer to comply with 14 CFR 91.17 and 91.19. Section 91.19(a) prohibits operating a civil aircraft with knowledge that narcotic drugs, marihuana, or depressant or stimulant drugs are carried in it, unless the carriage is authorized by or under a Federal or State statute or by a Federal or State agency (91.19(b)); a State law simply permitting use is not an authorization to carry the drug by aircraft. Section 107.57(b) makes an act prohibited by 91.19(a) grounds for denial, suspension, or revocation of a Remote Pilot Certificate. Part 107 does not ban every medication; the issue here is carrying marijuana, which 91.19 prohibits.",
+      "keyTakeaway": "107.27 brings in 91.19: knowingly carrying drugs by drone is prohibited unless specifically authorized.",
+      "references": ["ref-cfr107", "ref-cfr91"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k8"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-145",
+    "stem": "Does Part 107 require a drone to show anti-collision lighting during a midday flight?",
+    "choices": [
+      { "id": "q-reg-145-a", "text": "No; lighting is required only at twilight and night", "isCorrect": true },
+      { "id": "q-reg-145-b", "text": "Yes; anti-collision lighting is required on every flight", "isCorrect": false },
+      { "id": "q-reg-145-c", "text": "No, unless the drone climbs above 200 feet AGL", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No; lighting is required only at twilight and night.",
+      "reason": "14 CFR 107.29 requires anti-collision lighting visible for at least 3 statute miles only at night and during civil twilight. AC 107-2A, paragraph 5.7.2.2, says 107.29 does not require lighting during the day, notes that lighting is generally not effective for daytime collision avoidance, and says pilots may still choose to use it. Altitude does not trigger the lighting rule; only civil twilight and night do (107.29).",
+      "keyTakeaway": "Daytime: no lighting required. Civil twilight and night: a 3-statute-mile anti-collision light.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k9"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-146",
+    "stem": "A remote pilot needs to know exactly when a daytime-only flight must end. According to AC 107-2A, where can official sunrise and sunset times be found?",
+    "choices": [
+      { "id": "q-reg-146-a", "text": "The Air Almanac tables, available from the Naval Observatory", "isCorrect": true },
+      { "id": "q-reg-146-b", "text": "The drone manufacturer's app, which sets the legal times", "isCorrect": false },
+      { "id": "q-reg-146-c", "text": "The sectional chart's margin notes for the area", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "The Air Almanac tables, available from the Naval Observatory.",
+      "reason": "AC 107-2A, paragraph 5.7, says civil twilight and night are defined using The Air Almanac, which provides tables to determine sunrise and sunset at various latitudes, and that these tables can be downloaded from the Naval Observatory. A manufacturer's app may show times, but it does not set legal times. Sectional charts do not list sunrise and sunset.",
+      "keyTakeaway": "Official sunrise and sunset come from The Air Almanac.",
+      "references": ["ref-ac1072", "ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k9"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-147",
+    "stem": "During a survey, a drone passes behind a tree for a few seconds and the remote PIC loses sight of it. Which statement is correct?",
+    "choices": [
+      { "id": "q-reg-147-a", "text": "Sight must be regained as soon as practicable; no set time is allowed", "isCorrect": true },
+      { "id": "q-reg-147-b", "text": "Any loss of sight, however brief, is a violation that must be reported", "isCorrect": false },
+      { "id": "q-reg-147-c", "text": "Losing sight is allowed for up to 30 seconds at a time", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Sight must be regained as soon as practicable; no set time is allowed.",
+      "reason": "AC 107-2A, paragraph 5.9, says the person keeping visual line of sight may have brief moments without seeing the aircraft, but must regain it as soon as practicable if it is lost, and that no specific time interval is permitted, because a fixed interval could allow a hazardous interruption. If VLOS cannot be regained, the pilot should follow predetermined lost-VLOS procedures. Part 107 has no reporting requirement for a brief loss of sight.",
+      "keyTakeaway": "Brief losses happen. Regain sight as soon as practicable. There is no allowed number of seconds.",
+      "references": ["ref-ac1072", "ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k10"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-148",
+    "stem": "A drone is far enough away that the remote PIC can see it only as a tiny dot and cannot tell which way it is pointed or moving. Is the operation within visual line of sight?",
+    "choices": [
+      { "id": "q-reg-148-a", "text": "No; the pilot must be able to tell its attitude and direction", "isCorrect": true },
+      { "id": "q-reg-148-b", "text": "Yes, because the drone is still visible as a dot in the sky", "isCorrect": false },
+      { "id": "q-reg-148-c", "text": "No; the drone must always stay within 1,000 feet of the pilot", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No; the pilot must be able to tell its attitude and direction.",
+      "reason": "14 CFR 107.31(a) requires seeing the aircraft throughout the flight in order to know its location, determine its attitude, altitude, and direction of flight, observe the airspace for other traffic or hazards, and determine that it does not endanger anyone. Merely detecting a dot does not meet that standard. Part 107 sets no fixed VLOS distance; the test is whether the pilot can see the aircraft's location, attitude, altitude, and direction (107.31).",
+      "keyTakeaway": "VLOS means seeing enough to tell location, attitude, altitude, and direction, not just a dot.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k10"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-149",
+    "stem": "A remote PIC flying alone glances down at the controller for a moment to check the remaining battery. Does this break the visual line of sight requirement?",
+    "choices": [
+      { "id": "q-reg-149-a", "text": "Yes; the pilot must watch the aircraft without any interruption", "isCorrect": false },
+      { "id": "q-reg-149-b", "text": "No; brief looks at the controller are allowed by the FAA", "isCorrect": true },
+      { "id": "q-reg-149-c", "text": "No, as long as the look lasts under 30 seconds", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No; brief looks at the controller are allowed by the FAA.",
+      "reason": "AC 107-2A, paragraph 5.9, says the person maintaining visual line of sight may have brief moments of not looking directly at the aircraft, for example to check battery life on the controller, while keeping the capability to see it, and that the VLOS requirement does not prohibit briefly looking down at the control station. A visual observer is optional and is not required for such glances. The FAA sets no time allowance: AC 107-2A, paragraph 5.9, says no specific interval of lost VLOS is permissible, while brief looks at the control station are fine.",
+      "keyTakeaway": "A quick look at the controller is fine. Keep the ability to see the aircraft.",
+      "references": ["ref-ac1072", "ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k10"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-150",
+    "stem": "During a mapping flight with a visual observer, the remote PIC asks the observer to also run the camera and watch the camera screen continuously. What is the problem?",
+    "choices": [
+      { "id": "q-reg-150-a", "text": "There is no problem, because the camera feed shows the aircraft", "isCorrect": false },
+      { "id": "q-reg-150-b", "text": "The observer must use binoculars to see it directly", "isCorrect": false },
+      { "id": "q-reg-150-c", "text": "The observer must watch the drone directly, not on a screen", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "The observer must watch the drone directly, not on a screen.",
+      "reason": "14 CFR 107.33(c) requires the remote PIC, the person at the controls, and the visual observer to coordinate to scan the airspace for potential collision hazards and to maintain awareness of the aircraft's position through direct visual observation. An observer watching a camera screen cannot do either. AC 107-2A, paragraph 5.9.1, says first-person view does not satisfy visual line of sight. Binoculars may be used only momentarily (AC 107-2A, paragraph 5.9.1); the observer must normally see the drone with unaided vision.",
+      "keyTakeaway": "An observer's job is direct watching and scanning. Do not load them with screen work.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k11"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-151",
+    "stem": "A remote pilot is flying a simple roof inspection alone, keeping the drone in sight the whole time. Is a visual observer required?",
+    "choices": [
+      { "id": "q-reg-151-a", "text": "No; a visual observer is optional under Part 107", "isCorrect": true },
+      { "id": "q-reg-151-b", "text": "Yes; every Part 107 flight requires a visual observer", "isCorrect": false },
+      { "id": "q-reg-151-c", "text": "No, unless the flight lasts over 15 minutes", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No; a visual observer is optional under Part 107.",
+      "reason": "AC 107-2A, paragraph 5.9.2, says the use of a visual observer is optional. 14 CFR 107.31(b) allows visual line of sight to be kept by the remote PIC and the person at the controls, or by a visual observer, and 107.33 sets requirements only 'if a visual observer is used.' Flight length does not matter; 107.33 makes a visual observer optional.",
+      "keyTakeaway": "A visual observer is optional. If you use one, 107.33 applies.",
+      "references": ["ref-ac1072", "ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k11"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-152",
+    "stem": "A helicopter is flying toward the area where a small drone is hovering. The remote PIC assumes the helicopter pilot has seen the drone and will avoid it. What is wrong with this assumption?",
+    "choices": [
+      { "id": "q-reg-152-a", "text": "Nothing, because helicopter pilots must always see and avoid drones", "isCorrect": false },
+      { "id": "q-reg-152-b", "text": "Helicopters cannot see anything below 500 feet AGL", "isCorrect": false },
+      { "id": "q-reg-152-c", "text": "Small drones are hard to see, and the drone must yield anyway", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Small drones are hard to see, and the drone must yield anyway.",
+      "reason": "AIM 7-6-6 warns manned pilots that, because unmanned aircraft can be very small, they may be difficult to see and track. A remote PIC cannot count on being seen. Under 14 CFR 107.37(a), the drone must yield the right of way to all aircraft in any case, and 107.31 gives the remote PIC the see-and-avoid duty. There is no such blind altitude; the point is that small drones are hard to see at any height.",
+      "keyTakeaway": "Assume you have not been seen. The drone yields.",
+      "references": ["ref-aim", "ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k14a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-153",
+    "stem": "A paraglider is soaring along the ridge where a drone is mapping. Who must give way?",
+    "choices": [
+      { "id": "q-reg-153-a", "text": "The paraglider, because the drone was working there first", "isCorrect": false },
+      { "id": "q-reg-153-b", "text": "Neither, because a paraglider is not an aircraft under Part 107", "isCorrect": false },
+      { "id": "q-reg-153-c", "text": "The drone, which must yield to all aircraft and airborne vehicles", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "The drone, which must yield to all aircraft and airborne vehicles.",
+      "reason": "14 CFR 107.37(a) requires each small unmanned aircraft to yield the right of way to all aircraft, airborne vehicles, and launch and reentry vehicles, giving way and not passing over, under, or ahead unless well clear. The rule covers airborne vehicles, so it applies whether or not the paraglider is classed as an aircraft. Who arrived first does not matter.",
+      "keyTakeaway": "Drones yield to everything that flies: aircraft, airborne vehicles, and launch and reentry vehicles.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k14a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-154",
+    "stem": "It is a clear, calm day with unlimited visibility, and the remote PIC relaxes the scan for traffic. According to the AIM, when have midair collisions almost always happened?",
+    "choices": [
+      { "id": "q-reg-154-a", "text": "In low visibility and rain", "isCorrect": false },
+      { "id": "q-reg-154-b", "text": "In ideal weather conditions", "isCorrect": true },
+      { "id": "q-reg-154-c", "text": "At night, in darkness", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "In ideal weather conditions.",
+      "reason": "AIM 7-6-1 says air collisions have almost invariably occurred under ideal weather conditions, and that unlimited visibility encourages a sense of security that is not justified. It urges pilots to be alert at all times, especially when the weather is good. A remote PIC's see-and-avoid duty under 14 CFR 107.31 and 107.37 does not ease on clear days.",
+      "keyTakeaway": "Good weather is when collisions happen. Keep scanning.",
+      "references": ["ref-aim", "ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k14a"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-155",
+    "stem": "A remote pilot wants to fly at 50 feet AGL inside a Class C surface area for a quick roof photo. Does the low altitude remove the need for authorization?",
+    "choices": [
+      { "id": "q-reg-155-a", "text": "No; drones under 100 feet AGL are exempt from 107.41", "isCorrect": false },
+      { "id": "q-reg-155-b", "text": "No, but only because a roof photo counts as commercial work", "isCorrect": false },
+      { "id": "q-reg-155-c", "text": "No; any altitude inside the Class C surface area needs authorization", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "No; any altitude inside the Class C surface area needs authorization.",
+      "reason": "14 CFR 107.41 prohibits operating in Class B, C, or D airspace, or within the lateral boundaries of a Class E surface area designated for an airport, without prior authorization from ATC. A Class C surface area extends from the surface, so a flight at 50 feet AGL is in Class C. No altitude, such as 100 feet AGL, is exempt. Commercial purpose has nothing to do with it; any flight inside the Class C surface area needs authorization.",
+      "keyTakeaway": "Inside B, C, D, or a Class E surface area, any altitude needs prior authorization.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k16"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-156",
+    "stem": "A small non-towered airport is surrounded by a dashed magenta line, and the area around it has Class E airspace beginning at 1,200 feet AGL. A job site is half a mile outside the dashed magenta line. The drone will stay at or below 400 feet AGL. Is ATC authorization required?",
+    "choices": [
+      { "id": "q-reg-156-a", "text": "Yes; anything within a few miles of a dashed magenta line needs authorization", "isCorrect": false },
+      { "id": "q-reg-156-b", "text": "No, as long as the pilot stays in radio contact with ATC", "isCorrect": false },
+      { "id": "q-reg-156-c", "text": "No; the site is outside the Class E surface area and below 1,200 feet AGL", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "No; the site is outside the Class E surface area and below 1,200 feet AGL.",
+      "reason": "The FAA Aeronautical Chart Users' Guide says a Class E surface area is shown with a dashed magenta line. 14 CFR 107.41 requires prior authorization only within the lateral boundaries of a Class E surface area designated for an airport (and in Class B, C, and D airspace). Outside the dashed line, Class E begins here at 1,200 feet AGL, so a drone at or below 400 feet AGL is in Class G and needs no authorization. The boundary is the dashed line itself, not a buffer around it. No radio contact is involved; Part 107 requires prior authorization only in the airspace listed in 107.41, and never requires radio contact.",
+      "keyTakeaway": "Inside the dashed magenta line: authorization. Outside it, below the Class E floor: Class G.",
+      "references": ["ref-cfr107", "ref-chartguide"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k16"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-157",
+    "stem": "A remote pilot's ATC authorization in Class D airspace allows flight up to 200 feet AGL. To get a better angle, the pilot wants to climb to 300 feet AGL. What is correct?",
+    "choices": [
+      { "id": "q-reg-157-a", "text": "The pilot may climb to 400 feet AGL, the Part 107 limit", "isCorrect": false },
+      { "id": "q-reg-157-b", "text": "The pilot may climb if no manned aircraft are in sight", "isCorrect": false },
+      { "id": "q-reg-157-c", "text": "The pilot must stay at or below the authorized altitude", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "The pilot must stay at or below the authorized altitude.",
+      "reason": "14 CFR 107.41 requires prior ATC authorization for operation in Class D airspace, and AC 107-2A, paragraph 5.10, says authorizations may depend on operational parameters set by ATC. Flying above the authorized altitude means operating in Class D airspace without authorization for that operation. The 400-foot limit in 107.51(b) is a separate maximum and does not expand an authorization.",
+      "keyTakeaway": "An authorization's altitude is a limit. Exceeding it is flying without authorization.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k16"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-158",
+    "stem": "A remote pilot arrives at a site and realizes it lies inside Class D airspace. The pilot plans to launch and request authorization once airborne. Is that allowed?",
+    "choices": [
+      { "id": "q-reg-158-a", "text": "Yes, if the pilot requests it within 5 minutes of launch", "isCorrect": false },
+      { "id": "q-reg-158-b", "text": "No; it must be obtained before entering the airspace", "isCorrect": true },
+      { "id": "q-reg-158-c", "text": "No; requests must be submitted at least 90 days ahead", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No; it must be obtained before entering the airspace.",
+      "reason": "14 CFR 107.41 requires prior authorization from ATC to operate in Class B, C, or D airspace or a Class E surface area. 'Prior' means before operating there. AC 107-2A, paragraph 5.10, says the FAA may approve or deny requests based on traffic, workload, and other factors, so approval cannot be assumed. No grace period makes an unauthorized flight legal. There is no 90-day advance requirement: AIM 11-4-2 says LAANC gives remote pilots near real-time airspace authorization within UAS Facility Map altitudes. What matters is that approval comes before the drone enters the airspace.",
+      "keyTakeaway": "Authorization first, then launch.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k16"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-159",
+    "stem": "The Chart Supplement says an airport's Class D airspace becomes a Class E surface area when the tower closes at night. A remote pilot plans to fly there after the tower closes. Is authorization still required?",
+    "choices": [
+      { "id": "q-reg-159-a", "text": "No; authorization is needed only while the tower is open", "isCorrect": false },
+      { "id": "q-reg-159-b", "text": "Yes; Class E surface areas also need authorization", "isCorrect": true },
+      { "id": "q-reg-159-c", "text": "Yes, but only within 1 mile of the runway", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Yes; Class E surface areas also need authorization.",
+      "reason": "14 CFR 107.41 covers Class B, C, and D airspace and the lateral boundaries of the surface area of Class E airspace designated for an airport. If the airspace becomes a Class E surface area when the tower closes, the authorization requirement still applies. Whether the tower is open does not decide the matter; the airspace class does. The requirement covers the whole lateral boundary of the Class E surface area, not just the area near the runway.",
+      "keyTakeaway": "Tower closed and the airspace becomes a Class E surface area? Still get authorization.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k16"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-160",
+    "stem": "In Class G airspace, a survey site lies under the final approach path a mile from the end of a non-towered airport's runway. What does FAA guidance tell the remote pilot to do?",
+    "choices": [
+      { "id": "q-reg-160-a", "text": "Avoid the corridor so manned pilots never have to change course", "isCorrect": true },
+      { "id": "q-reg-160-b", "text": "Fly normally, because airport rules apply only inside the airport fence", "isCorrect": false },
+      { "id": "q-reg-160-c", "text": "Avoid the corridor only while an airplane is in sight", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Avoid the corridor so manned pilots never have to change course.",
+      "reason": "AC 107-2A, paragraphs 5.10.1 and 5.10.1.2, say the remote PIC must avoid traffic patterns and approach corridors to runways and landing areas, and should operate so that a manned pilot does not need to alter the flight path in the pattern or on an approach. 14 CFR 107.43 prohibits interfering with operations and traffic patterns at any airport. Approach paths extend beyond the airport boundary, and aircraft on final can be well below 400 feet AGL. The guidance is to avoid approach corridors altogether, not only when traffic is visible.",
+      "keyTakeaway": "Stay out of approach corridors. Manned pilots should never have to change course for you.",
+      "references": ["ref-ac1072", "ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k17"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-161",
+    "stem": "A drone is working near a taxiway at an airport, and an airplane begins to taxi toward the area. Who has the right of way?",
+    "choices": [
+      { "id": "q-reg-161-a", "text": "The drone, because the airplane is not flying yet", "isCorrect": false },
+      { "id": "q-reg-161-b", "text": "The airplane, even though it is on the ground", "isCorrect": true },
+      { "id": "q-reg-161-c", "text": "Neither, because right-of-way rules apply only in the air", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "The airplane, even though it is on the ground.",
+      "reason": "AC 107-2A, paragraph 5.10.1, says that near an airport the remote PIC must yield the right of way to all other aircraft, including aircraft operating on the surface of the airport, and must avoid areas such as taxiways and runways where the drone could interfere (14 CFR 107.43). A taxiing airplane is still an aircraft.",
+      "keyTakeaway": "On the ground or in the air, manned aircraft have the right of way.",
+      "references": ["ref-ac1072", "ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k17"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-162",
+    "stem": "A remote pilot with an authorization is watching manned traffic in a towered airport's pattern. A helicopter appears from a direction outside the normal pattern. What does the AIM say about helicopters at towered airports?",
+    "choices": [
+      { "id": "q-reg-162-a", "text": "Helicopters must always fly the same left-hand pattern as airplanes", "isCorrect": false },
+      { "id": "q-reg-162-b", "text": "Helicopters are not allowed at airports with a control tower", "isCorrect": false },
+      { "id": "q-reg-162-c", "text": "Helicopters avoid the flow of fixed-wing traffic", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Helicopters avoid the flow of fixed-wing traffic.",
+      "reason": "AIM 4-3-2 says that, unless otherwise authorized or directed, fixed-wing aircraft approaching to land must circle the airport to the left, while pilots approaching to land in a helicopter must avoid the flow of fixed-wing traffic. So a remote pilot should expect helicopters outside the airplane pattern and keep scanning in every direction.",
+      "keyTakeaway": "Helicopters avoid the airplane pattern. Watch every direction near an airport.",
+      "references": ["ref-aim"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k17"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-163",
+    "stem": "A sectional chart lists a restricted area as active during set times on weekdays. No NOTAM about it has been issued today. Can the remote pilot assume it is inactive?",
+    "choices": [
+      { "id": "q-reg-163-a", "text": "Yes; restricted areas are active only when a NOTAM says so", "isCorrect": false },
+      { "id": "q-reg-163-b", "text": "No; the charted times apply even without a NOTAM", "isCorrect": true },
+      { "id": "q-reg-163-c", "text": "No, because restricted areas are active at all times", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No; the charted times apply even without a NOTAM.",
+      "reason": "The FAA Aeronautical Chart Users' Guide says special use airspace is listed with its altitude, time of use, and controlling agency, and warns that a NOTAM addressing activation will not be issued to announce permanently listed times of use. 14 CFR 107.45 requires permission from the using or controlling agency to operate in a restricted area. Restricted areas are not always active; their charted times of use are what apply.",
+      "keyTakeaway": "Charted hours apply without a NOTAM. Check the listed times and get permission.",
+      "references": ["ref-chartguide", "ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k18"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-164",
+    "stem": "A NOTAM designates an area around a coastal rocket launch site under 14 CFR 91.143 for a space launch. A remote pilot wants to film the launch from inside the area. Under Part 107:",
+    "choices": [
+      { "id": "q-reg-164-a", "text": "It is allowed only if ATC authorizes the flight in the area", "isCorrect": true },
+      { "id": "q-reg-164-b", "text": "The flight is allowed, because 91.143 applies only to manned aircraft", "isCorrect": false },
+      { "id": "q-reg-164-c", "text": "The flight is allowed below 400 feet AGL without any authorization", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "It is allowed only if ATC authorizes the flight in the area.",
+      "reason": "14 CFR 107.47 requires remote PICs to comply with 14 CFR 91.137 through 91.145 and 99.7. Section 91.143 says that when a NOTAM is issued for space flight operations, no person may operate any aircraft of U.S. registry, or pilot any aircraft under an FAA airman certificate, within the designated area except when authorized by ATC. A registered drone flown by a certificated remote pilot is covered, and the rule has no altitude exception.",
+      "keyTakeaway": "Space launch NOTAM areas: drones stay out unless ATC authorizes the flight.",
+      "references": ["ref-cfr107", "ref-cfr91"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k19"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-165",
+    "stem": "How should a remote pilot find out about temporary flight restrictions that might affect a flight?",
+    "choices": [
+      { "id": "q-reg-165-a", "text": "Check the current sectional chart, which shows temporary restrictions", "isCorrect": false },
+      { "id": "q-reg-165-b", "text": "Rely on the drone's geofencing to block any restricted area", "isCorrect": false },
+      { "id": "q-reg-165-c", "text": "Check the NOTAMs for the area before each flight", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Check the NOTAMs for the area before each flight.",
+      "reason": "AC 107-2A, paragraph 5.10.3, says certain TFRs are imposed by NOTAM and that the remote PIC must check for NOTAMs before each flight to determine whether any airspace restrictions apply. 14 CFR 107.49(a)(2) requires assessing local airspace and any flight restrictions before flight. The Chart Users' Guide notes that only TFRs related to national security are charted, so a chart cannot show most TFRs, and manufacturer geofencing is not an FAA source of restrictions.",
+      "keyTakeaway": "TFRs come by NOTAM. Check before every flight.",
+      "references": ["ref-ac1072", "ref-cfr107", "ref-chartguide"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k19"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-166",
+    "stem": "A fixed-wing drone flies at an airspeed of 95 knots directly into a 15-knot headwind. Is it within the Part 107 speed limit?",
+    "choices": [
+      { "id": "q-reg-166-a", "text": "Yes; its groundspeed is about 80 knots", "isCorrect": true },
+      { "id": "q-reg-166-b", "text": "No; its airspeed is above 87 knots", "isCorrect": false },
+      { "id": "q-reg-166-c", "text": "Yes; the Part 107 limit is 100 knots", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Yes; its groundspeed is about 80 knots.",
+      "reason": "14 CFR 107.51(a) limits groundspeed, not airspeed, to 87 knots (100 mph). With a 15-knot headwind, a 95-knot airspeed gives a groundspeed of about 80 knots, which is within the limit. AC 107-2A, paragraph 5.12.1, explains that wind direction and speed affect the groundspeed for a given airspeed. The limit is 87 knots (100 mph) groundspeed, not 100 knots.",
+      "keyTakeaway": "The limit is groundspeed. A headwind lowers it, and a tailwind raises it.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k21a"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-167",
+    "stem": "A drone has no groundspeed display. Which method does AC 107-2A describe for making sure it stays at or below 87 knots groundspeed?",
+    "choices": [
+      { "id": "q-reg-167-a", "text": "Estimate speed by watching how fast the drone shrinks from view", "isCorrect": false },
+      { "id": "q-reg-167-b", "text": "Ask ATC for a radar readout of the drone's speed", "isCorrect": false },
+      { "id": "q-reg-167-c", "text": "Time it between fixed points, allowing for wind", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Time it between fixed points, allowing for wind.",
+      "reason": "AC 107-2A, paragraph 5.12.1, lists ways to comply with the 87-knot limit in 14 CFR 107.51(a): a GPS device that reports groundspeed, timing the aircraft between two or more fixed points while considering wind and noting the power settings that keep it at or below 87 knots, or using the manufacturer's design limits such as installed groundspeed limiters. Visual guessing is not one of them, and ATC does not provide speed checks for drones.",
+      "keyTakeaway": "No speed display? Time it between fixed points, or rely on a built-in limiter.",
+      "references": ["ref-ac1072", "ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k21a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-168",
+    "stem": "A racing event wants drones to reach 110 mph groundspeed. What would make this legal under Part 107?",
+    "choices": [
+      { "id": "q-reg-168-a", "text": "A certificate of waiver covering 14 CFR 107.51", "isCorrect": true },
+      { "id": "q-reg-168-b", "text": "An airspace authorization from ATC", "isCorrect": false },
+      { "id": "q-reg-168-c", "text": "Nothing; the speed limit can never be waived", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "A certificate of waiver covering 14 CFR 107.51.",
+      "reason": "14 CFR 107.51(a) limits groundspeed to 87 knots (100 mph). Section 107.205(i) lists 107.51 among the regulations that can be waived, so a certificate of waiver could allow higher speeds if the FAA finds the operation can be conducted safely. An ATC authorization under 107.41 grants airspace access; it does not change the speed limit.",
+      "keyTakeaway": "The 87-knot limit is waivable. Airspace authorizations do not change it.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k21a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-169",
+    "stem": "A remote pilot is inspecting a 300-foot-tall building. The drone is 500 feet horizontally from the building. What is the highest it may fly?",
+    "choices": [
+      { "id": "q-reg-169-a", "text": "400 feet AGL", "isCorrect": true },
+      { "id": "q-reg-169-b", "text": "700 feet AGL", "isCorrect": false },
+      { "id": "q-reg-169-c", "text": "800 feet AGL", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "400 feet AGL.",
+      "reason": "14 CFR 107.51(b) allows flight above 400 feet AGL only within a 400-foot radius of a structure, and then no higher than 400 feet above the structure's immediate uppermost limit. At 500 feet from the building, the drone is outside the 400-foot radius, so the normal 400-foot AGL limit applies. 700 feet AGL would be allowed only within 400 feet of the building.",
+      "keyTakeaway": "The structure allowance applies only within a 400-foot radius.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k21b"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-170",
+    "stem": "A drone's altitude readout shows 1,350 feet MSL. The control station is on flat ground at an elevation of 1,000 feet MSL, and the drone is over that same ground. How high is the drone above the ground?",
+    "choices": [
+      { "id": "q-reg-170-a", "text": "1,350 feet AGL", "isCorrect": false },
+      { "id": "q-reg-170-b", "text": "350 feet AGL", "isCorrect": true },
+      { "id": "q-reg-170-c", "text": "2,350 feet AGL", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "350 feet AGL.",
+      "reason": "AC 107-2A, paragraph 5.12.2, describes determining altitude by subtracting the control station's MSL elevation from the aircraft's reported MSL altitude to get AGL. 1,350 minus 1,000 is 350 feet AGL, within the 400-foot AGL limit of 14 CFR 107.51(b). Treating an MSL reading as AGL, or adding the elevation instead of subtracting it, gives the wrong numbers.",
+      "keyTakeaway": "AGL = reported MSL altitude minus ground elevation.",
+      "references": ["ref-ac1072", "ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k21b"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-171",
+    "stem": "A tower stands inside a Class D surface area. The remote pilot wants to fly 300 feet above the top of the tower, within 200 feet of it. Does the structure allowance mean no authorization is needed?",
+    "choices": [
+      { "id": "q-reg-171-a", "text": "Yes; flights within 400 feet of a structure are exempt from airspace rules", "isCorrect": false },
+      { "id": "q-reg-171-b", "text": "No; prior authorization is still required in Class D", "isCorrect": true },
+      { "id": "q-reg-171-c", "text": "No; drones may never fly above the top of a structure", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No; prior authorization is still required in Class D.",
+      "reason": "14 CFR 107.51(b) allows flight higher than 400 feet AGL within a 400-foot radius of a structure, up to 400 feet above its top. That is an altitude limit only. Section 107.41 separately requires prior ATC authorization to operate in Class D airspace, and nothing in 107.51 removes that requirement. The structure allowance in 107.51(b) does let a drone fly up to 400 feet above a structure's top within a 400-foot radius; it just does not replace the Class D authorization.",
+      "keyTakeaway": "The structure allowance changes the altitude limit, not the airspace rules.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k21b"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-172",
+    "stem": "A drone has no altitude readout. Which method does AC 107-2A suggest to help the crew keep it at or below 400 feet AGL?",
+    "choices": [
+      { "id": "q-reg-172-a", "text": "Pace off 400 feet on the ground to learn the look of it", "isCorrect": true },
+      { "id": "q-reg-172-b", "text": "Climb until the drone is barely visible, which is about 400 feet", "isCorrect": false },
+      { "id": "q-reg-172-c", "text": "Use the controller's signal strength bars as an altitude guide", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Pace off 400 feet on the ground to learn the look of it.",
+      "reason": "AC 107-2A, paragraph 5.12.2, lists ways to comply with the altitude limit in 14 CFR 107.51(b), including a calibrated altitude reporting device, a GPS that reports MSL altitude, having the remote pilot and visual observer pace off 400 feet on the ground to get a visual perspective of the distance, and using the known height of local terrain or structures. 'Barely visible' and signal strength are not reliable altitude cues.",
+      "keyTakeaway": "No altimeter? Pace off 400 feet on the ground, or use structures of known height.",
+      "references": ["ref-ac1072", "ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k21b"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-173",
+    "stem": "At night, how does Part 107 define the flight visibility a remote pilot must judge from the control station?",
+    "choices": [
+      { "id": "q-reg-173-a", "text": "How far away the drone's own anti-collision light can be seen", "isCorrect": false },
+      { "id": "q-reg-173-b", "text": "The visibility reported by the nearest airport's ASOS", "isCorrect": false },
+      { "id": "q-reg-173-c", "text": "How far prominent lighted objects can be seen and identified", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "How far prominent lighted objects can be seen and identified.",
+      "reason": "14 CFR 107.51(c) defines flight visibility as the average slant distance from the control station at which prominent unlighted objects may be seen and identified by day, and prominent lighted objects by night, and requires at least 3 statute miles. It is not based on the drone's own light or on a report from another location.",
+      "keyTakeaway": "Flight visibility: prominent objects (lighted at night) seen from the control station, at least 3 SM.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k21c"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-174",
+    "stem": "In haze, flight visibility from the control station is exactly 3 statute miles. May the remote pilot fly?",
+    "choices": [
+      { "id": "q-reg-174-a", "text": "No; visibility must be more than 3 statute miles", "isCorrect": false },
+      { "id": "q-reg-174-b", "text": "Yes, but only with a visual observer present", "isCorrect": false },
+      { "id": "q-reg-174-c", "text": "Yes; 3 statute miles meets the minimum of 3", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Yes; 3 statute miles meets the minimum of 3.",
+      "reason": "14 CFR 107.51(c) says the minimum flight visibility, as observed from the control station, must be no less than 3 statute miles. Exactly 3 statute miles meets that minimum. Part 107 has no greater minimum for haze. A visual observer is not needed to meet the visibility minimum.",
+      "keyTakeaway": "Visibility of 3 SM or more is legal. Less than 3 is not.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k21c"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-175",
+    "stem": "A remote pilot is inspecting a 500-foot tower. The cloud base is 600 feet AGL. What is the highest the drone may fly?",
+    "choices": [
+      { "id": "q-reg-175-a", "text": "900 feet AGL", "isCorrect": false },
+      { "id": "q-reg-175-b", "text": "550 feet AGL", "isCorrect": false },
+      { "id": "q-reg-175-c", "text": "100 feet AGL", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "100 feet AGL.",
+      "reason": "14 CFR 107.51(d) requires the drone to stay at least 500 feet below clouds and 2,000 feet horizontally from them. The structure allowance in 107.51(b) raises only the altitude limit; it does not reduce cloud clearance. With a 600-foot cloud base, the drone may go no higher than 100 feet AGL, even next to the tower. 900 feet AGL applies the structure allowance and ignores the clouds, and 550 feet AGL would be only 50 feet below the cloud base.",
+      "keyTakeaway": "Cloud clearance applies near structures too. Always 500 feet below the clouds.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k21d"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-176",
+    "stem": "The weather report shows scattered clouds at 400 feet AGL and a broken layer at 2,000 feet AGL. A remote pilot plans to fly at 200 feet AGL. Which statement is correct?",
+    "choices": [
+      { "id": "q-reg-176-a", "text": "Only the broken layer matters, because scattered clouds are not a ceiling", "isCorrect": false },
+      { "id": "q-reg-176-b", "text": "The drone may fly up to 400 feet AGL, because that is the altitude limit", "isCorrect": false },
+      { "id": "q-reg-176-c", "text": "Every cloud counts, including the scattered ones at 400 feet", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Every cloud counts, including the scattered ones at 400 feet.",
+      "reason": "14 CFR 107.51(d) sets the minimum distance of the small unmanned aircraft from clouds: 500 feet below and 2,000 feet horizontally. It applies to clouds, not to the ceiling. Scattered clouds are not a ceiling for weather reporting, but they are still clouds. At 200 feet AGL under a 400-foot cloud the drone would be only 200 feet below it.",
+      "keyTakeaway": "Cloud clearance is about every cloud, not the ceiling.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k21d"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-177",
+    "stem": "The cloud base over a job site is 1,000 feet AGL, and there is no tall structure nearby. What is the highest the drone may fly?",
+    "choices": [
+      { "id": "q-reg-177-a", "text": "500 feet AGL", "isCorrect": false },
+      { "id": "q-reg-177-b", "text": "400 feet AGL", "isCorrect": true },
+      { "id": "q-reg-177-c", "text": "600 feet AGL", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "400 feet AGL.",
+      "reason": "14 CFR 107.51(d) would allow flight up to 500 feet AGL under a 1,000-foot cloud base, but 107.51(b) separately limits altitude to 400 feet AGL away from structures. The more restrictive limit applies, so the answer is 400 feet AGL. 600 feet would be only 400 feet below the clouds and above the altitude limit.",
+      "keyTakeaway": "Apply both limits: 500 feet below clouds and 400 feet AGL. The lower one wins.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k21d"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-178",
+    "stem": "A pilot visiting from another country wants to fly a drone registered in that country for a paid job in the United States. The pilot holds no FAA Remote Pilot Certificate. Under Part 107:",
+    "choices": [
+      { "id": "q-reg-178-a", "text": "The pilot's foreign drone license substitutes for the FAA certificate", "isCorrect": false },
+      { "id": "q-reg-178-b", "text": "It needs an FAA certificate or an FAA authorization under 107.12(c)", "isCorrect": true },
+      { "id": "q-reg-178-c", "text": "No certificate is needed, because the drone is foreign-registered", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "It needs an FAA certificate or an FAA authorization under 107.12(c).",
+      "reason": "14 CFR 107.12(b) requires a person acting as remote PIC to hold an FAA remote pilot certificate with a small UAS rating (an uncertificated person may manipulate the controls only under the direct supervision of a certificated remote PIC, 107.12(a)(2)). Section 107.12(c) says the Administrator may, consistent with international standards, authorize an airman to operate a civil foreign-registered small unmanned aircraft without an FAA certificate. A foreign license does not substitute on its own, and foreign registration does not remove the requirement. Other requirements may also apply to the operation, such as a notice of identification under Part 89 for a foreign-registered drone with Remote ID.",
+      "keyTakeaway": "Foreign pilot, foreign drone: an FAA certificate, or an FAA authorization under 107.12(c).",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-certification",
+    "acsRefs": ["acs-ua-i-b-k22"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-179",
+    "stem": "Official sunset is 6:00 p.m. outside Alaska. At 6:35 p.m. the drone is still flying with its anti-collision light on. What applies now?",
+    "choices": [
+      { "id": "q-reg-179-a", "text": "It is now night, so the night training rule also applies", "isCorrect": true },
+      { "id": "q-reg-179-b", "text": "It is still civil twilight, so only the light is required", "isCorrect": false },
+      { "id": "q-reg-179-c", "text": "Nothing changes, because civil twilight lasts an hour after sunset", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "It is now night, so the night training rule also applies.",
+      "reason": "14 CFR 107.29(c)(2) says evening civil twilight outside Alaska ends 30 minutes after official sunset, here at 6:30 p.m. After that it is night, and 107.29(a) requires both anti-collision lighting visible for at least 3 statute miles and that the remote PIC completed an initial knowledge test or training under 107.65 after April 6, 2021. Civil twilight does not last an hour.",
+      "keyTakeaway": "Civil twilight ends 30 minutes after sunset. After that, night rules apply.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k24"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-180",
+    "stem": "A remote pilot is working in Alaska. How is civil twilight defined there for Part 107?",
+    "choices": [
+      { "id": "q-reg-180-a", "text": "As the period of civil twilight defined in The Air Almanac", "isCorrect": true },
+      { "id": "q-reg-180-b", "text": "The same 30 minutes before sunrise and after sunset as elsewhere", "isCorrect": false },
+      { "id": "q-reg-180-c", "text": "One hour before sunrise and one hour after sunset", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "As the period of civil twilight defined in The Air Almanac.",
+      "reason": "14 CFR 107.29(c)(3) says that in Alaska civil twilight is the period defined in The Air Almanac. The 30-minute periods in 107.29(c)(1) and (2) apply everywhere except Alaska. AC 107-2A, paragraph 5.7, also notes that Alaska's definition differs. Part 107 has no one-hour rule.",
+      "keyTakeaway": "Outside Alaska: 30 minutes. In Alaska: use The Air Almanac.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k24"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-181",
+    "stem": "A drone has a very bright steady white light that can be seen for 5 statute miles, but no flashing light. Does it meet the Part 107 night lighting requirement?",
+    "choices": [
+      { "id": "q-reg-181-a", "text": "No; it must also flash at a rate that prevents collisions", "isCorrect": true },
+      { "id": "q-reg-181-b", "text": "Yes, because the light is visible for more than 3 statute miles", "isCorrect": false },
+      { "id": "q-reg-181-c", "text": "No; anti-collision lights must be red, not white", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No; it must also flash at a rate that prevents collisions.",
+      "reason": "14 CFR 107.29(a)(2) requires lighted anti-collision lighting visible for at least 3 statute miles that has a flash rate sufficient to avoid a collision. A steady light, however bright, has no flash rate and does not meet the requirement. AC 107-2A, paragraph 5.7.2, says the remote pilot is responsible for verifying the light is operational, visible for 3 statute miles, and flashing at a sufficient rate. Part 107 sets no color; it requires visibility for at least 3 statute miles and a flash rate sufficient to avoid a collision.",
+      "keyTakeaway": "Night lighting must be visible for 3 SM and flash fast enough to avoid a collision.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k25"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-182",
+    "stem": "A company holds a Part 107 night waiver issued in 2019. Can it rely on that waiver for night flights today?",
+    "choices": [
+      { "id": "q-reg-182-a", "text": "Yes; certificates of waiver never expire once issued", "isCorrect": false },
+      { "id": "q-reg-182-b", "text": "No; night waivers issued before 2021 ended that year", "isCorrect": true },
+      { "id": "q-reg-182-c", "text": "No; every certificate of waiver expires after one year", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No; night waivers issued before 2021 ended that year.",
+      "reason": "14 CFR 107.29(d) says that after May 17, 2021, no one may operate at night under a certificate of waiver issued before April 21, 2021 under 107.200, and that waivers issued before March 16, 2021 that authorized deviation from 107.29 ended on May 17, 2021. Night flight now requires no waiver, but it must meet 107.29(a): a qualifying test or training after April 6, 2021, and anti-collision lighting. Waivers carry their own stated durations; these night waivers ended because 107.29(d) terminated them on May 17, 2021.",
+      "keyTakeaway": "Old night waivers ended in 2021. Today, night flight needs training and lights, not a waiver.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k25"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-183",
+    "stem": "A remote pilot passed the initial knowledge test in 2019 and completed the FAA's online recurrent training in 2025. With proper anti-collision lighting, may the pilot fly at night?",
+    "choices": [
+      { "id": "q-reg-183-a", "text": "No; only a new in-person knowledge test gives night privileges", "isCorrect": false },
+      { "id": "q-reg-183-b", "text": "Yes, but only with a visual observer at night", "isCorrect": false },
+      { "id": "q-reg-183-c", "text": "Yes; that training qualifies the pilot for night flight", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Yes; that training qualifies the pilot for night flight.",
+      "reason": "14 CFR 107.29(a)(1) requires the remote PIC to have completed an initial knowledge test or training under 107.65 after April 6, 2021. AC 107-2A, paragraph 5.7.2.1, says night privileges come from either a knowledge test that includes night topics or completion of the recurrent training, which covers night physiology and night illusions. The 2025 training also keeps the pilot current under 107.65, and no waiver is needed. Part 107 does not require a visual observer for night flight.",
+      "keyTakeaway": "Recurrent training after April 6, 2021 qualifies a pilot for night operations.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k25"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-184",
+    "stem": "A job is inside the area within 30 nautical miles of a Class B primary airport where manned aircraft generally need a transponder (the 'Mode C veil'). Does the drone need a transponder?",
+    "choices": [
+      { "id": "q-reg-184-a", "text": "Yes; every aircraft in the Mode C veil must carry a working transponder", "isCorrect": false },
+      { "id": "q-reg-184-b", "text": "No, but it must carry ADS-B Out in the veil instead", "isCorrect": false },
+      { "id": "q-reg-184-c", "text": "No; it may not fly with a transponder on unless authorized", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "No; it may not fly with a transponder on unless authorized.",
+      "reason": "14 CFR 107.52 says no person may operate a small UAS under Part 107 with a transponder on unless otherwise authorized by the Administrator. The Mode C veil described in AIM 4-1-20 and 14 CFR 91.215 is a manned-aircraft equipment requirement, and AC 107-2A, paragraph 5.10, explains that Part 107 operations may not be subject to Part 91 equipage requirements. The airspace rules for drones in this area are those of Part 107, such as prior authorization in 107.41 where it applies. ADS-B Out in transmit mode is prohibited too, under 107.53, unless the FAA authorizes it.",
+      "keyTakeaway": "Drones follow 107.52: transponder off unless authorized, even in the Mode C veil.",
+      "references": ["ref-cfr107", "ref-ac1072", "ref-aim"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k27"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
   }
 ]
