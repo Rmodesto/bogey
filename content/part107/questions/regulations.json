@@ -1670,5 +1670,1281 @@
     "difficulty": "easy",
     "status": "active",
     "version": 1
+  },
+  {
+    "id": "q-reg-076",
+    "stem": "A person flies a 1-pound drone only for fun at a local park and meets every condition of the statutory exception for limited recreational operations (49 U.S.C. 44809). Which rules govern this flight?",
+    "choices": [
+      { "id": "q-reg-076-a", "text": "The recreational exception in 49 U.S.C. 44809, not Part 107", "isCorrect": true },
+      { "id": "q-reg-076-b", "text": "Part 107, because every drone over 0.55 pounds must be flown under Part 107", "isCorrect": false },
+      { "id": "q-reg-076-c", "text": "The recreational exception, but only for drones under 0.55 pounds", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "The recreational exception in 49 U.S.C. 44809, not Part 107.",
+      "reason": "14 CFR 107.1(b)(2) says Part 107 does not apply to any aircraft subject to 49 U.S.C. 44809, the exception for limited recreational operations. A flyer who meets that exception's conditions is not operating under Part 107. The 0.55-pound figure is a registration threshold and a Category 1 limit, not the line between Part 107 and recreation, and a 1-pound recreational drone must still be registered (14 CFR 48.15) and comply with Remote ID (Part 89). The recreational exception is not limited to aircraft under 0.55 pounds; that weight decides whether registration is required.",
+      "keyTakeaway": "Flights that meet 44809 are outside Part 107. Most other civil small UAS flights fall under it.",
+      "references": ["ref-cfr107", "ref-cfr48", "ref-cfr89"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-general",
+    "acsRefs": ["acs-ua-i-a-k1"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-077",
+    "stem": "During a commercial job, an FAA inspector asks to inspect the small UAS and to check the visual observer's vision. Under Part 107, the crew must:",
+    "choices": [
+      { "id": "q-reg-077-a", "text": "Allow the inspection of the aircraft, but refuse any test of the visual observer, who holds no certificate", "isCorrect": false },
+      { "id": "q-reg-077-b", "text": "Allow the inspection and the test of the visual observer", "isCorrect": true },
+      { "id": "q-reg-077-c", "text": "Refuse until the FAA gives at least 24 hours' written notice", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Allow the inspection and the test of the visual observer.",
+      "reason": "14 CFR 107.7(b) requires the remote PIC, visual observer, owner, operator, or person manipulating the controls to allow the Administrator, on request, to test or inspect the small UAS, the remote PIC, the person at the controls, and, if applicable, the visual observer, to determine compliance. The rule covers the visual observer even though a visual observer needs no certificate. Part 107 sets no advance-notice requirement for these inspections.",
+      "keyTakeaway": "On request, the FAA may inspect or test the aircraft, the remote PIC, the person at the controls, and the visual observer.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-general",
+    "acsRefs": ["acs-ua-i-a-k5"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-078",
+    "stem": "A drone is eligible for Category 2 in one configuration and Category 3 in another. Before a Category 3 flight over workers at a closed site, how should the remote pilot confirm which configuration the aircraft is in?",
+    "choices": [
+      { "id": "q-reg-078-a", "text": "By checking the registration certificate, which records the aircraft's active category", "isCorrect": false },
+      { "id": "q-reg-078-b", "text": "By asking ATC to confirm the active category when requesting a LAANC authorization", "isCorrect": false },
+      { "id": "q-reg-078-c", "text": "By following the operating instructions, which explain how to verify the mode", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "By following the operating instructions, which explain how to verify the mode.",
+      "reason": "For an aircraft with variable modes or configurations, 14 CFR 107.120(b)(2)(iii) and 107.130(b)(2)(iii) require the remote pilot operating instructions to explain how to verify and change the mode or configuration, and 107.150 requires that the pilot cannot switch between them by accident. AC 107-2A, paragraph 8.12.1, says this lets the pilot confirm the correct configuration for the category being flown. A registration certificate does not record a category of operations over people, and LAANC grants airspace authorizations, not eligibility for operations over people.",
+      "keyTakeaway": "A multiple-category drone: the operating instructions tell you how to check and change its configuration.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-a-k6"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-079",
+    "stem": "An engineer modifies a drone design and submits a declaration of compliance for Category 3 on March 1, 2026. She does not produce aircraft for sale. Until when must she keep the supporting information that shows the aircraft meets Category 3?",
+    "choices": [
+      { "id": "q-reg-079-a", "text": "Until two years after she stops producing the aircraft", "isCorrect": false },
+      { "id": "q-reg-079-b", "text": "Until at least March 1, 2028, two years after she submitted it", "isCorrect": true },
+      { "id": "q-reg-079-c", "text": "For as long as any operator keeps the aircraft in service", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Until at least March 1, 2028, two years after she submitted it.",
+      "reason": "14 CFR 107.165(a)(2)(ii) says a person who designs or modifies a small unmanned aircraft must retain the supporting information for two years after submitting the declaration of compliance. The two-years-after-production rule in 107.165(a)(2)(i) applies to a person who produces the aircraft, and she produces none. No rule ties retention to how long the aircraft stays in service.",
+      "keyTakeaway": "Producers: 2 years after production ends. Designers or modifiers: 2 years after submitting the DOC.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-reporting",
+    "acsRefs": ["acs-ua-i-a-k7"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-080",
+    "stem": "A remote pilot owns an older drone that carries no Category 2 label. The FAA's list of accepted declarations shows that serial number as eligible for Category 2. What may the pilot do before flying it over people under Category 2?",
+    "choices": [
+      { "id": "q-reg-080-a", "text": "Nothing; an aircraft built without a label can never be used for Category 2", "isCorrect": false },
+      { "id": "q-reg-080-b", "text": "Submit a new declaration of compliance to the FAA for that serial number", "isCorrect": false },
+      { "id": "q-reg-080-c", "text": "Label it in English with its eligible category under 107.135", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Label it in English with its eligible category under 107.135.",
+      "reason": "AC 107-2A, paragraph 8.11.2.3, says that if an aircraft was manufactured before the rule took effect or was otherwise not labeled, the remote pilot is responsible for confirming it is listed on an FAA-accepted declaration of compliance and, if it is eligible, for labeling it under 14 CFR 107.135. That section requires an English label that is legible, prominent, will remain on the aircraft for the operation, and correctly identifies the category. A missing label does not make a listed aircraft permanently ineligible, and a new declaration is needed only from someone who produces, designs, or modifies the aircraft.",
+      "keyTakeaway": "Listed on an accepted DOC but unlabeled? The remote pilot may apply the label, per 107.135.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-a-k8"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-081",
+    "stem": "Midway through a roof inspection, the controller shows a motor warning and the drone starts to vibrate. The battery still has 60 percent charge. Under Part 107, the remote pilot should:",
+    "choices": [
+      { "id": "q-reg-081-a", "text": "Finish the inspection while the battery lasts, then check the motor", "isCorrect": false },
+      { "id": "q-reg-081-b", "text": "Stop the flight and land, because it may no longer be safe to fly", "isCorrect": true },
+      { "id": "q-reg-081-c", "text": "Keep flying, since the rule against continuing applies only over people", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Stop the flight and land, because it may no longer be safe to fly.",
+      "reason": "14 CFR 107.15(b) prohibits continuing a flight when the person knows or has reason to know the small UAS is no longer in a condition for safe operation. A motor warning with new vibration is reason to know. Battery charge has nothing to do with this rule, and the rule applies whether or not people are below the aircraft.",
+      "keyTakeaway": "The safe-condition rule applies in flight too: once you have reason to think it is unsafe, end the flight.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k2"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-082",
+    "stem": "A remote pilot sprained an ankle but can stand, see, and work the controls normally. The pilot holds no FAA medical certificate. May the pilot act as remote PIC?",
+    "choices": [
+      { "id": "q-reg-082-a", "text": "Yes; Part 107 requires no medical certificate, only fitness to fly", "isCorrect": true },
+      { "id": "q-reg-082-b", "text": "No; a remote PIC must hold at least a third-class medical certificate", "isCorrect": false },
+      { "id": "q-reg-082-c", "text": "Only if a second certificated remote pilot is standing by to take over", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Yes; Part 107 requires no medical certificate, only fitness to fly.",
+      "reason": "AC 107-2A, paragraph 5.6, says the person manipulating the controls and the visual observer are not required to hold an airman medical certificate. 14 CFR 107.17 only prohibits participating when a person knows or has reason to know of a physical or mental condition that would interfere with safe operation. A sprain that does not affect the pilot's ability to fly does not meet that test, and Part 107 does not require a backup pilot.",
+      "keyTakeaway": "No medical certificate for Part 107. The test is whether a condition would interfere with safe operation.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k3"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-083",
+    "stem": "A remote PIC lets an uncertificated client fly the drone, then walks 100 feet away to take a phone call while a visual observer watches the client. Is this allowed?",
+    "choices": [
+      { "id": "q-reg-083-a", "text": "Yes, because the visual observer is supervising the client", "isCorrect": false },
+      { "id": "q-reg-083-b", "text": "No, because the remote PIC could not take control immediately", "isCorrect": true },
+      { "id": "q-reg-083-c", "text": "No, because an uncertificated person may never fly the drone", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No, because the remote PIC could not take control immediately.",
+      "reason": "No. 14 CFR 107.12(a)(2) allows an uncertificated person to manipulate the controls only under the direct supervision of a remote PIC who has the ability to immediately take direct control of the flight. A remote PIC 100 feet away on a phone call cannot take control immediately. A visual observer cannot stand in for that supervision, and keeping the aircraft in sight does not meet the requirement. An uncertificated person may manipulate the controls under 14 CFR 107.12(a)(2) when directly supervised by a remote PIC who can immediately take control; the problem here is that the PIC walked away.",
+      "keyTakeaway": "An uncertificated person may fly only with the remote PIC right there, able to take over immediately.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-general",
+    "acsRefs": ["acs-ua-i-b-k4a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-084",
+    "stem": "A drone was losing power, and the remote PIC flew it over a group of people to reach the only clear landing spot. After a safe landing, the pilot swaps batteries and resumes the job on the same path over the group, citing the earlier emergency. Is this allowed?",
+    "choices": [
+      { "id": "q-reg-084-a", "text": "Yes, because the earlier emergency authorizes the deviation for the rest of the flight day", "isCorrect": false },
+      { "id": "q-reg-084-b", "text": "No, unless the pilot files a written report before resuming", "isCorrect": false },
+      { "id": "q-reg-084-c", "text": "No; the emergency deviation ended when the emergency did", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "No; the emergency deviation ended when the emergency did.",
+      "reason": "14 CFR 107.21(a) lets the remote PIC deviate from Part 107 only to the extent necessary to meet an in-flight emergency that requires immediate action. Once the aircraft has landed and the emergency is over, the normal rules, including 107.39 on flight over people, apply again. Under 107.21(b), a written report is due only if the Administrator requests one, and a report never authorizes a deviation. No report, before or after, extends an emergency deviation; 107.21(b) requires a written report only if the FAA asks for one.",
+      "keyTakeaway": "Emergency deviations last only as long as the emergency and only as far as needed.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-reporting",
+    "acsRefs": ["acs-ua-i-b-k5"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-085",
+    "stem": "In a dense downtown area, a remote pilot flies close to tall buildings in strong, gusty winds without considering how the wind will behave around them. The drone stays below 400 feet AGL and in sight. Under Part 107 this could be:",
+    "choices": [
+      { "id": "q-reg-085-a", "text": "Legal, because the altitude and line-of-sight limits were met", "isCorrect": false },
+      { "id": "q-reg-085-b", "text": "A concern only for manned aircraft, since the careless or reckless rule does not apply to drones", "isCorrect": false },
+      { "id": "q-reg-085-c", "text": "A careless or reckless operation that endangers life or property", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "A careless or reckless operation that endangers life or property.",
+      "reason": "14 CFR 107.23(a) prohibits operating a small UAS in a careless or reckless manner that endangers the life or property of another. AC 107-2A, paragraph 5.19, gives as an example failing to consider weather conditions near structures, trees, or rolling terrain when operating in a densely populated area. Meeting the altitude and line-of-sight limits does not excuse careless operation, and 107.23 is part of Part 107 itself.",
+      "keyTakeaway": "Meeting the numeric limits is not enough: ignoring wind near buildings in a crowded area can be careless or reckless.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k6a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-086",
+    "stem": "A promoter asks a remote pilot to drop full bottles of water from 300 feet AGL over a parking lot full of people. Under Part 107:",
+    "choices": [
+      { "id": "q-reg-086-a", "text": "It is allowed, because Part 107 does not regulate dropping objects", "isCorrect": false },
+      { "id": "q-reg-086-b", "text": "It is allowed once the pilot gets a waiver of the dropping-objects rule", "isCorrect": false },
+      { "id": "q-reg-086-c", "text": "It is prohibited, because it creates an undue hazard to people", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "It is prohibited, because it creates an undue hazard to people.",
+      "reason": "14 CFR 107.23(b) prohibits allowing an object to be dropped from a small unmanned aircraft in a manner that creates an undue hazard to persons or property. Full water bottles falling 300 feet onto a crowd create exactly that hazard, and the flight would also put the aircraft over people. Part 107 does regulate dropping objects, and 107.23 is not on the list of waivable sections in 107.205.",
+      "keyTakeaway": "Dropping is allowed only without an undue hazard, and 107.23 cannot be waived.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k6b"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-087",
+    "stem": "A remote pilot stopped drinking 10 hours ago. A breath test now shows an alcohol concentration of 0.04. May the pilot act as remote PIC?",
+    "choices": [
+      { "id": "q-reg-087-a", "text": "No, because 0.04 or greater is prohibited at any time", "isCorrect": true },
+      { "id": "q-reg-087-b", "text": "Yes, because more than 8 hours have passed since the last drink", "isCorrect": false },
+      { "id": "q-reg-087-c", "text": "No, but only because 10 hours is too soon after drinking", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No, because 0.04 or greater is prohibited at any time.",
+      "reason": "14 CFR 107.27 applies 14 CFR 91.17. Section 91.17(a) prohibits acting within 8 hours of drinking, while under the influence, while using a drug that affects one's faculties contrary to safety, or with an alcohol concentration of 0.04 or greater. Each condition stands on its own, so meeting the 8-hour rule does not cure a 0.04 reading. The limit is 0.04 or greater, not above 0.04. The 10 hours since the last drink do satisfy the 8-hour rule; it is the 0.04 concentration that prohibits the flight.",
+      "keyTakeaway": "8 hours AND below 0.04 AND not under the influence. All three must be true.",
+      "references": ["ref-cfr107", "ref-cfr91"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k8"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-088",
+    "stem": "Official sunset at a job site in Ohio is 5:12 p.m. The pilot's drone has no anti-collision light. What is the latest the drone may be in flight?",
+    "choices": [
+      { "id": "q-reg-088-a", "text": "5:12 p.m., official sunset", "isCorrect": true },
+      { "id": "q-reg-088-b", "text": "5:42 p.m., the end of evening civil twilight", "isCorrect": false },
+      { "id": "q-reg-088-c", "text": "6:12 p.m., one hour after sunset", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "5:12 p.m., official sunset.",
+      "reason": "14 CFR 107.29(b) and (c) say civil twilight outside Alaska runs from official sunset to 30 minutes after it, and an operation during civil twilight requires anti-collision lighting visible for at least 3 statute miles. Night follows civil twilight and also requires the lighting under 107.29(a). Without a light, the drone must be on the ground by official sunset. 5:42 p.m. is the end of civil twilight, and the lighting is required throughout that period.",
+      "keyTakeaway": "No anti-collision light? Fly only between official sunrise and official sunset.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k9"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-089",
+    "stem": "During a mapping job, the remote PIC places the visual observer behind a parked truck that will block the observer's view of the drone for part of the route. What does Part 107 require?",
+    "choices": [
+      { "id": "q-reg-089-a", "text": "Reposition the observer or change the route so the drone stays in view", "isCorrect": true },
+      { "id": "q-reg-089-b", "text": "Nothing, as long as the remote PIC can see the drone when the observer cannot", "isCorrect": false },
+      { "id": "q-reg-089-c", "text": "Give the observer the drone's video feed to watch instead", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Reposition the observer or change the route so the drone stays in view.",
+      "reason": "14 CFR 107.33(b) requires the remote PIC to ensure that the visual observer is able to see the unmanned aircraft in the manner specified in 107.31, and 107.33(c)(2) requires the crew to maintain awareness of the aircraft's position through direct visual observation. If the observer's view will be blocked, the remote PIC must move the observer or change the route. The remote PIC seeing the drone does not satisfy 107.33(b): when an observer is used, the remote PIC must ensure the observer can see the drone. Watching the drone's video feed does not count; 107.31 requires seeing the aircraft itself with vision unaided by any device other than corrective lenses.",
+      "keyTakeaway": "If you use a visual observer, you must make sure the observer can actually see the drone.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k11"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-090",
+    "stem": "A two-drone light show is planned. One crew member would be the remote PIC of drone 1 and, at the same time, the visual observer for drone 2. Without a waiver, this is:",
+    "choices": [
+      { "id": "q-reg-090-a", "text": "Prohibited, because no one may take part in two operations at once", "isCorrect": true },
+      { "id": "q-reg-090-b", "text": "Allowed, because the person is the remote PIC of only one of the two aircraft", "isCorrect": false },
+      { "id": "q-reg-090-c", "text": "Prohibited, because only one drone may fly at a site at a time", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Prohibited, because no one may take part in two operations at once.",
+      "reason": "14 CFR 107.35 says a person may not manipulate flight controls or act as remote PIC or visual observer in the operation of more than one unmanned aircraft at the same time. Mixing the roles across two aircraft is still taking part in two operations at once. The rule can be waived under 107.205(e). Several drones may fly at one site, each with its own crew; what 107.35 prohibits is one person flying or acting as remote PIC or VO for more than one aircraft at the same time.",
+      "keyTakeaway": "One person, one aircraft at a time, whether as pilot, controller, or visual observer.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k12"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-091",
+    "stem": "A lab asks a remote pilot to deliver medical samples packed in dry ice across a campus by drone. Under Part 107, this is:",
+    "choices": [
+      { "id": "q-reg-091-a", "text": "Allowed, because dry ice is not flammable or explosive", "isCorrect": false },
+      { "id": "q-reg-091-b", "text": "Prohibited, because dry ice is a hazardous material", "isCorrect": true },
+      { "id": "q-reg-091-c", "text": "Prohibited, because drones may never carry any cargo", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Prohibited, because dry ice is a hazardous material.",
+      "reason": "14 CFR 107.36 prohibits a small unmanned aircraft from carrying hazardous material as defined in 49 CFR 171.8. AIM 11-4-5 lists dry ice, lithium batteries, and aerosol whipped cream as examples of dangerous goods, and says carrying hazardous materials under Part 107 is prohibited and not subject to waiver. Being nonflammable does not make a material non-hazardous. Drones may carry cargo; what 107.36 prohibits is carrying hazardous material.",
+      "keyTakeaway": "Dry ice, aerosols, and lithium batteries as cargo are hazmat, and 107.36 cannot be waived.",
+      "references": ["ref-cfr107", "ref-aim"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k13"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-092",
+    "stem": "A low-flying helicopter is approaching the drone's position. The remote PIC thinks the fastest way to avoid it is to pass just underneath it. Under Part 107, the remote PIC must:",
+    "choices": [
+      { "id": "q-reg-092-a", "text": "Hold altitude, because the helicopter pilot must see and avoid the drone", "isCorrect": false },
+      { "id": "q-reg-092-b", "text": "Pass underneath quickly, because staying below manned aircraft is always safe", "isCorrect": false },
+      { "id": "q-reg-092-c", "text": "Give way, and do not pass over, under, or ahead unless well clear", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Give way, and do not pass over, under, or ahead unless well clear.",
+      "reason": "14 CFR 107.37(a) requires a small unmanned aircraft to yield the right of way to all aircraft. Yielding means giving way and not passing over, under, or ahead of the other aircraft unless well clear. Section 107.37(b) also prohibits operating so close to another aircraft as to create a collision hazard. The drone never has the right of way over a helicopter.",
+      "keyTakeaway": "The drone always yields. Do not pass over, under, or ahead unless well clear.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k14a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-093",
+    "stem": "During a real estate shoot with a drone not eligible for any operations-over-people category, the client's two employees stand in the open yard to watch. The remote PIC wants to fly over them. Are the employees direct participants?",
+    "choices": [
+      { "id": "q-reg-093-a", "text": "No, because only crewmembers count as direct participants", "isCorrect": true },
+      { "id": "q-reg-093-b", "text": "Yes, because they work for the company that hired the pilot", "isCorrect": false },
+      { "id": "q-reg-093-c", "text": "No, because they did not sign a written liability waiver", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No, because only crewmembers count as direct participants.",
+      "reason": "No. 14 CFR 107.39(a) permits flight over a person who is directly participating in the operation. AC 107-2A, paragraph 8.3, says direct participants include the remote PIC, another person manipulating the controls, a visual observer, or crewmembers necessary for the safety of the operation, assigned and briefed by the remote PIC. Working for the client or being told about the flight does not make someone a direct participant. Notice matters only at closed- or restricted-access sites (Category 3, and moving-vehicle operations under 107.145), and this is neither. Part 107 has no liability-waiver mechanism; signing papers does not make anyone a direct participant.",
+      "keyTakeaway": "Onlookers, including the client's staff, are not direct participants.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-b-k15"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-094",
+    "stem": "A job site lies inside the lateral boundaries of the Class E surface area designated for a nearby airport. Before flying there, the remote pilot must:",
+    "choices": [
+      { "id": "q-reg-094-a", "text": "Do nothing, because Class E airspace never requires an authorization", "isCorrect": false },
+      { "id": "q-reg-094-b", "text": "Establish two-way radio contact with the airport before launch", "isCorrect": false },
+      { "id": "q-reg-094-c", "text": "Get prior authorization from ATC before the flight", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Get prior authorization from ATC before the flight.",
+      "reason": "14 CFR 107.41 requires prior ATC authorization to operate in Class B, C, or D airspace or within the lateral boundaries of the surface area of Class E airspace designated for an airport. Most Class E airspace needs no authorization, but a Class E surface area does. Two-way radio contact is a manned-aircraft requirement; Part 107 requires authorization, not radio contact.",
+      "keyTakeaway": "B, C, D, and Class E surface areas: prior ATC authorization. Radio contact does not satisfy it.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k16"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-095",
+    "stem": "A remote pilot is filming in Class G airspace a quarter mile from a hospital helipad. A medical helicopter is inbound. Which rule applies?",
+    "choices": [
+      { "id": "q-reg-095-a", "text": "Nothing special, because 107.43 applies only to airports with runways", "isCorrect": false },
+      { "id": "q-reg-095-b", "text": "Avoid interfering with operations at the helipad, as at any airport", "isCorrect": true },
+      { "id": "q-reg-095-c", "text": "Get prior ATC authorization, because the helipad is within a quarter mile", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Avoid interfering with operations at the helipad, as at any airport.",
+      "reason": "14 CFR 107.43 prohibits operating a small unmanned aircraft in a manner that interferes with operations and traffic patterns at any airport, heliport, or seaplane base. AC 107-2A, paragraph 5.10.1, says no notification or authorization is needed near an airport unless the flight is in controlled airspace, but the pilot must avoid traffic patterns and approach paths. In Class G airspace there is no authorization requirement, but the duty not to interfere still applies.",
+      "keyTakeaway": "Airports, heliports, and seaplane bases: never interfere with their traffic, even in Class G.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k17"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-096",
+    "stem": "A job lies inside a restricted area. The remote pilot needs to know whom to ask for permission. Where can the pilot find the controlling agency?",
+    "choices": [
+      { "id": "q-reg-096-a", "text": "In the special use airspace table on the sectional chart", "isCorrect": true },
+      { "id": "q-reg-096-b", "text": "In the METAR for the nearest airport, under the remarks section", "isCorrect": false },
+      { "id": "q-reg-096-c", "text": "On the remote pilot's LAANC authorization, which names the agency", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "In the special use airspace table on the sectional chart.",
+      "reason": "14 CFR 107.45 requires permission from the using or controlling agency to operate in a restricted area. The FAA Aeronautical Chart Users' Guide says prohibited, restricted, and warning areas are listed on the sectional chart with their altitude, time of use, and controlling agency or contact facility. A METAR is a weather report, and LAANC grants access to controlled airspace around airports, not permission for a restricted area.",
+      "keyTakeaway": "Restricted area? The chart's special use airspace table lists the controlling agency.",
+      "references": ["ref-cfr107", "ref-chartguide"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k18"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-097",
+    "stem": "A wildfire is burning, and a NOTAM has set up a 14 CFR 91.137(a)(1) temporary flight restriction around it. A certificated remote pilot wants to fly his own drone inside it to send video to the fire crews, without coordinating with anyone. This is:",
+    "choices": [
+      { "id": "q-reg-097-a", "text": "Allowed, because the video would help the emergency response", "isCorrect": false },
+      { "id": "q-reg-097-b", "text": "Prohibited, unless the drone stays below 100 feet AGL", "isCorrect": false },
+      { "id": "q-reg-097-c", "text": "Prohibited, unless the flight is part of the relief effort", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Prohibited, unless the flight is part of the relief effort.",
+      "reason": "14 CFR 107.47 requires remote PICs to comply with 14 CFR 91.137 through 91.145. Under 91.137(b), when a TFR is issued under 91.137(a)(1), no person may operate an aircraft in the area unless it is participating in hazard relief and operating under the direction of the official in charge of on-scene emergency response. Good intentions without that direction do not qualify, and the TFR has no altitude exception for drones.",
+      "keyTakeaway": "Disaster TFRs: fly only as part of the response, under the on-scene official's direction.",
+      "references": ["ref-cfr107", "ref-cfr91"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k19"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-098",
+    "stem": "A fixed-wing drone's telemetry shows a groundspeed of 95 mph. Is this within the Part 107 speed limit?",
+    "choices": [
+      { "id": "q-reg-098-a", "text": "No; the limit is 87 mph", "isCorrect": false },
+      { "id": "q-reg-098-b", "text": "Yes; the limit is 87 knots, which is 100 mph", "isCorrect": true },
+      { "id": "q-reg-098-c", "text": "Yes; Part 107 limits airspeed, not groundspeed", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Yes; the limit is 87 knots, which is 100 mph.",
+      "reason": "14 CFR 107.51(a) limits groundspeed to 87 knots (100 miles per hour). 95 mph is below 100 mph, so it is within the limit. The trap is mixing units: the limit is 87 knots, not 87 mph. 95 mph is about 83 knots, which is less than 87 knots. The limit in 107.51(a) applies to groundspeed, not airspeed.",
+      "keyTakeaway": "87 knots = 100 mph. Check the units on the display.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k21a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-099",
+    "stem": "The METAR for an airport 10 miles away reports 5 statute miles visibility. At the job site, fog limits visibility from the control station to about 2 statute miles. May the pilot fly?",
+    "choices": [
+      { "id": "q-reg-099-a", "text": "Yes, because the nearest official report shows more than 3 statute miles", "isCorrect": false },
+      { "id": "q-reg-099-b", "text": "No, because visibility is judged from the control station", "isCorrect": true },
+      { "id": "q-reg-099-c", "text": "No, because that airport is too far away to use its report", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No, because visibility is judged from the control station.",
+      "reason": "14 CFR 107.51(c) requires a minimum flight visibility of 3 statute miles as observed from the location of the control station. An official report from another location does not override what the pilot actually sees at the site. The airport's distance is not the issue: even a report from next door would not replace the visibility observed from the control station.",
+      "keyTakeaway": "Visibility is what you see from the control station: at least 3 statute miles.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k21c"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-100",
+    "stem": "A drone at 250 feet AGL is approaching a cloud bank that lies about 1,500 feet ahead at the same altitude. What does Part 107 require?",
+    "choices": [
+      { "id": "q-reg-100-a", "text": "Continue, because the drone is more than 500 feet from the cloud", "isCorrect": false },
+      { "id": "q-reg-100-b", "text": "Turn away, but only once within 500 feet of the cloud", "isCorrect": false },
+      { "id": "q-reg-100-c", "text": "Turn away or stop, to stay 2,000 feet horizontally from it", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Turn away or stop, to stay 2,000 feet horizontally from it.",
+      "reason": "14 CFR 107.51(d) requires the small unmanned aircraft to remain at least 500 feet below a cloud and 2,000 feet horizontally from a cloud. 1,500 feet horizontally is too close. The 500-foot figure is the vertical clearance below a cloud, not the horizontal clearance, and the cloud clearance limits apply at every altitude.",
+      "keyTakeaway": "Cloud clearance: 500 feet below, 2,000 feet horizontally.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k21d"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-101",
+    "stem": "A pilot passed the initial knowledge test and holds a temporary Remote Pilot Certificate issued two weeks ago. The permanent card has not arrived. May the pilot act as remote PIC?",
+    "choices": [
+      { "id": "q-reg-101-a", "text": "No; only the permanent certificate allows a person to act as remote PIC", "isCorrect": false },
+      { "id": "q-reg-101-b", "text": "Yes, because a temporary certificate is valid for up to 120 days", "isCorrect": true },
+      { "id": "q-reg-101-c", "text": "Only under the direct supervision of another certificated remote pilot", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Yes, because a temporary certificate is valid for up to 120 days.",
+      "reason": "14 CFR 107.12(b) requires a remote PIC to hold a remote pilot certificate with a small UAS rating and to meet the recency requirement of 107.65. Under 107.64, a temporary certificate is issued for up to 120 calendar days and expires on its expiration date, on receipt of the permanent certificate, or on notice of denial or revocation. A valid temporary certificate meets the requirement, and a pilot who has just passed the initial test also meets recency.",
+      "keyTakeaway": "A temporary certificate is a real certificate for up to 120 days.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-certification",
+    "acsRefs": ["acs-ua-i-b-k22"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-102",
+    "stem": "A pre-programmed mapping route will take the drone behind a hill, out of sight of both the remote PIC and the visual observer, for about two minutes. Under Part 107, this is:",
+    "choices": [
+      { "id": "q-reg-102-a", "text": "Not allowed, because the drone must stay within line of sight", "isCorrect": true },
+      { "id": "q-reg-102-b", "text": "Allowed, because automated flights are exempt from the line-of-sight rule", "isCorrect": false },
+      { "id": "q-reg-102-c", "text": "Not allowed, because automated flight is banned under Part 107", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Not allowed, because the drone must stay within line of sight.",
+      "reason": "Automated operation is allowed under Part 107, but the operation must comply with every applicable rule (107.19(d)) and the remote PIC must be able to direct the aircraft (107.19(e)). 14 CFR 107.31 still requires the remote PIC, person at the controls, or a visual observer to see the aircraft throughout the flight. Being able to take control does not replace visual line of sight. Automated flight is allowed under Part 107 as long as the remote PIC can direct the aircraft (AC 107-2A, paragraph 5.2.3); the problem is the loss of visual line of sight.",
+      "keyTakeaway": "Automated is fine. Out of sight is not.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k23"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-103",
+    "stem": "Official sunrise in Georgia is 6:45 a.m. A remote pilot launches at 6:20 a.m. What lighting does Part 107 require?",
+    "choices": [
+      { "id": "q-reg-103-a", "text": "None, because the flight begins less than 30 minutes before sunrise", "isCorrect": false },
+      { "id": "q-reg-103-b", "text": "Red and green position lights, the same as manned aircraft at night", "isCorrect": false },
+      { "id": "q-reg-103-c", "text": "Anti-collision lighting visible for at least 3 statute miles", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Anti-collision lighting visible for at least 3 statute miles.",
+      "reason": "14 CFR 107.29(c)(1) defines morning civil twilight outside Alaska as the 30 minutes before official sunrise, here 6:15 to 6:45 a.m. Under 107.29(b), any operation during civil twilight requires lighted anti-collision lighting visible for at least 3 statute miles. A takeoff at 6:20 a.m. falls in that period. Part 107 requires anti-collision lighting, not position lights.",
+      "keyTakeaway": "Civil twilight: 30 minutes before sunrise and 30 minutes after sunset. Both need the 3-statute-mile anti-collision light.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k24"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-104",
+    "stem": "A drone weighs 48 pounds. A customer wants it to carry an 8-pound package to a farm in the same State, within visual line of sight. Can this be done under Part 107?",
+    "choices": [
+      { "id": "q-reg-104-a", "text": "Yes, because the 55-pound limit applies to the aircraft but not its cargo", "isCorrect": false },
+      { "id": "q-reg-104-b", "text": "No, because Part 107 never allows carrying property for hire", "isCorrect": false },
+      { "id": "q-reg-104-c", "text": "No, because the aircraft and package together are over the limit", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "No, because the aircraft and package together are over the limit.",
+      "reason": "14 CFR 107.3 defines a small unmanned aircraft as weighing less than 55 pounds on takeoff, including everything on board or attached. AC 107-2A, paragraph 5.15.1, confirms the aircraft plus any property carried must be under 55 pounds. 48 plus 8 is 56 pounds. Staying in one State is required, but it does not fix the weight problem. Part 107 does allow carrying property for compensation or hire within a single State when the total weight stays under 55 pounds and the other conditions are met; the weight is what rules this job out.",
+      "keyTakeaway": "Under 55 pounds total at takeoff, cargo included.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k26"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-105",
+    "stem": "A remote pilot installs a transponder on a drone so that ATC radar can see it near a Class C airport. Under Part 107, the drone may be flown with the transponder on:",
+    "choices": [
+      { "id": "q-reg-105-a", "text": "Only if otherwise authorized by the Administrator", "isCorrect": true },
+      { "id": "q-reg-105-b", "text": "Any time it flies in Class C airspace", "isCorrect": false },
+      { "id": "q-reg-105-c", "text": "Only if it flies inside a Class B Mode C veil", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Only if otherwise authorized by the Administrator.",
+      "reason": "14 CFR 107.52 prohibits operating a small UAS with a transponder on unless the Administrator has authorized it otherwise. Being in Class C airspace does not create an exception. Part 107 operations in Class C airspace rely on prior ATC authorization, not a transponder. The Mode C veil does not change the rule; 107.52 allows a transponder to be on only when the Administrator authorizes it.",
+      "keyTakeaway": "Transponder on only with FAA authorization, the same as ADS-B Out.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k27"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-106",
+    "stem": "A drone carries a receive-only ADS-B In unit that shows nearby manned traffic on the controller. It has no ADS-B Out equipment. Does 14 CFR 107.53 prohibit this?",
+    "choices": [
+      { "id": "q-reg-106-a", "text": "No; 107.53 prohibits only operating with ADS-B Out transmitting", "isCorrect": true },
+      { "id": "q-reg-106-b", "text": "Yes; all ADS-B equipment, including receivers, is prohibited on small UAS", "isCorrect": false },
+      { "id": "q-reg-106-c", "text": "No, because 107.53 applies only in controlled airspace", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No; 107.53 prohibits only operating with ADS-B Out transmitting.",
+      "reason": "14 CFR 107.53 says no person may operate a small UAS with ADS-B Out equipment in transmit mode unless otherwise authorized by the Administrator. The rule addresses transmitting, not receiving traffic information. A receive-only unit does not transmit, so 107.53 does not apply and no waiver is involved. 107.53 applies in all airspace; it simply does not cover receive-only ADS-B In equipment.",
+      "keyTakeaway": "The ban is on transmitting ADS-B Out. Receiving traffic information is not covered.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-operating",
+    "acsRefs": ["acs-ua-i-b-k28"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-107",
+    "stem": "An applicant was convicted under a State law for possessing marijuana six months ago and now applies for a Remote Pilot Certificate. What may the FAA do?",
+    "choices": [
+      { "id": "q-reg-107-a", "text": "Nothing, because only a Federal drug conviction affects an application", "isCorrect": false },
+      { "id": "q-reg-107-b", "text": "Deny the application for up to 1 year after the conviction", "isCorrect": true },
+      { "id": "q-reg-107-c", "text": "Deny it permanently, because any drug conviction is disqualifying", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Deny the application for up to 1 year after the conviction.",
+      "reason": "14 CFR 107.57(a) says a conviction for violating any Federal or State statute relating to the possession of marijuana, among other drug offenses, is grounds for denying an application for up to 1 year after the date of final conviction, or for suspending or revoking a certificate already held. State convictions count. The denial period is up to 1 year, not permanent.",
+      "keyTakeaway": "Federal or State drug convictions: denial for up to 1 year, or suspension or revocation of a held certificate.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-certification",
+    "acsRefs": ["acs-ua-i-c-k1"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-108",
+    "stem": "After a reported incident, the FAA asks a certificated remote pilot to authorize release of the results of an alcohol test taken at the scene. The pilot refuses. Under Part 107, this refusal is grounds for:",
+    "choices": [
+      { "id": "q-reg-108-a", "text": "Nothing, because only a refusal to a law enforcement officer counts", "isCorrect": false },
+      { "id": "q-reg-108-b", "text": "Suspension or revocation of the Remote Pilot Certificate", "isCorrect": true },
+      { "id": "q-reg-108-c", "text": "A civil penalty only; the certificate cannot be affected", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Suspension or revocation of the Remote Pilot Certificate.",
+      "reason": "14 CFR 107.59 makes it grounds for denial of an application (for up to 1 year) or suspension or revocation of a certificate to refuse a test when a law enforcement officer requests it under 91.17(c), or to refuse to furnish or authorize release of test results that the Administrator requests under 91.17(c) or (d). A refusal to the FAA counts as well as a refusal to an officer. The rule specifically puts the certificate at risk.",
+      "keyTakeaway": "Refusing the test, or refusing to release the results to the FAA, can cost you the certificate.",
+      "references": ["ref-cfr107", "ref-cfr91"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-certification",
+    "acsRefs": ["acs-ua-i-c-k2"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-109",
+    "stem": "A client tells the remote pilot that the manufacturer says the drone is fine to fly over the crowd at its event. Who is responsible for confirming that the aircraft is eligible for the category of operation being flown?",
+    "choices": [
+      { "id": "q-reg-109-a", "text": "The manufacturer, since it built the aircraft and declared its category", "isCorrect": false },
+      { "id": "q-reg-109-b", "text": "The client, since the client organized the event and invited the crowd", "isCorrect": false },
+      { "id": "q-reg-109-c", "text": "The remote pilot, who must verify the label and DOC listing", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "The remote pilot, who must verify the label and DOC listing.",
+      "reason": "AC 107-2A, paragraph 8.13, says the remote pilot is responsible for determining that the aircraft is being operated in the appropriate category and for verifying that it is properly labeled and listed on an FAA-accepted declaration of compliance. 14 CFR 107.19 makes the remote PIC the final authority for the operation. The manufacturer's statements and the client's plans do not shift that responsibility.",
+      "keyTakeaway": "Over people, the remote pilot owns the eligibility check: category, label, and DOC listing.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-e-k1"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-110",
+    "stem": "A 0.5-pound drone with no exposed rotating parts is used for Category 1 operations. For a night flight over people, the pilot adds a strobe that brings the total weight to 0.6 pounds. Which is correct?",
+    "choices": [
+      { "id": "q-reg-110-a", "text": "The drone still qualifies for Category 1, because anti-collision lights required at night are not counted", "isCorrect": false },
+      { "id": "q-reg-110-b", "text": "The drone no longer qualifies for Category 1, because the 0.55-pound limit includes the light", "isCorrect": true },
+      { "id": "q-reg-110-c", "text": "The drone qualifies for Category 2 automatically, because it is over 0.55 pounds", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "The drone no longer qualifies for Category 1, because the 0.55-pound limit includes the light.",
+      "reason": "14 CFR 107.110(a)(1) requires a Category 1 aircraft to weigh 0.55 pounds or less on takeoff and throughout the operation, including everything on board or otherwise attached, and the light is attached. AC 107-2A, paragraph 8.14, says the categories and their restrictions do not change at night. Nothing exempts a required light from the weight. Category 2 requires an FAA-accepted declaration of compliance and a label, so it is never automatic.",
+      "keyTakeaway": "Night does not change the categories. The light counts toward Category 1's 0.55 pounds.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-e-k2"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-111",
+    "stem": "A remote pilot has a 0.5-pound drone, weighed with everything attached, that has no exposed rotating parts that could cut skin. What else is required before flying it over people under Category 1?",
+    "choices": [
+      { "id": "q-reg-111-a", "text": "Nothing more; Category 1 needs no label or declaration", "isCorrect": true },
+      { "id": "q-reg-111-b", "text": "A Category 1 label in English, applied by the remote pilot", "isCorrect": false },
+      { "id": "q-reg-111-c", "text": "An FAA-accepted declaration of compliance for the model", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Nothing more; Category 1 needs no label or declaration.",
+      "reason": "Under 14 CFR 107.110, Category 1 eligibility depends only on weighing 0.55 pounds or less, everything included, and having no exposed rotating parts that would lacerate skin. AC 107-2A, paragraph 8.11.1, says the FAA does not require labeling of Category 1 aircraft. Declarations of compliance apply to Categories 2 and 3. Sustained flight over an open-air assembly still requires Remote ID compliance under 107.110(b).",
+      "keyTakeaway": "Category 1: 0.55 pounds or less and no lacerating exposed rotating parts. No DOC and no label.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-e-k3a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-112",
+    "stem": "A remote pilot wants to hover for several minutes over 10 people standing in an open lot. The area is not a closed site and the group is not an open-air assembly. Which category allows this?",
+    "choices": [
+      { "id": "q-reg-112-a", "text": "Category 2", "isCorrect": true },
+      { "id": "q-reg-112-b", "text": "Category 3", "isCorrect": false },
+      { "id": "q-reg-112-c", "text": "Neither; sustained flight over people is never allowed", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Category 2.",
+      "reason": "Category 2 under 14 CFR 107.115 places no limit on sustained flight over people, apart from the Remote ID requirement for sustained flight over open-air assemblies. Category 3 under 107.125(c) allows flight over people only within or over a closed- or restricted-access site with everyone on notice or, outside such a site, with no sustained flight over anyone who is neither participating nor under a covered structure or in a stationary vehicle. Hovering over non-participants in an open lot fails both Category 3 conditions.",
+      "keyTakeaway": "Category 2 allows sustained flight over people. Category 3 does not, unless at a closed site with everyone on notice.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-e-k3b"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-113",
+    "stem": "A drone that is labeled and listed for Category 3 makes one quick pass over a pedestrian on a public sidewalk on its way across a job site. The site is not closed. Is this allowed?",
+    "choices": [
+      { "id": "q-reg-113-a", "text": "No; Category 3 never allows flight over a person outside a closed site", "isCorrect": false },
+      { "id": "q-reg-113-b", "text": "Yes, because a public sidewalk is not part of the job site", "isCorrect": false },
+      { "id": "q-reg-113-c", "text": "Yes, because a single brief pass is not sustained flight", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Yes, because a single brief pass is not sustained flight.",
+      "reason": "14 CFR 107.125(c)(2) allows Category 3 flight above a person if the aircraft does not maintain sustained flight over any person who is not directly participating, under a covered structure, or inside a stationary vehicle. A brief, one-time pass is not sustained flight. The notice requirement in 107.125(c)(1) applies to the other option, a closed- or restricted-access site. Where the pedestrian stands does not matter; the pass is allowed because it is not sustained flight (107.125(c)(2)).",
+      "keyTakeaway": "Category 3 outside a closed site: brief passes are allowed; sustained flight over non-participants is not.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-e-k3c"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-114",
+    "stem": "A small unmanned aircraft has an airworthiness certificate issued under Part 21, but the operating limitations in its approved Flight Manual prohibit flight over people. May it be used for Category 4 operations?",
+    "choices": [
+      { "id": "q-reg-114-a", "text": "No, because its operating limitations must allow flight over people", "isCorrect": true },
+      { "id": "q-reg-114-b", "text": "Yes, because the airworthiness certificate alone makes it eligible", "isCorrect": false },
+      { "id": "q-reg-114-c", "text": "No, because Category 4 also requires a declaration of compliance", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No, because its operating limitations must allow flight over people.",
+      "reason": "14 CFR 107.140(b) requires a Category 4 aircraft to have an airworthiness certificate under Part 21 and to be operated under the operating limitations in its approved Flight Manual or as specified by the Administrator, and those limitations must not prohibit operations over people. The certificate alone is not enough. Part 107 has no Category 4 label; labeling applies to Categories 2 and 3. Category 4 relies on a Part 21 airworthiness certificate and its operating limitations, not a declaration of compliance (107.140).",
+      "keyTakeaway": "Category 4 = Part 21 airworthiness certificate + operating limitations that allow flight over people.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-e-k3d"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-115",
+    "stem": "A remote pilot's drone does not qualify for any operations-over-people category. The job is in a busy public park on a Saturday. Which plan follows FAA guidance for selecting the operational area?",
+    "choices": [
+      { "id": "q-reg-115-a", "text": "Fly over park visitors only briefly, so the flight is never sustained", "isCorrect": false },
+      { "id": "q-reg-115-b", "text": "Pick a time and place with no people, or keep them clear", "isCorrect": true },
+      { "id": "q-reg-115-c", "text": "Post a sign announcing the flight, so anyone who reads it is on notice", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Pick a time and place with no people, or keep them clear.",
+      "reason": "AC 107-2A, paragraph 8.3, says a remote pilot can comply with the rule against flight over people by selecting an operational location where no people are present or expected for the duration, or, if people are present, by having a plan to keep them clear, such as asking them to stay indoors or under safe cover. 14 CFR 107.39 does not allow even brief flight over non-participants for an aircraft that qualifies for no category; the brief-pass allowance belongs to Category 3. Posting notice matters only at closed- or restricted-access sites (Category 3, and moving-vehicle operations under 107.145).",
+      "keyTakeaway": "Pick a spot and time with no people, or a plan to keep them clear. Brief flights over them are still flights over them.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-e-k4"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-116",
+    "stem": "What minimum distance from people who are not participating does Part 107 require a remote pilot to keep?",
+    "choices": [
+      { "id": "q-reg-116-a", "text": "None; the remote pilot chooses a safe stand-off distance", "isCorrect": true },
+      { "id": "q-reg-116-b", "text": "500 feet in any direction, the same as for manned aircraft", "isCorrect": false },
+      { "id": "q-reg-116-c", "text": "100 feet horizontally from any person not participating", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "None; the remote pilot chooses a safe stand-off distance.",
+      "reason": "AC 107-2A, paragraph 8.3.1, says Part 107 does not impose a specific stand-off distance from people. The remote pilot may set one by considering the aircraft's performance, environmental conditions such as wind and gusts, the operational area, probable failures and emergency maneuvers, and the pilot's own familiarity with the aircraft, and should adjust it as conditions change. The 500-foot distance comes from the manned-aircraft minimum safe altitude rule in Part 91, which does not apply to Part 107.",
+      "keyTakeaway": "No fixed buffer in Part 107. The pilot sets one based on the aircraft, the conditions, and possible failures.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-e-k5"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-117",
+    "stem": "At a closed quarry, haul trucks move constantly. Every driver has been told that a drone may fly over them. Can a Category 2 drone fly sustained flight over the moving trucks?",
+    "choices": [
+      { "id": "q-reg-117-a", "text": "Yes, because everyone in the trucks at the closed site is on notice", "isCorrect": true },
+      { "id": "q-reg-117-b", "text": "No; sustained flight over moving vehicles is never allowed in Category 2", "isCorrect": false },
+      { "id": "q-reg-117-c", "text": "Yes, because haul trucks do not count as vehicles", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Yes, because everyone in the trucks at the closed site is on notice.",
+      "reason": "14 CFR 107.145(b) allows Category 1, 2, or 3 operations over people in moving vehicles if the aircraft either stays within or over a closed- or restricted-access site with everyone in the moving vehicles on notice, or does not maintain sustained flight over moving vehicles. Here the first condition is met, so sustained flight is permitted. The trucks do not need to stop. The haul trucks are moving vehicles under 107.145; the flight is allowed only because the site is closed and the drivers are on notice.",
+      "keyTakeaway": "Moving vehicles, Categories 1 to 3: a closed site with everyone on notice, or no sustained flight.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-e-k6"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-118",
+    "stem": "A remote pilot modifies a Category 2-labeled drone in a way its operating instructions do not allow. From now on the pilot will fly it only away from people. What should happen to the Category 2 label?",
+    "choices": [
+      { "id": "q-reg-118-a", "text": "It can stay, because the aircraft will not be flown over people", "isCorrect": false },
+      { "id": "q-reg-118-b", "text": "It should be removed or covered, since it is now ineligible", "isCorrect": true },
+      { "id": "q-reg-118-c", "text": "It can stay until the FAA rescinds the declaration of compliance", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "It should be removed or covered, since it is now ineligible.",
+      "reason": "AC 107-2A, paragraph 8.4.4, says a modification not permitted by the remote pilot operating instructions renders the aircraft ineligible. FAA guidance in paragraph 8.11.2.4 says that when a modified aircraft is no longer eligible in its labeled category, the person who did the modification would have to remove or cover the old label. Leaving a wrong label invites someone to fly it over people later. The FAA does not need to rescind the declaration for a modified aircraft to become ineligible.",
+      "keyTakeaway": "An unapproved modification ends eligibility, and the old label must come off or be covered.",
+      "references": ["ref-ac1072", "ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-e-k7"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-119",
+    "stem": "A film crew sets up a Category 3 operation in a fenced lot. Workers who are not part of the drone crew will be inside. What should the remote pilot do about these workers?",
+    "choices": [
+      { "id": "q-reg-119-a", "text": "Nothing, because a fence by itself makes the lot a closed site", "isCorrect": false },
+      { "id": "q-reg-119-b", "text": "Put them on notice of the flights and keep others out", "isCorrect": true },
+      { "id": "q-reg-119-c", "text": "Require each worker to wear a hard hat in place of giving notice", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Put them on notice of the flights and keep others out.",
+      "reason": "14 CFR 107.125(c)(1) allows Category 3 flight over people within a closed- or restricted-access site only if everyone inside is on notice that a drone may fly over them. AC 107-2A, paragraph 8.3.6.6, says people performing other functions at the site must be on notice and should be advised of precautions, and the remote pilot is responsible for making sure no inadvertent or unauthorized access occurs. A fence helps control access but does not give notice. Protective gear is not a substitute for notice.",
+      "keyTakeaway": "Category 3 closed site: control access, and put everyone inside on notice.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-e-k8"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-120",
+    "stem": "A remote pilot buys a used drone that its manufacturer declared eligible for Category 3. Which information must the manufacturer's remote pilot operating instructions cover?",
+    "choices": [
+      { "id": "q-reg-120-a", "text": "The aircraft's maintenance records, flight hours, and repair history", "isCorrect": false },
+      { "id": "q-reg-120-b", "text": "Required components, limits, category, and allowed modifications", "isCorrect": true },
+      { "id": "q-reg-120-c", "text": "The airspace authorizations and waivers the aircraft has received", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Required components, limits, category, and allowed modifications.",
+      "reason": "14 CFR 107.130(b)(2) requires the applicant to make remote pilot operating instructions available on sale or transfer. At a minimum they must cover a system description, including required components, limitations, and declared categories; modifications that do not affect eligibility; and how to verify and change the mode or configuration if it can vary. Maintenance records and airspace authorizations are not part of these instructions.",
+      "keyTakeaway": "Operating instructions: components, limits, category, allowed modifications, and mode switching.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-e-k9"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-121",
+    "stem": "The operating instructions for a Category 2 drone list a parachute as a required component for Category 2. The parachute is shipped separately and is not installed today. May the drone be flown over people under Category 2?",
+    "choices": [
+      { "id": "q-reg-121-a", "text": "No, because a required component for Category 2 is missing", "isCorrect": true },
+      { "id": "q-reg-121-b", "text": "Yes, because the Category 2 label is still on the aircraft", "isCorrect": false },
+      { "id": "q-reg-121-c", "text": "No, because parachutes are banned on Category 2 drones", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No, because a required component for Category 2 is missing.",
+      "reason": "AC 107-2A, paragraph 8.12.1, says the remote pilot operating instructions must identify any component that must be on the aircraft to meet the Category 2 or 3 safety requirements, including one provided separately such as a parachute. 14 CFR 107.115(a) requires an aircraft that is eligible for Category 2 under 107.120(a). A missing required component means the aircraft is not in its eligible configuration, regardless of the label. Parachutes are not banned; here the operating instructions make one a required component.",
+      "keyTakeaway": "Required components are part of eligibility. If one is missing, the aircraft is not eligible.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-e-k10"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-122",
+    "stem": "A Category 2 drone's operating instructions list two approved replacement cameras as optional components. The pilot swaps in one of the listed cameras and secures it. Is the drone still eligible for Category 2?",
+    "choices": [
+      { "id": "q-reg-122-a", "text": "Yes, because the camera is listed and securely attached", "isCorrect": true },
+      { "id": "q-reg-122-b", "text": "No; any change at all requires a new declaration of compliance", "isCorrect": false },
+      { "id": "q-reg-122-c", "text": "Yes, and any other payload may now be added without affecting eligibility", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Yes, because the camera is listed and securely attached.",
+      "reason": "AC 107-2A, paragraph 8.12.1, item 2a, says the operating instructions must completely describe modifications that do not change eligibility, including any payload, consistent with 14 CFR 107.120(b)(2)(ii). The sample instructions in Figure 8-2 allow replacing the camera only with a pre-approved camera listed in the instructions, and require any permissible payload to be securely attached. A listed camera, securely attached, keeps eligibility; an unlisted payload may end it. Not every change requires a new declaration.",
+      "keyTakeaway": "Listed optional components keep eligibility. Unlisted payloads may end it.",
+      "references": ["ref-ac1072", "ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-e-k11"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-123",
+    "stem": "A hobbyist builds a drone from parts bought separately, not from a kit, and wants to fly it over people under Category 3. What must happen first?",
+    "choices": [
+      { "id": "q-reg-123-a", "text": "Nothing, because drones built by a hobbyist are exempt from Subpart D", "isCorrect": false },
+      { "id": "q-reg-123-b", "text": "The builder only needs to put a Category 3 label on the aircraft", "isCorrect": false },
+      { "id": "q-reg-123-c", "text": "The builder must use an accepted MOC and submit a DOC", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "The builder must use an accepted MOC and submit a DOC.",
+      "reason": "AC 107-2A, paragraph 8.4.2, says someone who builds a small unmanned aircraft from separate parts, not from a kit, is an applicant and must submit a declaration of compliance to conduct Category 2 or 3 operations. Under 14 CFR 107.160, the declaration identifies the FAA-accepted means of compliance used to show the aircraft meets 107.130(a). Home-built aircraft get no exemption from Subpart D, and a label without an accepted declaration does not make an aircraft eligible.",
+      "keyTakeaway": "Building it yourself makes you the applicant: accepted MOC first, then a DOC.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-e-k12"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-124",
+    "stem": "A client wants a remote pilot to file a declaration of compliance so that the client's unmodified, store-bought drone can be flown over people under Category 2. What is a declaration of compliance, and who submits it?",
+    "choices": [
+      { "id": "q-reg-124-a", "text": "A record of Category 2 or 3 compliance from the producer, designer, or modifier", "isCorrect": true },
+      { "id": "q-reg-124-b", "text": "A form the remote pilot submits to the FAA before each operation over people", "isCorrect": false },
+      { "id": "q-reg-124-c", "text": "An FAA report issued after the aircraft passes a test flight with an inspector", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "A record of Category 2 or 3 compliance from the producer, designer, or modifier.",
+      "reason": "14 CFR 107.3 defines a declaration of compliance as a record submitted to the FAA that certifies the small unmanned aircraft conforms to the Category 2 or Category 3 requirements of Subpart D. AC 107-2A, paragraph 8.9, says it is submitted by the person who designs, produces, or modifies the aircraft. For an unmodified aircraft, the remote pilot's job is to verify that the model is listed on an FAA-accepted declaration and labeled. It is not filed per operation, and it is not an FAA test flight report.",
+      "keyTakeaway": "The DOC comes from whoever produces, designs, or modifies the aircraft. The pilot checks that it is listed.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-e-k13"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-125",
+    "stem": "The operating instructions for a Category 2 drone list a specific propeller as an allowed replacement. During routine maintenance the operator installs that propeller. What is required?",
+    "choices": [
+      { "id": "q-reg-125-a", "text": "A new declaration of compliance, as for any propeller change", "isCorrect": false },
+      { "id": "q-reg-125-b", "text": "Nothing more, because the propeller is an allowed replacement", "isCorrect": true },
+      { "id": "q-reg-125-c", "text": "An FAA airworthiness inspection before the next flight over people", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Nothing more, because the propeller is an allowed replacement.",
+      "reason": "AC 107-2A, paragraph 8.4.5, says maintenance on an eligible Category 2 or 3 aircraft that does not change its configuration or characteristics does not require a new declaration of compliance. It gives the example of replacing propellers when that is listed as an allowed modification. Replacing them with propellers not covered by the operating instructions would require a new declaration. Category 2 aircraft have no airworthiness inspection requirement.",
+      "keyTakeaway": "Maintenance within the operating instructions keeps eligibility. Unlisted parts need a new DOC.",
+      "references": ["ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-e-k14"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-126",
+    "stem": "Under Part 107, how must a means of compliance show that an aircraft meets the Category 2 injury limit?",
+    "choices": [
+      { "id": "q-reg-126-a", "text": "Through a log of flight hours showing the aircraft has never had an accident", "isCorrect": false },
+      { "id": "q-reg-126-b", "text": "Through test, analysis, or inspection that the FAA accepts", "isCorrect": true },
+      { "id": "q-reg-126-c", "text": "Through a demonstration flight observed by the remote pilot's client", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Through test, analysis, or inspection that the FAA accepts.",
+      "reason": "14 CFR 107.155(a) says a means of compliance for Category 2 or 3 must consist of test, analysis, or inspection. Under 107.155(c), the FAA notifies the applicant when it accepts the means of compliance, and AC 107-2A, paragraph 8.5.1, says the FAA must accept it before an applicant can rely on it. Accident-free hours and client demonstrations are not recognized methods.",
+      "keyTakeaway": "MOC = test, analysis, or inspection, and the FAA must accept it.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-e-k15"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-127",
+    "stem": "Using the FAA-provided means of compliance, a manufacturer calculates that a drone's maximum impact kinetic energy is 24.8 foot-pounds. For which categories is the drone eligible on that basis?",
+    "choices": [
+      { "id": "q-reg-127-a", "text": "Category 3 only", "isCorrect": true },
+      { "id": "q-reg-127-b", "text": "Category 2 only", "isCorrect": false },
+      { "id": "q-reg-127-c", "text": "Both Category 2 and Category 3", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Category 3 only.",
+      "reason": "14 CFR 107.120(a)(1) limits Category 2 to injury less severe than a transfer of 11 foot-pounds of kinetic energy, and 107.130(a)(1) limits Category 3 to less than 25 foot-pounds. AC 107-2A, paragraph 8.6.1.5, gives this example: a 1-pound aircraft with a maximum impact speed of 40 feet per second has about 24.8 foot-pounds. That exceeds the Category 2 limit but is below the Category 3 limit. Eligibility also requires meeting the other requirements and being listed on an accepted declaration.",
+      "keyTakeaway": "Under 11 ft-lb: Category 2. Under 25 ft-lb: Category 3.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-e-k16"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-128",
+    "stem": "A ducted-fan drone design keeps its propellers inside a shroud. Tests show the shroud is likely to break in a typical impact with a person and expose the spinning blades. Does it meet the exposed rotating parts requirement?",
+    "choices": [
+      { "id": "q-reg-128-a", "text": "Yes, because the propellers are enclosed during normal flight", "isCorrect": false },
+      { "id": "q-reg-128-b", "text": "No, because every ducted-fan design is automatically ineligible", "isCorrect": false },
+      { "id": "q-reg-128-c", "text": "No, because a typical impact could expose the blades", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "No, because a typical impact could expose the blades.",
+      "reason": "AC 107-2A, paragraph 8.6.2, says propellers internal to the aircraft, as in a ducted fan, satisfy the requirement only if they would not contact a person in a typical impact. If impact forces are likely to cause structural failures that expose the rotating parts, the design does not satisfy it. The requirement applies to Categories 1, 2, and 3 under 14 CFR 107.110(a)(2), 107.120(a)(2), and 107.130(a)(2). Ducted designs are not automatically ineligible; a shroud that stays intact in typical impacts could meet the requirement.",
+      "keyTakeaway": "A shroud counts only if it stays intact in a typical impact with a person.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-e-k17"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-129",
+    "stem": "A university lab wants to test a prototype unmanned aircraft that has no Remote ID equipment, outside any FAA-recognized identification area. Under Part 89, when may it fly without Remote ID?",
+    "choices": [
+      { "id": "q-reg-129-a", "text": "Whenever it flies for a university, because schools are exempt", "isCorrect": false },
+      { "id": "q-reg-129-b", "text": "When it stays below 200 feet AGL on its own campus", "isCorrect": false },
+      { "id": "q-reg-129-c", "text": "When the FAA authorizes it for aeronautical research", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "When the FAA authorizes it for aeronautical research.",
+      "reason": "14 CFR 89.105 requires Remote ID except as otherwise authorized or as provided in 89.120. Section 89.120 says the Administrator may authorize operations without Remote ID when the operation is solely for aeronautical research or to show compliance with regulations. The other path, 89.115(b), applies only inside an FAA-recognized identification area, which this flight is not. There is no automatic exemption for schools or prototypes. No altitude or campus exception exists; without Remote ID equipment and outside a FRIA, it needs FAA authorization under 89.120.",
+      "keyTakeaway": "Outside a FRIA, flying without Remote ID for research needs FAA authorization under 89.120.",
+      "references": ["ref-cfr89"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-f-k3"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-130",
+    "stem": "A pilot from Canada brings a Canadian-registered drone with Remote ID to the United States for a job. What does Part 89 require before the flight?",
+    "choices": [
+      { "id": "q-reg-130-a", "text": "Submit a notice of identification and carry the confirmation", "isCorrect": true },
+      { "id": "q-reg-130-b", "text": "Nothing, because foreign-registered drones are exempt from Part 89", "isCorrect": false },
+      { "id": "q-reg-130-c", "text": "Re-register the drone with the FAA as a U.S. aircraft before flying", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Submit a notice of identification and carry the confirmation.",
+      "reason": "14 CFR 89.130(a) requires anyone operating a foreign-registered civil unmanned aircraft with Remote ID in the United States to submit a notice of identification first. Under 89.130(b) and (c), the FAA issues a Confirmation of Identification, which must be kept at the control station and shown on request to the FAA or a law enforcement officer. Section 89.130(b)(2) says the notice and the confirmation do not count as U.S. aircraft registration.",
+      "keyTakeaway": "Foreign-registered drones with Remote ID: notice of identification, then keep the Confirmation of Identification at the control station.",
+      "references": ["ref-cfr89"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-f-k5"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-131",
+    "stem": "A Part 107 pilot says his drone does not need Remote ID because Part 89 exempts unmanned aircraft that transmit ADS-B Out. Is he right?",
+    "choices": [
+      { "id": "q-reg-131-a", "text": "No; that exemption covers only Part 91 ADS-B Out operations", "isCorrect": true },
+      { "id": "q-reg-131-b", "text": "Yes; any unmanned aircraft transmitting ADS-B Out is exempt from Remote ID", "isCorrect": false },
+      { "id": "q-reg-131-c", "text": "No; Part 89 has no exceptions to Remote ID of any kind", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No; that exemption covers only Part 91 ADS-B Out operations.",
+      "reason": "14 CFR 89.101(b) says the Remote ID operating rules do not apply to unmanned aircraft operations under Part 91 that are transmitting ADS-B Out under 91.225. A Part 107 operation is not a Part 91 operation. Section 89.125 says ADS-B Out cannot be used to comply with Remote ID, and 14 CFR 107.53 prohibits a Part 107 operation from transmitting ADS-B Out unless authorized. Part 89 does have an exception, in 89.101(b), but it is limited to operations under Part 91 that transmit ADS-B Out under 91.225.",
+      "keyTakeaway": "Part 107 drones: ADS-B Out is not Remote ID, and transmitting it is banned without authorization.",
+      "references": ["ref-cfr89", "ref-cfr107"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-f-k4"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-132",
+    "stem": "A standard Remote ID unmanned aircraft must broadcast its identity. Part 89 allows that identity to be either its serial number or:",
+    "choices": [
+      { "id": "q-reg-132-a", "text": "Its session ID for the flight", "isCorrect": true },
+      { "id": "q-reg-132-b", "text": "Its pilot's certificate number", "isCorrect": false },
+      { "id": "q-reg-132-c", "text": "Its registration number", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Its session ID for the flight.",
+      "reason": "14 CFR 89.305(a) says a standard Remote ID unmanned aircraft must broadcast the identity of the aircraft, consisting of either a serial number assigned by the producer or a session ID. The pilot's certificate number and the registration number are not message elements under 89.305.",
+      "keyTakeaway": "Standard Remote ID identity: serial number or session ID.",
+      "references": ["ref-cfr89"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-f-k6"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-reg-133",
+    "stem": "A remote pilot buys a Remote ID broadcast module to add to an older drone. How can the pilot tell the module was produced to meet Part 89?",
+    "choices": [
+      { "id": "q-reg-133-a", "text": "It carries a permanent English label saying it meets Part 89", "isCorrect": true },
+      { "id": "q-reg-133-b", "text": "Its packaging says it is compatible with the pilot's drone model", "isCorrect": false },
+      { "id": "q-reg-133-c", "text": "It transmits on the same 2.4 GHz band as the drone's controller", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "It carries a permanent English label saying it meets Part 89.",
+      "reason": "14 CFR 89.525(b) says no one may produce a Remote ID broadcast module unless it displays a label indicating it meets Part 89, in English and legible, prominent, and permanently affixed. Under 89.115(a)(1)(i), its serial number must also be listed on an FAA-accepted declaration of compliance. Compatibility claims and radio frequency do not show compliance.",
+      "keyTakeaway": "Compliant modules carry a permanent Part 89 label, and their serial numbers are on an accepted DOC.",
+      "references": ["ref-cfr89"]
+    },
+    "domain": "dom-regulations",
+    "moduleId": "mod-regulations",
+    "lessonId": "les-reg-ops-over-people",
+    "acsRefs": ["acs-ua-i-f-k7"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
   }
 ]

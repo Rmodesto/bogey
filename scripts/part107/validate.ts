@@ -35,14 +35,30 @@ function globJSON(dir: string): string[] {
     .map((f) => path.join(dir, f));
 }
 
+const NEAR_DUPLICATE_THRESHOLD = 0.85;
+
 // Normalized similarity for near-duplicate detection
-function normalizedSimilarity(a: string, b: string): number {
+function normalizedSimilarity(a: string, b: string, minSimilarity = 0): number {
   const an = a.toLowerCase().replace(/[^a-z0-9 ]/g, "").trim();
   const bn = b.toLowerCase().replace(/[^a-z0-9 ]/g, "").trim();
   if (an === bn) return 1;
   const longer = an.length > bn.length ? an : bn;
   const shorter = an.length > bn.length ? bn : an;
   if (longer.length === 0) return 1;
+  // Levenshtein distance is at least the length difference, so similarity can
+  // never exceed shorter/longer. Callers only care about pairs above a
+  // threshold; returning that bound early keeps the O(n²) stem scan fast
+  // without changing which pairs pass the threshold.
+  const lengthBound = shorter.length / longer.length;
+  if (lengthBound < minSimilarity) return lengthBound;
+  if (minSimilarity > 0) {
+    // Only distances up to maxDist can reach the threshold. A banded
+    // Levenshtein is exact within that limit and stops as soon as the
+    // distance is known to exceed it.
+    const maxDist = Math.floor(longer.length * (1 - minSimilarity));
+    const dist = boundedLevenshtein(longer, shorter, maxDist);
+    return (longer.length - dist) / longer.length;
+  }
   // Levenshtein
   const costs: number[] = [];
   for (let i = 0; i <= longer.length; i++) {
@@ -62,6 +78,36 @@ function normalizedSimilarity(a: string, b: string): number {
     if (i > 0) costs[shorter.length] = lastValue;
   }
   return (longer.length - costs[shorter.length]) / longer.length;
+}
+
+// Levenshtein distance between a and b (a.length >= b.length), exact when the
+// distance is at most maxDist; otherwise returns maxDist + 1.
+function boundedLevenshtein(a: string, b: string, maxDist: number): number {
+  const n = a.length;
+  const m = b.length;
+  if (n - m > maxDist) return maxDist + 1;
+  const BIG = maxDist + 1;
+  let prev = new Int32Array(m + 1).fill(BIG);
+  let cur = new Int32Array(m + 1).fill(BIG);
+  for (let j = 0; j <= Math.min(m, maxDist); j++) prev[j] = j;
+  for (let i = 1; i <= n; i++) {
+    cur.fill(BIG);
+    const lo = Math.max(1, i - maxDist);
+    const hi = Math.min(m, i + maxDist);
+    if (i <= maxDist) cur[0] = i;
+    let rowMin = cur[0];
+    for (let j = lo; j <= hi; j++) {
+      const cost = a.charCodeAt(i - 1) === b.charCodeAt(j - 1) ? 0 : 1;
+      const v = Math.min(prev[j - 1] + cost, prev[j] + 1, cur[j - 1] + 1);
+      cur[j] = v > BIG ? BIG : v;
+      if (cur[j] < rowMin) rowMin = cur[j];
+    }
+    if (rowMin > maxDist) return maxDist + 1;
+    const tmp = prev;
+    prev = cur;
+    cur = tmp;
+  }
+  return prev[m] > maxDist ? maxDist + 1 : prev[m];
 }
 
 export interface ValidationResult {
@@ -301,8 +347,8 @@ export function validate(): ValidationResult {
   // 5. Near-duplicate stem detection (warning only)
   for (let i = 0; i < questions.length; i++) {
     for (let j = i + 1; j < questions.length; j++) {
-      const sim = normalizedSimilarity(questions[i].stem, questions[j].stem);
-      if (sim > 0.85) {
+      const sim = normalizedSimilarity(questions[i].stem, questions[j].stem, NEAR_DUPLICATE_THRESHOLD);
+      if (sim > NEAR_DUPLICATE_THRESHOLD) {
         warnings.push(`Near-duplicate stems: "${questions[i].id}" and "${questions[j].id}" (similarity: ${(sim * 100).toFixed(1)}%)`);
       }
     }
