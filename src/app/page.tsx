@@ -68,7 +68,7 @@ export default function Landing() {
         <div className="flex items-center gap-2">
           <Plane className="w-6 h-6 text-deep-ice-blue" />
           <span className="font-semibold text-lg text-jet-black">
-            BogeyMan
+            Bogeyman
           </span>
         </div>
         <Button href="/dashboard" className="px-5 py-2.5">
@@ -160,10 +160,10 @@ export default function Landing() {
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <Plane className="w-5 h-5 text-deep-ice-blue" />
-            <span className="font-semibold text-jet-black">BogeyMan</span>
+            <span className="font-semibold text-jet-black">Bogeyman</span>
           </div>
           <p className="text-slate text-sm">
-            &copy; 2026 BogeyMan. All rights reserved.
+            &copy; 2026 Bogeyman. All rights reserved.
           </p>
         </div>
       </footer>

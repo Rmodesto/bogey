@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "BogeyMan | Drone Exam Training",
+  title: "Bogeyman | Drone Exam Training",
   description:
     "Aviation-grade training platform for FAA Part 107 drone certification.",
 };
