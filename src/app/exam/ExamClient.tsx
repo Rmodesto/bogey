@@ -118,7 +118,7 @@ export default function ExamClient({
             {flaggedCount > 0 && <span className="text-volt-green">Flagged: {flaggedCount}</span>}
           </div>
           <div className="flex items-center gap-4">
-            <span className={`flex items-center gap-2 font-mono text-sm ${timeRemaining < 600 ? "text-red-400" : "text-ice-blue"}`}>
+            <span data-testid="exam-timer" className={`flex items-center gap-2 font-mono text-sm ${timeRemaining < 600 ? "text-red-400" : "text-ice-blue"}`}>
               <Clock className="w-4 h-4" /> {formatTime(timeRemaining)}
             </span>
             <button onClick={() => setShowNav(!showNav)} className="p-2 rounded-lg border border-slate/40 hover:bg-graphite">
@@ -135,6 +135,7 @@ export default function ExamClient({
             {examQuestions.map((_, i) => (
               <button
                 key={i}
+                data-testid="exam-nav-cell"
                 onClick={() => { setCurrentIndex(i); setShowNav(false); }}
                 className={`relative w-full aspect-square rounded-lg text-xs font-semibold flex items-center justify-center border ${
                   i === currentIndex
@@ -175,12 +176,13 @@ export default function ExamClient({
             </button>
           </div>
 
-          <h2 className="text-xl font-semibold text-white mb-8">{question.question}</h2>
+          <h2 data-testid="exam-question" className="text-xl font-semibold text-white mb-8">{question.question}</h2>
 
           <div className="space-y-3">
             {question.options.map((opt, i) => (
               <button
                 key={i}
+                data-testid="exam-option"
                 onClick={() => {
                   const a = [...answers];
                   a[currentIndex] = i;
