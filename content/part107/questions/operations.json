@@ -1098,5 +1098,1545 @@
     "difficulty": "hard",
     "status": "active",
     "version": 1
+  },
+  {
+    "id": "q-ops-051",
+    "stem": "A remote pilot is working at 10 p.m. near an airport whose part-time tower closed at 9 p.m. How are manned pilots now coordinating at the airport?",
+    "choices": [
+      { "id": "q-ops-051-a", "text": "By getting clearances on the tower frequency, which stays staffed by recording", "isCorrect": false },
+      { "id": "q-ops-051-b", "text": "By contacting flight service, which takes over every closed tower", "isCorrect": false },
+      { "id": "q-ops-051-c", "text": "By self-announcing their positions and intentions on the CTAF", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "By self-announcing their positions and intentions on the CTAF.",
+      "reason": "AIM 4-1-9 says that at an airport without an operating control tower, pilots communicate through a flight service station, a UNICOM operator, or a self-announce broadcast on the CTAF, and its summary table says to self-announce on the CTAF when the tower or FSS is not in operation. A closed tower issues no clearances, and the AIM notes that flight service on the CTAF is available only in Alaska.",
+      "keyTakeaway": "Tower closed: the airport works like a non-towered one, and pilots self-announce on the CTAF.",
+      "references": ["ref-aim"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-radio",
+    "acsRefs": ["acs-ua-v-a-k1"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-052",
+    "stem": "A remote pilot monitoring a CTAF wants to anticipate arriving traffic. According to the AIM, when do inbound pilots normally make their position reports?",
+    "choices": [
+      { "id": "q-ops-052-a", "text": "Only once, when they turn onto the final approach", "isCorrect": false },
+      { "id": "q-ops-052-b", "text": "10 miles out, then downwind, base, and final", "isCorrect": true },
+      { "id": "q-ops-052-c", "text": "At 25 miles out, then every 5 miles until landing", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "10 miles out, then downwind, base, and final.",
+      "reason": "AIM 4-1-9 recommends that inbound pilots at airports without an operating tower broadcast about 10 miles out and when entering the downwind, base, and final legs, and again when leaving the runway. Listening for these calls tells a remote pilot roughly where manned traffic is and when it will arrive. The AIM does not call for reports at 25 miles or every 5 miles.",
+      "keyTakeaway": "Listen for the 10-mile call, then the downwind, base, and final calls.",
+      "references": ["ref-aim"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-radio",
+    "acsRefs": ["acs-ua-v-a-k2"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-053",
+    "stem": "A remote pilot hears an airplane ask the airport's UNICOM for the recommended runway. What is a UNICOM station?",
+    "choices": [
+      { "id": "q-ops-053-a", "text": "A nongovernment station that gives airport advisories", "isCorrect": true },
+      { "id": "q-ops-053-b", "text": "An FAA control tower that issues takeoff and landing clearances", "isCorrect": false },
+      { "id": "q-ops-053-c", "text": "A continuous recorded broadcast of the airport's current weather", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "A nongovernment station that gives airport advisories.",
+      "reason": "AIM 4-1-9 says UNICOM is a nongovernment air/ground radio communication station that may provide airport information at public-use airports where there is no tower or FSS. On request, it may give weather, wind direction, the recommended runway, or other information. It does not issue clearances, and a continuous recorded broadcast is ATIS.",
+      "keyTakeaway": "UNICOM: nongovernment, advisory only, no clearances.",
+      "references": ["ref-aim"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-radio",
+    "acsRefs": ["acs-ua-v-a-k4"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-054",
+    "stem": "A remote pilot listens to an airport's ATIS. The broadcast gives the wind, temperature, altimeter setting, and runway in use, but says nothing about sky condition or visibility. What does that indicate?",
+    "choices": [
+      { "id": "q-ops-054-a", "text": "The airport's weather sensors are out of service", "isCorrect": false },
+      { "id": "q-ops-054-b", "text": "The sky is completely clear and the visibility is unlimited", "isCorrect": false },
+      { "id": "q-ops-054-c", "text": "Ceiling above 5,000 feet, visibility over 5 miles", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Ceiling above 5,000 feet, visibility over 5 miles.",
+      "reason": "AIM 4-1-13 says the ceiling or sky condition, visibility, and obstructions to vision may be omitted from the ATIS if the ceiling is above 5,000 feet and the visibility is more than 5 miles. Leaving them out does not mean the sensors have failed, and it does not mean the sky is clear: clouds may still exist above 5,000 feet.",
+      "keyTakeaway": "No sky or visibility on ATIS means ceiling above 5,000 feet and visibility more than 5 miles.",
+      "references": ["ref-aim"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-radio",
+    "acsRefs": ["acs-ua-v-a-k5"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-055",
+    "stem": "On the CTAF, a pilot identifies the aircraft by its model name followed by 'Six Three Two Golf,' with no 'November.' Why is 'November' missing?",
+    "choices": [
+      { "id": "q-ops-055-a", "text": "When a model name is stated, the N prefix is dropped", "isCorrect": true },
+      { "id": "q-ops-055-b", "text": "The aircraft is registered outside the United States", "isCorrect": false },
+      { "id": "q-ops-055-c", "text": "The pilot made an error, because 'November' is always required", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "When a model name is stated, the N prefix is dropped.",
+      "reason": "AIM 4-2-4 says civil pilots should state the aircraft type, model, or manufacturer's name followed by the digits and letters of the registration number, and that when the manufacturer's name or model is stated, the 'N' prefix is dropped. Leaving out 'November' in that case is standard, not a sign of foreign registration or a mistake.",
+      "keyTakeaway": "Model or manufacturer plus registration: drop the N.",
+      "references": ["ref-aim"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-radio",
+    "acsRefs": ["acs-ua-v-a-k6"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-056",
+    "stem": "How should a pilot say the registration N9YJ on the radio?",
+    "choices": [
+      { "id": "q-ops-056-a", "text": "November Niner Yankee Juliett", "isCorrect": true },
+      { "id": "q-ops-056-b", "text": "November Nine Yellow Juliet", "isCorrect": false },
+      { "id": "q-ops-056-c", "text": "November Niner Yankee Jay", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "November Niner Yankee Juliett.",
+      "reason": "AIM 4-2-7 gives the phonetic alphabet: N is November, Y is Yankee, and J is Juliett, and the digit 9 is spoken as 'niner.' Everyday words like 'Yellow' or 'Nancy' are not part of the phonetic alphabet.",
+      "keyTakeaway": "Use the ICAO phonetic alphabet, and say 'niner' for 9.",
+      "references": ["ref-aim"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-radio",
+    "acsRefs": ["acs-ua-v-a-k7"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-057",
+    "stem": "A remote pilot on Eastern Daylight Time hears a broadcast give the time as 'one niner three zero Zulu.' What is the local time?",
+    "choices": [
+      { "id": "q-ops-057-a", "text": "2:30 p.m.", "isCorrect": false },
+      { "id": "q-ops-057-b", "text": "11:30 p.m.", "isCorrect": false },
+      { "id": "q-ops-057-c", "text": "3:30 p.m.", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "3:30 p.m.",
+      "reason": "AIM 4-2-12 says FAA operations use Coordinated Universal Time (Zulu) and gives the conversion: add 5 hours to Eastern Standard Time to get UTC, and subtract 1 hour from that for daylight time, so Eastern Daylight Time is UTC minus 4 hours. 1930Z minus 4 hours is 1530 local, or 3:30 p.m. 2:30 p.m. uses the standard-time offset, and 11:30 p.m. adds the offset instead of subtracting it.",
+      "keyTakeaway": "Zulu is UTC. Eastern Daylight Time = UTC minus 4 hours.",
+      "references": ["ref-aim"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-radio",
+    "acsRefs": ["acs-ua-v-a-k8"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-058",
+    "stem": "On a sectional chart, an airport near the job site is shown in magenta. What does the color tell the remote pilot?",
+    "choices": [
+      { "id": "q-ops-058-a", "text": "The airport has an operating control tower", "isCorrect": false },
+      { "id": "q-ops-058-b", "text": "The airport does not have a control tower", "isCorrect": true },
+      { "id": "q-ops-058-c", "text": "The airport is private and closed to the public", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "The airport does not have a control tower.",
+      "reason": "The FAA Aeronautical Chart Users' Guide says airports with control towers and their related data are shown in blue, and all other airports and their data are shown in magenta. Magenta therefore means no control tower. The color does not show whether an airport is private.",
+      "keyTakeaway": "Blue: towered airport. Magenta: no tower.",
+      "references": ["ref-chartguide"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-airport",
+    "acsRefs": ["acs-ua-v-b-k1"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-059",
+    "stem": "A remote pilot near a towered airport is monitoring the tower frequency. According to the AIM, about how far from the airport do arriving pilots normally make their first call to the tower?",
+    "choices": [
+      { "id": "q-ops-059-a", "text": "About 15 miles from the airport, on initial callup", "isCorrect": true },
+      { "id": "q-ops-059-b", "text": "About 3 miles, when entering the downwind leg", "isCorrect": false },
+      { "id": "q-ops-059-c", "text": "About 50 miles, when leaving cruise altitude", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "About 15 miles from the airport, on initial callup.",
+      "reason": "AIM 4-3-2 says that at an airport with an operating control tower, pilots must maintain two-way radio contact with the tower within the Class B, C, or D surface area unless authorized otherwise, and that the initial callup should be made about 15 miles from the airport. Hearing that first call gives a remote pilot several minutes of warning before the aircraft arrives. The other distances are not the AIM's guidance.",
+      "keyTakeaway": "Arrivals call the tower about 15 miles out. Use that call as an early warning.",
+      "references": ["ref-aim"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-airport",
+    "acsRefs": ["acs-ua-v-b-k2"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-060",
+    "stem": "A remote pilot is hired to film at an airport and is unsure where the Security Identification Display Area (SIDA) boundary is. What should the pilot do?",
+    "choices": [
+      { "id": "q-ops-060-a", "text": "Assume the SIDA covers only the passenger terminal building", "isCorrect": false },
+      { "id": "q-ops-060-b", "text": "Enter freely, because a Remote Pilot Certificate grants access", "isCorrect": false },
+      { "id": "q-ops-060-c", "text": "Ask the airport authority, which keeps a map of the SIDA", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Ask the airport authority, which keeps a map of the SIDA.",
+      "reason": "AIM 2-3-15 says a SIDA is a limited-access area that requires a badge, entering it without authorization and proper identification is prohibited, and pilots unsure of a SIDA's location should contact the airport authority. Airports with a SIDA have a description and map of its boundaries. A SIDA can include aircraft movement and parking areas, not just the terminal, and a Remote Pilot Certificate is not an airport badge.",
+      "keyTakeaway": "Not sure where the SIDA is? Ask airport management, and do not enter without authorization.",
+      "references": ["ref-aim"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-airport",
+    "acsRefs": ["acs-ua-v-b-k5"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-061",
+    "stem": "A remote pilot planning night work near an airport sees a runway lighting symbol on the sectional that means there are lighting limitations. Where should the pilot look for details such as part-time or pilot-controlled lighting?",
+    "choices": [
+      { "id": "q-ops-061-a", "text": "The METAR for the airport", "isCorrect": false },
+      { "id": "q-ops-061-b", "text": "The Chart Supplement", "isCorrect": true },
+      { "id": "q-ops-061-c", "text": "The airport's NOTAMs only", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "The Chart Supplement.",
+      "reason": "The FAA Aeronautical Chart Users' Guide says that symbol means the pilot must consult the Chart Supplement for runway lighting limitations, such as lighting available on request, part-time lighting, or pilot-controlled lighting. It also says the Chart Supplement describes each airport's lighting aids in detail. A METAR is a weather report. NOTAMs report temporary changes such as outages, not the airport's regular lighting arrangements.",
+      "keyTakeaway": "Airport details such as lighting, hours, and remarks are in the Chart Supplement.",
+      "references": ["ref-chartguide", "ref-aim"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-airport",
+    "acsRefs": ["acs-ua-v-b-k6b"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-062",
+    "stem": "A remote pilot plans a long survey along a river in October. According to the AIM, what should the pilot keep in mind about birds?",
+    "choices": [
+      { "id": "q-ops-062-a", "text": "Birds are a hazard only within 5 miles of an airport", "isCorrect": false },
+      { "id": "q-ops-062-b", "text": "Migrating birds stay above 3,000 feet AGL, well above drones", "isCorrect": false },
+      { "id": "q-ops-062-c", "text": "Bird strike risk is higher during the fall migration months", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Bird strike risk is higher during the fall migration months.",
+      "reason": "AIM 7-5-1 says bird strike risk increases during migration, from March through April and August through November. It also says over 90 percent of reported strikes occur at or below 3,000 feet AGL, so migrating birds share the altitudes drones fly. AIM 7-5-2 warns that charted wildlife refuges and other natural areas can have unusually high concentrations of birds.",
+      "keyTakeaway": "Spring and fall migration raise bird strike risk, and most strikes happen low.",
+      "references": ["ref-aim"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-airport",
+    "acsRefs": ["acs-ua-v-b-k7"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-063",
+    "stem": "During daylight hours, a remote pilot near an airport in a Class D surface area notices the airport beacon is on. What might this indicate?",
+    "choices": [
+      { "id": "q-ops-063-a", "text": "The airport has closed and is no longer accepting traffic", "isCorrect": false },
+      { "id": "q-ops-063-b", "text": "A military aircraft is about to land on the main runway", "isCorrect": false },
+      { "id": "q-ops-063-c", "text": "Visibility or ceiling may be below VFR minimums", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Visibility or ceiling may be below VFR minimums.",
+      "reason": "AIM 2-1-9 says that in Class B, C, D, and E surface areas, operation of the airport beacon during daylight often indicates that ground visibility is less than 3 miles and/or the ceiling is less than 1,000 feet, though pilots should not rely on the beacon alone. For a remote pilot, visibility under 3 statute miles would also fall below the Part 107 minimum in 14 CFR 107.51(c), so the pilot should check current conditions. A daytime beacon does not mean the airport is closed or that military traffic is coming.",
+      "keyTakeaway": "A beacon on in daylight can mean poor weather. Check visibility against the 3-statute-mile minimum.",
+      "references": ["ref-aim", "ref-cfr107"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-airport",
+    "acsRefs": ["acs-ua-v-b-k8"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-064",
+    "stem": "A new visual observer arrives at the site after the preflight briefing, just as the drone is about to launch. What must the remote PIC do before the observer takes part?",
+    "choices": [
+      { "id": "q-ops-064-a", "text": "Nothing, because only the remote PIC needs to know the procedures", "isCorrect": false },
+      { "id": "q-ops-064-b", "text": "Have the observer read the aircraft's user manual during the flight", "isCorrect": false },
+      { "id": "q-ops-064-c", "text": "Brief the observer on the procedures and roles before launch", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Brief the observer on the procedures and roles before launch.",
+      "reason": "14 CFR 107.49(b) requires the remote PIC to ensure that everyone directly participating in the operation is informed about the operating conditions, emergency procedures, contingency procedures, roles and responsibilities, and potential hazards before the flight. Arriving late does not change that. Reading a manual during the flight is not a briefing and would distract the observer.",
+      "keyTakeaway": "Everyone who takes part gets the briefing, including late arrivals.",
+      "references": ["ref-cfr107"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-emergency",
+    "acsRefs": ["acs-ua-v-c-k1"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-065",
+    "stem": "A remote pilot is flying on an airline to a job and is bringing spare lithium batteries for the drone. How should the spare batteries travel?",
+    "choices": [
+      { "id": "q-ops-065-a", "text": "In checked baggage, so they are away from the passengers", "isCorrect": false },
+      { "id": "q-ops-065-b", "text": "In carry-on bags, protected and within limits", "isCorrect": true },
+      { "id": "q-ops-065-c", "text": "In checked baggage, as long as each is fully charged", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "In carry-on bags, protected and within limits.",
+      "reason": "SAFO 15010 says the Hazardous Materials Regulations prohibit spare lithium batteries in checked baggage, including bags checked at the gate. Limited exceptions allow passengers to carry spare batteries for personal use in carry-on baggage, within the allowable quantity and size limits of 49 CFR 175.10, and each spare battery must be individually protected to prevent short circuits, for example by its original packaging or by taping over exposed terminals.",
+      "keyTakeaway": "Spare lithium batteries go in the cabin, within the limits and protected, never in checked bags.",
+      "references": ["ref-safo-15010"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-emergency",
+    "acsRefs": ["acs-ua-v-c-k2a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-066",
+    "stem": "A remote pilot forgot the drone's charger. A coworker offers a charger made for a different type of battery. What is the best practice?",
+    "choices": [
+      { "id": "q-ops-066-a", "text": "Use it, as long as its connector fits the battery", "isCorrect": false },
+      { "id": "q-ops-066-b", "text": "Do not use it, because it would void the warranty", "isCorrect": false },
+      { "id": "q-ops-066-c", "text": "Do not use it; improper charging can cause a fire", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Do not use it; improper charging can cause a fire.",
+      "reason": "AC 107-2A, Appendix B, paragraph B.5, says lithium battery fires can be caused by improper charging, among other things, and that the remote PIC should consider following the manufacturer's recommendations for safe battery handling and usage. A charger that merely fits the connector does not make an unsuitable charger safe. The concern is safety, not the warranty: improper charging can cause a fire.",
+      "keyTakeaway": "Use the charger the manufacturer recommends. Improper charging can start a fire.",
+      "references": ["ref-ac1072"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-emergency",
+    "acsRefs": ["acs-ua-v-c-k2b"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-067",
+    "stem": "After a hard landing, a drone's lithium battery has a dented case but shows no swelling and still reads full charge. What should the remote pilot do?",
+    "choices": [
+      { "id": "q-ops-067-a", "text": "Keep using it, since it still holds a full charge", "isCorrect": false },
+      { "id": "q-ops-067-b", "text": "Take it out of service only if it reads below half charge", "isCorrect": false },
+      { "id": "q-ops-067-c", "text": "Take it out of service, because crash damage can cause fire", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Take it out of service, because crash damage can cause fire.",
+      "reason": "AC 107-2A, Appendix B, paragraph B.5, says lithium battery fires can be caused when a battery is damaged as a result of a crash, short-circuits, is improperly charged, is heated to extreme temperatures, is mishandled, or is defective. A battery that holds a charge can still be damaged inside. Waiting for swelling in flight risks a fire in the air and a loss of control. Charge level is not the test; crash damage alone is reason to retire the battery.",
+      "keyTakeaway": "Crash-damaged lithium batteries can catch fire. Do not fly them.",
+      "references": ["ref-ac1072"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-emergency",
+    "acsRefs": ["acs-ua-v-c-k2c"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-068",
+    "stem": "A lithium battery catches fire on the charging table. Following SAFO 09013, what should the crew do?",
+    "choices": [
+      { "id": "q-ops-068-a", "text": "Pick the battery up and throw it away from the table", "isCorrect": false },
+      { "id": "q-ops-068-b", "text": "Cover the battery with ice to cool it as quickly as possible", "isCorrect": false },
+      { "id": "q-ops-068-c", "text": "Extinguish it, then douse it with water to cool the cells", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Extinguish it, then douse it with water to cool the cells.",
+      "reason": "SAFO 09013 recommends two steps: extinguish the fire with a Halon, Halon replacement, or water extinguisher, then douse the device with water or other non-alcoholic liquids to cool it and stop other cells from going into thermal runaway. It warns not to pick up or move a smoking or burning device, and not to cover it or use ice, because that insulates the cells and makes further thermal runaway more likely.",
+      "keyTakeaway": "Lithium fire: extinguish, then cool with water. Do not move it, cover it, or ice it.",
+      "references": ["ref-safo-09013"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-emergency",
+    "acsRefs": ["acs-ua-v-c-k2d"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-069",
+    "stem": "A remote pilot plans a job in an area where GPS interference testing sometimes occurs. Before the flight, how can the pilot learn whether GPS may be unreliable, and why does it matter?",
+    "choices": [
+      { "id": "q-ops-069-a", "text": "Check the GPS NOTAMs; GPS-based features may fail", "isCorrect": true },
+      { "id": "q-ops-069-b", "text": "Check the sectional chart, which marks GPS test areas", "isCorrect": false },
+      { "id": "q-ops-069-c", "text": "No check is needed, because drones keep position without GPS", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Check the GPS NOTAMs; GPS-based features may fail.",
+      "reason": "AIM 5-1-3 says the FAA issues GPS status information through the NOTAM system and that operators can find GPS outages, testing, and anomalies by searching for GPS NOTAMs before flight (see also AIM 1-1-17). 14 CFR 107.49(a) requires the remote PIC to assess local airspace and flight restrictions before flight. Losing GPS can take away features that depend on it, such as GPS position hold or GPS altitude reporting (AC 107-2A, paragraph 5.12.2), leaving the aircraft to drift with the wind unless the pilot corrects. Sectional charts do not show temporary testing.",
+      "keyTakeaway": "Search for GPS NOTAMs before flying, and be ready to fly without GPS-based features.",
+      "references": ["ref-aim", "ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-emergency",
+    "acsRefs": ["acs-ua-v-c-k4"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-070",
+    "stem": "A remote pilot wants to install a long-range video link that transmits on a frequency outside the unlicensed bands. What is required?",
+    "choices": [
+      { "id": "q-ops-070-a", "text": "A license from the FCC for that frequency", "isCorrect": true },
+      { "id": "q-ops-070-b", "text": "Nothing, because Part 107 operators may use any frequency", "isCorrect": false },
+      { "id": "q-ops-070-c", "text": "Prior authorization from ATC", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "A license from the FCC for that frequency.",
+      "reason": "AC 107-2A, Appendix B, paragraph B.6.2, says the Federal Communications Commission regulates the spectrum used for drone operations. Some frequencies, such as 900 MHz, 2.4 GHz, and 5.8 GHz, are unlicensed and can be used freely, but all other frequencies require a user-specific FCC license for civil users. ATC authorizes airspace access, not radio frequencies.",
+      "keyTakeaway": "900 MHz, 2.4 GHz, and 5.8 GHz are unlicensed. Anything else needs an FCC license.",
+      "references": ["ref-ac1072"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-emergency",
+    "acsRefs": ["acs-ua-v-c-k5"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-071",
+    "stem": "During a Category 2 flight over workers at a construction site, a propeller guard that the operating instructions list as a required component cracks and falls off. What should the remote pilot do?",
+    "choices": [
+      { "id": "q-ops-071-a", "text": "Continue, because eligibility is checked only before takeoff", "isCorrect": false },
+      { "id": "q-ops-071-b", "text": "Move it away from the people and land, since it no longer qualifies", "isCorrect": true },
+      { "id": "q-ops-071-c", "text": "Climb higher over the workers to reduce the risk of an impact", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Move it away from the people and land, since it no longer qualifies.",
+      "reason": "A Category 2 operation under 14 CFR 107.115(a)(1) requires an aircraft that is eligible under 107.120(a), which includes having no exposed rotating parts that would lacerate skin (107.120(a)(2)). AC 107-2A, paragraph 8.12.1, says the operating instructions identify components required for eligibility. Without the guard, the aircraft no longer qualifies, so flight over the workers is no longer permitted under 107.39. Climbing keeps it over people and adds impact energy if it falls.",
+      "keyTakeaway": "Lose a required component over people: get clear of them and land.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-emergency",
+    "acsRefs": ["acs-ua-v-c-k6"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-072",
+    "stem": "A flight will start 20 minutes before official sunset and last 60 minutes. Outside Alaska, which requirements apply?",
+    "choices": [
+      { "id": "q-ops-072-a", "text": "None, because the flight starts in daylight", "isCorrect": false },
+      { "id": "q-ops-072-b", "text": "Lighting only after civil twilight ends; nothing during civil twilight", "isCorrect": false },
+      { "id": "q-ops-072-c", "text": "Lighting from sunset, plus post-April 2021 training for the night portion", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Lighting from sunset, plus post-April 2021 training for the night portion.",
+      "reason": "The flight ends 40 minutes after sunset. 14 CFR 107.29(b) and (c) require anti-collision lighting visible for at least 3 statute miles during civil twilight, which runs from official sunset to 30 minutes after it. After that it is night, and 107.29(a) requires both the lighting and that the remote PIC completed an initial knowledge test or training under 107.65 after April 6, 2021. AC 107-2A, Appendix A, says the risk assessment should cover missions that include day, twilight, and night.",
+      "keyTakeaway": "Plan for every lighting period the flight crosses: day, civil twilight, and night.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-emergency",
+    "acsRefs": ["acs-ua-v-c-k7"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-073",
+    "stem": "Midway through a job, the wind picks up and the remote PIC decides to shorten the flight legs and land at a different spot. What should the remote PIC do about the crew?",
+    "choices": [
+      { "id": "q-ops-073-a", "text": "Nothing, because only the remote PIC needs to know about changes", "isCorrect": false },
+      { "id": "q-ops-073-b", "text": "Brief the crew on the changes and adjustments right away", "isCorrect": true },
+      { "id": "q-ops-073-c", "text": "Explain the changes to the crew during the post-flight debrief", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Brief the crew on the changes and adjustments right away.",
+      "reason": "AC 107-2A, Appendix A, paragraph A.2.5.1, says that as conditions change, the remote PIC should brief the crew on the changes and any needed adjustments to ensure a safe outcome. Paragraph A.2.5 describes good crew resource management as an environment where open communication is encouraged and expected. Keeping the change to yourself, or waiting until after the flight, leaves the crew working from the old plan.",
+      "keyTakeaway": "When the plan changes, tell the crew now, not later.",
+      "references": ["ref-ac1072"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-adm",
+    "acsRefs": ["acs-ua-v-d-k1a"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-074",
+    "stem": "A remote pilot is planning a complex inspection at a busy construction site with traffic, cranes, and workers nearby. What does FAA guidance say about task management?",
+    "choices": [
+      { "id": "q-ops-074-a", "text": "Do every task yourself so that nothing gets missed", "isCorrect": false },
+      { "id": "q-ops-074-b", "text": "Add crewmembers only if the FAA requires them for the airspace", "isCorrect": false },
+      { "id": "q-ops-074-c", "text": "Use enough crew that no one is overloaded", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Use enough crew that no one is overloaded.",
+      "reason": "AC 107-2A, Appendix A, paragraph A.2.5.3, says tasks vary with the complexity of the operation, that additional crewmembers may be needed, and that the remote PIC should use enough crewmembers to make sure no one becomes overloaded, since an overworked team member raises the chance of an incident or accident. Doing everything alone invites overload. The guidance ties crew size to workload, not to an airspace requirement.",
+      "keyTakeaway": "Complex job? Add crew so no one is overloaded.",
+      "references": ["ref-ac1072"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-adm",
+    "acsRefs": ["acs-ua-v-d-k1b"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-075",
+    "stem": "A visual observer spots a helicopter approaching but hesitates to speak up because the remote PIC is the company owner and seems focused. Under good crew resource management, the observer should:",
+    "choices": [
+      { "id": "q-ops-075-a", "text": "Wait for the remote PIC to ask, since the PIC is in charge", "isCorrect": false },
+      { "id": "q-ops-075-b", "text": "Call out the traffic to the remote PIC immediately", "isCorrect": true },
+      { "id": "q-ops-075-c", "text": "Make a note and raise it during the post-flight debrief", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Call out the traffic to the remote PIC immediately.",
+      "reason": "AC 107-2A, Appendix A, paragraph A.2.5, says a characteristic of CRM is an environment where open communication is encouraged and expected. Paragraph A.2.5.1 says the visual observer should keep watch on the aircraft and the surrounding airspace and communicate flight status and any hazards to the remote PIC so that action can be taken. Waiting or saving it for the debrief defeats the purpose of having an observer.",
+      "keyTakeaway": "CRM means anyone who sees a hazard says so, right away.",
+      "references": ["ref-ac1072"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-adm",
+    "acsRefs": ["acs-ua-v-d-k2"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-076",
+    "stem": "A camera setting warning appears on the controller. The remote pilot spends several minutes trying to fix it while the drone hovers, without checking the aircraft or the sky. What does the PHAK say about this kind of situation?",
+    "choices": [
+      { "id": "q-ops-076-a", "text": "It is fine, because a hovering drone cannot drift", "isCorrect": false },
+      { "id": "q-ops-076-b", "text": "It is fine, as long as the drone stays below 400 feet AGL", "isCorrect": false },
+      { "id": "q-ops-076-c", "text": "It is a distraction that erodes situational awareness", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "It is a distraction that erodes situational awareness.",
+      "reason": "The PHAK (FAA-H-8083-25C, Chapter 2) says that fatigue, stress, and work overload can cause a pilot to fixate on a single item, that a distraction is a contributing factor in many accidents, and that many such distractions begin as a minor problem. A hovering drone can still drift with the wind, and other traffic can approach. Staying under 400 feet AGL does not protect against either.",
+      "keyTakeaway": "A small glitch can steal your attention. Keep scanning, or land and then fix it.",
+      "references": ["ref-phak-25c"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-adm",
+    "acsRefs": ["acs-ua-v-d-k3"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-077",
+    "stem": "On a hot day, a remote pilot has had only coffee since morning and does not feel thirsty. Which statement is correct?",
+    "choices": [
+      { "id": "q-ops-077-a", "text": "The pilot is fine, because thirst is the reliable sign of dehydration", "isCorrect": false },
+      { "id": "q-ops-077-b", "text": "The pilot is fine, because coffee hydrates as well as water does", "isCorrect": false },
+      { "id": "q-ops-077-c", "text": "The pilot may still be dehydrated despite not feeling thirsty", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "The pilot may still be dehydrated despite not feeling thirsty.",
+      "reason": "The PHAK (FAA-H-8083-25C, Chapter 17) lists diuretic drinks such as coffee among the causes of dehydration. It says the thirst mechanism arrives too late and is turned off too easily, so pilots should stay ahead of fluid needs instead of relying on thirst. The first noticeable effect of dehydration is fatigue.",
+      "keyTakeaway": "Do not wait for thirst. Drink water, and count coffee as a diuretic.",
+      "references": ["ref-phak-25c"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-physiology",
+    "acsRefs": ["acs-ua-v-e-k1"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-078",
+    "stem": "A remote pilot drank heavily the night before. Twelve hours later the pilot still feels the effects of the alcohol, though a breath test reads 0.02. May the pilot act as remote PIC?",
+    "choices": [
+      { "id": "q-ops-078-a", "text": "Yes, because more than 8 hours have passed since drinking", "isCorrect": false },
+      { "id": "q-ops-078-b", "text": "No, because the pilot is still under the influence", "isCorrect": true },
+      { "id": "q-ops-078-c", "text": "No, because 12 hours is less than the required 24", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No, because the pilot is still under the influence.",
+      "reason": "14 CFR 107.27 applies 14 CFR 91.17. Section 91.17(a)(2) prohibits acting while under the influence of alcohol, as a separate condition from the 8-hour rule in (a)(1) and the 0.04 limit in (a)(4). AC 107-2A, paragraph 5.16, lists all three. A pilot still feeling the effects fails the 'under the influence' test even though the other two are met. Part 107 sets an 8-hour rule, not 24 hours; the flight is barred because the pilot is still under the influence.",
+      "keyTakeaway": "Meeting the 8-hour rule and the 0.04 limit is not enough if you are still under the influence.",
+      "references": ["ref-cfr107", "ref-cfr91", "ref-ac1072"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-physiology",
+    "acsRefs": ["acs-ua-v-e-k2"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-079",
+    "stem": "Before a flight, the visual observer mentions having taken a decongestant that is causing drowsiness. What should the remote PIC do?",
+    "choices": [
+      { "id": "q-ops-079-a", "text": "Nothing, because medication rules apply only to the remote PIC", "isCorrect": false },
+      { "id": "q-ops-079-b", "text": "Replace the observer, because the medicine impairs them", "isCorrect": true },
+      { "id": "q-ops-079-c", "text": "Replace the observer, because all medicines are banned", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Replace the observer, because the medicine impairs them.",
+      "reason": "AC 107-2A, paragraph 5.16, says it is the remote PIC's responsibility to ensure all crewmembers are not impaired, and that certain antihistamines and decongestants may cause drowsiness. Under 14 CFR 107.27 and 91.17(a)(3), a visual observer may not take part while using a drug that affects their faculties contrary to safety. Being sold over the counter does not make a medicine safe for flight duties. Taking medicine is not itself banned; what matters is whether it impairs the person's ability to do the job safely.",
+      "keyTakeaway": "The remote PIC checks every crewmember for impairment, including from over-the-counter medicine.",
+      "references": ["ref-ac1072", "ref-cfr107", "ref-cfr91"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-physiology",
+    "acsRefs": ["acs-ua-v-e-k3"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-080",
+    "stem": "Right after a near fly-away, a remote pilot is breathing fast and feels lightheaded, with tingling in the fingers. The pilot is standing at ground level. What is the most likely cause, and the right response?",
+    "choices": [
+      { "id": "q-ops-080-a", "text": "Hypoxia; descend to a lower altitude", "isCorrect": false },
+      { "id": "q-ops-080-b", "text": "Dehydration; drink a large cup of coffee", "isCorrect": false },
+      { "id": "q-ops-080-c", "text": "Hyperventilation; slow the breathing rate", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Hyperventilation; slow the breathing rate.",
+      "reason": "The PHAK (FAA-H-8083-25C, Chapter 17) says pilots in an unexpected stressful situation may subconsciously breathe faster, causing hyperventilation, an abnormal loss of carbon dioxide. Symptoms include lightheadedness, dizziness, and tingling. The treatment is to restore normal breathing: slowing the breathing rate, breathing into a paper bag, or talking aloud. A pilot on the ground is not hypoxic, and coffee is a diuretic that would not help.",
+      "keyTakeaway": "Stress plus fast breathing plus tingling means hyperventilation. Slow your breathing.",
+      "references": ["ref-phak-25c"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-physiology",
+    "acsRefs": ["acs-ua-v-e-k4"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-081",
+    "stem": "For several months, a remote pilot has had serious financial worries and family problems and has noticed sharply falling performance at work. According to the PHAK, the pilot:",
+    "choices": [
+      { "id": "q-ops-081-a", "text": "Has acute stress, which a good night's sleep will cure", "isCorrect": false },
+      { "id": "q-ops-081-b", "text": "May have chronic stress and should not fly", "isCorrect": true },
+      { "id": "q-ops-081-c", "text": "Can fly safely, because stress improves alertness", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "May have chronic stress and should not fly.",
+      "reason": "The PHAK (FAA-H-8083-25C, Chapter 17) defines chronic stress as stress that presents an intolerable burden, exceeds a person's ability to cope, and causes performance to fall sharply, often from unrelenting pressures such as financial worries or relationship and work problems. It says pilots at this level are not safe to exercise their privileges and should consult a physician. Acute stress is short-term. A certain amount of stress helps alertness, but not at this level.",
+      "keyTakeaway": "Months of pressure and falling performance can mean chronic stress. Do not fly; see a physician.",
+      "references": ["ref-phak-25c"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-physiology",
+    "acsRefs": ["acs-ua-v-e-k5"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-082",
+    "stem": "A visual observer scans for traffic by sweeping the eyes steadily across the sky without stopping. What technique does the PHAK recommend instead?",
+    "choices": [
+      { "id": "q-ops-082-a", "text": "Short eye movements of 10 degrees or less, pausing each time", "isCorrect": true },
+      { "id": "q-ops-082-b", "text": "A slow, continuous sweep of the whole horizon without stopping", "isCorrect": false },
+      { "id": "q-ops-082-c", "text": "Fixing the eyes on one point of the sky and waiting for movement", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Short eye movements of 10 degrees or less, pausing each time.",
+      "reason": "The PHAK (FAA-H-8083-25C, Chapter 14) says effective scanning uses a series of short, regularly spaced eye movements that bring successive areas of the sky into central vision. Each movement should not exceed 10 degrees, and each area should be observed for at least 1 second to allow detection. The Remote Pilot Study Guide describes a similar stop-and-look method using sectors about 30 degrees wide. Both methods use short stops, never a continuous sweep or a fixed stare.",
+      "keyTakeaway": "Scan in steps of about 10 degrees, pausing at least 1 second at each.",
+      "references": ["ref-phak-25c", "ref-studyguide"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-physiology",
+    "acsRefs": ["acs-ua-v-e-k6"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-083",
+    "stem": "A remote pilot slept 3 hours and is upset after an argument with a client, but has had no alcohol for 12 hours. Using the IMSAFE checklist, the pilot should conclude:",
+    "choices": [
+      { "id": "q-ops-083-a", "text": "The pilot can fly, because the 8-hour alcohol rule is satisfied", "isCorrect": false },
+      { "id": "q-ops-083-b", "text": "The pilot can fly if a visual observer is added to the crew", "isCorrect": false },
+      { "id": "q-ops-083-c", "text": "The pilot should not fly today because of fatigue and emotion", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "The pilot should not fly today because of fatigue and emotion.",
+      "reason": "The PHAK (FAA-H-8083-25C, Chapter 2) presents the IMSAFE checklist (Illness, Medication, Stress, Alcohol, Fatigue, Emotion) as a way to judge physical and mental readiness, and stresses the difference between what is legal and what is safe. Fatigue and emotional upset are both on the list. Meeting the alcohol rule addresses only one item, and a visual observer does not fix the pilot's fitness.",
+      "keyTakeaway": "IMSAFE checks the whole pilot. Legal is not the same as fit.",
+      "references": ["ref-phak-25c", "ref-cfr107"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-physiology",
+    "acsRefs": ["acs-ua-v-e-k7"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-084",
+    "stem": "At night, a remote pilot finds that the drone's dim light seems to disappear when looked at directly but reappears when the pilot looks slightly to the side. How should the pilot look for it?",
+    "choices": [
+      { "id": "q-ops-084-a", "text": "Stare directly at where the light should be", "isCorrect": false },
+      { "id": "q-ops-084-b", "text": "Look about 5 to 10 degrees off center of the light", "isCorrect": true },
+      { "id": "q-ops-084-c", "text": "Look at a bright light to sharpen the eyes, then look back", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Look about 5 to 10 degrees off center of the light.",
+      "reason": "The PHAK (FAA-H-8083-25C, Chapter 17) explains that the cones, concentrated in the center of the eye, lose sensitivity at night, creating a night blind spot, while the rods outside the center become the main receptors. Looking 5 to 10 degrees off center puts the image on the rods, so a dim light appears clearer and brighter. Bright light undoes dark adaptation.",
+      "keyTakeaway": "At night, look slightly to the side of a dim light, not straight at it.",
+      "references": ["ref-phak-25c"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-physiology",
+    "acsRefs": ["acs-ua-v-e-k8"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-085",
+    "stem": "At night, an airplane's lights seem to be moving away from a remote pilot, but they are getting steadily brighter. What does the PHAK say this means?",
+    "choices": [
+      { "id": "q-ops-085-a", "text": "The airplane is moving away, because its lights appear to recede", "isCorrect": false },
+      { "id": "q-ops-085-b", "text": "The airplane is climbing; this is autokinesis", "isCorrect": false },
+      { "id": "q-ops-085-c", "text": "The airplane is approaching; this is the reversible perspective illusion", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "The airplane is approaching; this is the reversible perspective illusion.",
+      "reason": "The PHAK (FAA-H-8083-25C, Chapter 17) describes the reversible perspective illusion, in which an aircraft may appear to be moving away when it is actually approaching. To tell the direction, it says to watch the lights and their position relative to the horizon: if the intensity increases, the aircraft is approaching; if the lights dim, it is moving away. Autokinesis is the apparent movement of a single stationary light stared at against a dark background.",
+      "keyTakeaway": "At night, brightening lights mean the aircraft is getting closer.",
+      "references": ["ref-phak-25c"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-physiology",
+    "acsRefs": ["acs-ua-v-e-k9"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-086",
+    "stem": "A drone's manufacturer releases a required software update to fix a problem in the flight control software. The operator has a job this afternoon. What does FAA guidance say?",
+    "choices": [
+      { "id": "q-ops-086-a", "text": "Fly first, because software updates are optional", "isCorrect": false },
+      { "id": "q-ops-086-b", "text": "Do not fly until the required update is installed", "isCorrect": true },
+      { "id": "q-ops-086-c", "text": "Do not fly until the FAA approves the update", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Do not fly until the required update is installed.",
+      "reason": "AC 107-2A, paragraph 7.2.2, says the manufacturer may require an unscheduled software update to correct a problem, and that when such a condition is found, flight operations should not occur until the issue is corrected. A required update is not optional. AC 107-2A, paragraph 7.2.2, calls for no FAA approval; the operator installs the required update before flying.",
+      "keyTakeaway": "A required fix, software or hardware, comes before the next flight.",
+      "references": ["ref-ac1072"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-maintenance",
+    "acsRefs": ["acs-ua-v-f-k1"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-087",
+    "stem": "During preflight, the remote pilot spins up the motors and hears an unusual vibration from one propeller. What should the pilot do?",
+    "choices": [
+      { "id": "q-ops-087-a", "text": "Find and correct the imbalance before flying", "isCorrect": true },
+      { "id": "q-ops-087-b", "text": "Fly a short full-speed test to see whether it clears", "isCorrect": false },
+      { "id": "q-ops-087-c", "text": "Ignore it if the battery is fully charged", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Find and correct the imbalance before flying.",
+      "reason": "AC 107-2A, paragraph 7.3.4, recommends starting the propellers during preflight to inspect for any imbalance or irregular operation. 14 CFR 107.15(a) prohibits operating a small UAS that is not in a condition for safe operation, and requires the remote PIC to check that before each flight. A full-speed test flight with a suspected imbalance risks a failure in the air, and battery charge has nothing to do with propeller balance.",
+      "keyTakeaway": "Unusual vibration at spin-up means fix it before you fly.",
+      "references": ["ref-ac1072", "ref-cfr107"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-maintenance",
+    "acsRefs": ["acs-ua-v-f-k2"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-088",
+    "stem": "Before a long mapping job, a remote pilot charged every aircraft battery, but the tablet running the control station app is at 15 percent. What does FAA guidance say?",
+    "choices": [
+      { "id": "q-ops-088-a", "text": "Only the aircraft matters, because it flies the route on its own", "isCorrect": false },
+      { "id": "q-ops-088-b", "text": "Low tablet power is fine, because the drone returns home on a lost link", "isCorrect": false },
+      { "id": "q-ops-088-c", "text": "Make sure the control station also has enough power for the job", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Make sure the control station also has enough power for the job.",
+      "reason": "14 CFR 107.49(d) requires the remote PIC to ensure enough available power for the small UAS to operate for the intended operational time, and the small UAS includes the control station (107.3). AC 107-2A, paragraph 7.3.4, recommends checking that the aircraft and the control unit both have adequate power and checking battery levels for each. 107.19(e) requires the remote PIC to be able to direct the aircraft. An automatic return is a contingency, not a substitute for adequate power.",
+      "keyTakeaway": "Preflight power checks cover the control station too.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-maintenance",
+    "acsRefs": ["acs-ua-v-f-k3"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-089",
+    "stem": "A company keeps a maintenance logbook for its drone that covers only the airframe. According to AC 107-2A, what should its records also include?",
+    "choices": [
+      { "id": "q-ops-089-a", "text": "Nothing else, because only the airframe actually flies", "isCorrect": false },
+      { "id": "q-ops-089-b", "text": "Only the batteries, because they wear out the fastest", "isCorrect": false },
+      { "id": "q-ops-089-c", "text": "Every component of the system, including the control station", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Every component of the system, including the control station.",
+      "reason": "AC 107-2A, paragraph 7.3.5, says recordkeeping should include all components of the small UAS: the aircraft, control station, launch and recovery equipment, command and control link equipment, payload, and any other components required to operate safely. Records that cover only the airframe or only the batteries leave out parts whose failure could end a flight.",
+      "keyTakeaway": "Keep records for the whole system, not just the airframe.",
+      "references": ["ref-ac1072"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-maintenance",
+    "acsRefs": ["acs-ua-v-f-k4"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-090",
+    "stem": "Who may perform maintenance on a small unmanned aircraft that is used for Category 4 operations over people?",
+    "choices": [
+      { "id": "q-ops-090-a", "text": "A qualified person using the manufacturer's methods", "isCorrect": true },
+      { "id": "q-ops-090-b", "text": "Anyone, because Part 107 never sets maintenance requirements", "isCorrect": false },
+      { "id": "q-ops-090-c", "text": "Only the original manufacturer of the aircraft", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "A qualified person using the manufacturer's methods.",
+      "reason": "14 CFR 107.140(c)(1) requires the owner (or the operator, by agreement) to ensure that anyone maintaining a Category 4 aircraft has the knowledge, skill, and appropriate equipment and uses the methods in the manufacturer's current maintenance manual or instructions for continued airworthiness, or other methods acceptable to the Administrator. Section 107.140(d) says complying with Part 43 and Part 91 Subpart E fulfills these requirements. Other drones have no such requirement, but Category 4 does, and the work is not limited to the manufacturer.",
+      "keyTakeaway": "Category 4 maintenance follows the manufacturer's manual or other acceptable methods, done by someone qualified.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-maintenance",
+    "acsRefs": ["acs-ua-v-f-k5"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-091",
+    "stem": "A night job is in a valley surrounded by hills, with patches of fog forecast. During the preflight risk assessment, what should the remote PIC consider about the anti-collision light?",
+    "choices": [
+      { "id": "q-ops-091-a", "text": "Nothing, as long as the light's packaging says it is visible for 3 miles", "isCorrect": false },
+      { "id": "q-ops-091-b", "text": "Whether the light may be switched off where terrain blocks it", "isCorrect": false },
+      { "id": "q-ops-091-c", "text": "Whether terrain or fog will keep other aircraft from seeing it", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Whether terrain or fog will keep other aircraft from seeing it.",
+      "reason": "AC 107-2A, Appendix A, says the environment part of the risk assessment should ask whether the remote pilot, and other aircraft in the area, will be able to see the anti-collision light for at least 3 statute miles considering weather and terrain such as fog, hills, and structures, and whether the flash rate is sufficient to avoid a collision. The light exists so other aircraft can see the drone, not only the pilot. Paragraph 5.7.2 says the pilot may rely on the manufacturer's statement but remains responsible for verifying it at the operating location. The pilot may reduce the light's intensity but may never extinguish it at night (107.29(a)(2)).",
+      "keyTakeaway": "At night, ask whether terrain and weather will hide your light from other aircraft.",
+      "references": ["ref-ac1072", "ref-cfr107"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-maintenance",
+    "acsRefs": ["acs-ua-v-f-k6"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-092",
+    "stem": "The FAA rescinds the declaration of compliance for a drone model the pilot has been using for Category 2 operations. What does this mean for the pilot?",
+    "choices": [
+      { "id": "q-ops-092-a", "text": "It stays eligible as long as its Category 2 label is attached", "isCorrect": false },
+      { "id": "q-ops-092-b", "text": "It stays eligible because it was bought before the rescission", "isCorrect": false },
+      { "id": "q-ops-092-c", "text": "It is not eligible for Category 2 while the DOC is rescinded", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "It is not eligible for Category 2 while the DOC is rescinded.",
+      "reason": "14 CFR 107.160(d)(1) says no person may operate a small unmanned aircraft identified on a rescinded declaration of compliance while that declaration is rescinded. AC 107-2A, paragraph 8.10.1.1, says a rescission does not make the aircraft inoperable, but makes it ineligible for operations over people, so it can still fly ordinary Part 107 operations that do not go over people. Paragraph 8.10.3.3 says the FAA posts rescissions on its website. The label and the purchase date do not restore eligibility.",
+      "keyTakeaway": "A rescinded DOC ends Category 2 or 3 eligibility, whatever the label says.",
+      "references": ["ref-cfr107", "ref-ac1072"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-maintenance",
+    "acsRefs": ["acs-ua-v-f-k7"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-093",
+    "stem": "Near a non-towered airport, a remote pilot monitors the CTAF for 20 minutes and hears no calls. Can the pilot conclude that no manned aircraft are nearby?",
+    "choices": [
+      { "id": "q-ops-093-a", "text": "Yes; every aircraft near the airport must call on the CTAF", "isCorrect": false },
+      { "id": "q-ops-093-b", "text": "No; some aircraft have no radio, and some pilots do not announce", "isCorrect": true },
+      { "id": "q-ops-093-c", "text": "No; pilots must announce only within 1 mile of the field", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No; some aircraft have no radio, and some pilots do not announce.",
+      "reason": "AIM 4-1-9 says there is no substitute for alertness near an airport without an operating control tower, because other aircraft may not have communication capability or their pilots may not communicate their presence or intentions. A silent frequency does not prove the sky is empty, so the remote pilot must keep scanning and yield right-of-way under 14 CFR 107.37. The AIM recommends monitoring and communicating from 10 miles out, not 1 mile, and even that is not guaranteed.",
+      "keyTakeaway": "A quiet CTAF is not an empty sky. Keep looking.",
+      "references": ["ref-aim", "ref-cfr107"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-radio",
+    "acsRefs": ["acs-ua-v-a-k1"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-094",
+    "stem": "A remote pilot wants to monitor traffic at a non-towered airport near a job site. Where can the pilot find the airport's CTAF?",
+    "choices": [
+      { "id": "q-ops-094-a", "text": "In the Chart Supplement, or by contacting any FSS", "isCorrect": true },
+      { "id": "q-ops-094-b", "text": "It is 122.9 at every airport, so no lookup is needed", "isCorrect": false },
+      { "id": "q-ops-094-c", "text": "Only by calling the airport manager on the phone", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "In the Chart Supplement, or by contacting any FSS.",
+      "reason": "AIM 4-1-9 says the CTAF for a particular airport is contained in the Chart Supplement and other aeronautical publications and can be obtained by contacting any FSS, and the FAA Aeronautical Chart Users' Guide shows the CTAF in the sectional's airport data block. The CTAF may be a UNICOM, MULTICOM, FSS, or tower frequency. MULTICOM 122.9 is used only where there is no tower, FSS, or UNICOM.",
+      "keyTakeaway": "Look up the CTAF. It is not the same frequency everywhere.",
+      "references": ["ref-aim", "ref-chartguide"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-radio",
+    "acsRefs": ["acs-ua-v-a-k2"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-095",
+    "stem": "A remote pilot is working 2 miles south of runway 36 at a non-towered airport. On the CTAF, a pilot reports 8 miles south, straight-in for runway 36. What should the remote pilot expect?",
+    "choices": [
+      { "id": "q-ops-095-a", "text": "The airplane entering a left downwind west of the runway", "isCorrect": false },
+      { "id": "q-ops-095-b", "text": "The airplane descending along the extended centerline from the south", "isCorrect": true },
+      { "id": "q-ops-095-c", "text": "The airplane flying over at least 1,000 feet AGL to circle", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "The airplane descending along the extended centerline from the south.",
+      "reason": "AIM 4-1-9 says a pilot making a straight-in approach without entering the traffic pattern should self-announce about 8 to 10 miles out. Runway 36 lands toward the north, so a straight-in arrival comes from the south along the extended runway centerline, descending, which puts it near the job site. It will not fly a downwind or overfly at pattern altitude. The remote pilot must yield under 14 CFR 107.37.",
+      "keyTakeaway": "Straight-in for runway 36 means low traffic on the extended centerline south of the field.",
+      "references": ["ref-aim", "ref-cfr107"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-radio",
+    "acsRefs": ["acs-ua-v-a-k3"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-096",
+    "stem": "A job site is inside the Class E surface area of a non-towered airport. The remote pilot plans to call the airport's UNICOM on the radio and ask permission to fly. Does that meet Part 107?",
+    "choices": [
+      { "id": "q-ops-096-a", "text": "No; it needs prior ATC authorization, which UNICOM cannot give", "isCorrect": true },
+      { "id": "q-ops-096-b", "text": "Yes; UNICOM permission satisfies the authorization rule", "isCorrect": false },
+      { "id": "q-ops-096-c", "text": "No; the pilot needs written permission from the airport manager", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "No; it needs prior ATC authorization, which UNICOM cannot give.",
+      "reason": "14 CFR 107.41 requires prior authorization from Air Traffic Control to operate within the lateral boundaries of a Class E surface area designated for an airport, and AIM 11-1-2 says Part 107 operators request it through LAANC or DroneZone. AIM 4-1-9 says UNICOM is a nongovernment station that may provide airport information on request, so it cannot grant an ATC authorization. Part 107 has no requirement for an airport manager's written permission.",
+      "keyTakeaway": "UNICOM is not ATC. Class E surface areas need a real authorization (LAANC or DroneZone).",
+      "references": ["ref-cfr107", "ref-ac1072", "ref-aim"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-radio",
+    "acsRefs": ["acs-ua-v-a-k4"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-097",
+    "stem": "Near a hospital, a remote pilot hears a helicopter call itself 'MEDEVAC' followed by its call sign. What does this tell the remote pilot?",
+    "choices": [
+      { "id": "q-ops-097-a", "text": "It is a military helicopter on a training mission", "isCorrect": false },
+      { "id": "q-ops-097-b", "text": "It is an air taxi flight without an authorized call sign", "isCorrect": false },
+      { "id": "q-ops-097-c", "text": "It is an urgent medical flight that gets ATC priority", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "It is an urgent medical flight that gets ATC priority.",
+      "reason": "AIM 4-2-4 says the term MEDEVAC is used only for missions of an urgent medical nature and gives the flight priority handling by ATC. Air taxi operators without FAA authorized call signs use the prefix 'Tango.' Military aircraft use their own call sign systems. A remote pilot hearing MEDEVAC should clear the area early, since 14 CFR 107.37 requires yielding to all aircraft.",
+      "keyTakeaway": "MEDEVAC = urgent medical flight with priority. Get out of its way early.",
+      "references": ["ref-aim", "ref-cfr107"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-radio",
+    "acsRefs": ["acs-ua-v-a-k6"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-098",
+    "stem": "Monitoring the tower frequency, a remote pilot hears the controller tell an airplane to 'enter a right downwind runway three zero.' Where will the airplane fly?",
+    "choices": [
+      { "id": "q-ops-098-a", "text": "Southwest of the runway, flying southeast, parallel to it", "isCorrect": false },
+      { "id": "q-ops-098-b", "text": "Northeast of the runway, flying northwest, parallel to it", "isCorrect": false },
+      { "id": "q-ops-098-c", "text": "Northeast of the runway, flying southeast, parallel to it", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Northeast of the runway, flying southeast, parallel to it.",
+      "reason": "AIM 4-3-2 says the downwind leg is a flight path parallel to the landing runway in the opposite direction of landing. Runway 30 lands toward about 300 degrees, so downwind is flown toward about 120 degrees (southeast). In a right-hand pattern all turns are to the right, which puts the downwind leg on the right side of the landing direction, to the northeast of the runway. Flying northwest would be the landing direction, not downwind.",
+      "keyTakeaway": "Downwind is opposite the landing direction. Right traffic puts it on the right side of the runway.",
+      "references": ["ref-aim"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-airport",
+    "acsRefs": ["acs-ua-v-b-k2"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-099",
+    "stem": "During a job near an airport, a remote pilot notices large yellow crosses painted at each end of one runway. What do they mean?",
+    "choices": [
+      { "id": "q-ops-099-a", "text": "The runway is reserved for helicopter landings", "isCorrect": false },
+      { "id": "q-ops-099-b", "text": "The runway is closed, at least temporarily", "isCorrect": true },
+      { "id": "q-ops-099-c", "text": "The runway has right-hand traffic in effect", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "The runway is closed, at least temporarily.",
+      "reason": "AIM 2-3-6 says yellow crosses placed only at each end of a runway indicate that it is temporarily closed, and that permanently closed runways have yellow crosses at each end and at 1,000-foot intervals. Helicopter landing areas and right-hand traffic are marked or published differently. The remote pilot should not assume the other runways are quiet.",
+      "keyTakeaway": "Yellow X on a runway = closed.",
+      "references": ["ref-aim"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-airport",
+    "acsRefs": ["acs-ua-v-b-k3"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-100",
+    "stem": "A drone works just beyond the departure end of runway 27 at a non-towered airport, outside any authorization requirement. What does the AIM say departing airplanes normally do there?",
+    "choices": [
+      { "id": "q-ops-100-a", "text": "Turn left immediately after liftoff to stay inside the pattern", "isCorrect": false },
+      { "id": "q-ops-100-b", "text": "Level off at 400 feet AGL until they are beyond the airport", "isCorrect": false },
+      { "id": "q-ops-100-c", "text": "Climb straight out along the runway centerline past the runway end", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Climb straight out along the runway centerline past the runway end.",
+      "reason": "AIM 4-3-2 says the departure leg begins after takeoff and continues straight ahead along the extended runway centerline, climbing until at least 1/2 mile beyond the departure end of the runway and within 300 feet of pattern altitude. AIM 4-3-3 says aircraft remaining in the pattern turn crosswind beyond the departure end. Departing traffic therefore climbs right over the area past the runway end, which 14 CFR 107.43 requires the drone not to interfere with.",
+      "keyTakeaway": "The area past the departure end is directly under climbing traffic.",
+      "references": ["ref-aim", "ref-cfr107"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-airport",
+    "acsRefs": ["acs-ua-v-b-k4"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-101",
+    "stem": "An airport data block on a sectional chart reads CT - 118.3, followed by a star and a C in a circle. What does this tell the remote pilot?",
+    "choices": [
+      { "id": "q-ops-101-a", "text": "The tower is part-time, and 118.3 is the CTAF when it is closed", "isCorrect": true },
+      { "id": "q-ops-101-b", "text": "The tower is full-time, and Class C airspace surrounds it", "isCorrect": false },
+      { "id": "q-ops-101-c", "text": "The tower is part-time, and the CTAF is 122.9 when it closes", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "The tower is part-time, and 118.3 is the CTAF when it is closed.",
+      "reason": "The FAA Aeronautical Chart Users' Guide says CT gives the control tower's primary frequency, a star indicates part-time operation (with hours in the tower frequency tabulation), and the C symbol follows the Common Traffic Advisory Frequency. Here the C follows 118.3, so pilots self-announce on 118.3 when the tower is closed. The C does not mean Class C airspace, and AIM 4-1-9 says MULTICOM 122.9 is used where there is no tower, FSS, or UNICOM station on the airport.",
+      "keyTakeaway": "Star = part-time tower. Circled C marks the CTAF.",
+      "references": ["ref-chartguide", "ref-aim"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-airport",
+    "acsRefs": ["acs-ua-v-b-k6a"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-102",
+    "stem": "A sectional chart's airport data block shows 45 after the field elevation and lighting code. What does the 45 mean?",
+    "choices": [
+      { "id": "q-ops-102-a", "text": "The longest runway is aligned on a heading of 045 degrees", "isCorrect": false },
+      { "id": "q-ops-102-b", "text": "The longest runway there is about 4,500 feet long", "isCorrect": true },
+      { "id": "q-ops-102-c", "text": "The traffic pattern altitude is 4,500 feet MSL at this airport", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "The longest runway there is about 4,500 feet long.",
+      "reason": "The FAA Aeronautical Chart Users' Guide says the number in the airport data block is the length of the longest runway in hundreds of feet, and that usable length may be less. 45 therefore means about 4,500 feet. Runway headings appear in runway numbers, and pattern altitudes are published in the Chart Supplement, not in that position of the data block.",
+      "keyTakeaway": "Data block runway length is in hundreds of feet: 45 = 4,500 feet.",
+      "references": ["ref-chartguide"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-airport",
+    "acsRefs": ["acs-ua-v-b-k6a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-103",
+    "stem": "A remote pilot knows the AIM's standard pattern altitude of 1,000 feet AGL for propeller airplanes and wants to know whether a nearby airport uses something different. Where should the pilot look?",
+    "choices": [
+      { "id": "q-ops-103-a", "text": "The Chart Supplement entry for that airport", "isCorrect": true },
+      { "id": "q-ops-103-b", "text": "Nowhere; every airport uses exactly 1,000 feet AGL", "isCorrect": false },
+      { "id": "q-ops-103-c", "text": "The maximum elevation figure on the sectional", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "The Chart Supplement entry for that airport.",
+      "reason": "AIM 4-3-3 says the recommended pattern entry altitudes, such as 1,000 feet AGL for propeller-driven aircraft, should be maintained unless another traffic pattern altitude is published in the Chart Supplement. A maximum elevation figure shows terrain and obstruction heights in a chart quadrangle, not pattern altitudes. Knowing the real pattern altitude helps the remote pilot avoid interfering with traffic under 14 CFR 107.43.",
+      "keyTakeaway": "Nonstandard pattern altitudes are published in the Chart Supplement.",
+      "references": ["ref-aim", "ref-cfr107"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-airport",
+    "acsRefs": ["acs-ua-v-b-k6b"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-104",
+    "stem": "A remote pilot will film near an accident scene. During planning, the pilot realizes an EMS helicopter may need the same open area chosen for takeoff and landing. What does AC 107-2A's example suggest?",
+    "choices": [
+      { "id": "q-ops-104-a", "text": "Keep the one landing site, since the helicopter must wait for the drone", "isCorrect": false },
+      { "id": "q-ops-104-b", "text": "Skip planning, since emergencies cannot be anticipated before flight", "isCorrect": false },
+      { "id": "q-ops-104-c", "text": "Plan an alternate landing site and a safe spot to ditch the drone", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Plan an alternate landing site and a safe spot to ditch the drone.",
+      "reason": "AC 107-2A, Appendix A, paragraph A.4.8.1, uses this exact situation: an EMS helicopter needs the planned landing area while the drone is low on power. Considering it before flight, the remote pilot might reach an acceptable level of risk by having an alternate landing site and possibly additional sites where the drone can be sacrificed to avoid risk to people or manned aircraft. Manned aircraft have right-of-way under 14 CFR 107.37, and the AC's point is that emergencies can be planned for.",
+      "keyTakeaway": "Plan your outs before flight: an alternate landing site and a safe place to ditch.",
+      "references": ["ref-ac1072", "ref-cfr107"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-emergency",
+    "acsRefs": ["acs-ua-v-c-k1"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-105",
+    "stem": "A remote pilot's charger has no automatic shutoff, and the pilot plans to leave batteries on it unattended overnight. What risk does the FAA's lithium battery guidance describe?",
+    "choices": [
+      { "id": "q-ops-105-a", "text": "Overcharging can make a lithium battery self-ignite", "isCorrect": true },
+      { "id": "q-ops-105-b", "text": "None, because lithium batteries stop charging when full", "isCorrect": false },
+      { "id": "q-ops-105-c", "text": "Only a shorter battery life, with no risk of fire", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Overcharging can make a lithium battery self-ignite.",
+      "reason": "SAFO 10017 says FAA testing showed lithium-ion cells are capable of self-ignition, which can occur when a battery short circuits, is overcharged, is heated to extreme temperatures, is mishandled, or is defective, and that overheating can lead to thermal runaway. AC 107-2A, paragraph B.5, also lists improper charging as a cause of lithium battery fires. Following the manufacturer's charging recommendations, as AC 107-2A advises, helps prevent it.",
+      "keyTakeaway": "Overcharging can ignite a lithium battery. Follow the manufacturer's charging guidance.",
+      "references": ["ref-safo-lithium", "ref-ac1072"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-emergency",
+    "acsRefs": ["acs-ua-v-c-k2b"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-106",
+    "stem": "Between flights, a crew member drops spare drone batteries loose into a toolbox with wrenches and screws. What is the hazard, according to FAA guidance?",
+    "choices": [
+      { "id": "q-ops-106-a", "text": "None, because the batteries are not being charged", "isCorrect": false },
+      { "id": "q-ops-106-b", "text": "Only scratches to the battery's outer case", "isCorrect": false },
+      { "id": "q-ops-106-c", "text": "Metal tools can short the terminals and start a fire", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Metal tools can short the terminals and start a fire.",
+      "reason": "AC 107-2A, paragraph B.5, says lithium battery fires can be caused when a battery short-circuits or is mishandled. SAFO 15010 says spare lithium batteries should be individually protected to prevent short circuits, for example by taping exposed terminals or using separate bags, and must not come in contact with metal objects such as coins or keys. SAFO 15010 is written for airline baggage, but the short-circuit hazard it addresses is the same in a drone crew's toolbox. A battery does not need to be charging to short-circuit.",
+      "keyTakeaway": "Keep spare batteries' terminals covered and away from metal.",
+      "references": ["ref-ac1072", "ref-safo-15010"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-emergency",
+    "acsRefs": ["acs-ua-v-c-k2c"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-107",
+    "stem": "After the crew puts out a burning drone battery, it flares up again a minute later. What does SAFO 09013 say explains this?",
+    "choices": [
+      { "id": "q-ops-107-a", "text": "Heat from one cell drove nearby cells into thermal runaway", "isCorrect": true },
+      { "id": "q-ops-107-b", "text": "Water from the extinguisher reacted with the lithium", "isCorrect": false },
+      { "id": "q-ops-107-c", "text": "The battery recharged itself from the drone's motors", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Heat from one cell drove nearby cells into thermal runaway.",
+      "reason": "SAFO 09013 says that once one cell in a battery pack goes into thermal runaway, it produces enough heat to drive adjacent cells into thermal runaway, and the resulting fire can flare repeatedly as each cell ruptures. That is why it recommends cooling the device with water after the fire is out. It lists water extinguishers as acceptable, so the water did not cause the flare-up, and a battery does not recharge itself from a stopped drone.",
+      "keyTakeaway": "Battery fires can reignite cell by cell. After putting it out, keep cooling it.",
+      "references": ["ref-safo-09013"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-emergency",
+    "acsRefs": ["acs-ua-v-c-k2d"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-108",
+    "stem": "During a flight, the drone responds to stick inputs with a noticeable delay. What does AC 107-2A, Appendix C, recommend?",
+    "choices": [
+      { "id": "q-ops-108-a", "text": "Keep flying, but stay closer to the control station from now on", "isCorrect": false },
+      { "id": "q-ops-108-b", "text": "Discontinue flight until the control link is inspected and tested", "isCorrect": true },
+      { "id": "q-ops-108-c", "text": "Switch to manual mode and finish the job quickly", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Discontinue flight until the control link is inspected and tested.",
+      "reason": "AC 107-2A, Appendix C, item 8, says that when control inputs are not synchronized or are delayed, the operator should discontinue flight or avoid further flight until the control link between the ground control unit and the aircraft is inspected and tested, and ensure reliable control communications before further flight, to prevent a possible loss of control resulting in a collision or flyaway. Flying on, closer or in a different mode, ignores that warning sign.",
+      "keyTakeaway": "Delayed control response is a warning of lost control or flyaway. Land and fix the link.",
+      "references": ["ref-ac1072"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-emergency",
+    "acsRefs": ["acs-ua-v-c-k3"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-109",
+    "stem": "During an automated mapping mission, the drone loses its control link with the control station. According to AC 107-2A, what would the aircraft generally do?",
+    "choices": [
+      { "id": "q-ops-109-a", "text": "Keep flying the programmed mission or return home to land", "isCorrect": true },
+      { "id": "q-ops-109-b", "text": "Stop its motors immediately and fall to the ground below", "isCorrect": false },
+      { "id": "q-ops-109-c", "text": "Hover in place until the battery runs completely flat", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Keep flying the programmed mission or return home to land.",
+      "reason": "AC 107-2A, paragraph 5.2.3, says that during automated flight, control inputs come from components on board the aircraft, and if the remote PIC loses the control link, the aircraft would continue to fly the programmed mission or return home to land. Paragraph 5.2.3.1 says the remote PIC must still retain the ability to direct the aircraft, so the remote PIC should know which the aircraft will do.",
+      "keyTakeaway": "On lost link, an automated mission keeps going or returns home. Know which your aircraft does.",
+      "references": ["ref-ac1072"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-emergency",
+    "acsRefs": ["acs-ua-v-c-k3"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-110",
+    "stem": "A remote pilot will inspect a house roof with a drone not eligible for flight over people. The residents are relaxing in the back yard. What does AC 107-2A suggest?",
+    "choices": [
+      { "id": "q-ops-110-a", "text": "Fly over them quickly, since brief passes over people are allowed", "isCorrect": false },
+      { "id": "q-ops-110-b", "text": "Ask them to stay indoors or under safe cover until the flight is done", "isCorrect": true },
+      { "id": "q-ops-110-c", "text": "Nothing, as long as the residents have agreed to have the drone fly", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Ask them to stay indoors or under safe cover until the flight is done.",
+      "reason": "AC 107-2A, paragraph 8.3, says that if the remote pilot selects a location where people are present, the pilot should have a plan to keep them clear of the operating area, and may direct people to remain indoors or under safe cover, such as a structure or stationary vehicle, until the flight has ended. Without a category of eligibility, 14 CFR 107.39 does not allow flight over people who are not directly participating, and agreeing to the flight does not make them participants.",
+      "keyTakeaway": "If people are on site, have a plan to keep them clear: indoors or under safe cover.",
+      "references": ["ref-ac1072", "ref-cfr107"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-emergency",
+    "acsRefs": ["acs-ua-v-c-k6"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-111",
+    "stem": "A drone not eligible for flight over people will fly a fast pass along a line 30 feet beside a group of spectators. What should the remote pilot consider, per AC 107-2A?",
+    "choices": [
+      { "id": "q-ops-111-a", "text": "Only whether its planned path crosses directly overhead", "isCorrect": false },
+      { "id": "q-ops-111-b", "text": "Its course and speed, but not what a failure would do", "isCorrect": false },
+      { "id": "q-ops-111-c", "text": "Its course, speed, and trajectory if a failure occurs", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Its course, speed, and trajectory if a failure occurs.",
+      "reason": "AC 107-2A, paragraph 8.3, says the remote pilot should consider risk mitigations and account for the small unmanned aircraft's course, speed, and trajectory, including the possibility of a failure, to determine whether it would go over a person. A fast pass beside a crowd could carry a failed drone over them even if the planned path never crosses overhead. Leaving out failure trajectories misses the AC's point: a failure at speed can carry the drone over people beside its path.",
+      "keyTakeaway": "Plan for where a failed drone would go, not just where you intend it to go.",
+      "references": ["ref-ac1072", "ref-cfr107"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-emergency",
+    "acsRefs": ["acs-ua-v-c-k6"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-112",
+    "stem": "For a night job, a remote pilot plans to use the same large operating area flown by day, relying on the anti-collision light and the telemetry screen. What does AC 107-2A say?",
+    "choices": [
+      { "id": "q-ops-112-a", "text": "The plan is fine, because the light alone shows where the drone is", "isCorrect": false },
+      { "id": "q-ops-112-b", "text": "Expect to shrink the area, since lights and telemetry cannot replace VLOS", "isCorrect": true },
+      { "id": "q-ops-112-c", "text": "Add a second anti-collision light and keep the same area", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Expect to shrink the area, since lights and telemetry cannot replace VLOS.",
+      "reason": "AC 107-2A, paragraph 5.9.3, says that in almost all night operations the remote PIC may need to restrict the operational area, because reduced lighting and contrast make it hard to see the aircraft's location, attitude, altitude, and direction of flight as 14 CFR 107.31 requires, and that a remote pilot cannot rely solely on the anti-collision lighting, telemetry displays, or both to comply with 107.31.",
+      "keyTakeaway": "At night, plan a smaller area. The light and the screen do not satisfy VLOS by themselves.",
+      "references": ["ref-ac1072", "ref-cfr107"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-emergency",
+    "acsRefs": ["acs-ua-v-c-k7"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-113",
+    "stem": "On a job, the visual observer will stand 600 feet from the remote pilot beside a noisy highway. When should the crew decide how they will communicate?",
+    "choices": [
+      { "id": "q-ops-113-a", "text": "Before the flight, for example by agreeing on handheld radios", "isCorrect": true },
+      { "id": "q-ops-113-b", "text": "During the flight, once a problem has actually come up", "isCorrect": false },
+      { "id": "q-ops-113-c", "text": "Never; the observer only watches and does not talk to the pilot", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Before the flight, for example by agreeing on handheld radios.",
+      "reason": "AC 107-2A, paragraph 5.9.2.2, says the remote PIC, person manipulating the controls, and VO must work out a method of effective communication that does not create a distraction and that the method must be determined prior to operation, and it allows communication-assisting devices such as handheld radios. 14 CFR 107.33 requires the crew to maintain effective communication, and the VO's job is to tell the pilot what they see.",
+      "keyTakeaway": "Settle how the crew will talk before launch, especially over distance or noise.",
+      "references": ["ref-ac1072", "ref-cfr107"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-adm",
+    "acsRefs": ["acs-ua-v-d-k1a"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-114",
+    "stem": "A remote PIC has listed the hazards of a job and judged how severe the risk of each one is. In AC 107-2A's basic hazard process, what comes next?",
+    "choices": [
+      { "id": "q-ops-114-a", "text": "Cancel the job, because any listed hazard rules out flight", "isCorrect": false },
+      { "id": "q-ops-114-b", "text": "Develop a plan to lessen each risk to an acceptable level", "isCorrect": true },
+      { "id": "q-ops-114-c", "text": "Fly the job, because listing hazards removes their risk", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Develop a plan to lessen each risk to an acceptable level.",
+      "reason": "AC 107-2A, Appendix A, paragraph A.4.8.1, describes the basic hazard identification and mitigation process: consider the hazards of the particular operation, determine the risk severity, and then develop a plan to lessen (mitigate) the risk to an acceptable level. Identifying a hazard does not remove it, and a hazard does not automatically rule out the operation if it can be mitigated.",
+      "keyTakeaway": "Identify, assess, then mitigate to an acceptable level.",
+      "references": ["ref-ac1072"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-adm",
+    "acsRefs": ["acs-ua-v-d-k5"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-115",
+    "stem": "On a long job, a remote pilot has skipped breakfast and lunch and now feels lightheaded and shaky. Which IMSAFE item does this fail, and what should the pilot do?",
+    "choices": [
+      { "id": "q-ops-115-a", "text": "Illness; fly on, since hunger is not an illness", "isCorrect": false },
+      { "id": "q-ops-115-b", "text": "Eating; stop and eat before flying again", "isCorrect": true },
+      { "id": "q-ops-115-c", "text": "Alcohol; wait 8 hours before flying again", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Eating; stop and eat before flying again.",
+      "reason": "AC 107-2A, Appendix A, paragraph A.4.8.2, lists the IMSAFE checklist, including Eating: am I sufficiently nourished? A pilot who is lightheaded from skipping meals is not fit to fly until the problem is fixed. 14 CFR 107.17 prohibits operating with a condition that would interfere with safe operation. Alcohol and the 8-hour rule in 107.27 do not apply here.",
+      "keyTakeaway": "IMSAFE includes Eating. Hungry and shaky is not fit to fly.",
+      "references": ["ref-ac1072", "ref-cfr107"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-physiology",
+    "acsRefs": ["acs-ua-v-e-k7"],
+    "difficulty": "easy",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-116",
+    "stem": "At night, a remote pilot uses off-center viewing to keep sight of the drone's dim light, but after a few seconds of holding the gaze the light fades again. What does the PHAK recommend?",
+    "choices": [
+      { "id": "q-ops-116-a", "text": "Stare straight at the light until it comes back into view", "isCorrect": false },
+      { "id": "q-ops-116-b", "text": "Use a bright flashlight to help the eyes refocus on the light", "isCorrect": false },
+      { "id": "q-ops-116-c", "text": "Shift the gaze to a new off-center point every 2 to 3 seconds", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Shift the gaze to a new off-center point every 2 to 3 seconds.",
+      "reason": "The PHAK (FAA-H-8083-25C), Chapter 17, says that with off-center vision, images of an object viewed longer than 2 to 3 seconds disappear because the rods reach a photochemical equilibrium, so pilots should avoid viewing an object longer than that and shift the eyes from one off-center point to another. Looking directly puts the image in the night blind spot, and bright light destroys dark adaptation.",
+      "keyTakeaway": "Off-center viewing works only if you keep shifting the gaze every 2 to 3 seconds.",
+      "references": ["ref-phak-25c"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-physiology",
+    "acsRefs": ["acs-ua-v-e-k8"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-117",
+    "stem": "A remote pilot has finished the ground part of the preflight inspection and launched. Before starting the mission, what does AC 107-2A's preflight list suggest?",
+    "choices": [
+      { "id": "q-ops-117-a", "text": "Climb straight to 400 feet AGL to test the control link's range", "isCorrect": false },
+      { "id": "q-ops-117-b", "text": "Fly at a low controlled altitude and recheck all controls and stability", "isCorrect": true },
+      { "id": "q-ops-117-c", "text": "Start the mission and check controls on the first long flight leg", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Fly at a low controlled altitude and recheck all controls and stability.",
+      "reason": "AC 107-2A, paragraph 7.3.4, lists preflight inspection items, including starting the propellers to inspect for imbalance and, at a controlled low altitude, flying within range of any interference and rechecking all controls and stability. Climbing straight to 400 feet or checking controls mid-mission puts a possible problem far from the pilot and the ground. 14 CFR 107.49 requires the preflight check.",
+      "keyTakeaway": "Finish preflight with a low hover and a controls check before going anywhere.",
+      "references": ["ref-ac1072", "ref-cfr107"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-maintenance",
+    "acsRefs": ["acs-ua-v-f-k2"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-118",
+    "stem": "A crack in a drone's motor mount was glued, but the operator cannot restore the part to its safe operational specification. What does AC 107-2A recommend?",
+    "choices": [
+      { "id": "q-ops-118-a", "text": "Fly it, but with lighter payloads, until the glue fails again", "isCorrect": false },
+      { "id": "q-ops-118-b", "text": "Replace the part with one that is in a condition for safe operation", "isCorrect": true },
+      { "id": "q-ops-118-c", "text": "Have someone sign off on the glued part, then fly it", "isCorrect": false }
+    ],
+    "explanation": {
+      "correct": "Replace the part with one that is in a condition for safe operation.",
+      "reason": "AC 107-2A, paragraph 7.2.3.1, says that if the operator or other maintenance personnel are unable to repair, modify, or overhaul a small UAS or component back to its safe operational specification, the operator should replace it with one that is in a condition for safe operation, and that all required maintenance should be completed before each flight. A sign-off does not restore a part to specification. 14 CFR 107.15 prohibits operating a small UAS that is not in a condition for safe operation.",
+      "keyTakeaway": "If a part cannot be repaired to specification, replace it before flying.",
+      "references": ["ref-ac1072", "ref-cfr107"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-maintenance",
+    "acsRefs": ["acs-ua-v-f-k3"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-119",
+    "stem": "A drone model appears on the FAA's list of eligible aircraft with a declaration of compliance for Category 2 only. A remote pilot wants to use it for a Category 3 operation. Is it eligible?",
+    "choices": [
+      { "id": "q-ops-119-a", "text": "Yes; any model on the list may fly in any category over people", "isCorrect": false },
+      { "id": "q-ops-119-b", "text": "No; the FAA's list is only for Category 1 aircraft", "isCorrect": false },
+      { "id": "q-ops-119-c", "text": "No; eligibility is listed by category, and this is Category 2 only", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "No; eligibility is listed by category, and this is Category 2 only.",
+      "reason": "AC 107-2A, paragraphs 8.10.3.2 and 8.10.3.3, say the remote pilot must determine whether the aircraft is listed on an FAA-accepted DOC appropriate to the category of the intended operation, and that the FAA website lists eligible aircraft by make, model, series, and category declared. A Category 2 declaration does not make the aircraft eligible for Category 3, which has its own requirements under 14 CFR 107.130. Category 1 aircraft need no declaration; the list covers aircraft declared for Categories 2 and 3.",
+      "keyTakeaway": "Check both the model and the category on the FAA's eligibility list.",
+      "references": ["ref-ac1072", "ref-cfr107"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-maintenance",
+    "acsRefs": ["acs-ua-v-f-k7"],
+    "difficulty": "medium",
+    "status": "active",
+    "version": 1
+  },
+  {
+    "id": "q-ops-120",
+    "stem": "A drone's manufacturer reports a possible safety issue with the model to the FAA. Does the report by itself make the model ineligible for operations over people?",
+    "choices": [
+      { "id": "q-ops-120-a", "text": "Yes; any reported issue rescinds the declaration at once", "isCorrect": false },
+      { "id": "q-ops-120-b", "text": "Not automatically, but all flights must stop for 30 days", "isCorrect": false },
+      { "id": "q-ops-120-c", "text": "Not automatically; the FAA first evaluates the report", "isCorrect": true }
+    ],
+    "explanation": {
+      "correct": "Not automatically; the FAA first evaluates the report.",
+      "reason": "AC 107-2A, paragraph 8.10.2.3, says reporting a safety issue to the FAA would not automatically mean that the FAA would determine the aircraft is no longer eligible to operate over people or that corrective action is necessary; the FAA would evaluate the report and work with the declaration holder. Rescission follows the process in 14 CFR 107.160. The remote pilot should still watch the FAA's list and check the aircraft's condition before each flight under 107.49. No automatic 30-day pause exists; the FAA evaluates the report and, if needed, follows the rescission process.",
+      "keyTakeaway": "A safety report starts an FAA review. It is not a rescission by itself.",
+      "references": ["ref-ac1072", "ref-cfr107"]
+    },
+    "domain": "dom-operations",
+    "moduleId": "mod-operations",
+    "lessonId": "les-ops-maintenance",
+    "acsRefs": ["acs-ua-v-f-k7"],
+    "difficulty": "hard",
+    "status": "active",
+    "version": 1
   }
 ]

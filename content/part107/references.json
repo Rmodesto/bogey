@@ -112,5 +112,33 @@
     "id": "ref-ac150520032",
     "title": "Reporting Wildlife Aircraft Strikes — AC 150/5200-32",
     "docId": "AC-150/5200-32"
+  },
+  {
+    "id": "ref-phak-25c",
+    "title": "Pilot's Handbook of Aeronautical Knowledge (FAA-H-8083-25C)",
+    "docId": "FAA-H-8083-25C",
+    "url": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/faa-h-8083-25c.pdf",
+    "revisionDate": "2023"
+  },
+  {
+    "id": "ref-awh-28b",
+    "title": "Aviation Weather Handbook (FAA-H-8083-28B)",
+    "docId": "FAA-H-8083-28B",
+    "url": "https://www.faa.gov/sites/faa.gov/files/FAA-H-8083-28B.pdf",
+    "revisionDate": "2026-04-02"
+  },
+  {
+    "id": "ref-safo-09013",
+    "title": "SAFO 09013: Fighting Fires Caused By Lithium Type Batteries in Portable Electronic Devices",
+    "docId": "SAFO-09013",
+    "url": "https://www.faa.gov/sites/faa.gov/files/other_visit/aviation_industry/airline_operators/airline_safety/SAFO09013.pdf",
+    "revisionDate": "2009-06-23"
+  },
+  {
+    "id": "ref-safo-15010",
+    "title": "SAFO 15010: Carriage of Spare Lithium Batteries in Carry-on and Checked Baggage",
+    "docId": "SAFO-15010",
+    "url": "https://www.faa.gov/sites/faa.gov/files/other_visit/aviation_industry/airline_operators/airline_safety/SAFO15010.pdf",
+    "revisionDate": "2015-10-08"
   }
 ]
