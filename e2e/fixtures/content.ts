@@ -45,6 +45,23 @@ export const lessonWithQuiz = (() => {
   throw new Error("No lesson has Questions; the quiz journey cannot be tested");
 })();
 
+/**
+ * The lesson with the fewest Questions, so the "finish the whole check" journey
+ * stays runnable as the bank grows. Picking the first lesson with any Questions
+ * made that spec skip itself once the bank reached 500.
+ */
+export const lessonWithShortestQuiz = (() => {
+  let best: { moduleId: string; lesson: Lesson; count: number } | null = null;
+  for (const mod of modules) {
+    for (const lesson of mod.lessons) {
+      const count = activeQuestions.filter((q) => q.lessonId === lesson.id).length;
+      if (count > 0 && (!best || count < best.count)) best = { moduleId: mod.id, lesson, count };
+    }
+  }
+  if (!best) throw new Error("No lesson has Questions; the check journey cannot be tested");
+  return best;
+})();
+
 export const quizQuestionCount = (lessonId: string) =>
   activeQuestions.filter((q) => q.lessonId === lessonId).length;
 

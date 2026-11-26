@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { lessonWithQuiz, quizQuestionCount } from "./fixtures/content";
+import { lessonWithQuiz, lessonWithShortestQuiz, quizQuestionCount } from "./fixtures/content";
 
 const { moduleId, lesson } = lessonWithQuiz;
 const url = `/learn/${moduleId}/${lesson.id}`;
@@ -72,22 +72,24 @@ test.describe("lesson", () => {
   });
 
   test("finishing every check question shows the result card", async ({ page }) => {
-    test.skip(checkCount > 12, `this lesson's check has ${checkCount} questions`);
-    await page.goto(url);
-    const last = lesson.sections[lesson.sections.length - 1];
-    await page.getByRole("button", { name: title(last.title) }).first().click();
+    // Runs against the shortest check in the bank so it never self-skips as the
+    // bank grows; the mechanism is identical whatever the length.
+    const short = lessonWithShortestQuiz;
+    await page.goto(`/learn/${short.moduleId}/${short.lesson.id}`);
+    const lastSection = short.lesson.sections[short.lesson.sections.length - 1];
+    await page.getByRole("button", { name: title(lastSection.title) }).first().click();
 
-    for (let i = 0; i < checkCount; i++) {
+    for (let i = 0; i < short.count; i++) {
       await page.getByTestId("quiz-choice").first().click();
       await page
-        .getByRole("button", { name: i === checkCount - 1 ? "See Results" : "Next Question" })
+        .getByRole("button", { name: i === short.count - 1 ? "See Results" : "Next Question" })
         .click();
     }
 
     await expect(page.getByTestId("quiz-complete")).toBeVisible();
     // Reported as a percentage today; ADR-0004 makes a check result a count,
     // because check length runs from 1 to 32 Questions depending on the lesson.
-    await expect(page.getByText(new RegExp(`out of ${checkCount} correct`))).toBeVisible();
+    await expect(page.getByText(new RegExp(`out of ${short.count} correct`))).toBeVisible();
   });
 
   test("a check result does not survive a reload", async ({ page }) => {
